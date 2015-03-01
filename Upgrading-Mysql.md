@@ -1,4 +1,4 @@
-# Upgrading MySQL 5.5 to 5.6
+## Upgrading MySQL 5.5 to 5.6
 
 ## Remove Existing MySQL Install
 

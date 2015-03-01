@@ -1,5 +1,3 @@
-# YCharts Development Readme
-
 ## Technology Stack
 The following is a description of the major components of our technology stack.
 

@@ -1,4 +1,1 @@
-<p align = center>[[Home]] |
-[[Getting Started]] | 
-[[Overview]]  
-</p>
+<p align = center>[[Home]]</p>

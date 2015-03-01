@@ -1,5 +1,3 @@
-# Random MySQL Notes
-
 ## Fabric Tasks for Database Dumps
 
 The commands on this page have been automated with the following fabric tasks:

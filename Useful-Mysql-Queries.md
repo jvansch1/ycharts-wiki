@@ -1,5 +1,3 @@
-# Useful MySQL queries
-
 ## Sysadmin
 
 ```mysql
