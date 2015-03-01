@@ -1,4 +1,3 @@
-# Indicator Notes
 ## Creation Utils
 ### Useful Files
 1. [importers.py](https://github.com/ycharts/ycharts/blob/develop/apps/indicators/importers.py) - Contains the importers which use `internal_data` to import the data

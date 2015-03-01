@@ -1,6 +1,6 @@
-# Common Calculation Issues
+## Common Calculation Issues
 
-## Principles We Follow
+### Principles We Follow
 
 ### 1) No Data is Better than Wrong Data
 

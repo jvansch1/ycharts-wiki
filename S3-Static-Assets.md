@@ -1,4 +1,4 @@
-# Storing Static Assets on S3
+## Storing Static Assets on S3
 
 ## Settings
 - `STATIC_URL`

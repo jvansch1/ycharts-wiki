@@ -1,4 +1,4 @@
-# SonicWall Router Notes
+## SonicWall Router Notes
 
 ## Redirecting Internet Traffic to Local Computer
 

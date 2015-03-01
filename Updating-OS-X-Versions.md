@@ -1,4 +1,4 @@
-# Re-Configuring Dev Environments for Mac OS X Upgrades
+## Re-Configuring Dev Environments for Mac OS X Upgrades
 
 
 ## 10.6 to 10.7

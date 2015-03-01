@@ -1,4 +1,4 @@
-# Getting started with sublime #
+## Getting started with sublime
 
 ## Essential Commands ##
 

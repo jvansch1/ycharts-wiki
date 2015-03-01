@@ -1,4 +1,4 @@
-# The Store
+## The Store
 
 ## Overview
 

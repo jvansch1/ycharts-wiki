@@ -1,5 +1,3 @@
-# Indicator Outsourcer Notes
-
 ### Vocabulary
 * **Outsourcer**: A django model which manages one particular outsourced task. The importer creates one of these and tells it to create an outsourced task immediately afterwards.
 * **Outsourced Task**: The actual task itself (ex. HIT for Amazon MTurk). Outsourcers are always linked to outsourced tasks by an ID.

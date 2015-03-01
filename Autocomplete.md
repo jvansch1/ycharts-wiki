@@ -1,5 +1,5 @@
-# Django Autocompleter
-##Useful notes for django-autocompleter as they pertain to YCharts Development
+## Django Autocompleter
+###Useful notes for django-autocompleter as they pertain to YCharts Development
 
 ### Setting up
 In order to add a new item type to the autocompleter, you'll need to setup a new AutocompleterProvider. This is done by importing and extending one of two base AutoCompleterProvider classes. AutocompleterModelProvider is for autocompleting on models such as Companies or Indicators.  AutocompleterDictProvider is for anything else (in our case, metrics).

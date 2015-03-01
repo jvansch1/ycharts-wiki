@@ -1,4 +1,4 @@
-# Using LoDash
+### Using LoDash
 
 A drop in replacement for underscore
 

@@ -1,4 +1,4 @@
-# Debugging Running Processes on Ubuntu
+### Debugging Running Processes on Ubuntu
 
 Sometimes a process gets stuck for whatever reason and it can be useful to determine why
 it is stuck.

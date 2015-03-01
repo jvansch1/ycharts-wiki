@@ -1,4 +1,4 @@
-# All the steps needed to add a new data frequency
+### All the steps needed to add a new data frequency
 
 **In main/static/main/js/date_formatter.js**, add the frequency to getFormatter() and
 add an appropriate handling function if necessary.

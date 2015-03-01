@@ -1,4 +1,4 @@
-# Useful code snippets
+### Useful code snippets
 
 ## Turn on DB logging on a single file
 

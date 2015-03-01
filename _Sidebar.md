@@ -1,7 +1,7 @@
 **Essentials**
 * [[Home]]
 * [[Dev Env Setup]]
-* [[Deployment-Procedures]]
+* [[Deployment Procedures]]
 * [[Onboarding]]
 * [[Offboarding]]
 * [[Code Guidelines]]
@@ -24,7 +24,7 @@
 * Tools
   * [[Sublime]]
 * Mac OS X
-  * [[Updating OS X Version]]
+  * [[Updating OS X Versions]]
 * Amazon
   * [[S3-Static-Assets]]
   * [[AWS-Redis-Setup]]

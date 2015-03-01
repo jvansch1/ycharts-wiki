@@ -1,4 +1,4 @@
-# Forking a project on github and developing on it.
+### Forking a project on github and developing on it.
 
 ## Fork the Project
     For the project Yourself

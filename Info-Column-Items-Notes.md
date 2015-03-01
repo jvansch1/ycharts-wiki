@@ -1,4 +1,4 @@
-# How To Add Info Columns:
+## How To Add Info Columns:
 
 ## Where Are They?
 - Screener (screener.html)

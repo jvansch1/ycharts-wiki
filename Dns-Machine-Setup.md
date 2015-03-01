@@ -1,4 +1,4 @@
-# Setting Up a DNS Machine
+### Setting Up a DNS Machine
 
 ## Mac Mini
 

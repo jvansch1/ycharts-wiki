@@ -1,4 +1,4 @@
-# News Headline Feeds & Analysis Feeds
+## News Headline Feeds & Analysis Feeds
 
 Currently the News system breaks down into two sub-systems.  Our News Headlines that we ingest from various sources on the web, all these importers are located inside of the news/ app and the importers are controlled by a series of management commands via upstart.  The other subsystem would be our outbound 'news feed' of our analysis articles written by our content team, these articles and their feeds are contained inside of the articles app.
 

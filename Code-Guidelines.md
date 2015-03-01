@@ -1,4 +1,4 @@
-## Overview
+### Overview
 
 This doc details the common YCharts practices for creating code so everybody can easily read and locate it.  Follow the suggestions and we'll all be happier long term (and you'll spend less time rewriting and moving old code.
 

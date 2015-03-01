@@ -1,5 +1,3 @@
-# Indicator Guide
-
 ## Importers
 ### General
 

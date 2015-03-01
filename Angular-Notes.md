@@ -1,4 +1,4 @@
-## Stateful Apps
+### Stateful Apps
 
 Apps that have "state", as we refer to it, are those that update their UI/data based on the querystring after the hash in the URL. Examples of current stateful apps are the [Fundamental Chart](http://ycharts.com/charts/fundamental_chart), [Stock Screener](http://ycharts.com/stock_screener), and [Data Tables](http://ycharts.com/export_center/multicompany_comparison).
 

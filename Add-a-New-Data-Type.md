@@ -1,4 +1,4 @@
-# All the steps needed to add a new data type
+### All the steps needed to add a new data type
 
 1. In `apps/main/static/main/js/number_formatter.js`, add the type to `getFormatter()` and
    add an appropriate handling function if necessary.

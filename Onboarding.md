@@ -1,4 +1,4 @@
-# YCharts Basic Onboarding
+## YCharts Basic Onboarding
 
 ## Essential Accounts
 Set up an e-mail address at http://google.com/a/ycharts.com

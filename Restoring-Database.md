@@ -1,4 +1,4 @@
-# Restoring Your Database
+## Restoring Your Database
 
 ## Copy Data Files Method (Preferred)
 ### Stop MySQL

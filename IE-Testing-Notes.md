@@ -1,4 +1,4 @@
-# Getting Started With VMWare Fusion
+### Getting Started With VMWare Fusion
 
 ## Getting Started
 

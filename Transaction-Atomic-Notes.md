@@ -1,4 +1,4 @@
-# Using django.db.transaction.atomic
+## Using django.db.transaction.atomic
 
 In django 1.6, `transaction.commit_on_success`, `transaction.commit_unless_managed`, and other
 apis have been deprecated in favor of the new `transaction.atomic` function which can handle

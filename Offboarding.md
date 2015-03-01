@@ -1,4 +1,4 @@
-# YCharts Basic Offboarding
+## YCharts Basic Offboarding
 
 ## Essential Accounts
 

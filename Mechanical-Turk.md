@@ -1,4 +1,5 @@
-# YCharts Mechanical Turk
+### YCharts Mechanical Turk
+
 ## Contents
 - [Intro](#intro)
     - [Basic Definitions](#basic-definitions)

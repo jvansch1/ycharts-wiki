@@ -1,4 +1,4 @@
-# Random Sysadmin Notes
+## Random Sysadmin Notes
 
 ## Move file from one AWS instance to another using SCP
 

@@ -1,4 +1,4 @@
-# jQuery UI Components Inventory
+### jQuery UI Components Inventory
 
 List of the various component breakdowns for static-media generators
 
