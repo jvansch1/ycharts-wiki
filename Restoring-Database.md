@@ -1,0 +1,84 @@
+# Restoring Your Database
+
+## Copy Data Files Method (Preferred)
+### Stop MySQL
+
+```bash
+launchctl unload ~/Library/LaunchAgents/com.ycharts.mysql.plist
+```
+
+### Copy the Backup Files
+Copy the `ycharts_db` folder from the DB Restore machine to your home directory (`~`)
+
+### TEMPORARY: Uninstall/Reinstall MySQL
+Make sure your server is stopped as normal. Then do the following to uninstall/reinstall MySQL:
+
+```bash
+# Uninstall MySQL
+brew uninstall mysql
+# Delete data dir
+rm -rf /usr/local/var/mysql
+# Reinstall MySQL
+brew install mysql
+
+# Start MySQL
+launchctl load ~/Library/LaunchAgents/com.ycharts.mysql.plist
+
+# Create ycharts database
+mysql -u root
+
+# Run the following commands in the mysql shell
+CREATE DATABASE ycharts CHARACTER SET utf8 COLLATE utf8_general_ci;
+GRANT ALL ON ycharts.* to 'ycharts'@'localhost' IDENTIFIED BY 'ycharts';
+FLUSH PRIVILEGES;
+exit;
+
+# Stop MySQL again
+launchctl unload ~/Library/LaunchAgents/com.ycharts.mysql.plist
+```
+
+### Restore Your Database
+
+> NOTE: By default, the script will move a database backup from `~/ycharts_db` to
+> `/usr/local/var/mysql` and keep the current owner and group of `/usr/local/var/mysql`.
+> These defaults should work if you have installed mysql via Homebrew.
+
+```bash
+# To run with default values (should work if mysql was installed via Homebrew)
+sudo /sites/ycharts/scripts/restore_database.sh
+
+# To copy instead of move files
+sudo /sites/ycharts/scripts/restore_database.sh -c
+
+# To specify a different source directory
+sudo /sites/ycharts/scripts/restore_database.sh -s ~/ycharts_sql_backup_files
+
+# To output usage information
+sudo /sites/ycharts/scripts/restore_database.sh -h
+# usage: /sites/ycharts/scripts/restore_database.sh [OPTIONS]
+#
+# This script moves or copies backed up MySQL database files to the MySQL database folder
+#
+# OPTIONS:
+#     -h Show this message and exit
+#     -s Source directory of the database files (default: ~/ycharts_db)
+#     -d Destination directory of the database files (default: /usr/local/var/mysql)
+#     -c Copy the files from the source directory instead of moving them
+#     -o Override the owner of the destination directory (defaults to current owner)
+#     -g Override the group of the destination directory (defaults to current group)
+
+```
+
+### Start MySQL
+
+```bash
+launchctl load ~/Library/LaunchAgents/com.ycharts.mysql.plist
+```
+
+## Logical Dump Method
+
+Make sure `ycharts_all.sql` is in your home folder (`~`), then:
+
+```bash
+fab restore_db
+```
