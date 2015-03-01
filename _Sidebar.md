@@ -1,7 +1,7 @@
 **Essentials**
 * [[Home]]
 * [[Dev Env Setup]]
-* [Deployment-Procedures]]
+* [[Deployment-Procedures]]
 * [[Onboarding]]
 * [[Offboarding]]
 * [[Code Guidelines]]
