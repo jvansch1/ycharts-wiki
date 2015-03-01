@@ -1,10 +1,5 @@
-**About**
-* [[Overview]]
-* [[Requirements]]
-* [[License]]
-* [[Sample App]]
-* [[Support]]
-* [[Roadmap]]
+**Essentials**
+* [[Home]]
 
 **Developer Notes**
 * [[Mysql]]
