@@ -1,5 +1,13 @@
 ## Getting started with sublime
 
+## Preferences (cmd + ,) ##
+    Add
+
+    "dictionary": "Packages/Language - English/en_US.dic",
+    "spell_check": true,
+    "translate_tabs_to_spaces": true,
+    "trim_trailing_white_space_on_save": true
+
 ## Essential Commands ##
 
 **Shift-Command-P**
