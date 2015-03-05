@@ -113,7 +113,7 @@ If you ever need to run a manual sql migration
   indicators/migrations/0167 - update records in a database based on another column
 calculations/migrations/0138 - add columns to an existing table
 calculations/migrations/0163 - add, drop, and modify column attributes on a table
-  financials/migraitons/0038 - modify true/false boolean attributes on existing columns
+  financials/migrations/0038 - modify true/false boolean attributes on existing columns
 ```
 
 You can also do a grep for db.execute to find other manual migrations
