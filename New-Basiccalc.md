@@ -3,38 +3,19 @@
 ## Checklist of files where calc must be present
 
 ### apps/calculations/calc_info.py
-* basic_calc_info dictionary - all calc info must be filled in properly (see the documentation at the top of the page for details)
-One of the following menus:
-* `price_and_valuation_menu_structure`
-* `ratios_menu_structure`
-* Lite and Free calcs should also be in `company_popular_calc_menu_calcs`
+* See basic_calc_info dictionary for some basic structure
 
 ### apps/calculations/models.py
 IMPORTANT: The name of the calculation must match for all models (except BasicCalcLatest, where the suffix '_is_prelim' must be added to the calc name)
 * BasicCalc class: `models.DecimalField(max_digits=13, decimal_places=4, null=True)`
 * CompanyBasicCalcLatest class `models.BooleanField(default=False)`
 
-## apps/calculations/executor/basiccalc.py
-Here is where you define the function that actually runs the calculation. Note that the name of the calculation in the function name and in the result object must match (see example below).
+## apps/calculations/executor/*
+Work in Progress.
 
 ### apps/calculations/migrations
 * You should use `python manage.py schemamigration --auto calculations <description>` to create new tables when the models.py fields are defined
 * Add that migration to git using `git add .` before commiting
-
-### docs/deployment_notes/x_yz_deployment_notes.txt
-Add the following to the most recent notes
-
-    # Pre Deploy
-    ...
-    # Run migrations for new calculations
-    python /sites/ycharts/manage.py migrate calculations
-    ...
-
-    # Post Deploy
-    ...
-    # Queue new basiccalcs
-    python /sites/ycharts/manage.py companies_tasks_run --task_type basiccalc
-    ...
 
 ## Process for Adding Calcs
 The process for adding one calculation at a time is a bit different than the process for adding multiple calculations at a time. I'll start with the multiple calculations method, because it works both ways.
@@ -164,7 +145,7 @@ To test, you will have to run the celery calculation engine and then queue the c
 
 Then, start the calculation engine (celery worker) with logging
 
-    celery -A ycharts worker -Q main,latestcalcs -E -l info
+    celery -A ycharts worker -E -Q main,latestcalcs -l info
 
 Then - in a different terminal window - queue the calcs
 (These commands queue for AA, AAPL, PG, and KO, repsectively)
