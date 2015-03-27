@@ -21,8 +21,6 @@ The following is a description of the major components of our technology stack.
 * [Angular.js](http://angularjs.org/) is how all our JS apps are built. We use it for building front-end widgets and controls, for building single-page stateful apps, etc.
 * [JQuery](http://jquery.com/) is the core util library we use for AJAX requests, DOM manipulation, CSS manipulation.
 * [JQuery UI](http://jqueryui.com/) is what we use for some advanced frontend UI elements like the sliders for the screener, the drag/drop on the dashboard page, etc.
-* [Sammy.js](http://sammyjs.org/) is the library we use to manage state in our JS apps. DEPRECATED.
-* [Mustache.js](https://github.com/janl/mustache.js/) is the library we use for JavaScript templating. DEPRECATED.
 * [Flot](http://www.flotcharts.org/) is the core library we use to create our charts.
 
 ### Some Notable Private JS Libraries We Use
