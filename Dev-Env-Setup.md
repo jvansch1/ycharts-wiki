@@ -91,7 +91,7 @@ can connect to our server machines.  You will be getting the `.pem` key.
 # Change the permissions on the key file
 chmod 700 ~/.ssh/ycharts-2014-01.pem
 # Test that it works
-ssh ycharts_admin
+ssh staging_admin
 ```
 
 If you were able to connect you will see it, if not ask for help.
