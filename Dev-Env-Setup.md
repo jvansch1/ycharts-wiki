@@ -28,6 +28,8 @@ brew install libmemcached
 brew install pango gdk-pixbuf libxml2 libxslt libffi
 # If you're using OSX 10.9+:
 brew install swig
+# Install pkg-config (may be necessary for some other packages)
+brew install pkg-config
 ```
 
 ## Checkout code
@@ -105,7 +107,8 @@ logout
 
 ```bash
 brew update
-brew install node
+brew tap homebrew/versions
+brew install node010
 ```
 
 Pay special attention to the post install directions.
