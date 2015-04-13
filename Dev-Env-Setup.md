@@ -112,7 +112,7 @@ brew install node010
 ```
 
 Pay special attention to the post install directions.
-It may tell you add to your $PATH in your `~/bash_profile`
+It may tell you add to your $PATH in your `~/.bash_profile`
 
 ## Install Node Packages
 
@@ -223,7 +223,7 @@ sudo pip install virtualenvwrapper
 mkdir ~/.virtualenvs
 ```
 
-Open `~/bash_profile` file and add the following lines
+Open `~/.bash_profile` file and add the following lines
 
 ```bash
 export WORKON_HOME=$HOME/.virtualenvs
