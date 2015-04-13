@@ -21,7 +21,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 # For the pre commit hook
 brew install ack
 # For Numpy/SciPy/Pandas
-brew install gfortran
+brew install gcc
 # For pylibmc
 brew install libmemcached
 # For weasyprint
