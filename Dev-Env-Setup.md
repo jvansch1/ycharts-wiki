@@ -12,7 +12,7 @@ http://xquartz.macosforge.org/landing/
 Install Homebrew for easier package management
 
 ```bash
-ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go/install)"
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
 ## Install Some Random Dev Packages We Need
