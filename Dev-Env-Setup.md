@@ -208,9 +208,6 @@ echo '/usr/local/lib/python2.7/site-packages' > ~/Library/Python/2.7/lib/python/
 
 ```bash
 sudo easy_install pip
-
-# pip 1.5.2 doesn't work for us
-sudo pip install pip==1.4.1
 ```
 
 ## Install Virtual Environment
