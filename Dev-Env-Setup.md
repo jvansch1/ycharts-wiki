@@ -422,11 +422,16 @@ sudo /sites/ycharts/binaries/wkhtmltox/install.sh mac
 > NOTE: Make sure you have run `requirements_2.txt`. Packages `ply` and `awscli`
 > must be installed.
 
-In your `~/.bash_profile` or `~/.profile` file, add the following lines
+Ask someone to create an IAM user for you. Once created, they should give you
+your credentials as well as a temporary password. They will also set up multi-factor
+authentication for you.
+
+After logging in to [the AWS console](https://ycharts.signin.aws.amazon.com/console), add
+your credentials to your `~/.bash_profile` or `~/.profile`.
 
 ```bash
-export AWS_ACCESS_KEY_ID=AKIAJ7COJHVL4NFK4KJA
-export AWS_SECRET_ACCESS_KEY=8AV6nBn45bV2KUCL66Kln0dA6wCbUoSekGnxrf38
+export AWS_ACCESS_KEY_ID=<YOUR_ACCESS_KEY_HERE>
+export AWS_SECRET_ACCESS_KEY=<YOUR_SECRET_ACCESS_KEY_HERE>
 export AWS_DEFAULT_REGION=us-east-1
 ```
 
