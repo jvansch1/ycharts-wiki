@@ -30,6 +30,7 @@
   * [[S3-Static-Assets]]
   * [[AWS-Redis-Setup]]
   * [[Mechanical-Turk]]
+  * [[VPC-Setup]]
 * Celery
   * [[Celery Getting Started]]
 * Apps
