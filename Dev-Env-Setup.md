@@ -183,12 +183,15 @@ launchctl load ~/Library/LaunchAgents/homebrew.mxcl.memcached.plist
 ## Install Redis
 
 ```bash
-brew install redis
+brew install redis28
 
 # Symlink plist to launch redis on startup
 ln -sfv /usr/local/opt/redis/*.plist ~/Library/LaunchAgents
 # Start redis now
-launchctl load ~/Library/LaunchAgents/homebrew.mxcl.redis.plist
+launchctl load ~/Library/LaunchAgents/homebrew.mxcl.redis28.plist
+
+# Use the redis cli with:
+redis28-cli
 ```
 
 ## Install Mercurial
