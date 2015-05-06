@@ -144,8 +144,8 @@ Again, be careful here - be sure that you *only* made changes to code that affec
     # End the release
     fab -i ~/.ssh/ycharts-2014-01.pem staging end_deploy
 
-    # Now do any post deploy tasks
-
+    # Now do any post deploy tasks (see deployment notes)
+ 
 
 ## Running a One-off Command on Every Machine
 To run a one-off command on every machine, run the following:
