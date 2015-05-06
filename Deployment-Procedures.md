@@ -34,7 +34,7 @@ Note: This will automatically install paramiko and pycrypto to support SSH conne
     git push origin master
     git push origin --tags
 
-### Prepare e-mail to core@ycharts.com
+### Prepare e-mail to notices@ycharts.com
 Include all major features and whatnot
 
 ### Make annotation on Google Analytics
