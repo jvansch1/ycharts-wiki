@@ -11,10 +11,6 @@ Note: This will automatically install paramiko and pycrypto to support SSH conne
 
 ## Releasing to production
 
-### Make sure all the Python tests pass
-    cd /sites/ycharts
-    python manage.py test
-
 ### Prepare release to production
     cd /sites/ycharts
     git checkout develop
