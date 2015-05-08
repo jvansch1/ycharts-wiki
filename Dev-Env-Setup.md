@@ -339,10 +339,10 @@ echo "from development import *" > /sites/ycharts/ycharts/settings/active.py
 > NOTE: If you got an older database, you may need to run migrations: `python manage.py migrate`
 
 ```bash
-# Initialize main autocompleter
-python manage.py autocompleter_init --remove --store --name main
+# Initialize security autocompleters
+python manage.py autocompleter_init --remove --store --name fund
 
-# Initialize other autocompleters
+# Initialize calc autocompleters
 python manage.py autocompleter_init --remove --store --name all_calc
 python manage.py autocompleter_init --remove --store --name aggregate_calc
 python manage.py autocompleter_init --remove --store --name history_calc
@@ -357,8 +357,12 @@ python manage.py autocompleter_init --remove --store --name fund_history_calc
 python manage.py autocompleter_init --remove --store --name index_calc
 python manage.py autocompleter_init --remove --store --name index_history_calc
 python manage.py autocompleter_init --remove --store --name technical_calc
+
+# Initialize other autocompleters
 python manage.py autocompleter_init --remove --store --name fund_manager
 python manage.py autocompleter_init --remove --store --name fund_benchmark
+python manage.py autocompleter_init --remove --store --name fund_family
+python manage.py autocompleter_init --remove --store --name fund_broker
 ```
 
 ## Initialize Screener Sets, Equity Lists
