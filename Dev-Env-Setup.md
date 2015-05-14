@@ -340,7 +340,10 @@ echo "from development import *" > /sites/ycharts/ycharts/settings/active.py
 
 ```bash
 # Initialize security autocompleters
+python manage.py autocompleter_init --remove --store --name main
 python manage.py autocompleter_init --remove --store --name fund
+python manage.py autocompleter_init --remove --store --name stock
+python manage.py autocompleter_init --remove --store --name etf
 
 # Initialize calc autocompleters
 python manage.py autocompleter_init --remove --store --name all_calc
