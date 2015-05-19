@@ -7,7 +7,7 @@ Note: This will automatically install paramiko and pycrypto to support SSH conne
 
 ## Testing deployment setup
     cd /sites/ycharts
-    fab -i ~/.ssh/ycharts-2014-01.pem staging admin.ping
+    fab staging admin.ping
 
 ## Releasing to production
 
@@ -44,19 +44,19 @@ Include release number and basic description
     cd /sites/ycharts/
 
     # Run the build step
-    fab -i ~/.ssh/ycharts-2014-01.pem production build
+    fab production build
 
     # Start the release
-    fab -i ~/.ssh/ycharts-2014-01.pem production start_deploy
+    fab production start_deploy
 
     # Run migrations manually (safe) or with fab (can fail on long migrations)
     ssh ycharts_admin
     python /sites/ycharts/manage.py migrate
     # OR
-    fab -i ~/.ssh/ycharts-2014-01.pem production admin.run_migrations
+    fab production admin.run_migrations
 
     # End the release
-    fab -i ~/.ssh/ycharts-2014-01.pem production end_deploy
+    fab production end_deploy
 
     # Now do any post deploy tasks
 
@@ -88,31 +88,31 @@ box that notifies users we are preforming scheduled maintenance)
 
 ### If you are releasing code to admin and web, run:
 
-    fab -i ~/.ssh/ycharts-2014-01.pem production quick_deploy
+    fab production quick_deploy
 
 ### If you are only releasing code to the admin server, run:
 
-    fab -i ~/.ssh/ycharts-2014-01.pem production admin.quick_deploy
+    fab production admin.quick_deploy
 
 Careful with this - be sure that you *only* made changes to code that will affect admin.
 
 ### If you are only releasing code to the web server, run:
 
-    fab -i ~/.ssh/ycharts-2014-01.pem production web_quick_deploy
+    fab production web_quick_deploy
 
 Again, be careful here - be sure that you *only* made changes to code that affects the web server.
 
 ## Releasing to Staging
 
 ### Quick deploy to staging
-    fab -i ~/.ssh/ycharts-2014-01.pem staging quick_deploy
+    fab staging quick_deploy
 
 ### If you are only doing a machine specific quick_deploy
 
-    fab -i ~/.ssh/ycharts-2014-01.pem staging web_quick_deploy
-    fab -i ~/.ssh/ycharts-2014-01.pem staging queue_quick_deploy
-    fab -i ~/.ssh/ycharts-2014-01.pem staging admin.quick_deploy
-    fab -i ~/.ssh/ycharts-2014-01.pem staging indicators_admin.quick_deploy
+    fab staging web_quick_deploy
+    fab staging queue_quick_deploy
+    fab staging admin.quick_deploy
+    fab staging indicators_admin.quick_deploy
 
 ### Prepare release to staging
     cd /sites/ycharts
@@ -130,19 +130,19 @@ Again, be careful here - be sure that you *only* made changes to code that affec
     cd /sites/ycharts/
 
     # Run build step
-    fab -i ~/.ssh/ycharts-2014-01.pem staging build
+    fab staging build
 
     # Start the release
-    fab -i ~/.ssh/ycharts-2014-01.pem staging start_deploy
+    fab staging start_deploy
 
     # Run migrations manually (safe) or with fab (can fail on long migrations)
     ssh ycharts_staging_admin
     python /sites/ycharts/manage.py migrate
     # OR
-    fab -i ~/.ssh/ycharts-2014-01.pem staging admin.run_migrations
+    fab staging admin.run_migrations
 
     # End the release
-    fab -i ~/.ssh/ycharts-2014-01.pem staging end_deploy
+    fab staging end_deploy
 
     # Now do any post deploy tasks (see deployment notes)
  
@@ -150,17 +150,17 @@ Again, be careful here - be sure that you *only* made changes to code that affec
 ## Running a One-off Command on Every Machine
 To run a one-off command on every machine, run the following:
 
-    fab -i ~/.ssh/ycharts-2014-01.pem [env] run_command:[command]
+    fab [env] run_command:[command]
 
 where `[env]` is the environment and `[command]` is the desired command. It is run from `env.ycharts[_node]_web_root`.
 
 To run as `sudo`:
 
-    fab -i ~/.ssh/ycharts-2014-01.pem [env] run_command:[command],sudo=yes
+    fab [env] run_command:[command],sudo=yes
 
 To run on a single machine or class of machines:
 
-    fab -i ~/.ssh/ycharts-2014-01.pem [env] admin.run_command:[command]
+    fab [env] admin.run_command:[command]
 
 ## Optional deployment commands
 To see a list of available commands

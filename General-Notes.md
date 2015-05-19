@@ -4,11 +4,11 @@ The commands on this page have been automated with the following fabric tasks:
 
 To create a database dump file on staging/production:
 
-    fab -i ~/.ssh/ycharts-2014-01.pem staging dump_db
+    fab staging dump_db
 
 To download the database dump file after creating it with the previous task:
 
-    fab -i ~/.ssh/ycharts-2014-01.pem staging download_db
+    fab staging download_db
 
 To restore the database dump to your local database, after downloading it with the previous task:
 
@@ -24,7 +24,7 @@ Log in to production_admin or staging_admin and do this
 Log out and now on your local machine do this
 
     cd ~
-    scp -i ~/.ssh/ycharts-2014-01.pem <production_admin OR staging_admin>:/mnt/db_dumps/DUMPNAME.sql
+    scp <production_admin OR staging_admin>:/mnt/db_dumps/DUMPNAME.sql
 
 ## Manual Restore Database
 
