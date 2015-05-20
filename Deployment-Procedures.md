@@ -34,12 +34,6 @@ Note: This will automatically install paramiko and pycrypto to support SSH conne
     git push origin master
     git push origin --tags
 
-### Prepare e-mail to notices@ycharts.com
-Include all major features and whatnot
-
-### Make annotation on Google Analytics
-Include release number and basic description
-
 ### Release code to production
     cd /sites/ycharts/
 
@@ -59,6 +53,12 @@ Include release number and basic description
     fab production end_deploy
 
     # Now do any post deploy tasks
+
+### Prepare e-mail to notices@ycharts.com
+Include all major features and whatnot
+
+### Make annotation on Google Analytics
+Include release number and basic description
 
 ## Doing a hotfix release on production
 
