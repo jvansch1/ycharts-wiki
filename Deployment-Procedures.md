@@ -34,6 +34,9 @@ Note: This will automatically install paramiko and pycrypto to support SSH conne
     git push origin master
     git push origin --tags
 
+### Update your SSH! This changes frequently!
+    cp confs/developers/ssh.conf ~/.ssh/config
+
 ### Release code to production
     cd /sites/ycharts/
 
