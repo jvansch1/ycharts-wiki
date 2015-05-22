@@ -1,119 +1,117 @@
 # Useful tips, tricks, and plugins for Vim
 
+## Basic Setup
+In vim, all of your configuration lives in the `~/.vim` directory. The main file for configuration is
+your **vimrc**. This file can be located at either `~/.vimrc` or `~/.vim/vimrc`. The latter is only for
+vim versions 7.4+ however it is preferred because then everything is under the same directory.
+
+Under `~/.vim` you can have several directories, the most common of which will be:
+
+* `autoload/` - this is used to define functions and automatically gets loaded when they are called
+* `colors/` - this is where colorschemes go
+* `ftplugin/` - this will contain files named after filetypes (e.g., `python.vim`) which get loaded when
+  a file of that type is opened
+* `plugin/` - this is where plugin scripts go
+* `syntax/` - this is where syntax files, which define syntax highlighting, go
+
+For more information, see `:help vimfiles`
+
 ## Sample vimrc files
-[Ryan's vimrc](https://gist.github.com/ryankuczka/5664030#file-vimrc)
-
-[Daniel's vimrc](https://gist.github.com/ryankuczka/74871d17f0426ac4cea2#file-daniel_vimrc-vim)
-
-[Farhan's vimrc](https://gist.github.com/ryankuczka/ddb274105c3f48dde839#file-farhan_vimrc-vim)
+* [Ryan's vimrc](https://github.com/ryankuczka/dotfiles/blob/master/vim/vimrc)
+* [Ryan's .vim folder](https://github.com/ryankuczka/dotfiles/blob/master/vim)
 
 ## Useful Plugins
 
-**[Vundle](https://github.com/gmarik/vundle)**
+### Plugin Manager
+There are several options. The first you will see a lot of is [pathogen](https://github.com/tpope/vim-pathogen)
+which is useful for including plugins but requires manual installation of the plugin files to a directory you
+specify. The rest of your options will all be able to download, install, and update plugins for you.
 
-Vundle is a Vim bundle plugin manager and makes it ridiculously easy to find and maintain vim plugins
+* [Vundle](https://github.com/gmarik/Vundle.vim) was the first, but lacks many features of the others
+* [vim-plug](https://github.com/junegunn/vim-plug) is lightweight (only one file) and feature packed.
+  This is my preferred manager.
+* [neobundle](https://github.com/Shougo/neobundle.vim) is perhaps the most feature packed, but is heavier than
+  the others.
 
-**[fugitive.vim](https://github.com/tpope/vim-fugitive)**
+### Functional Plugins
+These plugins add or extend functionality that seems native to vim.
 
-A Vim Git wrapper so awesome it should be illegal. `Bundle 'fugitive.vim'`
+* [surround.vim](https://github.com/tpope/vim-surround) adds commands to add, change, and delete "surrounding"
+  characters like brackets, parenteses, quotes, HTML tags, you name it. Incredibly powerful and very natural.
+* [unimpaired.vim](https://github.com/tpope/vim-unimpaired) adds mappings for easy movement between buffers,
+  tabs, location lists, quickfix lists, and so much more.
+* [commentary.vim](https://github.com/tpope/vim-commentary) adds mappings to easily comment/uncomment code.
+* [repeat.vim](https://github.com/tpope/vim-repeat) allows plugin creators to utilize the `.` key for repeating
+  the last action. All of [TPope's](https://github.com/tpope) and many other use it.
+* [targets.vim](https://github.com/wellle/targets.vim) extends and improves upon vim's native text objects.
+* [incsearch.vim](https://github.com/haya14busa/incsearch.vim) extends and improves upon vim's search (`/`)
+* [FastFold](https://github.com/Konfekt/FastFold) lets you use slow folding methods like `expr` and `syntax`
+  without them being slow!
+* [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) is a fast, fuzzy, autocompletion engine which
+  supports `<Tab>` completion and more.
+* [EasyMotion](https://github.com/Lokaltog/vim-easymotion) adds mappings that make it easy to move the cursor
+  anywhere on the screen.
 
-**[surround.vim](https://github.com/tpope/vim-surround)**
+### Command Plugins
+These plugins add useful commands (`:`)
 
-Provides easy ways to change surrounding characters such as brackets or quotes. `Bundle 'surround.vim'`
+* [abolish.vim](https://github.com/tpope/vim-abolish) adds a `:S[ubvert]` command which behaves like `:s[ubstitute]`
+  but will match and replace different cases and abbreviations too.
+* [eunuch.vim](https://github.com/tpope/vim-eunuch) adds commands for interacting with a Unix-like filesystem, including
+  commands like `:Move`, `:Rename`, `:Mkdir`, and so on.
+* [commandcaps.vim](https://github.com/takac/vim-commandcaps) adds commands so that if you hold the shift key too long,
+  things still work so `:Wq`, `:WQ` all do `:wq`
 
-**[abolish.vim](https://github.com/tpope/vim-abolish)**
+### Interactive Plugins
+These plugins use vim to interact with external programs or other vim constructs more easily.
 
-Enhances search, substitutions, and abbreviations. `Bundle 'abolish.vim'`
+* [ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim) is a fuzzy file finder that is fast, powerful, and extensible.
+    * [ctrlp-cmatcher](https://github.com/JazzCore/ctrlp-cmatcher) is a fast, compiled fuzzy matcher for CtrlP
+* [fugitive.vim](https://github.com/tpope/vim-fugitive) is an awsome plugin that lets you interact with git from vim!
+* [undotree](https://github.com/mbbill/undotree) visualizes vim's powerful but complex undo history.
+* [syntastic](https://github.com/scrooloose/syntastic) lets you run linters and checkers from within vim.
+* [NERDTree](https://github.com/scrooloose/nerdtree) lets you interact with the file system.
+* [tagbar](https://github.com/majutsushi/tagbar) provides an interactive overview of your code structure using `ctags`.
+* [bufexplorer](https://github.com/jlanzarotta/bufexplorer) helps with managing buffers.
 
-**[unimpaired.vim](https://github.com/tpope/vim-unimpaired)**
+### Visual Plugins
+These plugins alter the way vim looks.
 
-Adds a ton of keyboard mappings to better navigate buffers, tabs, add empty lines, etc. `Bundle 'unimpaired.vim'`
+* [airline](https://github.com/bling/vim-airline) is a lightweight statusline and tabline plugin which supports
+  powerline style fonts, themes, and more
+* [indentline](https://github.com/Yggdroot/indentLine) displays indent guides.
+* [gitgutter](https://github.com/airblade/vim-gitgutter) displays symbols in the sign column to show lines added,
+  changed, or deleted from the current git status
+* [css-color](https://github.com/ap/vim-css-color) changes the background of css color codes (e.g., `red`, `#FF0000`,
+  or `rgb(255, 0, 0)`) to the color it represents
+* [MatchTag](https://github.com/gregsexton/MatchTag) highlights the matching HTML or XML tag to the one you're currently on.
 
-**[NERDCommenter](http://www.vim.org/scripts/script.php?script_id=1218)**
+#### Colorschemes
+These change the colors of your syntax highlighting. Some popular colorschemes are:
 
-NERDCommenter adds normal key mappings to quickly comment/uncomment blocks of code `Bundle 'The-NERD-Commenter'`
+* [lucius](https://github.com/jonathanfilip/vim-lucius)
+* [solarized](https://github.com/altercation/vim-colors-solarized)
+* [jellybeans](https://github.com/nanotech/jellybeans.vim)
+* [hybrid](https://github.com/w0ng/vim-hybrid)
+* [gotham](https://github.com/whatyouhide/vim-gotham)
 
-**[AutoClose](http://www.vim.org/scripts/script.php?script_id=1849)**
+### Filetype Specific Plugins
+These plugins add or extend functionality for specific types of files.
 
-Autoclose brackets as you type. `Bundle 'AutoClose'`
+* [vim-instant-markdown](https://github.com/suan/vim-instant-markdown) provides a live compiled preview of markdown
+  files in your browser.
 
-**[Rename2](http://www.vim.org/scripts/script.php?script_id=2724)**
+#### Syntax Plugins
+These improve the syntax highlighting for specific filetypes.
 
-Rename the file you are currently editing and keep on editing `Bundle 'Rename2'`
-
-**[indentLine.vim](http://www.vim.org/scripts/script.php?script_id=4354)**
-
-Adds a vertical line to show indent levels. `Bundle 'Yggdroot/indentLine'`
-
-**[TextObjectify](https://github.com/paradigm/TextObjectify)**
-
-Changes some of the unexpected ways text objects work to how they should be expected. `Bundle 'paradigm/TextObjectify'`
-
-**[CSS Color](https://github.com/skammer/vim-css-color)**
-
-Highlights the background of a color string as that color `Bundle 'skammer/vim-css-color'`
-
-**[Git Gutter](https://github.com/airblade/vim-gitgutter)**
-
-Adds plus, minus, changed signs to the gutter based on the current git diff. `Bundle 'airblade/vim-gitgutter'`
-
-**[Ack](http://www.vim.org/scripts/script.php?script_id=2572)**
-
-Provides a slick interface to ack with interactive search results that take you directly to the matched line in a file `Bundle 'ack.vim'`
-
-**[Syntastic](https://github.com/scrooloose/syntastic)**
-
-Syntax checking/linting - lets you run jshint or flake8 with a single click and conveniently takes you to your errors - highly recommended `Bundle 'Syntastic'`
-
-**[CtrlP](http://www.vim.org/scripts/script.php?script_id=3736) ([more info](http://kien.github.com/ctrlp.vim/))**
-
-Lets you quickly search for files with powerful fuzzy-matching autocompletion. `Bundle 'ctrlp.vim'`
-
-**[NERD Tree](http://www.vim.org/scripts/script.php?script_id=1658)**
-
-Tree explorer for navigating the file system `Bundle 'The-NERD-tree'`
-
-**[TAGList](http://www.vim.org/scripts/script.php?script_id=273)**
-
-Code browser (generates tags from variables, functions, classes that allow for easy jumping through code) `Bundle 'taglist.vim'`
-
-**[ShowTrailingWhitespace](http://www.vim.org/scripts/script.php?script_id=3966)**
-
-Highlights all trailing white space. `Bundle 'ShowTrailingWhitespace'`
-
-**[DeleteTrailingWhitespace](http://www.vim.org/scripts/script.php?script_id=3967)**
-
-Sister plugin to the above - lets you delete all trailing white space with 1 command `Bundle 'DeleteTrailingWhitespace'`
-
-**[Startify](https://github.com/mhinz/vim-startify)**
-
-Provides a nice start screen with recent and bookmarked files `Bundle 'mhinz/vim-startify'`
-
-**[SnipMate](http://www.vim.org/scripts/script.php?script_id=2540)**
-
-TextMate-style snippets for Vim `Bundle 'snipMate'`
-
-**[mru.vim](http://www.vim.org/scripts/script.php?script_id=521)**
-
-Plugin to manage most recently used files `Bundle 'mru.vim'`
-
-**[Keep Window on Buffer Delete](http://www.vim.org/scripts/script.php?script_id=2103)**
-
-Lets you quickly and easily delete the current buffer without killing the window - just type \bd - very useful!
-
-## Pleasant color-schemes
-
-**[Lucius](http://www.vim.org/scripts/script.php?script_id=2536)**
-
-**[Molokai](http://www.vim.org/scripts/script.php?script_id=2340)**
-
-**[Pyte](http://www.vim.org/scripts/script.php?script_id=1492)**
-
-**[Sahara](http://blog.sanctum.geek.nz/sahara-vim-colorscheme/)**
-
-**[Zenburn](http://www.vim.org/scripts/script.php?script_id=415)**
-
-**[Vim Colorschemes](https://github.com/flazz/vim-colorschemes)** -- Large repo of vim colorschemes to choose from `Bundle 'flazz/vim-colorschemes'`
+* [python](https://github.com/hdima/python-syntax)
+* [javascript](https://github.com/pangloss/vim-javascript)
+* [nginx](https://github.com/evanmiller/nginx-vim-syntax)
+* [LESS](https://github.com/groenewege/vim-less)
+* [CSS](https://github.com/hail2u/vim-css3-syntax)
+* [HTML](https://github.com/othree/html5.vim)
+* [javascript libraries](https://github.com/othree/javascript-libraries-syntax.vim)
+* [YAML](https://github.com/ingydotnet/yaml-vim)
 
 
 ## Tips and Tricks
