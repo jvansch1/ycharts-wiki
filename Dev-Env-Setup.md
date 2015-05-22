@@ -346,6 +346,16 @@ export ARCHFLAGS="-arch i386 -arch x86_64 -Wno-error=unused-command-line-argumen
 echo "from development import *" > /sites/ycharts/ycharts/settings/active.py
 ```
 
+## Generate JSON Files
+
+```bash
+python manage.py calculations_score_autocompleter
+python manage.py calculations_store_menus
+python manage.py companies_store_menus
+python manage.py fund_attributes_store_menus
+python manage.py securities_store_menus
+```
+
 ## Initialize Site Autocompleters
 
 > NOTE: You need some of the processes installed above to be running. It is recommended that you
