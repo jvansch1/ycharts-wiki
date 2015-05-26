@@ -41,7 +41,7 @@ git push origin --tags
 cd /sites/ycharts/
 
 # Start the release
-fab production start_deploy
+fab production build start_deploy
 
 # Run migrations manually
 ssh production_admin
@@ -90,13 +90,13 @@ git checkout master
 > box that notifies users we are preforming scheduled maintenance
 
 ```bash
-fab production quick_deploy
+fab production build quick_deploy
 
 # If you are only releasing code ONLY to the admin server, run:
-fab production:admin quick_deploy
+fab production:admin build quick_deploy
 
 # If you are only releasing code ONLY to the web server, run:
-fab production:web quick_deploy
+fab production:web build quick_deploy
 ```
 
 
@@ -104,12 +104,12 @@ fab production:web quick_deploy
 
 ### Quick deploy to staging
 ```bash
-fab staging quick_deploy
+fab staging build quick_deploy
 
 # Machine specific quick deploy
-fab staging:web quick_deploy
-fab staging:admin quick_deploy
-fab staging:indicators_admin quick_deploy
+fab staging:web build quick_deploy
+fab staging:admin build quick_deploy
+fab staging:indicators_admin build quick_deploy
 ```
 
 ### Prepare release to staging
@@ -131,7 +131,7 @@ git push origin develop
 cd /sites/ycharts/
 
 # Start the release
-fab staging start_deploy
+fab staging build start_deploy
 
 # Run migrations manually
 ssh staging_admin
