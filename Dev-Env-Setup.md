@@ -394,9 +394,14 @@ python manage.py autocompleter_init --remove --store --name fund_broker
 ```
 
 ## Initialize Lists and Sets
-
+You need to run Celery to actually get the lists you need!
 ```bash
-python manage.py main_process_lists_and_sets --store
+celery -A ycharts worker -E -Q latestcalcs,main,alerts -l info
+```
+
+Now, while Celery is running, IN A NEW TAB, do this
+```bash
+python manage.py main_process_lists_and_sets
 ```
 
 ## Install YCharts Node Packages
