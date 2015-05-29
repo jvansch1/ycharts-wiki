@@ -393,7 +393,7 @@ python manage.py autocompleter_init --remove --store --name fund_family
 python manage.py autocompleter_init --remove --store --name fund_broker
 ```
 
-## Initialize Screener Sets, Equity Lists
+## Initialize Lists and Sets
 
 ```bash
 python manage.py main_process_lists_and_sets --store
