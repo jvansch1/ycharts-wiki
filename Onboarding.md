@@ -21,7 +21,6 @@ Have the person create an account at http://getdropbox.com if they don't already
 application on their computer.
 
 1. If person is developer, share YCharts Design and YCharts Dev folders with them.
-2. If person is developer, copy ycharts-2014-01.pem from YCharts Dev folder to ~/.ssh
 
 Have the person create an account at http://ycharts.com if they don't already have one, give them staff access.
 
@@ -40,7 +39,7 @@ Log in as operator@ycharts.com at http://theresumator.com and add their @ycharts
 
 If the person will be directly involved in customer service:
 Log in as operator@ycharts.com at http://zendesk.com and add their @ycharts.com account to the YCharts account,
-as a cusomter service agent. Note: We pay per account for this, so don't do this if not needed!
+as a customer service agent. Note: We pay per account for this, so don't do this if not needed!
 
 ## E-Mail Filters
 
