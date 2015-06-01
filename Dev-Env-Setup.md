@@ -207,7 +207,7 @@ launchctl load ~/Library/LaunchAgents/homebrew.mxcl.memcached.plist
 brew install redis28
 
 # Symlink plist to launch redis on startup
-ln -sfv /usr/local/opt/redis/*.plist ~/Library/LaunchAgents
+ln -sfv /usr/local/opt/redis28/*.plist ~/Library/LaunchAgents
 # Start redis now
 launchctl load ~/Library/LaunchAgents/homebrew.mxcl.redis28.plist
 
