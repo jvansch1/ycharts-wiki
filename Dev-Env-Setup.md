@@ -169,6 +169,8 @@ The commands to stop and start MySQL are:
 launchctl unload ~/Library/LaunchAgents/com.ycharts.mysql.plist
 # To start MySQL
 launchctl load ~/Library/LaunchAgents/com.ycharts.mysql.plist
+
+exit
 ```
 
 ### Load MySQL data
