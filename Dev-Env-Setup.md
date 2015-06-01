@@ -132,6 +132,7 @@ It may tell you add to your $PATH in your `~/.bash_profile`
 ## Install Node Packages
 
 ```bash
+cd sites/ycharts
 npm install
 ```
 
