@@ -160,6 +160,9 @@ mysql -u root
 CREATE DATABASE ycharts CHARACTER SET utf8 COLLATE utf8_general_ci;
 GRANT ALL ON ycharts.* to 'ycharts'@'localhost' IDENTIFIED BY 'ycharts';
 FLUSH PRIVILEGES;
+
+# now get out of mysql
+exit
 ```
 
 The commands to stop and start MySQL are:
@@ -170,7 +173,7 @@ launchctl unload ~/Library/LaunchAgents/com.ycharts.mysql.plist
 # To start MySQL
 launchctl load ~/Library/LaunchAgents/com.ycharts.mysql.plist
 
-exit
+
 ```
 
 ### Load MySQL data
