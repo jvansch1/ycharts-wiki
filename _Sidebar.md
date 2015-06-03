@@ -55,7 +55,6 @@
   * [[Concurrent Login Block Notes]]
 * Other
   * [[Calculation Principles]]
-  * [[Dns Machine Setup]]
   * [[Fundamental Data Testing]]
   * [[Jquery UI Components]]
   * [[Lodash Usage]]
