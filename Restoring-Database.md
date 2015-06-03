@@ -1,6 +1,6 @@
-## Restoring Your Database
+# Restoring Your Database
 
-### Copy Data Files Method (Preferred)
+## Copy Data Files Method (Preferred)
 #### Stop MySQL
 
 ```bash
@@ -8,7 +8,9 @@ launchctl unload ~/Library/LaunchAgents/com.ycharts.mysql.plist
 ```
 
 #### Copy the Backup Files
+```
 Copy the `ycharts_db` folder from the DB Restore machine to your home directory (`~`)
+```
 
 #### Restore Your Database
 > NOTE: By default, the script will move a database backup from `~/ycharts_db` to
@@ -47,7 +49,7 @@ sudo /sites/ycharts/scripts/restore_database.sh -h
 launchctl load ~/Library/LaunchAgents/com.ycharts.mysql.plist
 ```
 
-### Logical Dump Method
+## Logical Dump Method
 
 Make sure `ycharts_all.sql` is in your home folder (`~`), then:
 
