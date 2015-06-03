@@ -1,33 +1,16 @@
 ## Restoring Your Database
 
-## Copy Data Files Method (Preferred)
-### Stop MySQL
+### Copy Data Files Method (Preferred)
+#### Stop MySQL
 
 ```bash
 launchctl unload ~/Library/LaunchAgents/com.ycharts.mysql.plist
 ```
 
-### Copy the Backup Files
+#### Copy the Backup Files
 Copy the `ycharts_db` folder from the DB Restore machine to your home directory (`~`)
 
-# Start MySQL
-launchctl load ~/Library/LaunchAgents/com.ycharts.mysql.plist
-
-# Create ycharts database
-mysql -u root
-
-# Run the following commands in the mysql shell
-CREATE DATABASE ycharts CHARACTER SET utf8 COLLATE utf8_general_ci;
-GRANT ALL ON ycharts.* to 'ycharts'@'localhost' IDENTIFIED BY 'ycharts';
-FLUSH PRIVILEGES;
-exit;
-
-# Stop MySQL again
-launchctl unload ~/Library/LaunchAgents/com.ycharts.mysql.plist
-```
-
-### Restore Your Database
-
+#### Restore Your Database
 > NOTE: By default, the script will move a database backup from `~/ycharts_db` to
 > `/usr/local/var/mysql` and keep the current owner and group of `/usr/local/var/mysql`.
 > These defaults should work if you have installed mysql via Homebrew.
@@ -58,13 +41,13 @@ sudo /sites/ycharts/scripts/restore_database.sh -h
 
 ```
 
-### Start MySQL
+#### Start MySQL
 
 ```bash
 launchctl load ~/Library/LaunchAgents/com.ycharts.mysql.plist
 ```
 
-## Logical Dump Method
+### Logical Dump Method
 
 Make sure `ycharts_all.sql` is in your home folder (`~`), then:
 
