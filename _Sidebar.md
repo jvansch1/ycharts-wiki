@@ -5,7 +5,7 @@
 * [[Onboarding]]
 * [[Offboarding]]
 * [[Code Guidelines]]
-* [[Dev Principles]]
+* [[Code Principles]]
 
 **Developer Notes**
 * Django
