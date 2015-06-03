@@ -10,17 +10,6 @@ launchctl unload ~/Library/LaunchAgents/com.ycharts.mysql.plist
 ### Copy the Backup Files
 Copy the `ycharts_db` folder from the DB Restore machine to your home directory (`~`)
 
-### TEMPORARY: Uninstall/Reinstall MySQL
-Make sure your server is stopped as normal. Then do the following to uninstall/reinstall MySQL:
-
-```bash
-# Uninstall MySQL
-brew uninstall mysql
-# Delete data dir
-rm -rf /usr/local/var/mysql
-# Reinstall MySQL
-brew install mysql
-
 # Start MySQL
 launchctl load ~/Library/LaunchAgents/com.ycharts.mysql.plist
 
