@@ -44,7 +44,6 @@
   * [[Add a New Data Frequency]]
   * [[Add a New Data Type]]
 * Notes
-  * [[Sonicwall-Router-Notes]]
   * [[IE Testing Notes]]
   * [[Info Column Items Notes]]
   * [[Store Notes]]
@@ -59,5 +58,4 @@
   * [[Jquery UI Components]]
   * [[Lodash Usage]]
   * [[News Headline Feeds]]
-  * [[New Basiccalc]]
   * [[Linux Process Debugging]]
