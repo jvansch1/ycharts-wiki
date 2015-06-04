@@ -33,22 +33,19 @@ git push origin master
 git push origin --tags
 ```
 
-### Update your SSH! This changes frequently!
-    cp confs/developers/ssh.conf ~/.ssh/config
-
 ### Release code to production
 ```bash
 cd /sites/ycharts/
 
 # Start the release
-fab production build start_deploy
+fab production build stop deploy
 
 # Run migrations manually
 ssh production_admin
 python /sites/ycharts/manage.py migrate
 
 # End the release
-fab production end_deploy
+fab production start
 
 # Now do any post deploy tasks
 ```
@@ -85,18 +82,17 @@ git checkout master
 
 ### Doing a quick release on production
 
-> NOTE: The following will take down the site for a couple of seconds then will re-open
-> the site in read-only mode (no creating watchlists for users, etc.) with a yellow
-> box that notifies users we are preforming scheduled maintenance
+> NOTE: The following goes through servers one-by-one, removing them from the load
+> balancer, deploying, then adding them back. There should be no downtime.
 
 ```bash
-fab production build quick_deploy
+fab production build hotfix
 
 # If you are only releasing code ONLY to the admin server, run:
-fab production:admin build quick_deploy
+fab production:admin build hotfix
 
 # If you are only releasing code ONLY to the web server, run:
-fab production:web build quick_deploy
+fab production:web build hotfix
 ```
 
 
@@ -131,14 +127,14 @@ git push origin develop
 cd /sites/ycharts/
 
 # Start the release
-fab staging build start_deploy
+fab staging build stop deploy
 
 # Run migrations manually
 ssh staging_admin
 python /sites/ycharts/manage.py migrate
 
 # End the release
-fab staging end_deploy
+fab staging start
 
 # Now do any post deploy tasks (see deployment notes)
 ```
