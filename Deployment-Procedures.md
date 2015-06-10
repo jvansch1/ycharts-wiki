@@ -35,6 +35,10 @@ git push origin --tags
 
 ### Release code to production
 ```bash
+
+# Update your ssh files
+cp confs/developers/ssh.conf ~/.ssh/config
+
 cd /sites/ycharts/
 
 # Start the release
