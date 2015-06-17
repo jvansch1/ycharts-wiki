@@ -1,12 +1,6 @@
 # Restoring Your Database
 
 ## Copy Data Files Method (Preferred)
-#### Stop MySQL
-
-```bash
-launchctl unload ~/Library/LaunchAgents/com.ycharts.mysql.plist
-```
-
 #### Copy the Backup Files
 ```
 Copy the `ycharts_db` folder from the DB Restore machine to your home directory (`~`)
@@ -41,12 +35,6 @@ Copy the `ycharts_db` folder from the DB Restore machine to your home directory 
 #     -o Override the owner of the destination directory (defaults to current owner)
 #     -g Override the group of the destination directory (defaults to current group)
 
-```
-
-#### Start MySQL
-
-```bash
-launchctl load ~/Library/LaunchAgents/com.ycharts.mysql.plist
 ```
 
 ## Logical Dump Method
