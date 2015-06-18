@@ -143,6 +143,40 @@ fab staging start
 # Now do any post deploy tasks (see deployment notes)
 ```
 
+## Various Fab Options
+Setting the environment takes a couple options:
+
+```bash
+# To run a single role
+fab staging:admin
+
+# To run multiple roles
+fab staging:'admin\,web'
+
+# To skip git and environment checks (for automated runs like queue machines)
+fab staging:skip=git_checks
+
+# To run on a single host
+fab staging:'web|10.1.279'
+```
+
+Build can also take several options:
+
+```bash
+# To skip generating menu json files
+fab staging build:skip=menus
+
+# To skip running autocompleter inits
+fab staging build:skip=autocompleters
+
+# To skip running collectstatic
+fab staging build:skip=staticfiles
+
+# To skip running all management commands
+# (i.e., only pull code, install packages, and tar code)
+fab staging build:skip='menus\,autocompleters\,staticfiles'
+```
+
 ## Running a One-off Command on Every Machine
 To run a one-off command on every machine, run the following:
 
