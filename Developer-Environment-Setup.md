@@ -407,7 +407,7 @@ celery -A ycharts worker -E -Q latestcalcs,main,alerts -l info
 
 Now, while Celery is running, IN A NEW TAB, do this
 ```bash
-python manage.py main_process_lists_and_sets
+python manage.py securities_process_lists_and_sets
 ```
 
 ## Install YCharts Node Packages
