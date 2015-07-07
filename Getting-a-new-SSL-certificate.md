@@ -20,4 +20,4 @@ Common Name: ycharts.com
 Email Address: LEAVE BLANK
 Extra Stuff: LEAVE BLANK
 
-3) Upload the CSR + key to the cert provider.
+3) Now upload the CSR to the cert provider.
