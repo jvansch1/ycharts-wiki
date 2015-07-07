@@ -10,7 +10,7 @@ openssl genrsa -out ycharts.com.key 2048
  openssl req -sha256 -new -key ycharts.com.key -out ycharts.com.csr
 ```
 
-Answer to Questsions:
+Answer to Questions:
 
 Country Name: US
 
