@@ -29,15 +29,22 @@ pip install -r confs/server/requirements_2.txt
 1. Change all methods in `apps/sales_support/utils/zendesk_utils.py` to no-ops and comment out `zendesk` imports
     - Replace `ZendeskError` with `Exception` in `apps/accounts/tasks.py` and `apps/sales_support/management/commands/sales_support_sync_zendesk.py` and comment out imports
 1. Comment out all uses of `cache_utils`
+
     ```bash
     sed -i '.bak' -e 's/@cached/# @cached/g' **/*.py
     ```
+
 1. Comment out all uses of `honeypot`
+
     ```bash
     sed -i '.bak' -e 's/@check_honeypot/# @check_honeypot/g' **/*.py
     ```
+
 1. Make some changes to `apps/screener/utils/screener_utils.py`
+    > NOTE: These changes are due to redis returning as bytes. This can be better resolved by using the [`decode_responses`](https://github.com/andymccurdy/redis-py) flag.
+
     1. Around line 113:
+
         ```python
         # Change this:
         next_set = set([str(i) for i in securitylists.pop()])
@@ -46,21 +53,27 @@ pip install -r confs/server/requirements_2.txt
         ```
 
     1. Around line 303:
+
         ```python
         # Change this:
         securitylist_ids = securitylist_ids[start:end]
         # To this:
         securitylist_ids = [i.decode('utf-8') for i in securitylist_ids[start:end]]
         ```
+
 1. Make some changes to `apps/dashboard/utils/dashboard_utils.py`
+
     1. Around line 98:
+
         ```python
         # Change this
         watchlist_data = sorted(watchlist_data, key=lambda x: x.get(sort_by), reverse=reverse)
         # To this:
         watchlist_data = sorted(watchlist_data, key=lambda x: x.get(sort_by, 0), reverse=reverse)
         ```
+
 1. Change how `JSONField` gets its metaclass
+
     ```python
     # Instead of this:
     class JSONField(models.TextField):
