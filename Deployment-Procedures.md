@@ -99,6 +99,11 @@ fab production:admin build hotfix
 fab production:web build hotfix
 ```
 
+### Turning Hyperscale on In Production
+```
+fab production disable_autoscaling
+fab production enable_autoscaling:hyperscale=hyperscale
+```
 
 ## Releasing to Staging
 
