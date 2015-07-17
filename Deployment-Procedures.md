@@ -103,7 +103,13 @@ fab production:web build hotfix
 ```
 fab production disable_autoscaling
 fab production enable_autoscaling:hyperscale=hyperscale
+
+# To Turn off Hyperscaling when done ... 
+fab production disable_autoscaling
+fab production enable_autoscaling
 ```
+
+
 
 ## Releasing to Staging
 
