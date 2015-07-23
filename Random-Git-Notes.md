@@ -179,3 +179,11 @@ git push origin master
 cd ~/.virtualenvs/ycharts/src
 ln -s -f /sites/project project
 ```
+
+## Deleting all local branches except the specified
+
+In the most common case, it's develop and master you want to keep, change as needed
+
+```bash
+git branch | grep -v "\(develop\|master\)$" | xargs -n 1 git branch -D
+```
