@@ -160,6 +160,8 @@ git commit -c ORIG_HEAD
 git reset --merge
 ```
 
+See more in [[Git Revert and Reset]]
+
 ## Creating a github mirror of a svn codebase
 
 First, Go to Github and create `PROJECT_NAME`
