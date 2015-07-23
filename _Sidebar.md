@@ -16,7 +16,7 @@
 * Git
   * [[Forking On Github]]
   * [[Random Git Notes]]
-  * [[Git Reset]]
+  * [[Git Revert and Reset]]
 * Mysql
   * [[General Notes]]
   * [[Database Restore Machine Setup]]
