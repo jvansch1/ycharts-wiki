@@ -297,8 +297,8 @@ easy_install readline
 ## Installing required Python packages for YCharts
 
 ```bash
-pip install -r /sites/ycharts/confs/server/requirements_1.txt
-pip install -r /sites/ycharts/confs/server/requirements_2.txt
+pip install -r /sites/ycharts/confs/server/requirements.txt
+pip install -r /sites/ycharts/confs/server/dev_requirements.txt
 ```
 
 ### Potential Issues
@@ -465,7 +465,7 @@ sudo /sites/ycharts/binaries/wkhtmltox/install.sh mac
 
 ## Configure AWS CLI
 
-> NOTE: Make sure you have run `requirements_2.txt`. Packages `ply` and `awscli`
+> NOTE: Make sure you have run `dev_requirements.txt`. Packages `ply` and `awscli`
 > must be installed.
 
 Ask someone to create an IAM user for you. Once created, they should give you
