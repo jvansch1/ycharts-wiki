@@ -121,6 +121,10 @@ fab staging build quick_deploy
 fab staging:web build quick_deploy
 fab staging:admin build quick_deploy
 fab staging:indicators_admin build quick_deploy
+
+# If only deploying code to autoscaling machines ...
+fab staging disable_autoscaling
+fab staging enable_autoscaling
 ```
 
 ### Prepare release to staging
