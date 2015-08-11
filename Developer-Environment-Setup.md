@@ -371,32 +371,36 @@ python manage.py securities_store_menus
 
 ```bash
 # Initialize security autocompleters
-python manage.py autocompleter_init --remove --store --name main
-python manage.py autocompleter_init --remove --store --name fund
-python manage.py autocompleter_init --remove --store --name stock
+python manage.py autocompleter_init --remove --store --name company
 python manage.py autocompleter_init --remove --store --name etf
+python manage.py autocompleter_init --remove --store --name cef
+python manage.py autocompleter_init --remove --store --name stock
+python manage.py autocompleter_init --remove --store --name fund
+python manage.py autocompleter_init --remove --store --name main
 
 # Initialize calc autocompleters
 python manage.py autocompleter_init --remove --store --name all_calc
 python manage.py autocompleter_init --remove --store --name aggregate_calc
-python manage.py autocompleter_init --remove --store --name history_calc
-python manage.py autocompleter_init --remove --store --name stock_calc
-python manage.py autocompleter_init --remove --store --name stock_history_calc
+python manage.py autocompleter_init --remove --store --name company_calc
+python manage.py autocompleter_init --remove --store --name company_history_calc
 python manage.py autocompleter_init --remove --store --name etf_calc
 python manage.py autocompleter_init --remove --store --name etf_history_calc
-python manage.py autocompleter_init --remove --store --name mutual_fund_calc
-python manage.py autocompleter_init --remove --store --name mutual_fund_history_calc
 python manage.py autocompleter_init --remove --store --name fund_calc
 python manage.py autocompleter_init --remove --store --name fund_history_calc
+python manage.py autocompleter_init --remove --store --name history_calc
 python manage.py autocompleter_init --remove --store --name index_calc
 python manage.py autocompleter_init --remove --store --name index_history_calc
+python manage.py autocompleter_init --remove --store --name mutual_fund_calc
+python manage.py autocompleter_init --remove --store --name mutual_fund_history_calc
+python manage.py autocompleter_init --remove --store --name stock_calc
+python manage.py autocompleter_init --remove --store --name stock_history_calc
 python manage.py autocompleter_init --remove --store --name technical_calc
 
 # Initialize other autocompleters
-python manage.py autocompleter_init --remove --store --name fund_manager
 python manage.py autocompleter_init --remove --store --name fund_benchmark
-python manage.py autocompleter_init --remove --store --name fund_family
 python manage.py autocompleter_init --remove --store --name fund_broker
+python manage.py autocompleter_init --remove --store --name fund_family
+python manage.py autocompleter_init --remove --store --name fund_manager
 ```
 
 ## Initialize Lists and Sets
