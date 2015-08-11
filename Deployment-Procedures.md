@@ -55,7 +55,14 @@ fab production start
 ```
 
 ### Prepare e-mail to notices@ycharts.com
-Include all major features and whatnot
+
+You can run `systems_generate_release_email` management command by
+ 
+`python manage.py systems_generate_release_email`
+
+to generate release email from pivotal tracker.  
+
+Include the output notes in your email.
 
 ### Make annotation on Google Analytics
 Include release number and basic description
