@@ -2,9 +2,7 @@
 
 ## Copy Data Files Method (Preferred)
 #### Copy the Backup Files
-```
 Copy the `ycharts_db` folder from the DB Restore machine to your home directory (`~`)
-```
 
 #### Restore Your Database
 > NOTE: By default, the script will move a database backup from `~/ycharts_db` to
