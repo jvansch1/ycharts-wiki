@@ -401,6 +401,14 @@ python manage.py autocompleter_init --remove --store --name fund_benchmark
 python manage.py autocompleter_init --remove --store --name fund_broker
 python manage.py autocompleter_init --remove --store --name fund_family
 python manage.py autocompleter_init --remove --store --name fund_manager
+
+python manage.py autocompleter_init --remove --store all_info_field
+python manage.py autocompleter_init --remove --store company_info_field
+python manage.py autocompleter_init --remove --store stock_info_field
+python manage.py autocompleter_init --remove --store etf_info_field
+python manage.py autocompleter_init --remove --store mutual_fund_info_field
+python manage.py autocompleter_init --remove --store fund_info_field
+python manage.py autocompleter_init --remove --store index_info_field
 ```
 
 ## Initialize Lists and Sets
