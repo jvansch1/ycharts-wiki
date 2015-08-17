@@ -299,6 +299,9 @@ easy_install readline
 ```bash
 pip install -r /sites/ycharts/confs/server/requirements.txt
 pip install -r /sites/ycharts/confs/server/dev_requirements.txt
+
+# Install additional files for textblob
+python -m textblob.download_corpora
 ```
 
 ### Potential Issues
