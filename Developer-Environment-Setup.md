@@ -299,8 +299,17 @@ easy_install readline
 ```bash
 pip install -r /sites/ycharts/confs/server/requirements.txt
 pip install -r /sites/ycharts/confs/server/dev_requirements.txt
+```
 
-# Install additional files for textblob
+### Install additional files for textblob
+Add the following line to your `~/.bash_profile`
+```bash
+export NLTK_DATA=/sites/ycharts/data/investor_relations/nltk_data
+```
+
+Then run
+```bash
+source ~/.bash_profile
 python -m textblob.download_corpora
 ```
 
