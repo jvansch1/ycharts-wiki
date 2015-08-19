@@ -487,6 +487,12 @@ cd /sites/ycharts/binaries/ycharts_pdf_to_html/
 sudo /sites/ycharts/binaries/wkhtmltox/install.sh mac
 ```
 
+## Set up press release classifier
+
+```bash
+python manage.py investor_relations_generate_press_release_classifier
+```
+
 ## Configure AWS CLI
 
 > NOTE: Make sure you have run `dev_requirements.txt`. Packages `ply` and `awscli`
