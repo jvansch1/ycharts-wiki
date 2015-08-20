@@ -61,7 +61,7 @@ You can run `systems_generate_release_email` management command by
 `python manage.py systems_generate_release_email`
 
 to generate release email from pivotal tracker.  Remember to approve BOTH YCHARTS AND YCHARTS DATA projects.
-Include the output notes in your email.
+Include the output notes in your email. Paste the output in your email as plain text so it doesn't make an ugly line break between each delivered ticket.
 
 ### Make annotation on Google Analytics
 Include release number and basic description
