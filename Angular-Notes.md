@@ -83,6 +83,7 @@ In the template, elements should be constructed as consistently as possible.  In
 * Class
 * Element-specific items: value, type, etct.
 * Other Angular items
+* Do not use `.constant` to serve as the interface to a string value. For instance, angular event names (broadcasts,emits,ons,etc). In those circumstances, just use string in their place.
 
 Yes:
 
