@@ -58,12 +58,7 @@ fab production start
 
 ### Prepare e-mail to notices@ycharts.com
 
-You can run `systems_generate_release_email` management command by
- 
-`python manage.py systems_generate_release_email`
-
-to generate release email from pivotal tracker.  Remember to approve BOTH YCHARTS AND YCHARTS DATA projects.
-Include the output notes in your email. Paste the output in your email as plain text so it doesn't make an ugly line break between each delivered ticket.
+Look at all delivered pivotal tickets and write up which ones were important. Look at YCharts Data tickets too. Send an email [x.x] is live! with delivered tickets that make sense.
 
 ### Make annotation on Google Analytics
 Include release number and basic description
