@@ -58,7 +58,7 @@ fab production start
 
 ### Prepare e-mail to notices@ycharts.com
 
-Look at all delivered pivotal tickets and write up which ones were important. Look at YCharts Data tickets too. Send an email [x.x] is live! with delivered tickets that make sense.
+ Send an email [x.x] is live with all the pasted details from [Release Notes](https://docs.google.com/spreadsheets/d/1OLLeNnxiwOBx8tkdsJTPyifZ6Er_fhiHaLjPsq8VAEk/edit#gid=363985434).
 
 ### Make annotation on Google Analytics
 Include release number and basic description
