@@ -121,7 +121,7 @@ fab production enable_autoscaling
 fab staging build quick_deploy
 
 # If you just want the above to run as fast as it can
-fab staging:skip='git_checks\,autocompleters\,collectstatic' build quick_deploy
+fab staging:skip='autocompleters\,collectstatic' build quick_deploy
 
 # Machine specific quick deploy
 fab staging:web build quick_deploy
