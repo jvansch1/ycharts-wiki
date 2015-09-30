@@ -100,6 +100,9 @@ fab production:admin build hotfix
 
 # If you are only releasing code ONLY to the web server, run:
 fab production:web build hotfix
+
+# If you only need to release code to queue machines, run:
+fab production build disable_autoscaling enable_autoscaling
 ```
 
 ### Turning Hyperscale on In Production
