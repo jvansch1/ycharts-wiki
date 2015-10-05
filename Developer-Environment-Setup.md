@@ -432,7 +432,7 @@ Now, while Celery is running, IN A NEW TAB, do this
 python manage.py securities_process_lists_and_sets
 ```
 
-## Install YCharts Node Packages
+## Install YCharts Chart Image Generator Packages
 
 ```bash
 cd /sites/chart_image_generator
