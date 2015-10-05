@@ -452,7 +452,7 @@ If you get some weird errors, try the following, then redo the above:
 npm cache clean
 # Remove all installed packages and other NPM stuffs
 rm -rf ~/.npm
-rm -rf /sites/ycharts_node/node_modules
+rm -rf /sites/chart_image_generator/node_modules
 ```
 
 > NOTE: Be sure you are not using `sudo`. You might need to change
