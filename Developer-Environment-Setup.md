@@ -39,7 +39,7 @@ brew install pkg-config
 1. Configure so your SSH passphrase is remembered.
     * Follow the instructions here: http://help.github.com/working-with-key-passphrases/.
     * For Mac, you won't have to do anything like set up ssh-agent as long as you're using the default key name
-1. Fork the code on github for `ycharts` and `ycharts_node` to your own repo.
+1. Fork the code on github for `ycharts` and `chart_image_generator` to your own repo.
 1. Set up `/sites` directory
 
     ```bash
@@ -51,31 +51,31 @@ brew install pkg-config
     sudo chown -R <username> /sites/
     ```
 
-1. Clone the `ycharts` and `ycharts_node` repos
+1. Clone the `ycharts` and `chart_image_generator` repos
 
     ```bash
     git clone git@github.com:ycharts/ycharts.git ycharts
-    git clone git@github.com:ycharts/ycharts_node.git ycharts_node
+    git clone git@github.com:ycharts/chart_image_generator.git chart_image_generator
     ```
 
 1. Copy git configs to correct locations so you can push/pull
 
     ```bash
     cp /sites/ycharts/confs/developers/git_config /sites/ycharts/.git/config
-    cp /sites/ycharts_node/confs/git_config /sites/ycharts_node/.git/config
+    cp /sites/chart_image_generator/confs/git_config /sites/chart_image_generator/.git/config
     ```
 
 1. Set up your git pre-commit hooks
 
     ```bash
     ln -s -f /sites/ycharts/confs/developers/git_pre_commit_hook.py /sites/ycharts/.git/hooks/pre-commit
-    ln -s -f /sites/ycharts_node/confs/git_pre_commit_hook.py /sites/ycharts_node/.git/hooks/pre-commit
+    ln -s -f /sites/chart_image_generator/confs/git_pre_commit_hook.py /sites/chart_image_generator/.git/hooks/pre-commit
     ```
 
 1. Set up Pivotal Tracker integration
     1. On Pivotal Tracker go to "Profile" and scroll down to the bottom where it says "API Token".
         * If there is not already an API Token listed, click "Create New Token" and then copy it.
-    1. On GitHub, browse to your own fork of the `ycharts` or `ycharts_node` repo (i.e. `your_name/ycharts`).
+    1. On GitHub, browse to your own fork of the `ycharts` or `chart_image_generator` repo (i.e. `your_name/ycharts`).
     1. Go to "Settings" --> "Webhooks & Services" --> "Add service" --> "Pivotal Tracker".
     1. Paste the API token from above in the "Token" box, check the "Active" checkbox, and click "Update Settings".
 
@@ -435,7 +435,7 @@ python manage.py securities_process_lists_and_sets
 ## Install YCharts Node Packages
 
 ```bash
-cd /sites/ycharts_node
+cd /sites/chart_image_generator
 
 # Set necessary flags
 export PKG_CONFIG_PATH=/usr/X11/lib/pkgconfig
@@ -456,7 +456,7 @@ rm -rf /sites/ycharts_node/node_modules
 ```
 
 > NOTE: Be sure you are not using `sudo`. You might need to change
-> permissions for `~/.npm` and/or `/sites/ycharts_node/node_modules`
+> permissions for `~/.npm` and/or `/sites/chart_image_generator/node_modules`
 > to get `npm install` to work.
 
 ## Setup PDF -> Html Converter
