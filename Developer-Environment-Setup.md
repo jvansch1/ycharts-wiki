@@ -369,8 +369,6 @@ echo "from development import *" > /sites/ycharts/ycharts/settings/active.py
 ```bash
 python manage.py calculations_score_autocompleter
 python manage.py calculations_store_menus
-python manage.py companies_store_menus
-python manage.py fund_attributes_store_menus
 python manage.py securities_store_menus
 ```
 
