@@ -21,7 +21,7 @@ git tag X.X.X
 git push origin master
 git push origin --tags
 
-cd /sites/ycharts_node
+cd /sites/chart_image_generator
 git checkout develop
 git pull origin develop
 git checkout master
@@ -143,7 +143,7 @@ git checkout develop
 git pull origin develop
 git push origin develop
 
-cd /sites/ycharts_node
+cd /sites/chart_image_generator
 git checkout develop
 git pull origin develop
 git push origin develop
