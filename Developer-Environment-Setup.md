@@ -385,8 +385,11 @@ python manage.py autocompleter_init --remove --store --name company
 python manage.py autocompleter_init --remove --store --name etf
 python manage.py autocompleter_init --remove --store --name cef
 python manage.py autocompleter_init --remove --store --name stock
+# Fund handles both "CompanyFund" and "MutualFund" objects
 python manage.py autocompleter_init --remove --store --name fund
-python manage.py autocompleter_init --remove --store --name main
+python manage.py autocompleter_init --remove --store --name indicator
+python manage.py autocompleter_init --remove --store --name index
+python manage.py autocompleter_init --remove --store --name company_investor_info
 
 # Initialize calc autocompleters
 python manage.py autocompleter_init --remove --store --name all_calc
