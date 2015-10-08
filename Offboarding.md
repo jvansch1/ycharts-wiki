@@ -6,6 +6,8 @@ Suspend or delete their account at http://google.com/a/ycharts.com
 
 If it exists, delete their account's access to Google Analytics
 
+If it exists, delete their http://slack.com account
+
 If it exists, delete their http://theresumator.com account
 
 If it exists, delete their http://pivotaltracker.com account
