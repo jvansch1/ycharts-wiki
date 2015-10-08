@@ -18,8 +18,6 @@ If it exists, delete their http://mixpanel.com account
 
 If it exists, delete their http://balsamiq.com account
 
-If it exists, delete their http://mixpanel.com account
-
 Remove the users' @ycharts.com account on ycharts.com.
 
 If it exists, remove "is_staff" access to the user's personal accounts on ycharts.com
