@@ -6,13 +6,19 @@ Suspend or delete their account at http://google.com/a/ycharts.com
 
 If it exists, delete their account's access to Google Analytics
 
+If it exists, remove the user's membership from the YCharts project on http://github.com and remove from all groups/teams.
+
 If it exists, delete their http://slack.com account
 
 If it exists, delete their http://theresumator.com account
 
 If it exists, delete their http://pivotaltracker.com account
 
-If it exists, remove the user's membership from the YCharts project on http://github.com and remove from all groups/teams.
+If it exists, delete their http://mixpanel.com account
+
+If it exists, delete their http://balsamiq.com account
+
+If it exists, delete their http://mixpanel.com account
 
 Remove the users' @ycharts.com account on ycharts.com.
 
