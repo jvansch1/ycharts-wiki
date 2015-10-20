@@ -1,7 +1,5 @@
 ### Getting Started With VMWare Fusion
 
-## Getting Started
-
 ### Step 1:
 
 Break out the Ycharts Credit Card and go to [http://www.vmware.com/products/fusion/](http://www.vmware.com/products/fusion/)
