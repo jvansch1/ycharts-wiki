@@ -53,5 +53,3 @@ Underneath where it says "Status: Connected" you'll see:
 
 copy your ip into the browser window on your vm with :8000
 like this: XX.X.X.XX:8000
-
-Now, look at what you've built and start crying over how broken it is on obsolete versions of internet explorer no one has any business using anymore...
