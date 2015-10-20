@@ -1,4 +1,25 @@
-### Getting Started With VMWare Fusion
+# VirtualBox
+If you need to test on other IE versions, ie. reports of a user saying IE x.x doesn't work on Windows x.x 
+
+go here
+```
+https://dev.modern.ie/tools/vms/windows/
+```
+
+download the correct version. Select the VirtualBox version. You may need to install VirtualBox at 
+```
+https://www.virtualbox.org/wiki/Downloads
+```
+
+In VirtualBox, go to File, Import Appliance
+
+![](https://d1zjcuqflbd5k.cloudfront.net/files/acc_134337/1huKa?response-content-disposition=inline;%20filename=Screen%20Shot%20on%202015-10-20%20at%2011%3A36%3A30.png&Expires=1445355732&Signature=KVheW63B623NFBqxuwgxYL~H0tINK7R8bYXPDu6vLR-D9PT7udl1K8FFKVXFIzvmkTwWHs0y2JimzUQFza6dDrv7iqIEC6D64NHNirNk0JG9O6QBThMDH21N5tFtVzXjqbWu-SIaLfSwkJ3f6dEl0~XACELWgQuy3aGJrlRE6X4_&Key-Pair-Id=APKAJTEIOJM3LSMN33SA)
+
+Select where you downloaded the VirtualBox Container, hit okay. You should have a final prompt of settings. Leave those as default (unless you know what you're doing).
+
+![](https://d1zjcuqflbd5k.cloudfront.net/files/acc_134337/1k85H?response-content-disposition=inline;%20filename=Screen%20Shot%20on%202015-10-20%20at%2011%3A38%3A33.png&Expires=1445355819&Signature=gP0ZnTK~ca-MPMWOh5bowiS96-ofdNBXM84NnuTR9MS2VSWZ0c4dLge11FambdDjBVwiFWN-OFHVNM~bhJKm9uHWKV3xL6A1asmVpp7bPaCmyy3Iz8N7nLtFtvHeqcAM4ZPjXNINB7W4Sj8uLJ6BbQu7wKv3u8LzJev458srOoo_&Key-Pair-Id=APKAJTEIOJM3LSMN33SA)
+
+# VMWare Fusion
 
 ### Step 1:
 
@@ -8,36 +29,12 @@ You do not need Pro, it just has a bunch of workstation/IT management related ga
 
 Download and install.
 
-### Step 2 the Hard Way:
+### Step 2:
 Go to [http://www.modern.ie/en-us/virtualization-tools#downloads](http://www.modern.ie/en-us/virtualization-tools#downloads)
 
 On "get vms" select Mac and vmware fusion for mac.  Download the parts one at a time for each install you want.
 
-### Step 2 the Easy Way:
-You might want to do these one at a time (see last substep)
-get XP ie8 in terminal:
-
-    curl -O -L "https://www.modern.ie/vmdownload?platform=mac&virtPlatform=vmware&browserOS=IE8-WinXP&parts=0&filename=VMBuild_20131127/VMware/IE8_WinXP/Mac/IE8.WinXP.For.MacVMWare.sfx"
-
-get win 7 ie9:
-
-	$ curl -O "https://az412801.vo.msecnd.net/vhd/IEKitV1_Final/VMWare_Fusion/IE9_Win7/IE9.Win7.For.MacVMware.part0{1.sfx,2.rar,3.rar}"
-
-From the terminal, allow the downloaded file to execute by typing the following on the SFX file only.
-
-	chmod +x <filename>.sfx
-
-Run the SFX file from a terminal 
-
-	./<filename>.sfx 
-
-It will decompress into the VMWAREVM you can open with VMWare Fusion.  This will take a minute.
-
-Move the vmware vm somewhere stable (docs, some personal dev folder, whatever) and open with vmware fusion.
-
-Note:  You will not be able to register these XP/Win7 licenses so do not get too comfortable in them.  They are strictly for testing IEs so you'll be able to log in, get on IE and go to the site, but otherwise, since we may need to redownload every 30 days (tbd), treat them as disposable.  Not actually closing your vm is a bit of trick around this but otherwise you will need to do all of these again eventually.
-
-##Accessing your local via your VM:
+# Accessing your local environment via your virtual machine:
 
 Runserver in the following way.  This will allow you to access it from your vm (or elsewhere)
 
