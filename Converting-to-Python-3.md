@@ -116,7 +116,10 @@ sed -i '.bak' -e 's/^import string_utils$/from apps.main.utils import string_uti
 # except Exception, e:
 2to3 -w -f except -f dict -f imports -f has_key -f long -f basestring /sites/ycharts
 ```
-
+```bash
+# some builtin functions conversion
+2to3 -w -f map -f filter -f zip -f xrange -f itertools_imports -f itertools /sites/ycharts
+```
 ### Django Python 3 Changes
 #### Replace force_unicode
 ```bash
