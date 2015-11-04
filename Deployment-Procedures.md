@@ -16,7 +16,7 @@ git pull origin develop
 git checkout master
 git pull origin master
 git merge --no-ff develop
-git fetch origin --tags
+git vtag
 git tag X.X.X
 git push origin master
 git push origin --tags
