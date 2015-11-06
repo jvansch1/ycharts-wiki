@@ -1,17 +1,14 @@
 ### Contents
 
 Alert Models
+* Alert Examples
+* Setting Alerts
 
 Tasks
 
 * Main Asynchronous Functions
+* Sending Emails
 * Helper Functions
-
-Alert Utils
-* Setting and Deleting Alerts
-* Getting Deltas for Alert Generation
-
-Sending Emails
 
 Miscellaneous Supporting Tools
 * Company raw deltas (used to generate all non-limit company alerts)
@@ -21,68 +18,108 @@ Miscellaneous Supporting Tools
 
 # Detailed App Functions and Interactions
 
-## Types of alerts (alerts.models)
 
-###class UserAlert(models.Model)
+## AlertBase
 
-Abstract class that contains common elements between alerts.  Attributes include:
+Excluding alerts set on watchlists, all alerts are created through the AlertBase class method `create_alert_for_type(security_type, alert_type, alert_data)`.  Using the security type and alert type, we get athe appropriate model from ALERT_TYPE_TO_CLASS and call its own _create_alert(alert_data) method.
 
-    user = models.ForeignKey(User) # The user who set the alert and who will be sent the alert
-    create_date = models.DateField(auto_now_add=True) # The date the alert was created
-    modify_date = models.DateField(auto_now=True) # Date the alert was last modified
-    is_triggered = models.BooleanField(default=False) # Once the alert is triggered, this is set to true
-    trigger_date = models.DateTimeField(null=True, blank=True) # Date the alert is triggered
-    is_emailed = models.BooleanField(default=False) # True if the alert has been emailed
-    email_date = models.DateField(null=True, blank=True) # Date the alert was emailed
-    feature_needed = models.CharField(max_length=100, default='') # Feature need to use the alert
+## AlertWatchlist
 
-### class CompanyCalcLimitUserAlert(UserAlert)
+Alerts set on watchlists are set by creating an AlertWatchlist which is tied to a specific watchlist.  AlertWatchlist creates the individual alerts (in a similar fashion to AlertBase) for each watchlist item.  When a watchlist is updated (by adding or removing items), alerts/signals.py handles creating and deleting corresponding alerts.
 
-Allows users to set an alert on any calculation for any company.  For example: Alert me when the price of AAPL falls to $550.00.
+A security AlertWatchlist (ex. AlertCompanyWatchlist) is a proxy model on AlertWatchlist (similar to how Watchlist works).
 
-    company = models.ForeignKey(Company) # The company to which the alert applies
-    calculation = models.CharField(... choices=calc_info.get_calculation_menu_named_list(menu_type='all', include_pro_calcs=True))
-    # calculation is the name of the calculation that the user wants to be alerted about.
-    limit_type = models.CharField(max_length=3, choices=LIMIT_TYPES) # 'gte' (Greater than or equal to) or 'lte' (less than or equal to)
-    limit_value = models.DecimalField(max_digits=13, decimal_places=2) # the value at which the alert should trigger
+# Types of alerts (alerts.models)
 
-### class CompanyPortfolioAlert(UserAlert)
+Alerts are organized first by security_type (ex. companies, funds, indicators, portfolios) and then by the alert_type (calc limit, portfolio entry/exit, news, events, etc.).
+
+## Alert Examples
+
+### class AlertCompanyCalcLimit(AlertCompanyBase, AlertCalcLimit)
+
+Allows users to set an alert on any calculation for any company. For example: Alert me when the price of AAPL falls to $550.00.
+
+### class AlertIndexCalcLimit(AlertIndexBase, AlertCalcLimit)
+
+Allows users to set an alert on any calculation for any index. For example: Alert me when the level of ^DJI falls to 17770.
+
+### class AlertMutualFundCalcLimit(AlertMutualFundBase, AlertCalcLimit)
+
+Allows users to set an alert on any calculation for any index. For example: Alert me when the price of M:VFIAX rises above 200.
+
+### class AlertIndicatorLimit(AlertIndicatorBase)
+
+Allows users to set an alert on any calculation for any index. For example: Alert me when the value of I:USUR falls below 5%.
+
+AlertIndicator is similar in function to to other Limit alerts except that it does not operate on a calculation.  Instead, the limit_name attribute determines what data we pull fron the Indicator.  The values that we currently accept are stored in INDICATOR_FIELD_NAME_TO_LABEL and comprises of "last_value", "change_year_ago_percent", and "last_change_percent".  This is why AlertIndicatorLimit looks like a copy of AlertCalcLimit but does not inherit from it.
+
+### class AlertCompanyPortfolio(AlertCompanyBase)
 
 Alerts when a chosen stock enters/exits Portfolio Strategies. Eg. Alert me when MSFT enters or exits any Portfolio Strategy.
 
-### class CompanyRatingAlert(UserAlert)
+### class AlertCompanyRating(AlertCompanyBase)
 
 Alerts users when a company's overall rating changes.  Eg. Alert me whenever MSFT's overall rating changes.
 
-### class CompanyValueScoreAlert(UserAlert)
+### class AlertCompanyValueScore(AlertCompanyBase)
 
 Alerts when a chosen stock's value score changes.
 
-### class CompanyFundamentalScoreAlert(UserAlert)
+### class AlertCompanyFundamentalScore(AlertCompanyBase)
 
 Alerts when a chosen stock's fundamental score changes.
 
-The four preceding alert models above all have the same attributes:
+### class AlertPortfolio(AlertBase)
 
-    company = models.ForeignKey(Company) # The company that the user wants to follow
-    last_checked = models.DateTimeField() # The last time we checked to see if there was motion for the company
+Allows users to "follow" Portfolio Strategies.  Eg. Alert me whenever new stocks enter or exit the Large Cap Value Strategy. 
 
-All of these alerts are unique to a company for a specific user to prevent duplicate alerts.
+The preceding alert models all inherit security information from an Alert Security class while inheriting (when possible) alert specific information from an Alert Type class.
 
-### class PortfolioUserAlert(UserAlert)
+We also make alerts unique to the security and to a user to prevent duplicate alerts.
 
-Allows users to "follow" Portfolio Strategies.  Eg. Alert me whenever new stocks enter or exit the Large Cap Value Strategy.
+## Fund alerts
 
-    portfolio = models.ForeignKey(Portfolio) # The portfolio that the user is following
-    last_checked = models.DateTimeField() # The last time we checked for changes in the portfolio.
+As in other places, funds are of note because they live in both the Company and MutualFund models.  In this case, we use the securit_typey: alert_type structure in order to create different Alert objects but keep it tied to say, the same FundWatchlist.  Also because of this distinction, CalcLimits for FundWatchlists will silently fail on creation for a fund that doesn't have the calculation.  For example, Net Income is a company only calculation.  When creating an alert on a fund watchlist for Net Income, MutualFunds will be ignored.
 
-__Class Variables__
+
+## Class Variables
+
+### ALERT_TYPES
+
+This variable is worth looking at.  It contains useful info about various types of alerts, and contains the standard names for each alert.
+
+    ALERT_TYPE_TO_CLASS = {
+	    'company':{
+	        'calc_limit': AlertCompanyCalcLimit,
+	        'overall_rating': AlertCompanyRating,
+	        'fundamental_score': AlertCompanyFundamentalScore,
+	        'value_score': AlertCompanyValueScore,
+	        'portfolio': AlertCompanyPortfolio,
+	        'financial_data': AlertCompanyFinancialData,
+	        'news_data': AlertCompanyNewsData,
+	        'events': AlertCompanyEventData,
+	    },
+	    'index':{
+	        'calc_limit': AlertIndexCalcLimit,
+	        'news_data': AlertIndexNewsData,
+	    },
+	    'indicator':{
+	        'indicator_limit': AlertIndicatorLimit,
+	    },
+	    'mutual_fund':{
+	        'calc_limit': AlertMutualFundCalcLimit
+	    },
+	    'portfolio':{
+	        'portfolio': AlertPortfolio
+	    }
+	}
 
 ### EMAIL_FREQUENCIES
 Currently there are three types of email frequencies:
 
     EMAIL_FREQUENCIES = (
         ('a', 'As Soon as Possible'), # this will be intraday for price-based calcs and end of day for all others
+        ('ah', 'After Hours'), # This executes alerts that run after US market hours
         ('d', 'Daily'), # using the end of day close price for all price-based calcs
         ('w', 'Weekly'), # these will be run every Saturday Morning
     )
@@ -96,218 +133,34 @@ There are only two operators that we use for limit types, which can be combined 
     LIMIT_TYPES = (
         ('gte', 'Greater Than or Equal To'),
         ('lte', 'Less Than or Equal To'),
-
     )
 
 ## alerts.tasks
 
- __Main Asyncronous Functions__
+ __Main Asynchronous Functions__
 
-### execute_asap_alerts()
+### execute_alerts()
 
-No arguments - this function runs alerts that should be triggered as soon as possible
-
-### execute_daily_alerts()
-
-No arguments - runs alerts executeded daily
-
-### execute_weekly_alerts()
-
-No arguments - Runs alerts executed weekly
-
-### execute_all_user_alerts(user_id, time)
-
-This is the real workhorse function.  It executes all alerts for a given user.  This is probably the **best central starting point for learning about alerts.**
+No arguments - this function runs alerts based on a frequency set when the AlertExecutor is initialized.
+This is the real workhorse function.  It executes all alerts for users who fit the current frequency.  This is probably the **best central starting point for learning about alerts.**  It operates by first iterating through all of the alert models to find the users that have potentiall actionable alerts.  Then we execute each user's actionable
+ alerts.
 
 __Helper functions__
 
-### execute_limit_alert(alert, email_now)
+### _get_actionable_alerts(security_type, alert_type, send_email=False):
+Gets all of the alert items we have to consider during this cycle of alerts execution for a specific alert model.  We use security_type and alert_type to determine which model (using ALERT_TYPE_TO_CLASS).  Whether the alert is actionable is determined by email preferences and fre
+quency.
 
-Takes an alert object called `alert` and a boolean variable `email_now`.  Returns a message and the alert object to create an email or post to homepage.
-Also modifies the alert so it is triggered, sends an email if necessary, marks that an email has been sent, and creates a message for the homepage if necessary.
-
-    # Given the following:
-
-    alert1.company.symbol = 'AAPL'
-    alert1.limit_type = 'gte'
-    alert1.calculation = 'price'
-    alert1.limit_value = Decimal('500.00')
-    # Current price of AAPL is 600.00
-
-    >> message, alert = execute_limit_alert(alert1, True)
-    # Email will be sent to the user and message, alert will have the following values
-    >> alert
-    <CompanyCalcLimitUserAlert: CompanyCalcLimitUserAlert object>
-    >> message
-    u'AAPL <a href="http://ycharts.com/companies/AAPL/price">Price</a> rose to your target level of 500.00. Its current value is 600.00'
-
-Messages for other alerts will be similar.
-
-### execute_portfolio_alert(alert)
-
-Checks to see if the portfolio in `alert.portfolio` has had new entrants or exits.  Returns a message and the alert as `execute_limit_alert()` does.
-
-### execute_comp_port_alert(alert)
-
-Checks a company `alert.company` to see if the company has entered or exited any portfolios.  Returns a message and the alert as `execute_limit_alert()` does.
-
-__Bulk Alerts__
-
-These alerts all check all alerts of the same type between the dates `last_checked_date` and `datetime.date.today()` for all companies in `company_list` (a list of ids).
-They return a list of messasges similar to `execute_limit_alert()`, but not a single alert.
-
-### execute_overall_rating_alerts(user, last_checked_date, company_list)
-### execute_value_score_alerts(user, last_checked_date, company_list)
-### execute_fundamental_score_alerts(user, last_checked_date, company_list)
-
-## alerts.utils.alert_utils
-
-### ALERT_TYPES (variable)
-
-This variable is worth looking at.  It contains useful info about various types of alerts, and contains the standard names for each alert, similar to `calc_info` in `apps.calcs`.
-
-    ALERT_TYPES = {
-        'company_limit': {
-            'model': CompanyCalcLimitUserAlert,
-            'global': False, # 'global' tells whether an alert is global (contstantly being checked for all companies) or not
-            'company': True, # 'company' tells if an alert is related to a specific company
-        },
-        'overall_rating': {
-            'model': CompanyRatingAlert,
-            'global': True,
-            'company': True,
-        },
-        'fundamental_score': {
-            'model': CompanyFundamentalScoreAlert,
-            'global': True,
-            'company': True,
-        },
-        'value_score': {
-            'model': CompanyValueScoreAlert,
-            'global': True,
-            'company': True,
-        },
-        'company_portfolio': {
-            'model': CompanyPortfolioAlert,
-            'global': True,
-            'company': True,
-        },
-        'portfolio': {
-            'model': PortfolioUserAlert,
-            'global': True,
-            'company': False,
-        },
-    }
-
-__Setting and Deleting Alerts__
-
-### global_alert_for_watchlist(alert_type, watchlist, email_frequency)
-
-Sets the same alert type for all stocks in the watchlist.
-
-`alert_type` is any string in `alert_utils.ALERT_TYPES.keys()` where `ALERT_TYPES[alert_type]['gobal'] == True`
-
-`watchlist` is any `CompanyWatchlist` object.
-
-`email_frequency` is any value in `apps.alerts.models.EMAIL_FREQUENCIES`
-
-For example:
-
-    >> global_alert_for_watchlist(alert_type='overall_rating', watchlist=mywatchlist, email_frequency='a')
-    # Sets an overall rating alert for all companies in mywatchlist to be checked As Soon as Possible'
-
-### limit_alert_for_watchlist(watchlist, calculation, limit_type, limit_value, email_frequency)
-
-Does the same thing as global_alert_for_watchlist() shown above, but takes 3 different arguments:
-1. `calculation` is the internal name of any calculation in our system
-2. `limit_type` is the standard 'gte' or 'lte' for a limit alert
-3. `limit_value` is the value at which the alert should be triggered
-
-### delete_all_user_alerts(user)
-
-Does exactly what it sounds like it should do for a given `django.contrib.auth.User` object `user`
-
-__Getting Deltas for Alert Generation__
-
-### get_portfolio_company_deltas(portfolio, start_date, end_date)
-
-This function will get all changes to a portfolio between `start_date` and `end_date` (both of which are datetime objects).  `portfolio` is a Portfolio class object.
-
-    # Import necessary items
-    >>> from apps.portfolios.models import Portfolio
-    >>> from apps.alerts.utils import alert_utils
-    >>> import datetime
-
-    # Get a portfolio
-    >>> lcv = Portfolio.objects.get(internal_name='large_cap_value')
-
-    # Get entrants and exits
-    >>> alert_utils.get_portfolio_company_deltas(lcv, datetime.date(2012,5,3), datetime.date(2012,5,7))
-    {'entrants': [u'BLK', u'LMT', u'MET', u'MRO', u'PEG', u'PPL', u'WAG', u'WFC', u'WLP', u'LYB'], 'exits': [u'DUK', u'ETN', u'EXC', u'FE', u'NOC', u'PRU']}
-    # This is all the changes in the portfolio between 5/3/2012 and 5/7/2012
-
-### get_company_portfolio_deltas(company, start_date, end_date)
-
-Takes a `Company` class object and two datetimes, `start_date` and `end_date`.  Returns all portfolios the company entered or exited over the given timeframe.
-
-    # Import necessary items
-    >>> from apps.companies.models import Company
-    >>> from apps.alerts.utils import alert_utils
-    >>> import datetime
-
-    # Get a company
-    >>> wag = Company.objects.get(symbol='WAG')
-
-    # Get portfolios the company entered and exited.
-    >>> alert_utils.get_company_portfolio_deltas(wag, datetime.date(2012, 5, 3), datetime.date(2012, 5, 7))
-    {'entered': [{'portfolio_name': u'Large Cap Value', 'internal_name': u'large_cap_value'}], 'exited': []}
-
-### get_company_deltas(delta_type, company_id_list, start_date, end_date)
-
-Takes four arguments:
-1. `delta_type` can be 'overall_rating', 'value_score' or 'fundamental_score'
-2. `company_id_list` a list of company ids, eg. [1, 2, 12] for Agilent, Alcoa and Apple
-3. `start_date` a datetime.date() object showing the day before the range to look at starts
-4. `end_date` a datetime.date() object showing the day the range to look at ends.
-
-Samples:
-
-    # Import alert_utils
-    >>> from apps.alerts.utils import alert_utils
-
-    # Get overall rating deltas
-    >>> alert_utils.get_company_deltas('overall_rating', [3075], datetime.date(2012,5,1), datetime.date(2012,5,3))
-    {u'MSFT': {'new_rating': None, 'old_rating': u'1-attractive'}} # MSFT's company id is 3075
-
-    # Get value score deltas
-    >>> alert_utils.get_company_deltas('value_score', [3075], datetime.date(2012,5,1), datetime.date(2012,5,3))
-    {u'MSFT': {'new_rating': 9L, 'old_rating': None}} # MSFT's company id is 3075
-
-## alerts.utils
-
-__Sending emails__
-### send_alert_email(alerts, template, subject, recipient, send_notice=True)
-
-This funciton will rarely change, but here are the arguments:
-
-`alerts` a list of tuples of the form (alert, message) or (user, message), depending on the alert type.
-
-`template` the html template 'alerts/emails/basic_alert.html'
-
-`subject` changes depending on the type of alert sent (see send_summarized_alert_email())
-
-`recipient` is the email address to which the email will be sent (string type variable)
-
-### send_summarized_alert_email(alert_data, alert_types)
+### _send_summarized_alert_email(self, user, alerts_by_type, test_only=False):
 
 This function summarizes all alerts into one email for the user.  It takes two arguments.
 
-`alert_data` a list of tuples of the form (alert, message) or (user, message), depending on the alert type.
+`alerts_by_type` is a dictionary of alert types that have been triggered and will be sent to the user.
+Alert types are named in apps.alerts.models.ALERT_TYPE_TO_CLASS
 
-`alert_types` is a list of alert types that have been triggered and will be sent to the user.
-Alert types are named in apps.alerts.utils.alert_utils.ALERT_TYPES.keys()
+The HTML template used is stored in 'alerts/emails/basic_alert.html'.  The actual sending of the email is handled through user_email_utils.
 
-## Miscellanious Supporting Tools
+# Miscellaneous Supporting Tools
 
 ### apps.companies.models (Company raw delta objects)
 * class CompanyRatingDelta(models.Model)
@@ -321,12 +174,12 @@ Alert types are named in apps.alerts.utils.alert_utils.ALERT_TYPES.keys()
 * apps.companies.tasks.clean_company_deltas(date) - cleans all CompanyRatingDelta, CompanyValueScoreDelta and CompanyFundamentalScoreDelta objects
 * apps.portfolios.tasks.clean_portfolio_deltas(date) - cleans all old CompanyPortfolioDelta object
 
-Both of these are run in apps.main.management.commands.main_execute_daily_tasks
+Both of these are run in apps.systems.management.commands.management_command.systems_execute_daily_tasks
 
-### How alerts are run by our system
+# How alerts are run by our system
 
-`apps.main.management.commands.main_execute_daily_tasks`
+`apps.systems.management.commands.management_command.systems_execute_daily_tasks`
 Runs all daily and weekly alerts.  It also removes stale deltas from apps.companies.models tables and apps.portfolios.models tables (see above).
 
 `apps.alerts.management.commands.alerts_queue_tasks`
-Runs our intraday alerts.
+Runs our intraday alerts and after hours alerts.
