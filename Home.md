@@ -167,11 +167,11 @@ Here are our apps:
 * `articles` - code related to the the article we produce [in our analysis center](http://ycharts.com/analysis).
 * `calculations` - models + executors for most calculations are here
 * `charts` - views and utilities for getting chart data + several single page apps like our [Fundamental Chart](http://ycharts.com/charts/fundamental_chart/) and [Technical Chart](http://ycharts.com/charts/technical_chart/). This is centralized as charts can draw data from objects in multiple other apps.
+* `classifications` - contains models relating to [sector and industry data](https://ycharts.com/classifications/sectors) (ex. Naics, MornSector, and MornIndustry).
 * `companies` - all information surrounding a company, including data import management commands, utils for getting company data form external sources, and tons of important model methods for accessing company information.
 * `countries` - contains models relating to countries and national holidays (which are used by indicators for scheduling purposes)
 * `currencies` - contains models relating to currencies and exchange rates
 * `dashboard` - code that powers our [Dashboard](http://ycharts.com/dashboard/). Center for Watchlist management, news and charts.
-* `email_lists` - connects our users to our Campaign Monitor email lists.
 * `embeds` - Management commands, asset files and utilities used to create our interactive JS embeds.
 * `estimates` - data model, import scripts and management commands for downloading and processing Zacks Sales/ Earnings Estimates
 * `excel` - contains views for downloading and getting information regarding our [Excel Plugin](http://ycharts.com/excel)
@@ -188,6 +188,7 @@ Here are our apps:
 * `messaging` - handles the yellow pop up box that can display messages on our site.
 * `mutual_funds` - contains all models relating to mutual funds as well as management commands for importing the data
 * `news` - handles importing of third party news feeds into our site.
+* `notes` - holds user-entered notes on a company, index, or fund.
 * `partners` - holds a generic model for partners that have some business relationship with YCharts. Currently only for partner subscriptions, which are subscriptions that were not paid for on our site.
 * `pdf_reports` - code for generating our company PDF reports.
 * `portfolios` - models for and utils to help with our pro portfolio strategies.
@@ -201,6 +202,7 @@ Here are our apps:
 * `store` - Handles all paid product sign up, upgrade, downgrade, cancel, etc.
 * `support` - Power the [support center](http://ycharts.com/support)
 * `systems` - Views, models, and management commands for systems related things like the [Important Command Dashboard](http://ycharts.com/systems/review) or [Queue Info](http://ycharts.com/systems/review/queue_info)
+* `tables` - code comparison tables and metric sets
 * `topics` - DEPRECATED - recently removed from the site; kept because it contains information on holdings of investing pro like Warren Buffett, David Einhorn, etc. (13-f filing info). Due to be replaced by direct 13-F from a data provider
 * `tracking` - utils for tracking customer activity via [MixPanel](https://mixpanel.com/)
 * `userstats` - utils for keeping track of statistics of users
