@@ -57,7 +57,6 @@
   * [[Calculation Principles]]
   * [[Fundamental Data Testing]]
   * [[Jquery UI Components]]
-  * [[Lodash Usage]]
   * [[News Headline Feeds]]
   * [[Linux Process Debugging]]
   * [[Getting a new SSL certificate]]
