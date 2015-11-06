@@ -202,7 +202,7 @@ Here are our apps:
 * `store` - Handles all paid product sign up, upgrade, downgrade, cancel, etc.
 * `support` - Power the [support center](http://ycharts.com/support)
 * `systems` - Views, models, and management commands for systems related things like the [Important Command Dashboard](http://ycharts.com/systems/review) or [Queue Info](http://ycharts.com/systems/review/queue_info)
-* `tables` - code comparison tables and metric sets
+* `tables` - provides security comparison and timeseries app
 * `topics` - DEPRECATED - recently removed from the site; kept because it contains information on holdings of investing pro like Warren Buffett, David Einhorn, etc. (13-f filing info). Due to be replaced by direct 13-F from a data provider
 * `tracking` - utils for tracking customer activity via [MixPanel](https://mixpanel.com/)
 * `userstats` - utils for keeping track of statistics of users
