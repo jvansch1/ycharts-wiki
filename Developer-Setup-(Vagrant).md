@@ -4,10 +4,6 @@ Install XCode (full install) AND command line tools from here
 (you will need to create an Apple dev account)
 http://developer.apple.com/downloads
 
-### XQuartz
-If you have OSX 10.8 or higher, you may also need to install XQuartz manually:
-http://xquartz.macosforge.org/landing/
-
 ### Homebrew
 Install Homebrew for easier package management
 
@@ -20,16 +16,6 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 ```bash
 # For the pre commit hook
 brew install ack
-# For Numpy/SciPy/Pandas
-brew install gcc
-# For pylibmc
-brew install libmemcached
-# For weasyprint
-brew install pango gdk-pixbuf libxml2 libxslt libffi
-# If you're using OSX 10.9+:
-brew install swig
-# Install pkg-config (may be necessary for some other packages)
-brew install pkg-config
 ```
 
 ## Checkout code
@@ -118,30 +104,6 @@ ssh -o ProxyCommand='ssh ec2-user@52.6.96.159 -W %h:%p' <internal-ip>
 ssh -o ProxyCommand='ssh ec2-user@52.4.31.32 -W %h:%p' <internal-ip>
 ```
 
-## Install Node
-
-```bash
-brew update
-brew tap homebrew/versions
-brew install node010
-```
-
-Pay special attention to the post install directions.
-It may tell you add to your $PATH in your `~/.bash_profile`
-
-## Install Node Packages
-
-```bash
-cd sites/ycharts
-npm install
-```
-
-## Install Cairo
-```bash
-brew install jpeg
-brew install cairo
-```
-
 ## Install MySQL
 
 ```bash
@@ -213,149 +175,6 @@ launchctl load ~/Library/LaunchAgents/homebrew.mxcl.redis28.plist
 
 # Use the redis cli with:
 redis28-cli
-```
-
-## Install Mercurial
-
-Download and install the latest Mercurial binary for OSX, http://mercurial.selenic.com/,
-or to install via Homebrew
-
-```bash
-brew install mercurial
-
-# Tell python where to find the installed site-packages
-mkdir -p ~/Library/Python/2.7/lib/python/site-packages
-echo '/usr/local/lib/python2.7/site-packages' > ~/Library/Python/2.7/lib/python/site-packages/homebrew.pth
-```
-
-## Install Pip
-
-```bash
-sudo easy_install pip
-```
-
-## Install Virtual Environment
-
-Basic Install
-
-```bash
-sudo pip install virtualenv
-sudo pip install virtualenvwrapper
-mkdir ~/.virtualenvs
-```
-
-Open `~/.bash_profile` file and add the following lines
-
-```bash
-export WORKON_HOME=$HOME/.virtualenvs
-source /usr/local/bin/virtualenvwrapper.sh
-```
-
-Now run the file so it takes effect
-
-```bash
-source ~/.bash_profile
-```
-
-## Creating the Virtual Env
-
-```bash
-# Make the new virtualenv
-mkvirtualenv --distribute ycharts
-
-# Go inside ycharts virtualenv
-workon ycharts
-
-# Exit ycharts virtualenv
-deactivate
-```
-
-> NOTE: For the next few steps, you will want them installed in the
-> virtualenv you have setup!
-
-## Setup iPython
-```bash
-# Install iPython
-pip install ipython
-# Install ipdb
-pip install ipdb
-```
-
-To set a debug trace, add the following line where you want a breakpoint
-in your code.
-
-```python
-import ipdb; ipdb.set_trace()
-```
-
-> NOTE: If you get a warning about `readline` when inside an ipython shell:
-
-```bash
-easy_install readline
-```
-
-## Installing required Python packages for YCharts
-
-```bash
-pip install -r /sites/ycharts/confs/server/requirements.txt
-pip install -r /sites/ycharts/confs/server/dev_requirements.txt
-```
-
-### Install additional files for textblob
-Add the following line to your `~/.bash_profile`
-```bash
-export NLTK_DATA=/sites/ycharts/data/investor_relations/nltk_data
-```
-
-Then run
-```bash
-source ~/.bash_profile
-python -m textblob.download_corpora
-```
-
-### Potential Issues
-
-#### XCode 5
-
-If you have Xcode 5 or greater and you get errors that look like
-
-```
-clang: error: unknown argument: '-mno-fused-madd' [-Wunused-command-line-argument-hard-error-in-future]
-clang: note: this will be a hard error (cannot be downgraded to a warning) in the future
-error: command 'clang' failed with exit status 1
-```
-
-when installing compiled packages, (numpy, Pillow, etc.) then those warnings are indeed hard errors,
-and you need to set the `ARCHFLAGS` environment variable:
-
-```bash
-# Add to ~/.bash_profile to make it permanent
-export ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future
-```
-
-Source: http://stackoverflow.com/questions/22394575/xcode-llvm-5-1-clang-error
-
-#### Other Issues
-
-If you still have issues, you may need to specify the following flags:
-
-For OS X 10.8 or less, you might need to do this:
-
-```bash
-export CC="gcc" CXX="g++" FFLAGS="-ff2c"
-export ARCHFLAGS="-arch i386 -arch x86_64 -Wno-error=unused-command-line-argument-hard-error-in-future"
-```
-
-> NOTE: For OSX 10.9+ you may need to install gcc49, and then slightly change the above.
-
-```bash
-# Tap homebrew/versions and install gcc49
-brew tap homebrew/versions
-brew install gcc49
-
-# Set correct flags
-export CC="gcc-4.9" CXX="g++-4.9" FFLAGS="-ff2c"
-export ARCHFLAGS="-arch i386 -arch x86_64 -Wno-error=unused-command-line-argument-hard-error-in-future"
 ```
 
 ## Set Up Local Dev Settings
