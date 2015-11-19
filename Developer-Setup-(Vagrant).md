@@ -196,67 +196,16 @@ vagrant up
 This will take about 30 minutes for the first time setup. When it's completed ... test it out by
 ```
 vagrant ssh
+# test out that django is loaded correctly and django migrations can be accessed
+python manage.py migrate
 ```
-If it ssh's into the vagrant box, you've completed your setup!
+If it ssh's into the vagrant box, you've completed your setup! Stay in the vagrant ssh for now.
 
-## Generate JSON Files
 
-```bash
-python manage.py calculations_score_autocompleter
-python manage.py calculations_store_menus
-python manage.py securities_store_menus
+## Generate JSON Files and Initialize Site Autocompleters
+Copy and paste this
 ```
-
-## Initialize Site Autocompleters
-
-> NOTE: You need some of the processes installed above to be running. It is recommended that you
-> reboot your computer at this time as they should be set to run on startup.
->
-> NOTE: If you got an older database, you may need to run migrations: `python manage.py migrate`
-
-```bash
-# Initialize security autocompleters
-python manage.py autocompleter_init --remove --store --name company
-python manage.py autocompleter_init --remove --store --name etf
-python manage.py autocompleter_init --remove --store --name cef
-python manage.py autocompleter_init --remove --store --name stock
-# Fund handles both "CompanyFund" and "MutualFund" objects
-python manage.py autocompleter_init --remove --store --name fund
-python manage.py autocompleter_init --remove --store --name indicator
-python manage.py autocompleter_init --remove --store --name index
-python manage.py autocompleter_init --remove --store --name company_investor_info
-
-# Initialize calc autocompleters
-python manage.py autocompleter_init --remove --store --name all_calc
-python manage.py autocompleter_init --remove --store --name aggregate_calc
-python manage.py autocompleter_init --remove --store --name company_calc
-python manage.py autocompleter_init --remove --store --name company_history_calc
-python manage.py autocompleter_init --remove --store --name etf_calc
-python manage.py autocompleter_init --remove --store --name etf_history_calc
-python manage.py autocompleter_init --remove --store --name fund_calc
-python manage.py autocompleter_init --remove --store --name fund_history_calc
-python manage.py autocompleter_init --remove --store --name history_calc
-python manage.py autocompleter_init --remove --store --name index_calc
-python manage.py autocompleter_init --remove --store --name index_history_calc
-python manage.py autocompleter_init --remove --store --name mutual_fund_calc
-python manage.py autocompleter_init --remove --store --name mutual_fund_history_calc
-python manage.py autocompleter_init --remove --store --name stock_calc
-python manage.py autocompleter_init --remove --store --name stock_history_calc
-python manage.py autocompleter_init --remove --store --name technical_calc
-
-# Initialize other autocompleters
-python manage.py autocompleter_init --remove --store --name fund_benchmark
-python manage.py autocompleter_init --remove --store --name fund_broker
-python manage.py autocompleter_init --remove --store --name fund_family
-python manage.py autocompleter_init --remove --store --name fund_manager
-
-python manage.py autocompleter_init --remove --store --name all_info_field
-python manage.py autocompleter_init --remove --store --name company_info_field
-python manage.py autocompleter_init --remove --store --name stock_info_field
-python manage.py autocompleter_init --remove --store --name etf_info_field
-python manage.py autocompleter_init --remove --store --name mutual_fund_info_field
-python manage.py autocompleter_init --remove --store --name fund_info_field
-python manage.py autocompleter_init --remove --store --name index_info_field
+python apps/systems/onetime_scripts/init_site_autocompleters_and_generate_json.py
 ```
 
 ## Initialize Lists and Sets
@@ -265,8 +214,9 @@ You need to run Celery to actually get the lists you need!
 celery -A ycharts worker -E -Q latestcalcs,main,alerts -l info
 ```
 
-Now, while Celery is running, IN A NEW TAB, do this
+Now, while Celery is running in a new ssh session
 ```bash
+vagrant ssh
 python manage.py securities_process_lists_and_sets
 ```
 
