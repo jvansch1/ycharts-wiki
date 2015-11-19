@@ -254,60 +254,7 @@ Now, while Celery is running, IN A NEW TAB, do this
 python manage.py securities_process_lists_and_sets
 ```
 
-## Install YCharts Chart Image Generator Packages
-
-```bash
-cd /sites/chart_image_generator
-
-# Set necessary flags
-export PKG_CONFIG_PATH=/usr/X11/lib/pkgconfig
-export LDFLAGS="$(pkg-config --libs cairo) $(pkg-config --libs pixman-1)"
-
-# Install NPM packages
-npm install
-```
-
-If you get some weird errors, try the following, then redo the above:
-
-```bash
-# Clear NPM cache
-npm cache clean
-# Remove all installed packages and other NPM stuffs
-rm -rf ~/.npm
-rm -rf /sites/chart_image_generator/node_modules
-```
-
-> NOTE: Be sure you are not using `sudo`. You might need to change
-> permissions for `~/.npm` and/or `/sites/chart_image_generator/node_modules`
-> to get `npm install` to work.
-
-## Setup PDF -> Html Converter
-
-```bash
-# The script must be run from inside the ycharts_pdf_to_html directory
-cd /sites/ycharts/binaries/ycharts_pdf_to_html/
-# Run the build script for mac
-./build.sh mac
-```
-
-## Install PhantomJS
-
-```bash
-# Run the install script from any directory for mac
-/sites/ycharts/binaries/phantomjs/install.sh mac
-
-# PhantomJS can now be run via
-/sites/ycharts/binaries/phantomjs/bin/phantomjs
-```
-
-## Install wkhtmltox
-
-```bash
-# Run the install script from any direction for mac
-sudo /sites/ycharts/binaries/wkhtmltox/install.sh mac
-```
-
-## Set up press release classifier
+## Set up press release classifier (RYAN - Why is this needed?)
 
 ```bash
 python manage.py investor_relations_generate_press_release_classifier
