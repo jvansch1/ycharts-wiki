@@ -30,6 +30,13 @@ brew install pango gdk-pixbuf libxml2 libxslt libffi
 brew install swig
 # Install pkg-config (may be necessary for some other packages)
 brew install pkg-config
+# Install xmlsec1 (needed for pysaml2 which is needed for SSO
+brew install xmlsec1
+# brew installs binaries is a slightly different place from apt-get, and the
+# pysaml2 configuration in ycharts.py uses the apt-get location for simplicity.
+# In order to get things to work, symlink xmlsec1 to the expected location.
+# This line can be removed once vagrant is live.
+sudo ln -s /usr/local/bin/xmlsec1 /usr/bin/xmlsec1
 ```
 
 ## Checkout code
