@@ -182,6 +182,23 @@ redis28-cli
 echo "from development import *" > /sites/ycharts/ycharts/settings/active.py
 ```
 
+## Create Your Vagrant Instance
+```
+Install : https://www.virtualbox.org/wiki/Downloads
+Install : http://www.vagrantup.com/downloads
+```
+
+## Navigate to your main ycharts directory
+```
+cd /sites/ycharts
+vagrant up
+```
+This will take about 30 minutes for the first time setup. When it's completed ... test it out by
+```
+vagrant ssh
+```
+If it ssh's into the vagrant box, you've completed your setup!
+
 ## Generate JSON Files
 
 ```bash
