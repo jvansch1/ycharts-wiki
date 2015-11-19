@@ -37,11 +37,12 @@ brew install ack
     sudo chown -R <username> /sites/
     ```
 
-1. Clone the `ycharts` and `chart_image_generator` repos
+1. Clone the `ycharts`, `chart_image_generator`, and `developer_setup` repos
 
     ```bash
-    git clone git@github.com:ycharts/ycharts.git ycharts
-    git clone git@github.com:ycharts/chart_image_generator.git chart_image_generator
+    git clone git@github.com:ycharts/ycharts.git
+    git clone git@github.com:ycharts/chart_image_generator.git
+    git clone git@github.com:ycharts/developer_setup.git
     ```
 
 1. Copy git configs to correct locations so you can push/pull
@@ -134,8 +135,6 @@ The commands to stop and start MySQL are:
 launchctl unload ~/Library/LaunchAgents/com.ycharts.mysql.plist
 # To start MySQL
 launchctl load ~/Library/LaunchAgents/com.ycharts.mysql.plist
-
-
 ```
 
 ### Load MySQL data
