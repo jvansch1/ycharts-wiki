@@ -198,7 +198,7 @@ Here are our apps:
 * `screener` - code that powers our [Stock Screener](http://ycharts.com/stock_screener).
 * `search` - views relating to search on our site.
 * `securities` - utils for working with multiple types of securities
-* `sharing` - views and utils for Facebook, Twitter, and StockTwits sharing
+* `sharing` - views, models and utils for internal sharing of items (SavedScreens, MetricSets, etc.) with users in the same ClientGroup.
 * `store` - Handles all paid product sign up, upgrade, downgrade, cancel, etc.
 * `support` - Power the [support center](http://ycharts.com/support)
 * `systems` - Views, models, and management commands for systems related things like the [Important Command Dashboard](http://ycharts.com/systems/review) or [Queue Info](http://ycharts.com/systems/review/queue_info)
