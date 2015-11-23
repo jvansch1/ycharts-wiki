@@ -48,13 +48,6 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
     ln -s -f /sites/chart_image_generator/confs/git_pre_commit_hook.py /sites/chart_image_generator/.git/hooks/pre-commit
     ```
 
-1. Set up Pivotal Tracker integration
-    1. On Pivotal Tracker go to "Profile" and scroll down to the bottom where it says "API Token".
-        * If there is not already an API Token listed, click "Create New Token" and then copy it.
-    1. On GitHub, browse to your own fork of the `ycharts` or `chart_image_generator` repo (i.e. `your_name/ycharts`).
-    1. Go to "Settings" --> "Webhooks & Services" --> "Add service" --> "Pivotal Tracker".
-    1. Paste the API token from above in the "Token" box, check the "Active" checkbox, and click "Update Settings".
-
 ## Connecting to YCharts Production/Staging Servers
 Set up your SSH config so you can connect to our server machines.
 
