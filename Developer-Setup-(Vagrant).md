@@ -1,5 +1,3 @@
-## Install Some Devs Tool We Need
-
 ### Homebrew
 Install Homebrew for easier package management. This will also prompt you about XCode and install it for you.
 
