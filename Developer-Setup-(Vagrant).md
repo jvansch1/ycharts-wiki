@@ -151,12 +151,6 @@ to download a new DB. If you have one of the new CableMatters adapters, go to
 [their site](http://www.asix.com.tw/download.php?sub=driverdetail&PItemID=131 "Welcome to 1995")
 to download the drivers.  Choose: Apple Mac OS X 10.6 to 10.9 Drivers Installer.
 
-## Set Up Local Dev Settings
-
-```bash
-echo "from development import *" > /sites/ycharts/ycharts/settings/active.py
-```
-
 ## Create Your Vagrant Instance
 ```
 Install : https://www.virtualbox.org/wiki/Downloads
