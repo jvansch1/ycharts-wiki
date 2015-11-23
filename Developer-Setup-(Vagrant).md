@@ -165,11 +165,11 @@ vagrant up
 This will take about 30 minutes for the first time setup. When it's completed ... test it out by
 ```
 vagrant ssh
-# test out that django is loaded correctly and django migrations can be accessed
-python manage.py migrate
+# test out that django is loaded correctly by running the webserver. this will load django
+# so that you can access it from your machine at 127.0.0.1:4000
+djangoserver
 ```
-If it ssh's into the vagrant box, you've completed your setup! Stay in the vagrant ssh for now.
-
+If you can load the webpage, you've completed your setup! Stay in the vagrant ssh for now.
 
 ## Generate JSON Files and Initialize Site Autocompleters
 Copy and paste this
