@@ -151,31 +151,6 @@ to download a new DB. If you have one of the new CableMatters adapters, go to
 [their site](http://www.asix.com.tw/download.php?sub=driverdetail&PItemID=131 "Welcome to 1995")
 to download the drivers.  Choose: Apple Mac OS X 10.6 to 10.9 Drivers Installer.
 
-## Install Memcached
-
-```bash
-brew install memcached
-
-# Symlink plist to launch memcached on startup
-ln -sfv /usr/local/opt/memcached/*.plist ~/Library/LaunchAgents
-# Start memcached now
-launchctl load ~/Library/LaunchAgents/homebrew.mxcl.memcached.plist
-```
-
-## Install Redis
-
-```bash
-brew install redis28
-
-# Symlink plist to launch redis on startup
-ln -sfv /usr/local/opt/redis28/*.plist ~/Library/LaunchAgents
-# Start redis now
-launchctl load ~/Library/LaunchAgents/homebrew.mxcl.redis28.plist
-
-# Use the redis cli with:
-redis28-cli
-```
-
 ## Set Up Local Dev Settings
 
 ```bash
