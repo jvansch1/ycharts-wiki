@@ -1,11 +1,7 @@
 ## Install Some Devs Tool We Need
-### XCode
-Install XCode (full install) AND command line tools from here
-(you will need to create an Apple dev account)
-http://developer.apple.com/downloads
 
 ### Homebrew
-Install Homebrew for easier package management
+Install Homebrew for easier package management. This will also prompt you about XCode and install it for you.
 
 ```bash
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
