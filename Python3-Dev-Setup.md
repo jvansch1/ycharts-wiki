@@ -27,10 +27,14 @@ workon ycharts3
 ```bash
 pip install -r /sites/ycharts/confs/server/requirements.txt
 pip install -r /sites/ycharts/confs/server/dev_requirements.txt
+
+# pip install -r /sites/ycharts/confs/server/requirements.txt` is 
+# going to fail since fabric does not support py3k.
 ```
 
-### Couple notes
 
+
+### Couple notes
 Currently `static_sitemaps` and `fabric` do not support python3 so
-you should wait until we find replacement for `static_sitemaps` and make `fabric`
+you should wait until we find a replacement for `static_sitemaps` and make `fabric`
 compatible with Python3.
