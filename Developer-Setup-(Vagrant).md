@@ -46,6 +46,11 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
     ln -s -f /sites/chart_image_generator/confs/git_pre_commit_hook.py /sites/chart_image_generator/.git/hooks/pre-commit
     ```
 
+## PC Specific
+```
+# ignore chmod differences
+git config --global core.filemode false
+```
 ## Connecting to YCharts Production/Staging Servers
 Set up your SSH config so you can connect to our server machines.
 
