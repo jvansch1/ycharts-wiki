@@ -6,7 +6,8 @@
 * [[Offboarding]]
 * [[Code Guidelines]]
 * [[Code Principles]]
-* [[Converting to Python 3]]
+* [[Python3 Dev Setup]]
+* [[Python3 Notes]]
 
 **Developer Notes**
 * Django
