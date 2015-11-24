@@ -29,7 +29,7 @@ pip install -r /sites/ycharts/confs/server/requirements.txt
 pip install -r /sites/ycharts/confs/server/dev_requirements.txt
 
 # pip install -r /sites/ycharts/confs/server/requirements.txt` is 
-# going to fail since fabric does not support py3k.
+# going to fail since django-static-sitemaps does not support py3k.
 ```
 
 
