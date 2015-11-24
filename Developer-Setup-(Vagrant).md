@@ -46,7 +46,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
     ln -s -f /sites/chart_image_generator/confs/git_pre_commit_hook.py /sites/chart_image_generator/.git/hooks/pre-commit
     ```
 
-## PC Specific
+## Windows Specific (Only for emergencies under and under a Windows Dev)
 ```
 # ignore chmod differences
 git config --global core.filemode false
