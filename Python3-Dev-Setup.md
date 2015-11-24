@@ -15,8 +15,8 @@ mkvirtualenv -p /usr/local/bin/python3 ycharts3
 ### Test that it's correct python version
 ```bash
 python --version
-```
 # Python 3.4.3
+```
 
 ### Start working on ycharts3 env
 ```bash
