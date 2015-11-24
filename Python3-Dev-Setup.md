@@ -1,4 +1,4 @@
-# To run Ycharts on Py3k environment.
+# To run YCharts Codebase on Py3k environment.
 
 ### Install python3
 ```bash
