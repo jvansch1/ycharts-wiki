@@ -1,4 +1,4 @@
-### Homebrew
+### Homebrew (Mac)
 Install Homebrew for easier package management. This will also prompt you about XCode and install it for you.
 
 ```bash
