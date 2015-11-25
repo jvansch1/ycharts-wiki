@@ -182,7 +182,7 @@ vagrant ssh
 python manage.py securities_process_lists_and_sets
 ```
 
-## Set up press release classifier (RYAN - Why is this needed?)
+## Set up press release classifier (Only if you need to use press release classifiers)
 
 ```bash
 python manage.py investor_relations_generate_press_release_classifier
