@@ -41,6 +41,9 @@
   * [[Indicator Guide]]
   * [[Indicator Notes]]
   * [[Indicator Outsourcer Notes]]
+* Vagrant
+  * [[Developer Setup (Vagrant)]]
+  * [[How To Use Vagrant 101]]
 * How To
   * [[Add a New Data Frequency]]
   * [[Add a New Data Type]]
