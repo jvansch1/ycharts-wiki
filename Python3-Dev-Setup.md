@@ -12,15 +12,15 @@ deactivate
 mkvirtualenv -p /usr/local/bin/python3 ycharts3
 ```
 
+### Start working on ycharts3 env
+```bash
+workon ycharts3
+```
+
 ### Test that it's correct python version
 ```bash
 python --version
 # Python 3.5.0
-```
-
-### Start working on ycharts3 env
-```bash
-workon ycharts3
 ```
 
 ### Run all requirements
