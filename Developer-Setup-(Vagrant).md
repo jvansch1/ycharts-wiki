@@ -165,7 +165,6 @@ djangoserver
 If you can load the webpage, you've completed your setup! Stay in the vagrant ssh.
 
 ## Generate JSON Files and Initialize Site Autocompleters
-Copy and paste this
 ```
 python apps/systems/onetime_scripts/init_site_autocompleters_and_generate_json.py
 ```
@@ -182,7 +181,7 @@ vagrant ssh
 python manage.py securities_process_lists_and_sets
 ```
 
-## Set up press release classifier (Only if you need to use press release classifiers)
+## Set up press release classifier (Only if you need it)
 
 ```bash
 python manage.py investor_relations_generate_press_release_classifier
