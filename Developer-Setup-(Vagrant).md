@@ -49,8 +49,8 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 ## Windows Specific (Only for emergencies under and under a Windows Dev)
 ```
 # ignore chmod differences
+git config fileMode false
 git config --global fileMode false
-git config --global core.fileMode false
 ```
 ## Connecting to YCharts Production/Staging Servers
 Set up your SSH config so you can connect to our server machines.
