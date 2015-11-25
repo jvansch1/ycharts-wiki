@@ -26,9 +26,9 @@
   * [[Useful Mysql Queries]]
 * Tools
   * [[Sublime]]
+  * [[PyCharm]]
   * [[Vim Notes]]
-* Mac OS X
-  * [[Updating OS X Versions]]
+
 * Amazon
   * [[S3-Static-Assets]]
   * [[AWS-Redis-Setup]]
