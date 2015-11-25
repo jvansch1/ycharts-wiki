@@ -28,7 +28,6 @@
   * [[Sublime]]
   * [[PyCharm]]
   * [[Vim Notes]]
-
 * Amazon
   * [[S3-Static-Assets]]
   * [[AWS-Redis-Setup]]
