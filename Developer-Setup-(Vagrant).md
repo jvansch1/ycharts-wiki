@@ -150,9 +150,11 @@ This will take about 30 minutes for the first time setup. When it's completed ..
 vagrant ssh
 vagrant exit
 ```
+Adding Yourself to Vagrant Users (Temporarily while some of our team is still on manual development setups)
+```
 whoami
-
-In ycharts/development.py and add some unique part of your computer name (like last name) to the list of VAGRANT_USERS. Save and commit the file. This tells Django when starting to look for a slightly different location for the MySQL folder
+```
+In ycharts/development.py AND git_pre_commit_hook ... add some unique part of your computer name (like last name) to the list of VAGRANT_USERS. Save and commit the file. This tells Django when starting to look for a slightly different location for the MySQL folder and run a slightly different commit check
 
 ```
 vagrant ssh
