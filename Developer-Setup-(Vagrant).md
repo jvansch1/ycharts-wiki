@@ -48,7 +48,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 
 ## Windows Specific (Only for emergencies under and under a Windows Dev)
 ```
-# ignore chmod differences
+# ignore chmod differences, otherwise you will see a lot of modified files under PC when you shouldn't
 git config fileMode false
 git config --global fileMode false
 ```
