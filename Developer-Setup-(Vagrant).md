@@ -16,10 +16,9 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
     ```bash
     sudo mkdir /sites
     cd /sites
-    # Get your username
-    whoami
+
     # Use username to chown /sites
-    sudo chown -R <username> /sites/
+    sudo chown -R `whoami` /sites/
     ```
 
 1. Clone the `ycharts`, `chart_image_generator`, and `developer_setup` repos
