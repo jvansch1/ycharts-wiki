@@ -6,13 +6,11 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 ```
 
 ## Checkout code
-1. Create a github account and tell an admin your username. They must add you to YCharts
+1. Create a github account and tell an admin to add your username to YCharts.
 1. Create an private/public key and tie it to your github account.
     * Follow the instructions here: http://help.github.com/mac-key-setup/
 1. Configure so your SSH passphrase is remembered.
     * Follow the instructions here: http://help.github.com/working-with-key-passphrases/.
-    * For Mac, you won't have to do anything like set up ssh-agent as long as you're using the default key name
-1. Fork the code on github for `ycharts` and `chart_image_generator` to your own repo.
 1. Set up `/sites` directory
 
     ```bash
@@ -182,9 +180,6 @@ python manage.py investor_relations_generate_press_release_classifier
 ```
 
 ## Configure AWS CLI
-
-> NOTE: Make sure you have run `dev_requirements.txt`. Packages `ply` and `awscli`
-> must be installed.
 
 Ask someone to create an IAM user for you. Once created, they should give you
 your credentials as well as a temporary password. They will also set up multi-factor
