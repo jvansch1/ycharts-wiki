@@ -42,4 +42,11 @@ vagrant ssh
 djangoserver
 OSX: 127.0.0.1:4000 (Note the port difference)
 ```
+* Ipython Magic Commands
+```
+# Before
+%paste
 
+# After (This isn't as good, unfortunately)
+#cpaste
+```
