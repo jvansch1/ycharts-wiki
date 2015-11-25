@@ -146,14 +146,21 @@ Install : http://www.vagrantup.com/downloads
 cd /sites/ycharts
 vagrant up
 ```
-This will take about 30 minutes for the first time setup. When it's completed ... test it out by
+This will take about 30 minutes for the first time setup. When it's completed ... test it
 ```
 vagrant ssh
-# test out that django is loaded correctly by running the webserver. this will load django
+vagrant exit
+```
+
+Now go to ycharts/development.py and add some unique part of your computer name (generally your name) to the list of VAGRANT_USERS. Save and commit the file.
+
+```
+vagrant ssh
+# test django by running a webserver. this will load django
 # so that you can access it from your machine at 127.0.0.1:4000
 djangoserver
 ```
-If you can load the webpage, you've completed your setup! Stay in the vagrant ssh for now.
+If you can load the webpage, you've completed your setup! Stay in the vagrant ssh.
 
 ## Generate JSON Files and Initialize Site Autocompleters
 Copy and paste this
