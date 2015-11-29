@@ -5,6 +5,10 @@ Install Homebrew for easier package management. This will also prompt you about 
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
+```
+# Need to install Pyflakes for Commit Hooks, pip should preinstalled with all Python versions and pyflakes versions should/probably be on the latest version
+pip install pyflakes
+```
 ## Checkout code
 1. Create a github account and tell an admin to add your username to YCharts.
 1. Create an private/public key and tie it to your github account.
