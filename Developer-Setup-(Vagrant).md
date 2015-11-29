@@ -193,6 +193,15 @@ python manage.py securities_process_lists_and_sets
 python manage.py investor_relations_generate_press_release_classifier
 ```
 
+```
+# Optimize Vagrant
+vagrant halt
+
+# Load Virtual Box. Click on the virtual machine settings and change the settings below to KVM to make it fast.
+
+[VirtualBox Paravirtualization](https://d1zjcuqflbd5k.cloudfront.net/files/acc_134337/1di8R?response-content-disposition=inline;%20filename=Screen%20Shot%20on%202015-11-29%20at%2014%3A06%3A39.png&Expires=1448824390&Signature=VCBYep0Tf0VvRPvAZHfjMq166GtqRlOILoT6zfnEtDhp4yMzbJ~aTLNjNPiJqCvUQnBvCHeDp~0emE6ORrfhxPspfWUZne8sDt9tc349iSk4t~Ag3fykvKWPG2LeRum~JhCxMsVtTxQOLmkvCeuAtRtoGfbdlOtmpQKotuBBta8_&Key-Pair-Id=APKAJTEIOJM3LSMN33SA)
+```
+
 ## Configure AWS CLI
 
 Ask someone to create an IAM user for you. Once created, they should give you
