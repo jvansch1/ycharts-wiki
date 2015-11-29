@@ -5,8 +5,9 @@ Install Homebrew for easier package management. This will also prompt you about 
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
+### PyFlakes For Git Commit Hooks
 ```
-# Need to install Pyflakes for Commit Hooks, pip should preinstalled with all Python versions and pyflakes versions should/probably be on the latest version
+# pip should preinstalled with all Python versions and pyflakes versions should/probably be on the latest version
 pip install pyflakes
 ```
 ## Checkout code
@@ -49,7 +50,8 @@ pip install pyflakes
 
 ## Windows Development (Only for emergencies)
 ```
-# ignore chmod differences, otherwise you will see a lot of modified files under PC when you shouldn't
+# ignore chmod differences, otherwise you will see a lot of modified files under PC when you shouldn't - do this 
+# in the git repo! 
 git config fileMode false
 git config --global fileMode false
 ```
