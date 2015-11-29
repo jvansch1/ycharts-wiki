@@ -199,7 +199,7 @@ vagrant halt
 ```
 ## Load Virtual Box. Click on the virtual machine settings and change the settings below to KVM to make it fast.
 
-[https://d1zjcuqflbd5k.cloudfront.net/files/acc_134337/1di8R?response-content-disposition=inline;%20filename=Screen%20Shot%20on%202015-11-29%20at%2014%3A06%3A39.png&Expires=1448824390&Signature=VCBYep0Tf0VvRPvAZHfjMq166GtqRlOILoT6zfnEtDhp4yMzbJ~aTLNjNPiJqCvUQnBvCHeDp~0emE6ORrfhxPspfWUZne8sDt9tc349iSk4t~Ag3fykvKWPG2LeRum~JhCxMsVtTxQOLmkvCeuAtRtoGfbdlOtmpQKotuBBta8_&Key-Pair-Id=APKAJTEIOJM3LSMN33SA](VirtualBox ParaVirtualization)
+[http://d.pr/i/1di8R](VirtualBox ParaVirtualization)
 ```
 
 ## Configure AWS CLI
