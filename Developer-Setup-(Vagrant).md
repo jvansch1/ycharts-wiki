@@ -48,10 +48,17 @@ pip install pyflakes
     ln -s -f /sites/chart_image_generator/confs/git_pre_commit_hook.py /sites/chart_image_generator/.git/hooks/pre-commit
     ```
 
-1. Setup your Vagrant Bash Profiles
+1. Setup your Vagrant Bash Profiles with your Amazon IAM
+   Ask someone to create an IAM user for you. Once created, they should give you
+   your credentials as well as a temporary password. They will also set up multi-factor
+   authentication for you.
+
    ```bash
    cp /sites/ycharts/confs/developers/vagrant_bash_profile_local ~/.vagrant_bash_profile_local
    ```
+
+   After logging in to [the AWS console](https://ycharts.signin.aws.amazon.com/console), add
+   your credentials to your `~/.vagrant_bash_profile_local.
 
 ## Windows Development (Only for emergencies)
 ```
@@ -205,27 +212,4 @@ vagrant halt
 ## Load Virtual Box. Click on the virtual machine settings and change the settings below to KVM to make it fast.
 
 [http://d.pr/i/1di8R](VirtualBox ParaVirtualization)
-```
-
-## Configure AWS CLI
-
-Ask someone to create an IAM user for you. Once created, they should give you
-your credentials as well as a temporary password. They will also set up multi-factor
-authentication for you.
-
-After logging in to [the AWS console](https://ycharts.signin.aws.amazon.com/console), add
-your credentials to your `~/.bash_profile` or `~/.profile`.
-
-```bash
-export AWS_ACCESS_KEY_ID=<YOUR_ACCESS_KEY_HERE>
-export AWS_SECRET_ACCESS_KEY=<YOUR_SECRET_ACCESS_KEY_HERE>
-export AWS_DEFAULT_REGION=us-east-1
-```
-
-Apply the new settings:
-
-```bash
-source ~/.bash_profile
-# Test that it works
-aws help
 ```
