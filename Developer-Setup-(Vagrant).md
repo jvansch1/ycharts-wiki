@@ -50,7 +50,6 @@ pip install pyflakes
 
 1. Setup your Vagrant Bash Profiles
    ```bash
-   cp /sites/ycharts/confs/developers/vagrant_bash_profile ~/.vagrant_bash_profile
    cp /sites/ycharts/confs/developers/vagrant_bash_profile_local ~/.vagrant_bash_profile_local
    ```
 
