@@ -58,7 +58,7 @@ pip install pyflakes
    ```
 
    After logging in to [the AWS console](https://ycharts.signin.aws.amazon.com/console), add
-   your credentials to your `~/.vagrant_bash_profile_local.
+   your credentials to your ~/.vagrant_bash_profile_local.
 
 ## Windows Development (Only for emergencies)
 ```
