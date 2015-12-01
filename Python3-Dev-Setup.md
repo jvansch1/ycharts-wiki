@@ -32,4 +32,4 @@ pip install -r /sites/ycharts/confs/server/dev_requirements.txt
 
 
 ### Couple notes
-`fabric` do not support python3 so we should fix it.
+`fabric` doesn't support python3 so we should fix it.
