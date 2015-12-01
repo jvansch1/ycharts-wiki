@@ -27,14 +27,9 @@ python --version
 ```bash
 pip install -r /sites/ycharts/confs/server/requirements.txt
 pip install -r /sites/ycharts/confs/server/dev_requirements.txt
-
-# pip install -r /sites/ycharts/confs/server/requirements.txt` is 
-# going to fail since django-static-sitemaps does not support py3k.
 ```
 
 
 
 ### Couple notes
-Currently `static_sitemaps` and `fabric` do not support python3 so
-you should wait until we find a replacement for `static_sitemaps` and make `fabric`
-compatible with Python3.
+`fabric` do not support python3 so we should fix it.
