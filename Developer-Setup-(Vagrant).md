@@ -48,6 +48,11 @@ pip install pyflakes
     ln -s -f /sites/chart_image_generator/confs/git_pre_commit_hook.py /sites/chart_image_generator/.git/hooks/pre-commit
     ```
 
+1. Setup your Vagrant Bash Profiles
+   ```bash
+   cp /sites/ycharts/confs/developers/vagrant_bash_profile ~/.vagrant_bash_profile
+   ```
+
 ## Windows Development (Only for emergencies)
 ```
 # ignore chmod differences, otherwise you will see a lot of modified files under PC when you shouldn't - do this 
