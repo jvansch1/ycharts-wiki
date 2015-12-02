@@ -178,7 +178,7 @@ In the git_pre_commit_hook ... add some unique part of your computer name (like 
 vagrant ssh
 # test django by running a webserver. this will load django
 # so that you can access it from your machine at 127.0.0.1:4000
-djangoserver
+yc_django
 ```
 If you can load the webpage, you've completed your setup! Stay in the vagrant ssh.
 
@@ -190,7 +190,7 @@ python apps/systems/onetime_scripts/init_site_autocompleters_and_generate_json.p
 ## Initialize Lists and Sets
 You need to run Celery to actually get the lists you need!
 ```bash
-celery -A ycharts worker -E -Q latestcalcs,main,alerts -l info
+yc_celery
 ```
 
 Now, while Celery is running in a new ssh session
