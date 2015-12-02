@@ -166,21 +166,12 @@ vagrant up
 This will take about 30 minutes for the first time setup. When it's completed ... test it
 ```
 vagrant ssh
-vagrant exit
-```
-Adding Yourself to Vagrant Users (Temporarily while some of our team is still on manual development setups)
-```
-whoami
-```
-In the git_pre_commit_hook ... add some unique part of your computer name (like last name) to the list of VAGRANT_USERS. Save and commit the file. This tells Django when starting to look for a slightly different location run a slightly different commit check
 
-```
-vagrant ssh
+# Test Django
 # test django by running a webserver. this will load django
 # so that you can access it from your machine at 127.0.0.1:4000
 yc_django
 ```
-If you can load the webpage, you've completed your setup! Stay in the vagrant ssh.
 
 ## Generate JSON Files and Initialize Site Autocompleters
 ```
