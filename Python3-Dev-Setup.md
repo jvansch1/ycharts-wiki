@@ -29,7 +29,10 @@ pip install -r /sites/ycharts/confs/server/requirements.txt
 pip install -r /sites/ycharts/confs/server/dev_requirements.txt
 ```
 
+### Other Python3 changes
+ In `ycharts/settings/active.py` change
 
+`from development import *` to `from .development import *`
 
 ### Couple notes
 `fabric` doesn't support python3 so we should fix it.
