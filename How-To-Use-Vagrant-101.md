@@ -13,15 +13,6 @@ cp /sites/ycharts/confs/database/com.ycharts.mysql.plist ~/Library/LaunchAgents
 launchctl unload ~/Library/LaunchAgents/com.ycharts.mysql.plist
 launchctl load ~/Library/LaunchAgents/com.ycharts.mysql.plist
 ```
-* Running requirements
-```
-# Before
-pip install -r confs/server/dev_requirements.txt
-pip install -r confs/server/requirements.txt
-
-# After
-vagrant provision
-```
 * Migrations
 ```
 # Before
@@ -40,7 +31,7 @@ https://127.0.0.1:8000
 # After
 vagrant ssh
 djangoserver
-OSX: 127.0.0.1:4000 (Note the port difference)
+Local: 127.0.0.1:8000 (Note the port difference)
 ```
 * Ipython Magic Commands
 ```
