@@ -207,5 +207,5 @@ vagrant halt
 
 ### Load Virtual Box. Click on the virtual machine settings and change the settings below to KVM to make it fast.
 
-[http://d.pr/i/1di8R](VirtualBox ParaVirtualization)
+[VirtualBox ParaVirtualization](http://d.pr/i/1di8R)
 
