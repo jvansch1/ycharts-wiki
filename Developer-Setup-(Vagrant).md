@@ -199,11 +199,13 @@ python manage.py investor_relations_generate_press_release_classifier
 
 ## Optimize Vagrant
 
-```
-# Stop the vagrant machine
-vagrant halt
 
-# Load Virtual Box. Click on the virtual machine settings and change the settings below to KVM to make it fast.
+### Stop the vagrant machine
+```
+vagrant halt
+```
+
+### Load Virtual Box. Click on the virtual machine settings and change the settings below to KVM to make it fast.
 
 [http://d.pr/i/1di8R](VirtualBox ParaVirtualization)
-```
+
