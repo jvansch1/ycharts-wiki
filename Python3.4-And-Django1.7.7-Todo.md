@@ -36,10 +36,12 @@ We still have some places where we have to do `cString` fixes. No `cStringIO` in
 `basestring` breaks in `honeypot`, maybe make it fully py3k compatible?
 Is `honeypot` compatible with Py3k? We use the `@cache(...)` decorator
 
+### `hotshot`
 some import issues with `hotshot` logging library, so I maybe we can delete `('ycharts.middleware.ProfilerMiddleware',) ` from
 ```bash
  MIDDLEWARE_CLASSES = MIDDLEWARE_CLASSES + ('ycharts.middleware.ProfilerMiddleware',)
 ```
+or find some other py3k Profiler we can use
 
 ### `storage.py` fix
 ```bash
