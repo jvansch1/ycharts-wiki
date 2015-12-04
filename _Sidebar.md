@@ -27,9 +27,8 @@
   * [[Useful Mysql Queries]]
 * Tools
   * [[Sublime]]
+  * [[PyCharm]]
   * [[Vim Notes]]
-* Mac OS X
-  * [[Updating OS X Versions]]
 * Amazon
   * [[S3-Static-Assets]]
   * [[AWS-Redis-Setup]]
@@ -43,6 +42,9 @@
   * [[Indicator Guide]]
   * [[Indicator Notes]]
   * [[Indicator Outsourcer Notes]]
+* Vagrant
+  * [[Developer Setup (Vagrant)]]
+  * [[How To Use Vagrant 101]]
 * How To
   * [[Add a New Data Frequency]]
   * [[Add a New Data Type]]

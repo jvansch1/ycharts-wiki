@@ -85,7 +85,7 @@ Then re-run the `chef-solo` command again.
 ### Force the command to run without having to wait to Sunday
 
 ```bash
-sudo launchctl start com.ycharts.download_and_restore_db
+launchctl start com.ycharts.download_and_restore_db
 ```
 
 See what is happening when you run the above command

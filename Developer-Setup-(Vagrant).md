@@ -1,27 +1,29 @@
-### Homebrew
+### Homebrew (Mac)
 Install Homebrew for easier package management. This will also prompt you about XCode and install it for you.
 
 ```bash
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
+### PyFlakes For Git Commit Hooks
+```
+# pip should preinstalled with all Python versions and pyflakes versions should/probably be on the latest version
+pip install pyflakes
+```
 ## Checkout code
-1. Create a github account and tell an admin your username. They must add you to YCharts
+1. Create a github account and tell an admin to add your username to YCharts.
 1. Create an private/public key and tie it to your github account.
     * Follow the instructions here: http://help.github.com/mac-key-setup/
 1. Configure so your SSH passphrase is remembered.
     * Follow the instructions here: http://help.github.com/working-with-key-passphrases/.
-    * For Mac, you won't have to do anything like set up ssh-agent as long as you're using the default key name
-1. Fork the code on github for `ycharts` and `chart_image_generator` to your own repo.
 1. Set up `/sites` directory
 
     ```bash
     sudo mkdir /sites
     cd /sites
-    # Get your username
-    whoami
+
     # Use username to chown /sites
-    sudo chown -R <username> /sites/
+    sudo chown -R `whoami` /sites/
     ```
 
 1. Clone the `ycharts`, `chart_image_generator`, and `developer_setup` repos
@@ -46,11 +48,24 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
     ln -s -f /sites/chart_image_generator/confs/git_pre_commit_hook.py /sites/chart_image_generator/.git/hooks/pre-commit
     ```
 
-## Windows Specific (Only for emergencies under and under a Windows Dev)
+1. Setup your Vagrant Bash Profiles with your Amazon IAM
+   Ask someone to create an IAM user for you. Once created, they should give you
+   your credentials as well as a temporary password. They will also set up multi-factor
+   authentication for you.
+
+   ```bash
+   cp /sites/ycharts/confs/developers/vagrant_bash_profile_local ~/.vagrant_bash_profile_local
+   ```
+
+   After logging in to [the AWS console](https://ycharts.signin.aws.amazon.com/console), add
+   your credentials to your ~/.vagrant_bash_profile_local.
+
+## Windows Development (Only for emergencies)
 ```
-# ignore chmod differences
+# ignore chmod differences, otherwise you will see a lot of modified files under PC when you shouldn't - do this 
+# in the git repo! 
+git config fileMode false
 git config --global fileMode false
-git config --global core.fileMode false
 ```
 ## Connecting to YCharts Production/Staging Servers
 Set up your SSH config so you can connect to our server machines.
@@ -148,17 +163,17 @@ Install : http://www.vagrantup.com/downloads
 cd /sites/ycharts
 vagrant up
 ```
-This will take about 30 minutes for the first time setup. When it's completed ... test it out by
+This will take about 30 minutes for the first time setup. When it's completed ... test it
 ```
 vagrant ssh
-# test out that django is loaded correctly by running the webserver. this will load django
+
+# Test Django
+# test django by running a webserver. this will load django
 # so that you can access it from your machine at 127.0.0.1:4000
-djangoserver
+yc_django
 ```
-If you can load the webpage, you've completed your setup! Stay in the vagrant ssh for now.
 
 ## Generate JSON Files and Initialize Site Autocompleters
-Copy and paste this
 ```
 python apps/systems/onetime_scripts/init_site_autocompleters_and_generate_json.py
 ```
@@ -166,7 +181,7 @@ python apps/systems/onetime_scripts/init_site_autocompleters_and_generate_json.p
 ## Initialize Lists and Sets
 You need to run Celery to actually get the lists you need!
 ```bash
-celery -A ycharts worker -E -Q latestcalcs,main,alerts -l info
+yc_celery
 ```
 
 Now, while Celery is running in a new ssh session
@@ -175,34 +190,22 @@ vagrant ssh
 python manage.py securities_process_lists_and_sets
 ```
 
-## Set up press release classifier (RYAN - Why is this needed?)
+## Set up press release classifier (Only if you need it)
 
 ```bash
 python manage.py investor_relations_generate_press_release_classifier
 ```
 
-## Configure AWS CLI
 
-> NOTE: Make sure you have run `dev_requirements.txt`. Packages `ply` and `awscli`
-> must be installed.
+## Optimize Vagrant
 
-Ask someone to create an IAM user for you. Once created, they should give you
-your credentials as well as a temporary password. They will also set up multi-factor
-authentication for you.
 
-After logging in to [the AWS console](https://ycharts.signin.aws.amazon.com/console), add
-your credentials to your `~/.bash_profile` or `~/.profile`.
-
-```bash
-export AWS_ACCESS_KEY_ID=<YOUR_ACCESS_KEY_HERE>
-export AWS_SECRET_ACCESS_KEY=<YOUR_SECRET_ACCESS_KEY_HERE>
-export AWS_DEFAULT_REGION=us-east-1
+### Stop the vagrant machine
+```
+vagrant halt
 ```
 
-Apply the new settings:
+### Load Virtual Box. Click on the virtual machine settings and change the settings below to KVM to make it fast.
 
-```bash
-source ~/.bash_profile
-# Test that it works
-aws help
-```
+[VirtualBox Paravirtualization](http://d.pr/i/1di8R)
+
