@@ -20,7 +20,7 @@ workon ycharts3
 ### Test that it's correct python version
 ```bash
 python --version
-# Python 3.5.0
+# Python 3.4.3
 ```
 
 ### Run all requirements
