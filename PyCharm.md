@@ -10,6 +10,5 @@ Download the Professional Version and then talk to Fox or Tigran about the 30 da
 
 1. Launch PyCharm
 2. Select "Open"
-
 3. Navigate to `/sites/ycharts`
 4. Click "Done"
