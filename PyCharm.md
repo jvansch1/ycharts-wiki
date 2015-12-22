@@ -4,7 +4,10 @@
 
 You can download PyCharm [here](https://www.jetbrains.com/pycharm/).
 
-Download the Professional Version and then talk to Fox or Tigran about the 30 day Trial.
+Download the Professional Version and go through the initial setup process.
+![](http://s18.postimg.org/6473l4z7d/Screen_Shot_2015_12_22_at_6_29_50_PM.png)
+![](http://s18.postimg.org/yv3xb7515/Screen_Shot_2015_12_22_at_6_30_06_PM.png)
+![](http://s18.postimg.org/diwfdil2x/Screen_Shot_2015_12_22_at_6_30_22_PM.png)
 
 ## Launch PyCharm Project
 
