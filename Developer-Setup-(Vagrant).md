@@ -154,8 +154,8 @@ to download the drivers.  Choose: Apple Mac OS X 10.6 to 10.9 Drivers Installer.
 
 ## Create Your Vagrant Instance
 ```
-Install : https://www.virtualbox.org/wiki/Downloads
 Install : http://www.vagrantup.com/downloads
+# Vagrant 1.8 should auto-download VirtualBox. Talk to Shek if not.
 ```
 
 ## Navigate to your main ycharts directory
