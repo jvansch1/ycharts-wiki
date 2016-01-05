@@ -183,7 +183,6 @@ Here are our apps:
 * `indicators` - contains all code for importing, working with and displaying economic indicator data.
 * `indices` - code for dealing with indices (like S&P 500, Dow 30, NASDAQ, etc.) and when applicable their constituents
 * `investor_relations` - code for information regarding companies' investor relations info, as well as news and events pages
-* `main` - is the catchall space for scripts and commands utilities that aren't tied to any one app. All powers our frontpage. The most important command here is `main_execute_daily_tasks.py`
 * `marketing_emails` - handles transactional e-mails that are sent to users post regristration / Pro signup.
 * `messaging` - handles the yellow pop up box that can display messages on our site.
 * `mutual_funds` - contains all models relating to mutual funds as well as management commands for importing the data
