@@ -1,7 +1,7 @@
 # To run YCharts Codebase on Py3k environment.
 
 ### Install python3
-Go [here](https://www.python.org/downloads/release/python-340/) and download "Mac OS X 64-bit/32-bit" installer.
+Go [here](https://www.python.org/downloads/release/python-343/) and download "Mac OS X 64-bit/32-bit" installer.
 The reason why we do NOT do `brew install python3` because it will get the latest stable python 3.5 release which does NOT support Django 1.7.7.
 
 ### Create new virtualenv
