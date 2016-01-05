@@ -33,7 +33,4 @@ pip install -r /sites/ycharts/confs/server/dev_requirements.txt
 
 `from development import *` to `from .development import *`
 
-### Couple notes
-`fabric` doesn't support python3 so we should fix it.
-
 ### Now you are all set to run the django server and enjoy our codebase on py3k. Boom!
