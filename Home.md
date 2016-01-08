@@ -89,7 +89,7 @@ For JS, we use [JSHint](http://www.jshint.com/) as a guide.
 Besides the precommit hook we highly recommend installing plugins for your preferred text editor to do PEP8/JSHint checking as you write code.
 
 ## Code Editors
-Although you are free to use any editor you prefer, our development has standardized around SublimeText and Vim. We have helpful pointers about plugins to install and shortcuts to know for each. The SublimeText notes are [here](https://github.com/ycharts/ycharts/wiki/Sublime) and the Vim notes are [here](https://github.com/ycharts/ycharts/wiki/Vim-Notes)
+Although you are free to use any editor you prefer, our development has standardized around SublimeText and PyCharm and Vim. We have helpful pointers about plugins to install and shortcuts to know for each. The [SublimeText notes](https://github.com/ycharts/ycharts/wiki/Sublime), [PyCharm notes](https://github.com/ycharts/ycharts/wiki/PyCharm) and the [Vim notes](https://github.com/ycharts/ycharts/wiki/Vim-Notes) 
 
 
 
