@@ -7,6 +7,7 @@
 * [[Code Guidelines]]
 * [[Code Principles]]
 * [[Python3 Dev Setup]]
+* [[Python3 Benchmark Suite and Results]]
 * [[Python3 Notes]]
 * [[Python3.4 And Django1.7.7 Todo]]
 
