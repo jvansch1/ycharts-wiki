@@ -169,7 +169,7 @@ vagrant ssh
 
 # Test Django
 # test django by running a webserver. this will load django
-# so that you can access it from your machine at 127.0.0.1:4000
+# so that you can access it from your machine at 127.0.0.1:8000
 yc_django
 ```
 
