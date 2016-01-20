@@ -12,20 +12,15 @@ openssl genrsa -out ycharts.com.key 2048
 
 Answer to Questions:
 
-Country Name: US
+| Question        | Answer              |
+| ------------- |:---------------------:|
+| Country Name  | US                    |
+| State         | Illinois              |
+| City          | Chicago               |
+| Org           | YCharts, Inc.         |
+| Common Name   | LEAVE BLANK           |
+| Email         | LEAVE BLANK           |
+| Extra Stuff   | LEAVE BLANK           |
 
-State: Illinois
-
-City: Chicago
-
-Org: YCharts, Inc.
-
-Org Unit: LEAVE BLANK
-
-Common Name: ycharts.com
-
-Email Address: LEAVE BLANK
-
-Extra Stuff: LEAVE BLANK
 
 3) Now upload the CSR to the cert provider.
