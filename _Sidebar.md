@@ -24,8 +24,8 @@
   * [[General Notes]]
   * [[Database Restore Machine Setup]]
   * [[Restoring Database]]
-  * [[Upgrading Mysql]]
-  * [[Useful Mysql Queries]]
+  * [[Upgrading MySQL]]
+  * [[Useful MySQL Queries]]
 * Tools
   * [[Sublime]]
   * [[PyCharm]]
