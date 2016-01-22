@@ -48,13 +48,8 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
    your credentials as well as a temporary password. They will also set up multi-factor
    authentication for you.
 
-   ```bash
-   touch confs/developers/vagrant_bash_profile_local
-   nano confs/developers/vagrant_bash_profile_local
-   ```
-
    After logging in to [the AWS console](https://ycharts.signin.aws.amazon.com/console), add
-   your credentials.
+   your credentials to your local vagrant bash_profile.
    
    ```
    nano confs/developers/vagrant_bash_profile_local
