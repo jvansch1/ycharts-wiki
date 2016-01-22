@@ -481,20 +481,11 @@ cd /sites/ycharts/binaries/ycharts_pdf_to_html/
 
 ## Install PhantomJS
 
-```bash
-# Run the install script from any directory for mac
-/sites/ycharts/binaries/phantomjs/install.sh mac
-
-# PhantomJS can now be run via
-/sites/ycharts/binaries/phantomjs/bin/phantomjs
-```
+Download from [here](http://phantomjs.org/download.html) and move the binary to `/usr/local/bin/`
 
 ## Install wkhtmltox
 
-```bash
-# Run the install script from any direction for mac
-sudo /sites/ycharts/binaries/wkhtmltox/install.sh mac
-```
+Download from [here](http://download.gna.org/wkhtmltopdf/0.12/0.12.2.1/wkhtmltox-0.12.2.1_osx-cocoa-x86-64.pkg) and install the package by double-clicking the file.
 
 ## Set up press release classifier
 
