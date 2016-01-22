@@ -49,11 +49,16 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
    authentication for you.
 
    ```bash
-   cp /sites/ycharts/confs/developers/vagrant_bash_profile_local ~/.vagrant_bash_profile_local
+   touch confs/developers/vagrant_bash_profile_local
+   nano confs/developers/vagrant_bash_profile_local
    ```
 
    After logging in to [the AWS console](https://ycharts.signin.aws.amazon.com/console), add
-   your credentials to your ~/.vagrant_bash_profile_local.
+   your credentials.
+   
+   ```
+   nano confs/developers/vagrant_bash_profile_local
+   ```
 
 ## Windows Development (Only for emergencies)
 ```
