@@ -78,6 +78,12 @@ WHERE i.ir_url = '' AND c.market_cap_usd > 50
 ORDER BY c.market_cap_usd DESC;
 ```
 
+## Indices
+```mysql
+# Indices, grouped by family, with last price date
+select symbol, name, family, day from indices_index left outer join indices_indexlevellatest on indices_index.id = indices_indexlevellatest.index_id order by name, family;
+```
+
 ## Indicators
 
 ```mysql
