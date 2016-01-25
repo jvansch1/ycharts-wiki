@@ -46,9 +46,6 @@
 * Vagrant
   * [[Developer Setup (Vagrant)]]
   * [[How To Use Vagrant 101]]
-* How To
-  * [[Add a New Data Frequency]]
-  * [[Add a New Data Type]]
 * Notes
   * [[IE Testing Notes]]
   * [[Info Column Items Notes]]
@@ -61,7 +58,10 @@
 * Other
   * [[Calculation Principles]]
   * [[Fundamental Data Testing]]
+  * [[Add a New Data Frequency]]
+  * [[Add a New Data Type]]
   * [[Jquery UI Components]]
   * [[News Headline Feeds]]
   * [[Linux Process Debugging]]
   * [[Getting a new SSL certificate]]
+  * [[]]
