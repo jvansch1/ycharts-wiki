@@ -96,7 +96,7 @@ If the currency is not the indexes "home currency," add the currency code to the
 
 If the currency code addition makes the index too long, us a shorten version of the currency:
 
-We started a few so you get an idea, you can make up your own
+Below are a bunch of shorter codes. If the currency you are looking for is not in this list, make one up and add it to this list.
 
 Currency Code | Shortened Currency Code
 ------------- | -----------------------
