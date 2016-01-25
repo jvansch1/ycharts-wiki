@@ -58,10 +58,10 @@
 * Other
   * [[Calculation Principles]]
   * [[Fundamental Data Testing]]
+  * [[Index  Naming Instructions]]
   * [[Add a New Data Frequency]]
   * [[Add a New Data Type]]
   * [[Jquery UI Components]]
   * [[News Headline Feeds]]
   * [[Linux Process Debugging]]
   * [[Getting a new SSL certificate]]
-  * [[]]
