@@ -128,8 +128,10 @@ MXN | MP
 Simply add an H to the symbol. If this makes the symbol too long and earlier you used the full currency code in the symbol, switch to using the shorter currency code.
 
 ## Xignite New Ticker
+For some indices we have info that we can easily match to an Xignite ticker. Details will be provider for each individual provider.
 
 ## Xignite Legacy Ticker
+xignite_legacy_to_new_mapping.xls has a mapping of Xignite Old to New tickers. If we have a new ticker from above, we can use this to get the old ticker and fill it in.
 
 ## YCharts Final Ticker
 
