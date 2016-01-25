@@ -47,6 +47,7 @@
   * [[Developer Setup (Vagrant)]]
   * [[How To Use Vagrant 101]]
 * Notes
+  * [[Diagnosing-Site-Issues]]
   * [[IE Testing Notes]]
   * [[Info Column Items Notes]]
   * [[Store Notes]]
