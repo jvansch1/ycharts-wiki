@@ -50,7 +50,6 @@
   * [[IE Testing Notes]]
   * [[Info Column Items Notes]]
   * [[Store Notes]]
-  * [[Sysadmin Notes]]
   * [[Transaction Atomic Notes]]
   * [[Code Snippets]]
   * [[Useful Regexps]]
@@ -63,8 +62,8 @@
   * [[Add a New Data Type]]
   * [[Jquery UI Components]]
   * [[News Headline Feeds]]
-  * [[Linux Process Debugging]]
   * [[Getting a new SSL certificate]]
 
-**Systems**
+**Devops**
 * [[Random Useful Sysadmin Commands]]
+* [[Linux Process Debugging]]
