@@ -127,8 +127,11 @@ MXN | MP
 
 Simply add an H to the symbol. If this makes the symbol too long and earlier you used the full currency code in the symbol, switch to using the shorter currency code.
 
+## Xignite New Ticker
 
+## Xignite Legacy Ticker
 
+## YCharts Final Ticker
 
 
 
@@ -146,5 +149,5 @@ Note
 ##### Core Name
 Note
 
-#####  Xignite New Matching
+#####  Xignite New Ticker Matching
 Note
