@@ -10,6 +10,9 @@ fab staging ping
 
 ### Prepare release to production
 ```bash
+Make sure there are no non-run migrations! The below shouldn't make any migrations!
+python manage.py makemigrations 
+
 cd /sites/ycharts
 git checkout develop
 git pull origin develop
