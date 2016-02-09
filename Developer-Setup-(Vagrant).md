@@ -54,7 +54,11 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
    ```
    nano confs/developers/vagrant_bash_profile_local
    ```
+1. You can also add aliases you would like to use in vagrant. For example if you want an alias for running your `chart_image_generator` node server you might add a line like this to your `confs/developers/vagrant_bash_profile_local` file.
 
+    ```
+    alias yc_node="node /sites/chart_image_generator/ycharts_server.js"
+    ```
 ## Windows Development (Only for emergencies)
 ```
 # ignore chmod differences, otherwise you will see a lot of modified files under PC when you shouldn't - do this 
