@@ -208,3 +208,9 @@ vagrant halt
 
 [VirtualBox Paravirtualization](http://d.pr/i/1di8R)
 
+## Make Sure Node Works
+```
+vagrant ssh
+yc_node
+```
+If this doesn't work, delete any precompiled node packages that may be there from a previous setup.
