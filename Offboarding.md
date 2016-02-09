@@ -22,4 +22,10 @@ Remove the users' @ycharts.com account on ycharts.com.
 
 If it exists, remove "is_staff" access to the user's personal accounts on ycharts.com
 
-Change any passwords the user might know by heart.
+Change any passwords the user might know by heart. (lol)
+
+Remove Okta Access
+
+Wipe Former Computer
+
+
