@@ -214,3 +214,7 @@ vagrant ssh
 yc_node
 ```
 If this doesn't work, delete any precompiled node packages that may be there from a previous setup. remove node_modules from sites/ycharts and sites/chart_image_generator and then make sure you do npm install on both directories INSIDE vagrant. (The way Mac installs node_modules doesn't always work)
+
+## Install FileZilla
+https://filezilla-project.org/
+Then open up Filezilla and import /sites/ycharts/developers/confs/filezilla_config.xml - this will load common FTP locations we use.
