@@ -30,7 +30,7 @@ https://127.0.0.1:8000
 
 # After
 vagrant ssh
-djangoserver
+yc_django
 Local: 127.0.0.1:8000 (Note the port difference)
 ```
 * Ipython Magic Commands
