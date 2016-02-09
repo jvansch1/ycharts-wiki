@@ -213,4 +213,4 @@ vagrant halt
 vagrant ssh
 yc_node
 ```
-If this doesn't work, delete any precompiled node packages that may be there from a previous setup.
+If this doesn't work, delete any precompiled node packages that may be there from a previous setup. remove node_modules from sites/ycharts and sites/chart_image_generator and then make sure you do npm install on both directories INSIDE vagrant. (The way Mac installs node_modules doesn't always work)
