@@ -214,6 +214,28 @@ vagrant ssh
 yc_node
 ```
 If this doesn't work, delete any precompiled node packages that may be there from a previous setup. remove node_modules from sites/ycharts and sites/chart_image_generator and then make sure you do npm install on both directories INSIDE vagrant. (The way Mac installs node_modules doesn't always work)
+```
+npm cache clean
+# Remove all installed packages and other NPM stuffs
+rm -rf ~/.npm
+rm -rf /sites/chart_image_generator/node_modules
+rm -rf /sites/ycharts/node_modules
+cd /sites/ycharts
+npm install
+cd /sites/chart_image_generator
+npm install
+yc_node
+```
+## For People Moving To Vagrant (Not Fresh Install)
+```
+nano ~/Library/LaunchAgents/com.ycharts.mysql.plist
+```
+Change your bind address to 0.0.0.0. Save.
+```
+launchctl unload ~/Library/LaunchAgents/com.ycharts.mysql.plist
+launchctl load ~/Library/LaunchAgents/com.ycharts.mysql.plist
+```
+This makes your VM be able to access MySQL.
 
 ## Install FileZilla
 https://filezilla-project.org/
