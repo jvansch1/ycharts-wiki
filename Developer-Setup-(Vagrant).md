@@ -21,6 +21,14 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
     sudo chown -R `whoami` /sites/
     ```
 
+## Windows Development (Only for emergencies)
+```
+# ignore chmod differences, otherwise you will see a lot of modified files under PC when you shouldn't - do this 
+# in the git repo! 
+git config core.fileMode false
+git config --global core.fileMode false
+```
+
 1. Clone the `ycharts`, `chart_image_generator`, and `developer_setup` repos
 
     ```bash
@@ -59,13 +67,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
     ```
     alias yc_node="node /sites/chart_image_generator/ycharts_server.js"
     ```
-## Windows Development (Only for emergencies)
-```
-# ignore chmod differences, otherwise you will see a lot of modified files under PC when you shouldn't - do this 
-# in the git repo! 
-git config fileMode false
-git config --global fileMode false
-```
+
 ## Connecting to YCharts Production/Staging Servers
 Set up your SSH config so you can connect to our server machines.
 
