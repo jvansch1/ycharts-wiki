@@ -5,7 +5,7 @@ Install Homebrew for easier package management. This will also prompt you about 
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-## Checkout code
+## Setting up Git
 1. Create a github account and tell an admin to add your username to YCharts.
 1. Create an private/public key and tie it to your github account.
     * Follow the instructions here: http://help.github.com/mac-key-setup/
@@ -21,14 +21,14 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
     sudo chown -R `whoami` /sites/
     ```
 
-## Windows Development (Only for emergencies)
+### Windows Development (Only for emergencies)
 ```
 # ignore chmod differences, otherwise you will see a lot of modified files under PC when you shouldn't - do this 
-# in the git repo! 
+# in the git repo! You may have to do this twice depending on each repo's git configurations
 git config core.fileMode false
 git config --global core.fileMode false
 ```
-
+## Checkout Code
 1. Clone the `ycharts`, `chart_image_generator`, and `developer_setup` repos
 
     ```bash
