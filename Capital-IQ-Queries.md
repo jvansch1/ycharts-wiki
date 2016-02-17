@@ -6,7 +6,10 @@ select GETDATE() as observeDate
 , (select C.companyName from ciqCompany C where C.companyId = EP.companyId) as companyName
 , (select EPT.periodTypeName from ciqEstimatePeriodType EPT where EPT.periodTypeId = EP.periodTypeId) as
 periodTypeName
+, EP.fiscalQuarter
 , EP.fiscalYear
+, EP.calendarQuarter
+, EP.calendarYear
 , (select DI.dataItemName from ciqdataitem DI where DI.dataitemid = ED.dataitemid) as dataItemName
 , (select Cu.ISOCode from ciqCurrency Cu where Cu.currencyId = ED.currencyId) as ISOCode
 , (select EST.estimateScaleName from ciqEstimateScaleType EST where EST.estimateScaleId =
@@ -31,5 +34,5 @@ where EP.companyId = 112350 -- IBM
 and EP.periodTypeId = 2 -- annual
 and GETDATE() between ED.effectiveDate and ED.toDate
 and EP.fiscalYear between 2008 and 2017
-order by 4
+order by 5, 8, 4
 ```
