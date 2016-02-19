@@ -35,3 +35,32 @@ and EP.periodTypeId = 2 -- annual
 and GETDATE() between ED.effectiveDate and ED.toDate
 and EP.fiscalYear between 2008 and 2017
 ```
+
+### Query All of IBM's Estimates for 6/30
+
+select
+(select C.companyName from ciqCompany C where C.companyId = EP.companyId) as companyName
+, (select EPT.periodTypeName from ciqEstimatePeriodType EPT where EPT.periodTypeId = EP.periodTypeId) as periodTypeName
+, EP.fiscalYear
+, (select DI.dataItemName from ciqdataitem DI where DI.dataitemid = ED.dataitemid) as dataItemName
+, EC.tradingItemId
+, (select Cu.ISOCode from ciqCurrency Cu where Cu.currencyId = ED.currencyId) as ISOCode
+, (select EAS.accountingStandardDescription from dbo.ciqEstimateAccountingStd EAS where EAS.accountingStandardId = EC.accountingStandardId) as AccountingStandard
+, (select EST.estimateScaleName from ciqEstimateScaleType EST where EST.estimateScaleId = ED.estimateScaleId) as estimateScaleName
+, ED.dataItemValue,ED.effectiveDate
+from ciqEstimatePeriod EP
+--- link the core estimate table to data table
+-----------------------------------------------------------
+join ciqEstimateConsensus EC on EC.estimatePeriodId = EP.estimatePeriodId
+join ciqEstimateNumericData ED on ED.estimateConsensusId = EC.estimateConsensusId
+-----------------------------------------------------------
+--- using a left join in order to retrieve company-level estimates that do not have a tradingitemID
+-----------------------------------------------------------
+left join ciqTradingItem TI on TI.tradingItemId = EC.tradingItemId
+left join ciqSecurity S on S.securityId = TI.securityId
+-----------------------------------------------------------
+where EP.companyId = 112350 -- IBM
+and EP.periodTypeId = 1 -- annual
+and '6/30/2015' between ED.effectiveDate and ED.toDate
+order by EP.fiscalYear desc, ED.dataItemId
+```
