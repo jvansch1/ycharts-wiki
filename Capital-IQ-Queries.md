@@ -37,7 +37,7 @@ and EP.fiscalYear between 2008 and 2017
 ```
 
 ### Query All of IBM's Estimates for 6/30
-
+```
 select
 (select C.companyName from ciqCompany C where C.companyId = EP.companyId) as companyName
 , (select EPT.periodTypeName from ciqEstimatePeriodType EPT where EPT.periodTypeId = EP.periodTypeId) as periodTypeName
