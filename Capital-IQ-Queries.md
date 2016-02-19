@@ -35,7 +35,7 @@ and EP.periodTypeId = 2 -- annual
 and GETDATE() between ED.effectiveDate and ED.toDate
 and EP.fiscalYear between 2008 and 2017
 ```
-![Test](http://d.pr/i/1laAU)
+
 ### Query All of IBM's Estimates for 6/30 - (This will show the different estimate types like EBIT, EBIT, Net Income)
 ```
 select
