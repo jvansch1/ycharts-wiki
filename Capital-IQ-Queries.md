@@ -36,7 +36,7 @@ and GETDATE() between ED.effectiveDate and ED.toDate
 and EP.fiscalYear between 2008 and 2017
 ```
 
-### Query All of IBM's Estimates for 6/30
+### Query All of IBM's Estimates for 6/30 - (This will show the different estimate types like EBIT, EBIT, Net Income)
 ```
 select
 (select C.companyName from ciqCompany C where C.companyId = EP.companyId) as companyName
