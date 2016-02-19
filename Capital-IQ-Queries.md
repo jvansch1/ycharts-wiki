@@ -34,5 +34,4 @@ where EP.companyId = 112350 -- IBM
 and EP.periodTypeId = 2 -- annual
 and GETDATE() between ED.effectiveDate and ED.toDate
 and EP.fiscalYear between 2008 and 2017
-order by 5, 8, 4
 ```
