@@ -64,3 +64,37 @@ and EP.periodTypeId = 1 -- annual
 and '6/30/2015' between ED.effectiveDate and ED.toDate
 order by EP.fiscalYear desc, ED.dataItemId
 ```
+
+### See all the queries made for a certain data type (and include revisions of up and down) for IBM on 6/30
+```
+select cep.companyid
+, cc.companyname
+,cti.tradingItemId
+,ex.exchangeName
+, cept.periodtypename
+, cep.fiscalyear
+,cep.fiscalQuarter
+, cep.periodenddate
+, cep.advancedate
+, cend.dataitemid
+, cdi.dataitemname
+, cend.dataitemvalue
+, cend.effectivedate
+, cend.toDate
+from ciqestimatePeriod cep
+join ciqestimateConsensus cec on cep.estimateperiodid = cec.estimateperiodid
+join ciqestimatenumericdata cend on cec.estimateconsensusid = cend.estimateconsensusid
+join ciqcompany cc on cep.companyid = cc.companyid
+join ciqSecurity cs on cs.companyId = cc.companyId
+join ciqTradingItem cti on cti.securityId = cs.securityId and cti.tradingItemId = cec.tradingItemId
+join ciqExchange ex on ex.exchangeId = cti.exchangeId
+join ciqestimateperiodtype cept on cep.periodtypeid = cept.periodtypeid
+join ciqdataitem cdi on cend.dataitemid = cdi.dataitemid
+where cep.companyid = '112350' ---IBM
+and cend.dataitemid in (100278,100280)
+and cep.periodtypeid = '2' --Quarterly
+and cs.primaryFlag = 1
+and cti.primaryFlag = 1
+and cep.periodEndDate = '6/30/2015'
+order by cend.effectiveDate desc, cend.dataItemId
+```
