@@ -33,7 +33,6 @@ and GETDATE() BETWEEN EN.effectiveDate and EN.toDate
 where EP.companyId = 112350 -- IBM
 and EP.periodTypeId = 2 -- annual
 and GETDATE() between ED.effectiveDate and ED.toDate
-and EP.fiscalYear between 2008 and 2017
 ```
 
 ### Query All of IBM's Estimates for 6/30 - (This will show the different estimate types like EBIT, EBIT, Net Income)
