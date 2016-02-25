@@ -4,17 +4,16 @@ Used for testing out Capital IQ
 ``` sql
 select GETDATE() as observeDate
 , (select C.companyName from ciqCompany C where C.companyId = EP.companyId) as companyName
-, (select EPT.periodTypeName from ciqEstimatePeriodType EPT where EPT.periodTypeId = EP.periodTypeId) as
-periodTypeName
+, (select EPT.periodTypeName from ciqEstimatePeriodType EPT where EPT.periodTypeId = EP.periodTypeId) as periodTypeName
 , EP.fiscalQuarter
 , EP.fiscalYear
 , EP.calendarQuarter
 , EP.calendarYear
 , (select DI.dataItemName from ciqdataitem DI where DI.dataitemid = ED.dataitemid) as dataItemName
 , (select Cu.ISOCode from ciqCurrency Cu where Cu.currencyId = ED.currencyId) as ISOCode
-, (select EST.estimateScaleName from ciqEstimateScaleType EST where EST.estimateScaleId =
-ED.estimateScaleId) as estimateScaleName
-, ED.dataItemValue,ED.effectiveDate
+, (select EST.estimateScaleName from ciqEstimateScaleType EST where EST.estimateScaleId = ED.estimateScaleId) as estimateScaleName
+, ED.dataItemValue
+, ED.effectiveDate
 , DI.relDataItemId
 , DI.dataItemId
 , EN.noteText
@@ -33,6 +32,7 @@ and GETDATE() BETWEEN EN.effectiveDate and EN.toDate
 where EP.companyId = 112350 -- IBM
 and EP.periodTypeId = 2 -- annual
 and GETDATE() between ED.effectiveDate and ED.toDate
+order by 8
 ```
 
 ### Query All of IBM's Estimates for 6/30 - (This will show the different estimate types like EBIT, EBIT, Net Income)
