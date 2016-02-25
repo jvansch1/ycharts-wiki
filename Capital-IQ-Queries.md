@@ -97,3 +97,27 @@ and cti.primaryFlag = 1
 and cep.periodEndDate = '6/30/2015'
 order by cend.effectiveDate desc, cend.dataItemId
 ```
+
+### Query Data for All Info About IBM with Full Outer Joins
+```
+select cep.companyid
+, cc.companyname
+, cept.periodtypename
+, cep.fiscalyear
+, cep.fiscalQuarter
+, cep.periodenddate
+, cep.advancedate
+, cend.dataitemid
+, cdi.dataitemname
+, cend.dataitemvalue
+, cend.effectivedate
+, cend.toDate
+from ciqestimatePeriod cep
+full outer join ciqestimateConsensus cec on cep.estimateperiodid = cec.estimateperiodid
+full outer join ciqestimatenumericdata cend on cec.estimateconsensusid = cend.estimateconsensusid
+full outer join ciqcompany cc on cep.companyid = cc.companyid
+full outer join ciqSecurity cs on cs.companyId = cc.companyId
+full outer join ciqestimateperiodtype cept on cep.periodtypeid = cept.periodtypeid
+full outer join ciqdataitem cdi on cend.dataitemid = cdi.dataitemid
+where cep.companyid = '112350' ---IBM
+```
