@@ -1,7 +1,7 @@
 Used for testing out Capital IQ
 
 ### Query IBM for All Estimate Data Points 
-```
+``` sql
 select GETDATE() as observeDate
 , (select C.companyName from ciqCompany C where C.companyId = EP.companyId) as companyName
 , (select EPT.periodTypeName from ciqEstimatePeriodType EPT where EPT.periodTypeId = EP.periodTypeId) as
@@ -36,7 +36,7 @@ and GETDATE() between ED.effectiveDate and ED.toDate
 ```
 
 ### Query All of IBM's Estimates for 6/30 - (This will show the different estimate types like EBIT, EBIT, Net Income)
-```
+``` sql
 select
 (select C.companyName from ciqCompany C where C.companyId = EP.companyId) as companyName
 , (select EPT.periodTypeName from ciqEstimatePeriodType EPT where EPT.periodTypeId = EP.periodTypeId) as periodTypeName
@@ -65,7 +65,7 @@ order by EP.fiscalYear desc, ED.dataItemId
 ```
 
 ### See all the queries made for a certain data type (and include revisions of up and down) for IBM on 6/30
-```
+``` sql
 select cep.companyid
 , cc.companyname
 ,cti.tradingItemId
@@ -99,7 +99,7 @@ order by cend.effectiveDate desc, cend.dataItemId
 ```
 
 ### Query Data for All Info About IBM with Full Outer Joins
-```
+``` sql
 select cep.companyid
 , cc.companyname
 , cept.periodtypename
