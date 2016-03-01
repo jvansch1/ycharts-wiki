@@ -97,3 +97,8 @@ and cti.primaryFlag = 1
 and cep.periodEndDate = '6/30/2015'
 order by cend.effectiveDate desc, cend.dataItemId
 ```
+
+# All Data Types Offered by CapIQ
+```
+select count(*) from ciqDataItem
+```
