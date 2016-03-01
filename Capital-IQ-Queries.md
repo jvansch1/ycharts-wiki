@@ -107,3 +107,8 @@ select count(*) from ciqDataItem
 ```
 select * from ciqDataItem where dataItemName in ('EBIT Consensus Mean', 'EBITDA Consensus Mean', 'EPS Normalized Consensus Mean', 'Revenue Consensus Mean')
 ```
+
+### Determine How Many Data Points We Will Actually Need from CapIQ
+```
+select count(*) from ciqEstimateNumericData where dataItemId in (select dataItemId from ciqDataItem where dataItemName in ('EBIT Consensus Mean', 'EBITDA Consensus Mean', 'EPS Normalized Consensus Mean', 'Revenue Consensus Mean'))
+```
