@@ -98,7 +98,12 @@ and cep.periodEndDate = '6/30/2015'
 order by cend.effectiveDate desc, cend.dataItemId
 ```
 
-# All Data Types Offered by CapIQ
+### All Data Types Offered by CapIQ
 ```
 select count(*) from ciqDataItem
+```
+
+### The Data Types We Care About From CapIQ
+```
+select * from ciqDataItem where dataItemName in ('EBIT Consensus Mean', 'EBITDA Consensus Mean', 'EPS Normalized Consensus Mean', 'Revenue Consensus Mean')
 ```
