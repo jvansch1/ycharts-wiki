@@ -60,7 +60,20 @@ git config --global core.fileMode false
    your credentials to your local vagrant bash_profile.
    
    ```
+   # if you have sublime
+   subl confs/developers/vagrant_bash_profile_local
+   # otherwise open up with nano
    nano confs/developers/vagrant_bash_profile_local
+
+   # then in your vagrant_bash_profile_local add
+   export AWS_ACCESS_KEY_ID=<YOUR_ACCESS_KEY_HERE>
+   export AWS_SECRET_ACCESS_KEY=<YOUR_SECRET_ACCESS_KEY_HERE>
+   export AWS_DEFAULT_REGION=us-east-1
+   # add any other aliases you want and close it.
+
+   # you need to now 'source' your vagrant_bash_profile_local so run:
+   vagrant halt
+   vagrant up --provision
    ```
 1. You can also add aliases you would like to use in vagrant. For example if you want an alias for running your `chart_image_generator` node server you might add a line like this to your `confs/developers/vagrant_bash_profile_local` file.
 
