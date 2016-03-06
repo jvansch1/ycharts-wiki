@@ -61,9 +61,9 @@ git config --global core.fileMode false
    
    ```
    # if you have sublime
-   subl confs/developers/vagrant_bash_profile_local
+   subl /sites/ycharts/confs/developers/vagrant_bash_profile_local
    # otherwise open up with nano
-   nano confs/developers/vagrant_bash_profile_local
+   nano /sites/ycharts/confs/developers/vagrant_bash_profile_local
 
    # then in your vagrant_bash_profile_local add
    export AWS_ACCESS_KEY_ID=<YOUR_ACCESS_KEY_HERE>
