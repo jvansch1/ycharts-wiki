@@ -1,7 +1,7 @@
 Issues We Have Seen with Chicago Internet
 
 1. A user has spyware that is downloading the entire traffic.
-2. The switch is kind of failure prone. If someone plugs a port back into another port of the switch, it will bring down the entire network. NOT A JOKE! If you want to know if it's a switch problem, TAKE OUT THE SWITCH <> ROUTER.
+2. The switch is kind of failure prone. If someone plugs a port back into another port of the switch, it will bring down the entire network. NOT A JOKE! If you want to know if it's a switch problem, TAKE OUT THE SWITCH <> ROUTER. Have a computer plug directly into the router/firewall. If your internet works when that happens, it's the SWITCH!!!!!!!
 3. ATT Modem flips into bridge modes and completely fails to work.
 The static IPs are 
 ```
