@@ -8,6 +8,7 @@ The static IPs are
 162.197.252.41 (statically assigned)
 Gateway: 162.197.252.46; DNS: 8.8.8.8, 8.8.4.4
 ```
+
 4. Comcast sometimes will just fail, you will then need to reset. This should actually be static, but Comcast fucked us
 ```
 73.247.76.130 (via DHCP)
