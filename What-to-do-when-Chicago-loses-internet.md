@@ -9,7 +9,7 @@ The static IPs are
 Gateway: 162.197.252.46; DNS: 8.8.8.8, 8.8.4.4
 ```
 
-4. Comcast sometimes will just fail, you will then need to reset. This should actually be static, but Comcast fucked us
+4. Comcast sometimes will just fail, you will then need to reset. This should actually be static, but Comcast fucked us, so this is done dynamically.
 ```
 73.247.76.130 (via DHCP)
 Gateway: 73.247.76.1; DNS: 75.75.75.75, 75.75.76.76
@@ -18,3 +18,8 @@ Gateway: 73.247.76.1; DNS: 75.75.75.75, 75.75.76.76
 ATT / Comcast is set as a FAIL OVER solution. That is, if it ATT fails, it will switch over to Comcast! IE. For 99% of the time, Comcast is NOT used.
 
 On the Meraki interface, you can see where the traffic is going ... either Internet 1 or Internet 2
+
+If you need to login to the ATT modem .... here are the credentials
+```
+ATT Modem : login/password
+```
