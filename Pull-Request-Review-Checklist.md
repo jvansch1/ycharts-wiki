@@ -3,22 +3,8 @@
 ## Basic ##
 
 ## Screener ##
-### Key Components
-* Universe Filters
-* Metric Filters
-* Data Table
-* Export Data
-* Metric/Info Columns
-* Scoring Models
-* Saved Screens
-* Save as Watchlist
-
-### Testing
-Below are some steps to test the key components above.  Those without their own section are handled incidentally in checking other things.  A full pass through may not be necessary, but keep in mind where metric changes might come into play in unexpected ways (columns, sorting, saved screens etc), calc menu changes might cause problems (popups), etc.
 
 ### Security Universe Filters
-These allow us to filter down by security lists.  Default should be all of the asset type.
-#### Things to Test
 1. Add a Filter
     - Does the popup look correct?
     - When I add, does the result set shrink correctly (CHECK COUNTS!)
@@ -33,8 +19,6 @@ These allow us to filter down by security lists.  Default should be all of the a
     - Results should be pretty clear about whether it's working or not.  Only have attractive selected?  Should only see green in the results.
 
 ### Metric Filters
-These allow us to filter by an individual metric value, a range, etc.
-#### Things to Test
 1. Add a Metric Filter
     - Test all types: Between, less than, greater than etc.
     - Test the formula entry, calc selection, range data etc.
@@ -47,8 +31,6 @@ These allow us to filter by an individual metric value, a range, etc.
 3. Delete a filter
 
 ### The Data Table
-This is where the data appears.  Handles display, of course, adding and removing items, and sorting.  Check the following:
-#### Things to Test
 1. Does sorting work?  Do metric values appear to be in order?
     - Try both directions!
 2. Are there things that shouldn't be here given the current filters?
