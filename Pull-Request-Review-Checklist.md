@@ -47,18 +47,13 @@
     - Sorted column displayed correctly with arrow pointing in the right direction?
 
 ### Export Button
-Export to CSV
-#### Things to Test
 1. Does Exporting Work?
 2. Check the file:  Data there? Labels Correct?
 
 ### Scoring Models
-#### Testing
 Run through it.  Do the same as Metric filters + Make sure values look right.
 
 ### Saved Screens
-Saved screener params
-#### Testing
 1. Did we change anything that would change a param key or value
     - Calc names, info field name?
     - Does anything need to be updated? Was it updated?  There should be data migration.
@@ -70,7 +65,6 @@ Saved screener params
    - Check results for all
 
 ### Save as Watchlist
-Saves the screener result set as a new watchlist.
 1. Create a screen, save the results as a watchlist.  Give it a name.
     - Breaking names: try existing name.
 2. Does the watchlist have the same number of items as the screener result?
