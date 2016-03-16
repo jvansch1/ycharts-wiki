@@ -51,35 +51,6 @@ git config --global core.fileMode false
     ln -s -f /sites/chart_image_generator/confs/git_pre_commit_hook.py /sites/chart_image_generator/.git/hooks/pre-commit
     ```
 
-1. Setup your Vagrant Bash Profiles with your Amazon IAM
-   Ask someone to create an IAM user for you. Once created, they should give you
-   your credentials as well as a temporary password. They will also set up multi-factor
-   authentication for you.
-
-   After logging in to [the AWS console](https://ycharts.signin.aws.amazon.com/console), add
-   your credentials to your local vagrant bash_profile.
-   
-   ```
-   # if you have sublime
-   subl /sites/ycharts/confs/developers/vagrant_bash_profile_local
-   # otherwise open up with nano
-   nano /sites/ycharts/confs/developers/vagrant_bash_profile_local
-
-   # then in your vagrant_bash_profile_local add
-   export AWS_ACCESS_KEY_ID=<YOUR_ACCESS_KEY_HERE>
-   export AWS_SECRET_ACCESS_KEY=<YOUR_SECRET_ACCESS_KEY_HERE>
-   export AWS_DEFAULT_REGION=us-east-1
-   # add any other aliases you want and close it.
-
-   # you need to now 'source' your vagrant_bash_profile_local so run:
-   vagrant halt
-   vagrant up --provision
-   ```
-1. You can also add aliases you would like to use in vagrant. For example if you want an alias for running your `chart_image_generator` node server you might add a line like this to your `confs/developers/vagrant_bash_profile_local` file.
-
-    ```
-    alias yc_node="node /sites/chart_image_generator/ycharts_server.js"
-    ```
 
 ## Connecting to YCharts Production/Staging Servers
 Set up your SSH config so you can connect to our server machines.
@@ -252,6 +223,33 @@ launchctl load ~/Library/LaunchAgents/com.ycharts.mysql.plist
 ```
 This makes your VM be able to access MySQL.
 
-## Install FileZilla
-https://filezilla-project.org/
-Then open up Filezilla and import /sites/ycharts/developers/confs/filezilla_config.xml - this will load common FTP locations we use.
+## Amazon IAM Roles
+1. Setup your Vagrant Bash Profiles with your Amazon IAM
+   Ask someone to create an IAM user for you. Once created, they should give you
+   your credentials as well as a temporary password. They will also set up multi-factor
+   authentication for you.
+
+   After logging in to [the AWS console](https://ycharts.signin.aws.amazon.com/console), add
+   your credentials to your local vagrant bash_profile.
+   
+   ```
+   # if you have sublime
+   subl /sites/ycharts/confs/developers/vagrant_bash_profile_local
+   # otherwise open up with nano
+   nano /sites/ycharts/confs/developers/vagrant_bash_profile_local
+
+   # then in your vagrant_bash_profile_local add
+   export AWS_ACCESS_KEY_ID=<YOUR_ACCESS_KEY_HERE>
+   export AWS_SECRET_ACCESS_KEY=<YOUR_SECRET_ACCESS_KEY_HERE>
+   export AWS_DEFAULT_REGION=us-east-1
+   # add any other aliases you want and close it.
+
+   # you need to now 'source' your vagrant_bash_profile_local so run:
+   vagrant halt
+   vagrant up --provision
+   ```
+1. You can also add aliases you would like to use in vagrant. For example if you want an alias for running your `chart_image_generator` node server you might add a line like this to your `confs/developers/vagrant_bash_profile_local` file.
+
+    ```
+    alias yc_node="node /sites/chart_image_generator/ycharts_server.js"
+    ```
