@@ -83,7 +83,7 @@ Run through it.  Do the same as Metric filters + Make sure values look right.
         - Funds should not have "EBITDA" metric
         - Index should not have "PE Ratio" metric
         - Indicator should not have any metrics.
-    - Do Equity, Fund and Index have `System Alert` checkboxes?
+    - Do Equity, Fund and Index have `System Alert` checkboxes? Do they work?
 2. Create a Portfolio Strategy Alert (make sure it appears in Alerts Manager Popup after creation)
     - Do this by going to Data > Portfolio Strategies > Click "Receive Alerts on this Strategy"
 3. Edit an alert for each security type
