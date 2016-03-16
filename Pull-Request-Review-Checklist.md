@@ -77,6 +77,12 @@ Run through it.  Do the same as Metric filters + Make sure values look right.
 ### Metric ###
 ### Alerts Manger ###
 
+#### UI Testing
+1. Open and close it ~5 times and see if anything weird happens
+2. Does the "x" in the top right work and close the popup?
+3. Is it draggable?
+
+#### Functional Testing
 1. Create an alert for each security type (Equity, MutualFund, Index, Indicator)
     - Are the metrics correct for each security type?
         - Equity should not have "Total Assets Under Management" metric
@@ -86,12 +92,29 @@ Run through it.  Do the same as Metric filters + Make sure values look right.
     - Do Equity, Fund and Index have `System Alert` checkboxes? Do they work?
 2. Create a Portfolio Strategy Alert (make sure it appears in Alerts Manager Popup after creation)
     - Do this by going to Data > Portfolio Strategies > Click "Receive Alerts on this Strategy"
-3. Edit an alert for each security type
-4. Delete an alert for each security type (Also test Delete for Portfolio Strategies)
-5. Does the `Receive Alerts By Email` dropdown have four options of `As Soon As Possible`, `Daily`, `Weekly` and `Never`?
-6. Does the `Create New Alert` autocompleter work as expected? (Should show all security types)
+3. Create a Watchlist Alert 
+    - Do this on watchlist by Options > Create/Edit Alerts
+4. Edit an alert for each security type (Also test Edit for Watchlist Alerts)
+5. Delete an alert for each security type (Also test Delete for Portfolio Strategy Alerts)
+6. Does the `Receive Alerts By Email` dropdown have four options of `As Soon As Possible`, `Daily`, `Weekly` and `Never`?
+7. Does the `Create New Alert` autocompleter work as expected? (Should show all security types)
 
 ### Alerts ###
+
+#### UI Testing
+1. Open and close it like 5 times and see if anything weird happens
+2. Does the "x" in the top right work and close the popup?
+3. Is it draggable?
+
+#### Functionality Testing
+1. Create alerts for Fund, Equity, Economic Indicators and Index Watchlists
+    - To do so on a watchlist of each type Options > Create/Edit Alerts
+2. Create alerts for Fund, Equity, Economic Indicators and Index securities
+    - To do so go to each securities page (ie. `/companies/AAPL`) and on the top bar click "Create an Alert"
+    - Does each popup have the correct metrics? (ie. A equity should not have "Assets Under Management")
+    - Does each popup have Systems Alerts checkbox options?
+3. Go to "Alerts Manager" and make sure they were all created successfully
+
 ### Info ###
 ### Watchlist Inline ###
 ### Security Lists ###
