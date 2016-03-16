@@ -76,6 +76,20 @@ Run through it.  Do the same as Metric filters + Make sure values look right.
 ## Popups ##
 ### Metric ###
 ### Alerts Manger ###
+
+1. Create an alert for each security type (Equity, MutualFund, Index, Indicator)
+    - Are the metrics correct for each security type?
+        - Equity should not have "Total Assets Under Management" metric
+        - Funds should not have "EBITDA" metric
+        - Index should not have "PE Ratio" metric
+        - Indicator should not have any metrics.
+    - Do Equity, Fund and Index have `System Alert` checkboxes?
+2. Create a Portfolio Strategy Alert (make sure it appears in Alerts Manager Popup after creation)
+    - Do this by going to Data > Portfolio Strategies > Click "Receive Alerts on this Strategy"
+3. Edit an alert for each security type
+4. Delete an alert for each security type (Also test Delete for Portfolio Strategies)
+5. Does the `Receive Alerts By Email` dropdown have four options of `As Soon As Possible`, `Daily`, `Weekly` and `Never`?
+6. Does the `Create New Alert` autocompleter work as expected? (Should show all security types)
 ### Alerts ###
 ### Info ###
 ### Watchlist Inline ###
