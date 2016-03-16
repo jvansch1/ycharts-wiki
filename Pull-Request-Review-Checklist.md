@@ -90,6 +90,7 @@ Run through it.  Do the same as Metric filters + Make sure values look right.
 4. Delete an alert for each security type (Also test Delete for Portfolio Strategies)
 5. Does the `Receive Alerts By Email` dropdown have four options of `As Soon As Possible`, `Daily`, `Weekly` and `Never`?
 6. Does the `Create New Alert` autocompleter work as expected? (Should show all security types)
+
 ### Alerts ###
 ### Info ###
 ### Watchlist Inline ###
