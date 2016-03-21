@@ -2,7 +2,7 @@
 The following is a description of the major components of our technology stack.
 
 ## High Level Stack
-* [Python](http://python.org) is our backend programming language. We are standardized around Python 2.7, though we will likely switch to Python 3.X as soon as most of our major libraries support it.
+* [Python](http://python.org) is our backend programming language. We are standardized around Python 3.4
 * [Django](https://docs.djangoproject.com/en/1.4/) is our backend framework.
 * [MySQL](http://dev.mysql.com/doc/) is our main storage database. It powers all of our Django models.
 * [Redis](http://redis.io/commands) is the data store that powers our screener, autocompleter, queue, among other things.
