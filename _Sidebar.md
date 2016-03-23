@@ -45,7 +45,6 @@
   * [[Indicator Notes]]
   * [[Indicator Outsourcer Notes]]
 * Vagrant
-  * [[Developer Setup (Vagrant)]]
   * [[How To Use Vagrant 101]]
 * Notes
   * [[Diagnosing-Site-Issues]]
