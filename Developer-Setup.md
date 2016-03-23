@@ -181,15 +181,6 @@ python manage.py securities_process_lists_and_sets
 python manage.py investor_relations_generate_press_release_classifier
 ```
 
-
-## Optimize Vagrant
-
-
-### Stop the vagrant machine
-```
-vagrant halt
-```
-
 ## Make Sure Node Works
 ```
 vagrant ssh
