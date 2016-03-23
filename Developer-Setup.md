@@ -190,10 +190,6 @@ python manage.py investor_relations_generate_press_release_classifier
 vagrant halt
 ```
 
-### Load Virtual Box. Click on the virtual machine settings and change the settings below to KVM to make it fast.
-
-[VirtualBox Paravirtualization](http://d.pr/i/1di8R)
-
 ## Make Sure Node Works
 ```
 vagrant ssh
