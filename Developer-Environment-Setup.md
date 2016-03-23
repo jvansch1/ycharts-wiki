@@ -199,16 +199,6 @@ cd /sites/chart_image_generator
 npm install
 yc_node
 ```
-## For People Moving To Vagrant (Not Fresh Install)
-```
-nano ~/Library/LaunchAgents/com.ycharts.mysql.plist
-```
-Change your bind address to 0.0.0.0. Save.
-```
-launchctl unload ~/Library/LaunchAgents/com.ycharts.mysql.plist
-launchctl load ~/Library/LaunchAgents/com.ycharts.mysql.plist
-```
-This makes your VM be able to access MySQL.
 
 ## Amazon IAM Roles
 1. Setup your Vagrant Bash Profiles with your Amazon IAM
