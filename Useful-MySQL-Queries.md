@@ -81,7 +81,7 @@ ORDER BY c.market_cap_usd DESC;
 ## Indices
 ```mysql
 # Indices, grouped by family, with last price date
-select symbol, name, family, day from indices_index left outer join indices_indexlevellatest on indices_index.id = indices_indexlevellatest.index_id order by name, family;
+select symbol, name, xignite_legacy_family, day from indices_index left outer join indices_indexlevellatest on indices_index.id = indices_indexlevellatest.index_id order by name, xignite_legacy_family;
 ```
 
 ## Indicators
