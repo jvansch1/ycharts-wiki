@@ -179,6 +179,12 @@ python manage.py securities_process_lists_and_sets
 
 ```bash
 python manage.py investor_relations_generate_press_release_classifier
+
+If this fails, start Python
+import nltk
+nltk.download('punkt')
+
+Then try again
 ```
 
 ## Make Sure Node Works
