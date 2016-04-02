@@ -32,10 +32,11 @@
   * [[PyCharm]]
   * [[Vim Notes]]
 * Amazon
-  * [[S3-Static-Assets]]
-  * [[AWS-Redis-Setup]]
+  * [[Connecting to AWS Servers]]
   * [[Mechanical-Turk]]
   * [[VPC-Setup]]
+  * Deprecated: [[S3-Static-Assets]]
+  * Deprecated: [[AWS Redis Setup]]
 * Celery
   * [[Celery Getting Started]]
 * Apps
