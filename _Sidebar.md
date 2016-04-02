@@ -52,7 +52,7 @@
   * [[Info Column Items Notes]]
   * [[Store Notes]]
   * [[Transaction Atomic Notes]]
-  * [[Code Snippets]]
+  * [[Useful Code Snippets]]
   * [[Useful Regexps]]
   * [[Concurrent Login Block Notes]]
 * Other
