@@ -128,7 +128,7 @@ Run through it.  Do the same as Metric filters + Make sure values look right.
     - Do Equity, Fund and Index have `System Alert` checkboxes? Do they work?
 2. Create a Portfolio Strategy Alert (make sure it appears in Alerts Manager Popup after creation)
     - Do this by going to Data > Portfolio Strategies > Click "Receive Alerts on this Strategy"
-3. Create a Watchlist Alert 
+3. Create a Watchlist Alert
     - Do this on watchlist by Options > Create/Edit Alerts
 4. Edit an alert for each security type (Also test Edit for Watchlist Alerts)
 5. Delete an alert for each security type (Also test Delete for Portfolio Strategy Alerts)
@@ -156,3 +156,63 @@ Run through it.  Do the same as Metric filters + Make sure values look right.
 ### Security Lists ###
 
 ## Charts ##
+### Fundamental Chart
+1. Check that "There are no valid items on this chart. Change or add items from the left sidebar." is displayed on an empty chart.
+1. Add securities.
+    - Ensure that "Price" was added as a calc for companies if no other companies were on the chart.
+    - Ensure that "Level" was added as a calc for indices if no other indices were on the chart.
+    - Ensure that "Total Return Price" was added as a calc for mutual funds if no other mutual funds were on the chart.
+    - Check that the chart displays the expected data.
+1. Add calcs and check that the chart displays the data correctly.
+1. Change the zoom.
+    - Check that "1d" and "5d" zooms have intraday data for "Price" and "Level" calcs.
+    - Check that the "Date Range" inputs update to the correct dates.
+1. Change the data format.
+    - Change data format to "Normalized (% Change)" and check that all the data starts at 0% on the same date.
+    - Change data format to "Percent Off High" and check that all the data looks correct.
+1. Change the panel layout.
+    - Change panel layout to "Panel per Financial Metric" and there should be a chart for every metric in the left sidebar.
+    - Change panel layout to "Panel per Security" and there should be a chart for every security in the left sidebar.
+1. Toggle the "US Recessions" chart option on and check that recessions are colored dark grey. (Make sure the chart includes a recession... last one was Dec 07 to May 09)
+1. Toggle the "Log Scale" chart option on and check that the data gets logarithmically scaled.
+1. Click the "Save Image" button and an image of the chart should be downloaded.
+1. Click the "Export Data" button and a csv of the data should be downloaded.
+1. Click the "Embed" button and you should see a `<a>` tag that can be copied.
+1. Add a correlation of each type and ensure that it appears below and smaller than the main chart.
+1. Add a securitylist.
+    - Check that the first security in the list appears on the chart.
+    - Check that hitting the up and down arrows change the security.
+1. Click "Hide Chart Controls" and check that the left sidebar is hidden and the chart increases in size to take the whole page.
+
+#### Saved Charts
+1. Save as a new saved chart.
+1. Click "Reset All"
+1. Open the saved chart and check that all the options are the same.
+1. Make a change to the chart and check that the saved chart button says "Unsaved"
+1. Save the saved chart.
+1. Click "Reset All" and re-open to check that your change was saved.
+
+### Fundamental Chart for Presentation
+1. Go through all Fundamental Chart checks.
+1. Change size and check that the chart image size changes.
+1. Add a title and check that it appears on the chart.
+1. Add a note and check that it appears on the chart.
+1. Toggle all the chart options.
+    - Check that "Display Units" adds units to the label
+    - Check that "Display Source" displays the source for economic indicators.
+    - Check that "Quote Style Legend" displays price, change, and % change for price and level calcs.
+    - Check that "Legend On Chart" toggles where the legend is displayed.
+
+### Technical Chart
+1. Check that "To start, choose a stock or index" is display on an empty chart.
+1. Check that "Volume", "RSI 14", "SMA 50" and "SMA 200" are added underneath "Add Indicators"
+1. Add a security and check that data looks ok.
+1. Add/change indicators and check that data looks ok.
+1. Change "Chart Style" to "Line" and check that it changes to a line instead of candlesticks.
+1. Change "Period" and check that the number of points on the chart changes to the correct period.
+1. Check "List Browser" similar to Fundamental Chart.
+1. Check "Saved Charts" similar to Fundamental Chart.
+
+### Technical Chart for Presentation
+1. Go through Technical Chart checks.
+1. Go through Fundamental Chart for Presentation checks.
