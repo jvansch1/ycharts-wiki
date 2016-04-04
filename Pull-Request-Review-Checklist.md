@@ -71,6 +71,42 @@ Run through it.  Do the same as Metric filters + Make sure values look right.
 
 ## Tables ##
 
+### Comp Tables
+1. On the first new load of the page, you should see an empty table with "To get started, add securities." popup and the Symbol, Name, and Currency Code columns.
+2. Can I add and remove securities: via the securities and list options?
+3. Can I add and remove columns: info and metric?
+4. Do metric sets work? Can I load, update, and delete them?
+5. Can I add and remove summary stats?
+6. Does exporting work? How about for the excel add in?
+7. Does sorting work?  Do metric values appear to be in order?
+    - Try both directions!
+8. Load the table up and scroll. Does everything look okay?
+    - Small offset at end is expected
+9. Visuals
+    - Info columns all left aligned?
+    - Metrics Right aligned?
+    - Sorted column displayed correctly with arrow pointing in the right direction?
+10. Does the reset all button work?
+
+### Timeseries Analysis
+1. On the first new load of the page, you should see an empty table with "To get started, add securities." popup and the Symbol, Name, Metric and Currency Code columns.
+2. Can I add and remove securities: via the securities and list options?
+3. Can I add and remove columns: info and metric?
+4. Do metric sets work? Can I load, update, and delete them?
+5. Can I add and remove summary stats?
+6. Does the date range work? (Both start and end dates)
+7. Do the data formatting options work?
+8. Does exporting work?
+9. Does sorting work?  Do metric values appear to be in order?
+    - Try both directions!
+10. Load the table up and scroll. Does everything look okay?
+    - Small offset at end is expected
+11. Visuals
+    - Info columns all left aligned?
+    - Metrics Right aligned?
+    - Sorted column displayed correctly with arrow pointing in the right direction?
+12. Does the reset all button work?
+
 ## Dashboard ##
 
 ## Popups ##
