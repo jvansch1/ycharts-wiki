@@ -47,7 +47,6 @@
 * Vagrant
   * [[How To Use Vagrant 101]]
 * Notes
-  * [[Diagnosing-Site-Issues]]
   * [[IE Testing Notes]]
   * [[Info Column Items Notes]]
   * [[Store Notes]]
@@ -66,6 +65,8 @@
   * [[Getting a new SSL certificate]]
 
 **Devops**
+* [[Diagnosing Memcache Issues]]
 * [[Random Useful Sysadmin Commands]]
 * [[Linux Process Debugging]]
 * [[Debugging Node Processes]]
+
