@@ -132,6 +132,8 @@ Install : https://www.vagrantup.com/downloads.html
 
 ## Navigate to your main ycharts directory
 ```
+From the Mac Mini Shared Folder, copy vagrant_dev_setup_packaged.box to /sites/ycharts/confs/developers/vagrant_dev_setup_packaged.box
+
 cd /sites/ycharts
 vagrant up
 ```
