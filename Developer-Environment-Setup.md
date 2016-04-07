@@ -131,13 +131,13 @@ Install : https://www.vagrantup.com/downloads.html
 ```
 
 ## Navigate to your main ycharts directory
-```
 From the Mac Mini Shared Folder, copy vagrant_dev_setup_packaged.box to /sites/ycharts/confs/developers/vagrant_dev_setup_packaged.box
-
+```
 cd /sites/ycharts
+vagrant box add vagrant_dev_setup_packaged /sites/ycharts/confs/developers/vagrant_dev_setup_packaged.box
 vagrant up
 ```
-This will take about 30 minutes for the first time setup. When it's completed ... test it
+This will take about 5 minutes for the first time setup. When it's completed ... test it
 ```
 vagrant ssh
 
