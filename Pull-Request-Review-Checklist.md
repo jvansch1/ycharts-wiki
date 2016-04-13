@@ -106,6 +106,10 @@ Run through it.  Do the same as Metric filters + Make sure values look right.
 12. Does the reset all button work?
 
 ## Dashboard ##
+### Dashboard Watchlists ###
+
+### Dashboard Charts ###
+
 
 ## Popups ##
 ### Metric ###
