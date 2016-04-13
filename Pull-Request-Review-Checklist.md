@@ -1,7 +1,5 @@
 # Pull Request Review Checklist #
 
-## Basic ##
-
 ## Screener ##
 
 ### Security Universe Filters
