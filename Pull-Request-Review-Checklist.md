@@ -210,6 +210,7 @@ _Need to be using a User that is in a Client Group to share_
 4. Does the popup accurately display what lists the security is already in?
 5. Can the security be removed from a list here?
 6. Check that the changes being performed in the inline are actually reflected in the watchlist (even if it is just via a refresh and reopening the popup).
+7. Be sure to check on quote pages and table situations.
 
 ### Security Lists ###
 1. Is this multi-security_type?
