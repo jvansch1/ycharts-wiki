@@ -203,6 +203,12 @@ _Need to be using a User that is in a Client Group to share_
 3. Go to "Alerts Manager" and make sure they were all created successfully
 
 ### Info ###
+Very similar to other main popups:
+1. Opens? Closes? Reopens refreshed on button click while the popup is open?
+2. Check search.
+3. Correct Menu and Search types?
+4. Multi-pane selection works?
+
 ### Watchlist Inline ###
 1. Does it open? This commonly breaks with changes to security id and type fetching.
 2. Is the correct information to get the security present?
