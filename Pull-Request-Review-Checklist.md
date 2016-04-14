@@ -115,15 +115,25 @@ Run through it.  Do the same as Metric filters + Make sure values look right.
 ### Metric ###
 TODO: Metric Popup Needs to be Added.
 
+### Scoring Model ###
+_Located on the screener page_
+
+#### Functional Testing 
+1. Make sure Type dropdown works correctly
+2. Make sure you can select "Saved Scores"
+3. Make sure you can edit and save "Saved Scores"
+4. Make sure you can create a Score by adding components and changing the weightings.
+5. Make sure you can't have invalid weights, negative weights, or any alphanumeric weights.
+
 ### Sharing ###
 _Need to be using a User that is in a Client Group to share_
 
-#### UI Testing
+#### UI Testing ####
 1. Make sure open and closing works properly
 2. Make sure changing permissions shows a green "Saved..."
 3. Make sure you can switch between all of the permissions
 
-#### Functional Testing
+#### Functional Testing ####
 1. Share a watchlist with permission set to "View"
 2. Share a chart with permission set to "Edit"
 3. Unshare a chart by switching permissino to "Cannot View"
@@ -133,12 +143,12 @@ _Need to be using a User that is in a Client Group to share_
 
 ### Alerts Manger ###
 
-#### UI Testing
+#### UI Testing ####
 1. Open and close it ~5 times and see if anything weird happens
 2. Does the "x" in the top right work and close the popup?
 3. Is it draggable?
 
-#### Functional Testing
+#### Functional Testing ####
 1. Create an alert for each security type (Equity, MutualFund, Index, Indicator)
     - Are the metrics correct for each security type?
         - Equity should not have "Total Assets Under Management" metric
