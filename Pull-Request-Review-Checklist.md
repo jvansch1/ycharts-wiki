@@ -205,6 +205,17 @@ _Need to be using a User that is in a Client Group to share_
 ### Info ###
 ### Watchlist Inline ###
 ### Security Lists ###
+1. Is this multi-security_type?
+    - Do the right security groups appear at the top?  Is one selected on open (first)?
+    - Changing the selected security type shows appropriate menus?
+2. Intersect/Exclude/Add Present?  Should it be?
+    - In some cases, it will not appear until after the first list is selected (defaults to add the first time).
+    - Check clicking through these. Submit a few.
+3. *Watchlists appearing in first pane at the bottom?  Do they work?
+4. Edit Mode
+    - Make sure it opens in a populated state.
+    - Without a change submission, does it reopen to the correct state?
+    - Does resubmission work correctly?
 
 ## Charts ##
 ### Fundamental Chart
