@@ -113,6 +113,24 @@ Run through it.  Do the same as Metric filters + Make sure values look right.
 
 ## Popups ##
 ### Metric ###
+TODO: Metric Popup Needs to be Added.
+
+### Sharing ###
+_Need to be using a User that is in a Client Group to share_
+
+#### UI Testing
+1. Make sure open and closing works properly
+2. Make sure changing permissions shows a green "Saved..."
+3. Make sure you can switch between all of the permissions
+
+#### Functional Testing
+1. Share a watchlist with permission set to "View"
+2. Share a chart with permission set to "Edit"
+3. Unshare a chart by switching permissino to "Cannot View"
+3. Login to another user in the same client group
+4. Make sure you have the correct permissions for each of the items shared
+
+
 ### Alerts Manger ###
 
 #### UI Testing
