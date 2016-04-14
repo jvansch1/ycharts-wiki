@@ -204,6 +204,13 @@ _Need to be using a User that is in a Client Group to share_
 
 ### Info ###
 ### Watchlist Inline ###
+1. Does it open? This commonly breaks with changes to security id and type fetching.
+2. Is the correct information to get the security present?
+3. Can a security be added to a watchlist?
+4. Does the popup accurately display what lists the security is already in?
+5. Can the security be removed from a list here?
+6. Check that the changes being performed in the inline are actually reflected in the watchlist (even if it is just via a refresh and reopening the popup).
+
 ### Security Lists ###
 1. Is this multi-security_type?
     - Do the right security groups appear at the top?  Is one selected on open (first)?
