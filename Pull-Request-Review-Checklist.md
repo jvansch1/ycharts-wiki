@@ -113,7 +113,28 @@ Run through it.  Do the same as Metric filters + Make sure values look right.
 
 ## Popups ##
 ### Metric ###
-TODO: Metric Popup Needs to be Added.
+1. Open/Close
+    - Does it open?
+    - Does the (x) close it?
+    - Any console messages?
+    - Menu Populated? Correct menu options?
+    - Does clicking the popup button with the popup up re-open it in a reset state (which can be an "edit mode" preselected state)?  This was a UX decision.  We need to keep this consistent across all popups.
+2.  The Search
+    - This is often overlooked because there tends to be a search near the popup button but it must be checked!
+    - Loader spinner get knocked out of place (THIS HAPPENS A LOT)?
+    - Selection closes the menu and works?
+    - Again, correct options available?  Is it the right search type?
+3. New Selection Mode
+    - Does it open the first time with the first option in the first pane selected (second pane displayed)
+    - Click through, make sure you can get to the third pane and select.
+    - Header and Availability Present?  Periodicity Present?
+    - Does the glossary (?) appear when it should?
+    - Select a periodicity and click away: Does it reset?
+4. Edit Mode
+    - Correctly Populated, including periodicity (CHECK ONE WITH A PERIODICITY OPTION).
+    - Resubmit, was the full selection correct (try one on pane 2, try one on pane 3 [periodicity])
+    - Change the calc: does the selected metric update correctly?
+    - Click around, put it in a new state without submitting, make sure menus reset where they should (if on a new calc, the periodicity should return to the first option), but it still reopens with the correct data after no selection.
 
 ### Scoring Model ###
 _Located on the screener page_
