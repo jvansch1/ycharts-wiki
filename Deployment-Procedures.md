@@ -96,6 +96,9 @@ fab production build hotfix
 # If you are only releasing code ONLY to the admin server, run:
 fab production:admin build hotfix
 
+# If you are only releasing code ONLY to the companies admin server, run:
+fab production:companies_admin build hotfix
+
 # If you are only releasing code ONLY to the web server, run:
 fab production:web build hotfix
 
