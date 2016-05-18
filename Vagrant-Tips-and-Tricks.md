@@ -1,4 +1,4 @@
-Edit your sudoers file to not ask for password on vagrant ups
+## Edit your sudoers file to not ask for password on vagrant ups
 
 Use visudo! Use visudo! DO NOT edit sudoers manually, visudo checks syntax to prevent errors (if you mess up, its bad!)
 ```
