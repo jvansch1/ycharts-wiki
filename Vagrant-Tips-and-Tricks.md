@@ -13,7 +13,8 @@ Cmnd_Alias VAGRANT_EXPORTS_REMOVE = /usr/bin/sed -E -e /*/ d -ibak /etc/exports
 %admin ALL=(root) NOPASSWD: VAGRANT_EXPORTS_ADD, VAGRANT_NFSD, VAGRANT_EXPORTS_REMOVE
 ```
 
-## Run migrations without having to vagrant ssh and wait
+## Run Django Things Without Having to SSH and then do it.
 ```
 vagrant ssh -c "python manage.py migrate"
+vagrant ssh -c "python manage.py runserver"
 ```
