@@ -1,4 +1,4 @@
-If A Bad Zip File Is Downloaded
+# If A Bad Zip File Is Downloaded
 ```
 [10.0.2.197] out:     unpack_file(from_path, location, content_type, link)
 [10.0.2.197] out:   File "/home/ubuntu/.virtualenvs/ycharts/lib/python3.4/site-packages/pip/utils/__init__.py", line 598, in unpack_file
@@ -15,4 +15,4 @@ If A Bad Zip File Is Downloaded
 [10.0.2.197] out: 
 ```
 
-If you see this, it mean pip downloaded a zipfile that was bad. ssh into the production_build machine and delete the bad zip/wheel file and run build again.
+If you see this, it means pip downloaded a corrupted zipfile. ssh into the production_build machine and delete the bad zip/wheel file and run build again.
