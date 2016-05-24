@@ -39,6 +39,7 @@ git push origin --tags
 ### Release code to production
 > If this doesn't work look at [[Release-Issues-Debugging]] to see if this has happened before. 
 > Please! Add whatever you did to fix it for the next poor soul who has the same problem
+
 ```bash
 
 # Update your ssh files
