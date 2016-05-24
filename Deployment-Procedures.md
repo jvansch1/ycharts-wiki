@@ -37,6 +37,8 @@ git push origin --tags
 ```
 
 ### Release code to production
+> If this doesn't work look at [[Release-Issues-Debugging]] to see if this has happened before. 
+> Please! Add whatever you did to fix it for the next poor soul who has the same problem
 ```bash
 
 # Update your ssh files
@@ -89,6 +91,8 @@ git checkout master
 
 > NOTE: The following goes through servers one-by-one, removing them from the load
 > balancer, deploying, then adding them back. There should be no downtime.
+> If this doesn't work look at [[Release-Issues-Debugging]] to see if this has happened before. 
+> Please! Add whatever you did to fix it for the next poor soul who has the same problem
 
 ```bash
 fab production build hotfix
@@ -115,8 +119,6 @@ fab production enable_autoscaling:hyperscale=hyperscale
 fab production disable_autoscaling
 fab production enable_autoscaling
 ```
-
-
 
 ## Releasing to Staging
 
@@ -149,7 +151,6 @@ git checkout develop
 git pull origin develop
 git push origin develop
 ```
-
 
 ### Releasing code to staging
 ```bash
