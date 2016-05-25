@@ -15,3 +15,51 @@
 ```
 
 If you see badzipfile ... it means pip downloaded a corrupted zipfile. ssh into the production_build machine and delete the bad zip/wheel file and run build again.
+
+### If you get a SSH protocol error
+```
+!!! Parallel execution exception under host u'10.0.3.26':
+Process 10.0.3.26:
+Traceback (most recent call last):
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/multiprocessing/process.py", line 114, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/kevinfox/.virtualenvs/ycharts/src/fabric/fabric/tasks.py", line 243, in inner
+    submit(task.run(*args, **kwargs))
+  File "/Users/kevinfox/.virtualenvs/ycharts/src/fabric/fabric/tasks.py", line 175, in run
+    return self.wrapped(*args, **kwargs)
+  File "/Users/kevinfox/.virtualenvs/ycharts/src/fabric/fabric/decorators.py", line 182, in inner
+    return func(*args, **kwargs)
+  File "/sites/ycharts/fabfile.py", line 808, in _start
+    env.host_configs[env.host_string].start()
+  File "/sites/ycharts/fabfile.py", line 409, in start
+    super(IndicatorsAdminHostConfig, self).start()
+  File "/sites/ycharts/fabfile.py", line 63, in start
+    self.sudo('start {0}'.format(script))
+  File "/Users/kevinfox/.virtualenvs/ycharts/src/fabric/fabric/network.py", line 656, in host_prompting_wrapper
+    return func(*args, **kwargs)
+  File "/Users/kevinfox/.virtualenvs/ycharts/src/fabric/fabric/operations.py", line 1114, in sudo
+    stderr=stderr, timeout=timeout, shell_escape=shell_escape,
+  File "/Users/kevinfox/.virtualenvs/ycharts/src/fabric/fabric/operations.py", line 928, in _run_command
+    channel=default_channel(), command=wrapped_command, pty=pty,
+  File "/Users/kevinfox/.virtualenvs/ycharts/src/fabric/fabric/state.py", line 397, in default_channel
+    chan = _open_session()
+  File "/Users/kevinfox/.virtualenvs/ycharts/src/fabric/fabric/state.py", line 389, in _open_session
+    return connections[env.host_string].get_transport().open_session()
+  File "/Users/kevinfox/.virtualenvs/ycharts/src/fabric/fabric/network.py", line 158, in __getitem__
+    self.connect(key)
+  File "/Users/kevinfox/.virtualenvs/ycharts/src/fabric/fabric/network.py", line 150, in connect
+    user, host, port, cache=self, seek_gateway=seek_gateway)
+  File "/Users/kevinfox/.virtualenvs/ycharts/src/fabric/fabric/network.py", line 438, in connect
+    sock = get_gateway(host, port, cache, replace=tries > 0)
+  File "/Users/kevinfox/.virtualenvs/ycharts/src/fabric/fabric/network.py", line 92, in get_gateway
+    cache[gateway] = connect(*normalize(gateway) + (cache, False))
+  File "/Users/kevinfox/.virtualenvs/ycharts/src/fabric/fabric/network.py", line 478, in connect
+    raise NetworkError(msg, e)
+NetworkError: Error reading SSH protocol banner
+```
+1. Find the Host that failed by either looking at the stacktrace (in this case `10.0.3.26`).
+2. Go to EC2 Management Console and look at instances.
+3. Search for that IP and see what machine it is (in this case it was `indicators_admin`) and it failed on the start command
+4. Re start the machine by running `fab production:indicators_admin start`
