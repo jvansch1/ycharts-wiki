@@ -62,7 +62,10 @@ fab production start
 # Now do any post deploy tasks
 ```
 
-### Make annotation on Pivotal Tracker and Google Analytics
+### Make annotation on Pivotal Tracker
+- Go through all of the stories in current and accept the delivered ones
+- Create a new ticket of type "Release". Make the title the same as the release git tag
+- Drag the release ticket over to current so it's just under the green stories you just accepted 
 
 ## Doing a hotfix release on production
 
