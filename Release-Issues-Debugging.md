@@ -63,3 +63,4 @@ NetworkError: Error reading SSH protocol banner
 2. Go to EC2 Management Console and look at instances.
 3. Search for that IP and see what machine it is (in this case it was `indicators_admin`) and it failed on the start command
 4. Re start the machine by running `fab production:indicators_admin start`
+5. If you can ssh into the machine, find out what type of machine it corresponds to and run the stop command for that type, potentially `fab production:companies_admin stop`.
