@@ -64,3 +64,58 @@ NetworkError: Error reading SSH protocol banner
 3. Search for that IP and see what machine it is (in this case it was `indicators_admin`) and it failed on the start command
 4. Re start the machine by running `fab production:indicators_admin start`
 5. If you can ssh into the machine, find out what type of machine it corresponds to and run the stop command for that type, potentially `fab production:companies_admin stop`. (You might also need to run deploy on the admin machines separately)
+
+
+
+### If Autoscaling error at end of deploy
+```
+[10.0.2.159] run: crontab /sites/ycharts/confs/cron/admin_cron.txt
+[10.0.2.159] Enabling Web Autoscaling
+[10.0.2.159] Enabling Queue Autoscaling
+Traceback (most recent call last):
+  File "/home/vagrant/.virtualenvs/ycharts/src/fabric/fabric/main.py", line 749, in main
+    *args, **kwargs
+  File "/home/vagrant/.virtualenvs/ycharts/src/fabric/fabric/tasks.py", line 388, in execute
+    multiprocessing
+  File "/home/vagrant/.virtualenvs/ycharts/src/fabric/fabric/tasks.py", line 278, in _execute
+    return task.run(*args, **kwargs)
+  File "/home/vagrant/.virtualenvs/ycharts/src/fabric/fabric/tasks.py", line 175, in run
+    return self.wrapped(*args, **kwargs)
+  File "/home/vagrant/.virtualenvs/ycharts/src/fabric/fabric/decorators.py", line 140, in decorated
+    decorated.return_value = func(*args, **kwargs)
+  File "/sites/ycharts/fabfile.py", line 802, in start
+    enable_autoscaling()
+  File "/home/vagrant/.virtualenvs/ycharts/src/fabric/fabric/tasks.py", line 172, in __call__
+    return self.run(*args, **kwargs)
+  File "/home/vagrant/.virtualenvs/ycharts/src/fabric/fabric/tasks.py", line 175, in run
+    return self.wrapped(*args, **kwargs)
+  File "/home/vagrant/.virtualenvs/ycharts/src/fabric/fabric/decorators.py", line 140, in decorated
+    decorated.return_value = func(*args, **kwargs)
+  File "/sites/ycharts/fabfile.py", line 900, in enable_autoscaling
+    QueueAutoscaleContoller(group_types=group_types).enable_autoscaling(hyperscale=hyperscale)
+  File "/sites/ycharts/fabfile.py", line 966, in enable_autoscaling
+    self._enable_autoscaling()
+  File "/sites/ycharts/fabfile.py", line 985, in _enable_autoscaling
+    self.aws_helper.scale_groups_resume()
+  File "/sites/ycharts/apps/systems/utils/aws_utils.py", line 658, in scale_groups_resume
+    self.create_autoscale_alarms('up')
+  File "/sites/ycharts/apps/systems/utils/aws_utils.py", line 526, in create_autoscale_alarms
+    policies = self.get_autoscale_policies(policy_type)
+  File "/sites/ycharts/apps/systems/utils/aws_utils.py", line 425, in get_autoscale_policies
+    existing_policies = self.autoscale_connection.get_all_policies()
+  File "/home/vagrant/.virtualenvs/ycharts/lib/python3.4/site-packages/boto/ec2/autoscale/__init__.py", line 574, in get_all_policies
+    [('member', ScalingPolicy)])
+  File "/home/vagrant/.virtualenvs/ycharts/lib/python3.4/site-packages/boto/connection.py", line 1186, in get_list
+    raise self.ResponseError(response.status, response.reason, body)
+boto.exception.BotoServerError: BotoServerError: 400 Bad Request
+<ErrorResponse xmlns="http://autoscaling.amazonaws.com/doc/2011-01-01/">
+  <Error>
+    <Type>Sender</Type>
+    <Code>Throttling</Code>
+    <Message>CloudWatchAlarm Rate exceeded</Message>
+  </Error>
+  <RequestId>b394fd2c-2dcd-11e6-bd1c-59ca2fc669e3</RequestId>
+</ErrorResponse>
+```
+1. fab production disable_autoscaling:queue
+2. fab production enable_autoscaling:queue
