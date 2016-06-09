@@ -30,5 +30,5 @@ hi world
 ```
 which outputs:
 ```
-Hello world!
+Hello "world"!
 ```
