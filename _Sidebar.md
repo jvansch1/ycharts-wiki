@@ -54,6 +54,7 @@
   * [[Useful Code Snippets]]
   * [[Useful Regexps]]
   * [[Concurrent Login Block Notes]]
+  * [[Python Debugging Notes]]
 * Other
   * [[Calculation Principles]]
   * [[Fundamental Data Testing]]
