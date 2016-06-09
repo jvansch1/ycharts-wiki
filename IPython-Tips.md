@@ -26,9 +26,9 @@ ip.define_magic('hi', lambda self, line: hello(line))
 ```
 Now you can call your magic function like:
 ```
-hi world
+hi world 1 2 3
 ```
 which outputs:
 ```
-Hello "world"!
+Hello "world 1 2 3"!
 ```
