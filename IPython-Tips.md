@@ -15,3 +15,16 @@ from IPython.core import ultratb
 sys.excepthook = ultratb.FormattedTB(mode='Verbose',
     color_scheme='Linux', call_pdb=1)
 ```
+
+## Define a custom magic function in the ipython shell
+```ipython
+def hello(line):
+    print('Hello "{}"!'.format(line))
+
+ip = get_ipython()
+ip.define_magic('hi', lambda self, line: hello(line))
+
+# now you can call your custom function like:
+>>> hi world
+<<< Hello world!
+```
