@@ -23,9 +23,8 @@ def hello(line):
 
 ip = get_ipython()
 ip.define_magic('hi', lambda self, line: hello(line))
-
-# now you can call your custom function like:
-hi world
-# which outputs
-Hello world!
 ```
+Now you can call your custom function like:
+``hi world``
+which outputs:
+``Hello world!``
