@@ -112,3 +112,32 @@ select * from ciqDataItem where dataItemName in ('EBIT Consensus Mean', 'EBITDA 
 ```sql
 select count(*) from ciqEstimateNumericData where dataItemId in (select dataItemId from ciqDataItem where dataItemName in ('EBIT Consensus Mean', 'EBITDA Consensus Mean', 'EPS Normalized Consensus Mean', 'Revenue Consensus Mean'))
 ```
+
+# SQLite
+This example query gets all the information we'll likely want in a flattened table to be of use to us for calcs
+and stuff. We probably want some more fields like possible `ep.calendarQuarter` and `ep.calendarYear`.
+```sql
+SELECT
+    (SELECT ept.periodTypeName FROM ciqEstimatePeriodType AS ept WHERE ep.periodTypeId = ept.periodTypeId) AS periodTypeName,
+    ep.fiscalQuarter,
+    ep.fiscalYear,
+    ep.periodEndDate,
+    ed.dataItemId,
+    (SELECT di.dataItemName FROM ciqDataItem AS di WHERE ed.dataItemId = di.dataItemId) AS dataItem,
+    ec.tradingItemId,
+    (SELECT cu.ISOCode FROM ciqCurrency AS cu WHERE cu.currencyId = ed.currencyId) AS ISOCode,
+    (SELECT eas.accountingStandardDescription FROM ciqEstimateAccountingStd AS eas WHERE eas.accountingStandardId = ec.accountingStandardId) AS accountingStandardDescription,
+    (SELECT est.estimateScaleName FROM ciqEstimateScaleType AS est WHERE est.estimateScaleId = ed.estimateScaleId) AS estimateScaleName,
+    ed.dataItemValue,
+    ed.effectiveDate,
+    ed.toDate
+FROM ciqEstimatePeriod AS ep
+JOIN ciqEstimateConsensus AS ec
+    ON ec.estimatePeriodId = ep.estimatePeriodId
+JOIN ciqEstimateNumericData AS ed
+    ON ed.estimateConsensusId = ec.estimateConsensusId
+WHERE ep.companyId = 112350
+    AND ed.dataItemId = 100173
+    AND ep.fiscalQuarter = 2
+    AND ep.fiscalYear = 2015;
+```
