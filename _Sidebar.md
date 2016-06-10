@@ -12,7 +12,7 @@
 * Django
   * [[Autocomplete]]
 * Angular
-  * [[Angular Notes]]
+  * [[Angular]]
 * Git
   * [[Forking On Github]]
   * [[Random Git Notes]]
