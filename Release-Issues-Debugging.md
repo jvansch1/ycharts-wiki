@@ -119,3 +119,11 @@ boto.exception.BotoServerError: BotoServerError: 400 Bad Request
 ```
 1. fab production disable_autoscaling:queue
 2. fab production enable_autoscaling:queue
+
+###Mysterious 401 Unauthorized Error
+```
+boto.exception.EC2ResponseError: EC2ResponseError: 401 Unauthorized
+<?xml version="1.0" encoding="UTF-8"?>
+<Response><Errors><Error><Code>AuthFailure</Code><Message>AWS was not able to validate the provided access credentials</Message></Error></Errors><RequestID>624b9d59-1def-4d71-8bf1-1b11176d98fd</RequestID></Response>
+```
+What worked for me was ``vagrant halt`` followed by ``vagrant up``
