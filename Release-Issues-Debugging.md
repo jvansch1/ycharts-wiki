@@ -120,7 +120,7 @@ boto.exception.BotoServerError: BotoServerError: 400 Bad Request
 1. fab production disable_autoscaling:queue
 2. fab production enable_autoscaling:queue
 
-###Mysterious 401 Unauthorized Error
+###Mysterious AWS 401 Unauthorized Error
 ```
 boto.exception.EC2ResponseError: EC2ResponseError: 401 Unauthorized
 <?xml version="1.0" encoding="UTF-8"?>
