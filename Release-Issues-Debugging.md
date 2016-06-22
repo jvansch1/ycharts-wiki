@@ -117,8 +117,8 @@ boto.exception.BotoServerError: BotoServerError: 400 Bad Request
   <RequestId>b394fd2c-2dcd-11e6-bd1c-59ca2fc669e3</RequestId>
 </ErrorResponse>
 ```
-1. fab production disable_autoscaling:queue
-2. fab production enable_autoscaling:queue
+1. `fab production disable_autoscaling:queue`
+2. `fab production enable_autoscaling:queue`
 
 ###Mysterious AWS 401 Unauthorized Error
 ```
