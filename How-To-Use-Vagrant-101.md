@@ -41,3 +41,16 @@ Local: 127.0.0.1:8000 (Note the port difference)
 # After (This isn't as good, unfortunately)
 #cpaste
 ```
+
+# So you don't have to enter your password on vagrant up/down
+```
+# run the below, visudo is a file that makes edit to your /etc/sudoers but makes sure it's correct syntax!
+sudo visudo
+```
+paste the below to visudo
+```
+Cmnd_Alias VAGRANT_EXPORTS_ADD = /usr/bin/tee -a /etc/exports
+Cmnd_Alias VAGRANT_NFSD = /sbin/nfsd restart
+Cmnd_Alias VAGRANT_EXPORTS_REMOVE = /usr/bin/sed -E -e /*/ d -ibak /etc/exports
+%admin ALL=(root) NOPASSWD: VAGRANT_EXPORTS_ADD, VAGRANT_NFSD, VAGRANT_EXPORTS_REMOVE
+```
