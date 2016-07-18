@@ -114,7 +114,32 @@ fab production:web build hotfix
 fab production build disable_autoscaling enable_autoscaling
 ```
 
-### Turning Hyperscale on In Production
+### Hyperscaling
+NOTE: 7/18 New for next release/currently on develop.
+####Turning it On
+```
+fab <environment>production/staging enable_hyperscaling:web/queue
+
+# Examples
+# Hyperscaling for all groups on production
+fab production enable_hyperscaling
+
+# Staging Web
+fab staging enable_hyperscaling:web
+```
+####Turning off Hyperscaling
+```
+fab <environment>staging/production disable_hyperscaling:<group_type>queue/web
+
+# Examples
+# Production All 
+fab production disable_hyperscaling
+
+# Production Web
+fab production disable_hyperscaling:web
+```
+
+### OLD METHOD
 ```
 fab production disable_autoscaling
 fab production enable_autoscaling:hyperscale=hyperscale
