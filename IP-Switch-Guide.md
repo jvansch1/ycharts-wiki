@@ -1,6 +1,7 @@
 ## Overview
 
 This guide goes over the necessary process to switch our IP addresses across staging and production. The general steps are as follows:
+
 1. Allocate new IP addresses.
 2. Send list of new IPs to relevant organizations so they can whitelist them first.
 3. Once we confirm that they are whitelisted, one by one associate the IPs to our NAT servers.
@@ -13,7 +14,7 @@ This guide goes over the necessary process to switch our IP addresses across sta
 3. Select "Elastic IPs"
 <br>![](https://www.diigo.com/file/image/sosopsazdccdpasebzcdppqbpq/EC2+Management+Console.jpg)
 4. Allocate 3 New IP addresses by selecting "Allocate New Address" and Make sure to select used in "VPC"
-<br>![](https://www.diigo.com/file/image/sosopsazdccdpbcpazcdppqbqb/EC2+Management+Console.jpg)
+<br>![](https://www.diigo.com/file/image/sosopsazdccdsdpcozcdpprbpr/EC2+Management+Console.jpg)
 
 
 ### 2. Notify organizations of new IPs
