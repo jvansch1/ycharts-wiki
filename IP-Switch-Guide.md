@@ -18,9 +18,11 @@ This guide goes over the necessary process to switch our IP addresses across sta
 
 ### 2. Notify organizations of new IPs
 Send an email to the below organizations to whitelist our 3 new IPs that were allocated.
+
 1. Morningstar
 2. Bank of Dallas
-3. [Insert other if found]
+3. Twitter? Stocktwits? Xignite? News Sources? 
+4. [Insert other if found]
 
 
 ### 3. Associate new IPs with NAT servers
