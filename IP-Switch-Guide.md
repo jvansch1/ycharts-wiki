@@ -3,8 +3,8 @@
 This guide goes over the necessary process to switch our IP addresses across staging and production. The general steps are as follows:
 
 1. Allocate new IP addresses.
-2. Send list of new IPs to relevant organizations so they can whitelist them first.
-3. Once we confirm that they are whitelisted, one by one associate the IPs to our NAT servers.
+2. Send list of new IPs to relevant organizations so they can whitelist them first (tell them there is 1 month sunset period).
+3. Once we confirm that they are whitelisted, switch out the IP for staging and make sure it works for about a week. Then one by one associate the IPs to our NAT servers in production once it works on staging.
 4. Update the new IPs in other various places in our code (Fab file, SSH Config, etc..)
 
 ### 1. Allocate new IP Address
@@ -20,9 +20,20 @@ This guide goes over the necessary process to switch our IP addresses across sta
 ### 2. Notify organizations of new IPs
 Send an email to the below organizations to whitelist our 3 new IPs that were allocated.
 
-1. Morningstar
-2. Bank of Dallas
-3. Twitter? Stocktwits? Xignite? News Sources? 
+```
+We are making system configuration changes, and I need to add 3 IPs to the whitelist to allow access to the Stocktwits/Morningstar/Dallas Fed... We will be sunsetting 3 IPs of our existing IPs in about 1 month, so we are really just swapping them.
+
+The IPs I need to add are:
+52.6.96.159
+52.5.69.58
+52.4.31.32
+
+Can you direct me towards who can help me with this?
+```
+
+1. Morningstar (realtimehelpdesk@morningstar.com)
+2. Bank of Dallas (dal.webmaster@dal.frb.org)
+3. Stock (justin@stocktwits.com)
 4. [Insert other if found]
 
 
