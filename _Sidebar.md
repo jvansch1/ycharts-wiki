@@ -28,6 +28,7 @@
   * [[PyCharm]]
   * [[Vim Notes]]
 * Amazon
+  * [[IP Switch Guide]]
   * [[Connecting to AWS Servers]]
   * [[Mechanical-Turk]]
   * [[VPC-Setup]]
