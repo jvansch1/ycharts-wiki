@@ -2,10 +2,13 @@
 
 This guide goes over the necessary process to switch our IP addresses across staging and production. The general steps are as follows:
 
-1. Allocate new IP addresses.
-2. Send list of new IPs to relevant organizations so they can whitelist them first (tell them there is 1 month sunset period).
-3. Once we confirm that they are whitelisted, switch out the IP for staging and make sure it works for about a week. Then one by one associate the IPs to our NAT servers in production once it works on staging.
-4. Update the new IPs in other various places in our code (Fab file, SSH Config, etc..)
+[1.](https://github.com/ycharts/ycharts/wiki/IP-Switch-Guide#1-allocate-new-ip-address) Allocate new IP addresses.
+
+[2.](https://github.com/ycharts/ycharts/wiki/IP-Switch-Guide#2-notify-organizations-of-new-ips) Send list of new IPs to relevant organizations so they can whitelist them first (tell them there is 1 month sunset period).
+
+[3.](https://github.com/ycharts/ycharts/wiki/IP-Switch-Guide#3-associate-new-ips-with-nat-servers) Once we confirm that they are whitelisted, switch out the IP for staging and make sure it works for about a week. Then one by one associate the IPs to our NAT servers in production once it works on staging.
+
+[4.](https://github.com/ycharts/ycharts/wiki/IP-Switch-Guide#4-update-various-places-with-our-new-ips) Update the new IPs in other various places in our code (Fab file, SSH Config, etc..)
 
 ***
 
