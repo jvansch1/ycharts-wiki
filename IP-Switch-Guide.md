@@ -7,6 +7,8 @@ This guide goes over the necessary process to switch our IP addresses across sta
 3. Once we confirm that they are whitelisted, switch out the IP for staging and make sure it works for about a week. Then one by one associate the IPs to our NAT servers in production once it works on staging.
 4. Update the new IPs in other various places in our code (Fab file, SSH Config, etc..)
 
+***
+
 ### 1. Allocate new IP Address
 1. Login to AWS
 2. Select "EC2"
