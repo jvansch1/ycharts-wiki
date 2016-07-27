@@ -115,7 +115,6 @@ fab production build disable_autoscaling enable_autoscaling
 ```
 
 ### Hyperscaling
-NOTE: 7/18 New for next release/currently on develop.
 ####Turning it On
 ```
 fab <environment>production/staging enable_hyperscaling:web/queue
@@ -137,16 +136,6 @@ fab production disable_hyperscaling
 
 # Production Web
 fab production disable_hyperscaling:web
-```
-
-### OLD METHOD
-```
-fab production disable_autoscaling
-fab production enable_autoscaling:hyperscale=hyperscale
-
-# To Turn off Hyperscaling when done ... 
-fab production disable_autoscaling
-fab production enable_autoscaling
 ```
 
 ## Releasing to Staging
