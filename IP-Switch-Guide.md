@@ -38,8 +38,7 @@ Can you direct me towards who can help me with this?
 
 1. Morningstar (realtimehelpdesk@morningstar.com)
 2. Bank of Dallas (dal.webmaster@dal.frb.org)
-3. Stocktwits (support@stocktwits.com)
-4. [Insert other if found]
+3. [Insert other if found]
 
 
 ### 3. Associate new IPs with NAT servers
