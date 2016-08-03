@@ -7,7 +7,13 @@ SELECT table_name, table_rows,
     ROUND(((index_length) / 1024 / 1024),2) as index_size,
     ROUND(((data_length + index_length) / 1024 / 1024),2) as total_size
 FROM information_schema.TABLES
-WHERE table_schema = "ycharts" order by total_size desc;
+order by total_size desc;
+
+# Total disk usage of all tables (not just ycharts)
+SELECT SUM(((data_length ) / 1024 / 1024)) as table_size,
+    SUM(((index_length) / 1024 / 1024)) as index_size,
+    SUM(((data_length + index_length) / 1024 / 1024)) as total_size
+FROM information_schema.TABLES;
 
 # Look at collations/charsets of all tables
 SELECT table_schema, table_name, character_set_name, table_collation
