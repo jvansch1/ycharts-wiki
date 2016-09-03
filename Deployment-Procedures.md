@@ -80,7 +80,7 @@ Now you make the changes you want
 ### Commit code and tag
 ```bash
 git commit
-git fetch origin --tags
+git vtag
 git tag X.X.X
 git push origin master
 git push origin --tags
