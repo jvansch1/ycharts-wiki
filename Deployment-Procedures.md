@@ -102,7 +102,7 @@ git checkout master
 fab production build hotfix
 
 # If you just want the above to run as fast as it can
-fab production='autocompleters\,collectstatic' build hotfix
+fab production:skip='autocompleters\,collectstatic' build hotfix
 
 # If you are only releasing code ONLY to the admin server, run:
 fab production:admin build hotfix
