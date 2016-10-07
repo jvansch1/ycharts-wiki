@@ -17,6 +17,7 @@ sys.excepthook = ultratb.FormattedTB(mode='Verbose',
 ```
 
 ## Define a custom magic function in the ipython shell
+Note: this is out of date. It won't work with the new IPython 5 shell. 
 ```python
 def hello(line):
     print('Hello "{}"!'.format(line))
