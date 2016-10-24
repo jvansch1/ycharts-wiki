@@ -37,7 +37,7 @@ sudo node-inspector
 
 ```bash
 # Get the proxy command from the ssh config
-ssh -L 8080:localhost:8080 -o ProxyCommand='ssh ec2-user@52.4.31.32 -W %h:%p' ubuntu@[node_ip]
+ssh -L 8080:localhost:8080 -o ProxyCommand='ssh ec2-user@52.5.69.58 -W %h:%p' ubuntu@[node_ip]
 ```
 
 ### Debug it!
