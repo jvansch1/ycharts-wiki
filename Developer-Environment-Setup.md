@@ -164,18 +164,6 @@ vagrant ssh
 python manage.py securities_process_lists_and_sets
 ```
 
-## Set up press release classifier (Only if you need it)
-
-```bash
-python manage.py investor_relations_generate_press_release_classifier
-
-If this fails, start Python
-import nltk
-nltk.download('punkt')
-
-Then try again
-```
-
 ## Make Sure Node Works
 ```
 vagrant ssh
