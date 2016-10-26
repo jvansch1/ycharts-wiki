@@ -44,6 +44,7 @@
   * [[Indicator Outsourcer Notes]]
 * Vagrant
   * [[How To Use Vagrant 101]]
+  * [[How to run redis outside of vagrant]]
 * Notes
   * [[IE Testing Notes]]
   * [[Info Column Items Notes]]
