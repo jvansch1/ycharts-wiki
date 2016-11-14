@@ -63,6 +63,7 @@
   * [[Jquery UI Components]]
   * [[News Headline Feeds]]
   * [[Getting a new SSL certificate]]
+  * [[Road to AngularJS 2.0]]
 
 **Devops**
 * [[Diagnosing Memcache Issues]]
