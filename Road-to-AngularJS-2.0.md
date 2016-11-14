@@ -104,7 +104,7 @@ No more calling methods and attributes from scope space, we ask for things direc
 I included this component just to demonstrate further what this mix of old world and new world look like. We replace scope with ctrl in so many ways, but until everything is switched over, we’re left with this mix. Notice the the $scope.$on here and calls to AppState. They still work. 
 
 
-One Way Data Binding:
+####One Way Data Binding:
 
 
 Angular 1.5 introduces a new standard of data flow through an angular project. Gone is 2-way data binding, and welcome 1 way data binding + callbacks. Fortunately, as evident above, this really isnt so bad. Firstly, many of our 2-way data bound scope vars are actually just used 1 way… we just use the = notation.If that’s the case, the above is a perfect model of how we will transition. Scenarios in our code where a child directive and parent entity actually rely on 2-way data binding we could...keep it. OK, keeping it still works in 1.5, but it HAS to go. We’ll do very nearly the same as above except bind in a function from parent scope that is called every time the the variable of interest changes.
