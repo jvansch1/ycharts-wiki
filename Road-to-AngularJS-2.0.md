@@ -4,9 +4,9 @@
 Angular 2.0 is a major revamp of the Angular framework, and as such, introduces a large number of improvements and… breaking changes. It is not backwards compatible with any Angular 1.x built site and requires a significant engineering effort to migrate to. Fortunately, we will not be the first team to migrate to Angular 2.0, so we will be following a prescribed way forward that should introduce change incrementally and enable us to phase and sequence migration work as we would any other kind of project. The nature of the effort will generally adhere to the following guideline:
 
 
-Maximize Angular 1.x upgrade options and position our codebase to be more amenable to the 2.0 migration.
+1)Maximize Angular 1.x upgrade options and position our codebase to be more amenable to the 2.0 migration.
 
-Introduce the 2.0 framework into our codebase and utilize Angular-supported mechanisms to incrementally upgrade our apps in a mixed 1.x/2.0 environment until completion.
+2)Introduce the 2.0 framework into our codebase and utilize Angular-supported mechanisms to incrementally upgrade our apps in a mixed 1.x/2.0 environment until completion.
 
 
 ##Migrating to AngularJS 1.5
@@ -16,10 +16,10 @@ In keeping with the above guidelines, we should move to max out our Angular 1.x 
 ###Migration Case Study, the systems app:
 
 
-There are a lot of changes in 1.5, that affect  nearly every aspect of building an angular app. This includes everything from the file/directory structure, the logical structure of an app and the data flow of an app.
+There are a lot of changes in 1.5, that affect  nearly every aspect of building an angular app. This includes File System Architecture, Application Architecture and Application Data Flow.
 
 
-####File/Directory Structure:
+####File System Architecture:
 ``
 
 You’ll find that the patterns and structures on blogs or in the Angular docs are a little different from what I’ve done here. Firstly, this is a transitional stage on our way to 2.0, but also we are a Django project...we ain’t some pure single page app. As such, our  main html template and our angular app are in 2 different directories vs. 1 like you’ll find elsewhere. In order to create a link between a single page app’s template and the app’s relevant angular code, I created a directory for the js code that is the same name as the template. Notice command_dashboard.html and command_dashboard/. Let’s check out an angular app:
@@ -33,7 +33,7 @@ This is an angular 1.5 app. Well, mostly, and I’ll tell you what I didn’t do
 Shared is not an app, but is represented as a top level directory like the single page apps around it. It is however, a body of code that is shared across multiple angular apps in the systems app. So, in keeping with angular 1.5 structure, I created a shared module that could be added to any single page apps’ app.module.js file. Each app can now access the shared feature subfolder you see above to include that functionality as required. 
 
 
-####Logical structure of an angular app: components, components and the other stuff as required
+####Application Architecture: components, components and all the rest
 
 
 So, components. What is a component and why have all the system app’s controllers and directives been deleted? A component is the basic building block of an angular app. Everything is a component. There should be 1 top level component, made up of smaller component if required. Component are quite like the directives we knew in many ways since they both create some enclosed, isolated scope over an associated template. However, along with api and lifecycle changes, components are used explicitly in the construction of a modular, component based architecture whereas directives have no such opinion and instead focus on the decoration of the DOM. The idea isn't that one can't do what the other does, but instead is a about what you SHOULD do with one versus the other. It turns out that most of our directives will become components and very few of them will remain directives. A key tactical difference is that components are emplaced in a template hierarchically as custom elements, whereas directives are added as attributed to existing elements. Again, directives decorate. I’ve selected a few components to analyze. I chose 2 components to look at not because they are the best pieces of angular 1.5 I can produce, but instead because they represent what our transitional 1.5 world will look like as we try to account for new component based architecture and our current deep dependence on $scope.
@@ -106,14 +106,13 @@ No more calling methods and attributes from scope space, we ask for things direc
 I included this component just to demonstrate further what this mix of old world and new world look like. We replace scope with ctrl in so many ways, but until everything is switched over, we’re left with this mix. Notice the the $scope.$on here and calls to AppState. They still work. 
 
 
-####One Way Data Binding:
+####Application Data Flow: one-way data binding
 
 
 Angular 1.5 introduces a new standard of data flow through an angular project. Gone is 2-way data binding, and welcome 1 way data binding + callbacks. Fortunately, as evident above, this really isnt so bad. Firstly, many of our 2-way data bound scope vars are actually just used 1 way… we just use the = notation.If that’s the case, the above is a perfect model of how we will transition. Scenarios in our code where a child directive and parent entity actually rely on 2-way data binding we could...keep it. OK, keeping it still works in 1.5, but it HAS to go. We’ll do very nearly the same as above except bind in a function from parent scope that is called every time the the variable of interest changes.
 
 
 ###Resources:
-
 
 ####General Overview:
 https://docs.angularjs.org/guide/migration
@@ -128,19 +127,12 @@ https://docs.angularjs.org/guide/component
 https://github.com/toddmotto/angular-1-5-components-app
 https://angular.io/docs/ts/latest/guide/style-guide.html#!#application-structure (angular 2)
 
-
 ####One-way Data Binding:
 https://toddmotto.com/one-way-data-binding-in-angular-1-5/
-
-
-
 
 ###What we need to do:
 Upgrade AngularJS to 1.5 with zero code changes and test for potential breaking changes.
 Establish across the team the new, Angular 1.5 methods of organizing the file system, building components, one way data binding, etc so that new development adheres to these patterns.
 Sequence, spec and schedule appropriate units of code to migrate.
 
-
 ##Migrating to AngularJS 2.0
-
-
