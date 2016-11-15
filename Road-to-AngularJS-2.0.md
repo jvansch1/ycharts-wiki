@@ -94,8 +94,10 @@ shared.component('ycManagementCommandPopup', {
 ```
 
 Component in Angular 1.5 look good. There are some noticeable interface changes where everything is basically an object and can be treated as such. In fact, if the controller code here was any bigger, I could have chosen to define it in manage_command_popup.controller.js and instead just pass controller a class name instead. That’s the beauty of feature folders and component based architecture; it grows as the code does across multiple files and has the right mechanisms to bring pieces together here. Elements of note:
- Bindings: this used to be our scope interface. Here, you’ll mostly notice things being 1-way data bound in or strings and callbacks. Also, anything bound here get attached to the controller object automatically.
-Controllers - components have them and you won't see ng-controller hanging around anymore.That means that there are no longer module level controllers… they must be in a component. This lets them take advantage of all the code organization features of a component, but also lets us just write them as javascript. When controller code is just javascript, you can share them across components as required. Controllers now have special lifecycle methods, sorta equivalent to a mix of what we used to do in scope methods and in a directive link method. You can see above $onInit and $onChanges. $onInit is like the __init__ in python, controller object initialization. You’ll set up things you’ll need for the template here, make api calls, etc. Code we used to do in a directive’s link scope, we’ll do here instead. $onChanges is like our old $scope.watch… but exclusively for 1 way data bound values. It fires when changes occur, and we have a new api to observe and react to those changes. You’ll also notice this line var ctrl = this. Firstly, that redefinition is to keep us out of trouble in closures, etc where this changes meaning. Also, anything you attach to ctrl will be visible in the template. It’s like attaching thing to $scope in our pre 1.5 way of doing things.  In templates, you’ll see this:
+
+1) Bindings: this used to be our scope interface. Here, you’ll mostly notice things being 1-way data bound in or strings and callbacks. Also, anything bound here get attached to the controller object automatically.
+
+2) Controllers - components have them and you won't see ng-controller hanging around anymore.That means that there are no longer module level controllers… they must be in a component. This lets them take advantage of all the code organization features of a component, but also lets us just write them as javascript. When controller code is just javascript, you can share them across components as required. Controllers now have special lifecycle methods, sorta equivalent to a mix of what we used to do in scope methods and in a directive link method. You can see above $onInit and $onChanges. $onInit is like the __init__ in python, controller object initialization. You’ll set up things you’ll need for the template here, make api calls, etc. Code we used to do in a directive’s link scope, we’ll do here instead. $onChanges is like our old $scope.watch… but exclusively for 1 way data bound values. It fires when changes occur, and we have a new api to observe and react to those changes. You’ll also notice this line var ctrl = this. Firstly, that redefinition is to keep us out of trouble in closures, etc where this changes meaning. Also, anything you attach to ctrl will be visible in the template. It’s like attaching thing to $scope in our pre 1.5 way of doing things.  In templates, you’ll see this:
 
 ```html
 <div class="lbPopupMenu cmndDshOutPopup" ng-show="$ctrl.isOpen">
@@ -105,22 +107,92 @@ Controllers - components have them and you won't see ng-controller hanging aroun
     <h2 class="popMenuHed"><b>{{$ctrl.scriptName}}</b>
 ```
 No more calling methods and attributes from scope space, we ask for things directly from $ctrl.The key things with controller is that there is a lifecycle to hook into and operations we used to perform on scope, will be performed on ctrl.
-    3) 
 
+3) I included the below component just to demonstrate further what this mix of old world and new world look like. We replace scope with ctrl in so many ways, but until everything is switched over, we’re left with this mix. Notice the the $scope.$on here and calls to AppState. They still work. 
 
+```javascript
+var app = angular.module('importantCommandDashboardApp');
 
+app.component('ycImportantCommandDashboardTable', {
+    templateUrl:'/media/systems/js/important_command_dashboard/important_command_dashboard_table/important_command_dashboard_table.html',
+    bindings: {
+        commandRunId:'<'
+    },
+    controller: function(Ajax, $scope, AppState){
+        var ctrl = this;
 
+        ctrl.getImportantCommandsRuns = function() {
+            ctrl.loading = true;
+            Ajax.Systems.CommandRun.get({},{'isImportant': true})
+                .success(function(data){
+                    ctrl.importantCommandRuns = data.command_runs;
+                    ctrl.scriptNamesOrdered = Object.keys(data.command_runs).sort();
+                    ctrl.dates = data.dates;
+                })
+                .error(function(error, status){
+                    alert('An error occurred.  Please try again or contact us with details of your problem.');
+                })
+                ['finally'](function(){ctrl.loading = false;});
+        };
 
+        ctrl.$onInit = function(){
+            ctrl.importantCommandRuns = [];
+            ctrl.dates = [];
+            ctrl.getImportantCommandsRuns();
+        };
 
+        var validateCommandRunId = function(commandRunId) {
+            if (commandRunId === 'undefined' || !isPositiveInt(commandRunId)) {
+                AppState.setStateParamFromDefaults('commandRunId');
+                return false;
+            }
+            return true;
+        };
 
-I included this component just to demonstrate further what this mix of old world and new world look like. We replace scope with ctrl in so many ways, but until everything is switched over, we’re left with this mix. Notice the the $scope.$on here and calls to AppState. They still work. 
+        var isPositiveInt = function(v) {
+          return !isNaN(v) && parseInt(v, 10) == v  && v > 0;
+        };
 
+        ctrl.popupCloseStateHandler = function() {
+            AppState.setStateFromDefaults();
+            AppState.setUrlFromState();
+            ctrl.commandRunId = null;
+        };
+
+        $scope.$on('urlChanged', function(){
+            commandRunId = AppState.getStateParam('commandRunId');
+            if(validateCommandRunId(commandRunId)){
+                ctrl.commandRunId = commandRunId;
+            }else{
+                AppState.setUrlFromState();
+            }
+        });
+    }
+});
+```
 
 ####Application Data Flow: one-way data binding
 
-
 Angular 1.5 introduces a new standard of data flow through an angular project. Gone is 2-way data binding, and welcome 1 way data binding + callbacks. Fortunately, as evident above, this really isnt so bad. Firstly, many of our 2-way data bound scope vars are actually just used 1 way… we just use the = notation.If that’s the case, the above is a perfect model of how we will transition. Scenarios in our code where a child directive and parent entity actually rely on 2-way data binding we could...keep it. OK, keeping it still works in 1.5, but it HAS to go. We’ll do very nearly the same as above except bind in a function from parent scope that is called every time the the variable of interest changes.
+```javascript
+shared.component('ycManagementCommandPopup', {
+    require: {
+        ycAutoCloseCtrl: 'ycAutoClose'
+    },
+    bindings: {
+        commandRunId:'<',
+        popupCloseStateHandler:'&'
+    },...
+```
 
+```javascript
+ // no more scope watches... this is how you detect one way changes
+        ctrl.$onChanges = function(changes){
+            if (changes.commandRunId){
+                if (changes.commandRunId.isFirstChange()) return;
+                if (!changes.commandRunId.currentValue) return;
+                ctrl.commandRunId = changes.commandRunId.currentValue;
+```
 
 ###Resources:
 
