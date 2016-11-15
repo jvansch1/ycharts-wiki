@@ -31,7 +31,6 @@ Shared is not an app, but is represented as a top level directory like the singl
 
 ####Application Architecture: components, components and all the rest
 
-
 So, components. What is a component and why have all the system app’s controllers and directives been deleted? A component is the basic building block of an angular app. Everything is a component. There should be 1 top level component, made up of smaller component if required. Component are quite like the directives we knew in many ways since they both create some enclosed, isolated scope over an associated template. However, along with api and lifecycle changes, components are used explicitly in the construction of a modular, component based architecture whereas directives have no such opinion and instead focus on the decoration of the DOM. The idea isn't that one can't do what the other does, but instead is a about what you SHOULD do with one versus the other. It turns out that most of our directives will become components and very few of them will remain directives. A key tactical difference is that components are emplaced in a template hierarchically as custom elements, whereas directives are added as attributed to existing elements. Again, directives decorate. I’ve selected a few components to analyze. I chose 2 components to look at not because they are the best pieces of angular 1.5 I can produce, but instead because they represent what our transitional 1.5 world will look like as we try to account for new component based architecture and our current deep dependence on $scope.
 
 ```javascript
@@ -94,56 +93,17 @@ shared.component('ycManagementCommandPopup', {
 
 ```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Component in Angular 1.5 look good. There are some noticeable interface changes where everything is basically an object and can be treated as such. In fact, if the controller code here was any bigger, I could have chosen to define it in manage_command_popup.controller.js and instead just pass controller a class name instead. That’s the beauty of feature folders and component based architecture; it grows as the code does across multiple files and has the right mechanisms to bring pieces together here. Elements of note:
  Bindings: this used to be our scope interface. Here, you’ll mostly notice things being 1-way data bound in or strings and callbacks. Also, anything bound here get attached to the controller object automatically.
 Controllers - components have them and you won't see ng-controller hanging around anymore.That means that there are no longer module level controllers… they must be in a component. This lets them take advantage of all the code organization features of a component, but also lets us just write them as javascript. When controller code is just javascript, you can share them across components as required. Controllers now have special lifecycle methods, sorta equivalent to a mix of what we used to do in scope methods and in a directive link method. You can see above $onInit and $onChanges. $onInit is like the __init__ in python, controller object initialization. You’ll set up things you’ll need for the template here, make api calls, etc. Code we used to do in a directive’s link scope, we’ll do here instead. $onChanges is like our old $scope.watch… but exclusively for 1 way data bound values. It fires when changes occur, and we have a new api to observe and react to those changes. You’ll also notice this line var ctrl = this. Firstly, that redefinition is to keep us out of trouble in closures, etc where this changes meaning. Also, anything you attach to ctrl will be visible in the template. It’s like attaching thing to $scope in our pre 1.5 way of doing things.  In templates, you’ll see this:
 
+```html
+<div class="lbPopupMenu cmndDshOutPopup" ng-show="$ctrl.isOpen">
+<div yc-draggable="h2.popMenuHed">
+<div class="popMenuWrap">
+    <a class="xClose" ng-click="$ctrl.closePopup()"></a>
+    <h2 class="popMenuHed"><b>{{$ctrl.scriptName}}</b>
+```
 No more calling methods and attributes from scope space, we ask for things directly from $ctrl.The key things with controller is that there is a lifecycle to hook into and operations we used to perform on scope, will be performed on ctrl.
     3) 
 
