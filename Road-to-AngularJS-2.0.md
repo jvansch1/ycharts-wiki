@@ -30,7 +30,7 @@ This is an angular 1.5 app. Well, mostly, and I’ll tell you what I didn’t do
 
 ####Application Architecture: components, components and all the rest
 
-So, components. What is a component and why have all the system app’s controllers and directives been deleted? A component is the basic building block of an angular app. Everything is a component. There should be 1 top level component, made up of smaller component if required. Component are quite like the directives we knew in many ways since they both create some enclosed, isolated scope over an associated template. However, along with api and lifecycle changes, components are used explicitly in the construction of a modular, component based architecture whereas directives have no such opinion and instead focus on the decoration of the DOM. The idea isn't that one can't do what the other does, but instead is a about what you SHOULD do with one versus the other. It turns out that most of our directives will become components and very few of them will remain directives. A key tactical difference is that components are emplaced in a template hierarchically as custom elements, whereas directives are added as attributed to existing elements. Again, directives decorate. I’ve selected a few components to analyze. I chose 2 components to look at not because they are the best pieces of angular 1.5 I can produce, but instead because they represent what our transitional 1.5 world will look like as we try to balance the new component based architecture and our current, deep dependence on `$scope`.
+So, components. What is a component and why have all the system app’s controllers and directives been deleted? A component is the basic building block of an angular app. Everything is a component. There should be 1 top level component, made up of smaller component if required. Component are quite like the directives we knew in many ways since they both create some enclosed, isolated scope over an associated template. However, along with api and lifecycle changes, components are used explicitly in the construction of a modular, component based architecture whereas directives have no such opinion and instead focus on the decoration of the DOM. The idea isn't that one can't do what the other does, but instead is a about what you **should** do with one versus the other. It turns out that most of our directives will become components and very few of them will remain directives. A key tactical difference is that components are emplaced in a template hierarchically as custom elements, whereas directives are added as attributed to existing elements. Again, directives decorate. I’ve selected a few components to analyze. I chose 2 components to look at not because they are the best pieces of angular 1.5 I can produce, but instead because they represent what our transitional 1.5 world will look like as we try to balance the new component based architecture and our current, deep dependence on `$scope`.
 
 ```javascript
 shared.component('ycManagementCommandPopup', {
@@ -212,8 +212,10 @@ https://angular.io/docs/ts/latest/guide/style-guide.html#!#application-structure
 https://toddmotto.com/one-way-data-binding-in-angular-1-5/
 
 ###What we need to do:
-Upgrade AngularJS to 1.5 with zero code changes and test for potential breaking changes.
-Establish across the team the new, Angular 1.5 methods of organizing the file system, building components, one way data binding, etc so that new development adheres to these patterns.
-Sequence, spec and schedule appropriate units of code to migrate.
+1) Upgrade AngularJS to 1.5 with zero code changes and test for potential breaking changes.
+
+2) Establish across the team the new, Angular 1.5 methods of organizing the file system, building components, one way data binding, etc so that new development adheres to these patterns.
+
+3)Sequence, spec and schedule appropriate units of code to migrate.
 
 ##Migrating to AngularJS 2.0
