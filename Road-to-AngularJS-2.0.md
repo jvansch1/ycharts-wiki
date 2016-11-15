@@ -4,9 +4,9 @@
 Angular 2.0 is a major revamp of the Angular framework, and as such, introduces a large number of improvements and… breaking changes. It is not backwards compatible with any Angular 1.x built site and requires a significant engineering effort to migrate to. Fortunately, we will not be the first team to migrate to Angular 2.0, so we will be following a prescribed way forward that should introduce change incrementally and enable us to phase and sequence migration work as we would any other kind of project. The nature of the effort will generally adhere to the following guideline:
 
 
-1)Maximize Angular 1.x upgrade options and position our codebase to be more amenable to the 2.0 migration.
+1) Maximize Angular 1.x upgrade options and position our codebase to be more amenable to the 2.0 migration.
 
-2)Introduce the 2.0 framework into our codebase and utilize Angular-supported mechanisms to incrementally upgrade our apps in a mixed 1.x/2.0 environment until completion.
+2) Introduce the 2.0 framework into our codebase and utilize Angular-supported mechanisms to incrementally upgrade our apps in a mixed 1.x/2.0 environment until completion.
 
 
 ##Migrating to AngularJS 1.5
