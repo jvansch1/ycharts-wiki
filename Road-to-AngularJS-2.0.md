@@ -16,7 +16,7 @@ In keeping with the above guidelines, we should move to max out our Angular 1.x 
 ###Migration Case Study, the systems app:
 
 ####File System Architecture:
-``
+![](https://s3.amazonaws.com/ycharts-static-dev/wiki/directory1.png)
 
 You’ll find that the patterns and structures on blogs or in the Angular docs are a little different from what I’ve done here. Firstly, this is a transitional stage on our way to 2.0, but also we are a Django project...we ain’t some pure single page app. As such, our  main html template and our angular app are in 2 different directories vs. 1 like you’ll find elsewhere. In order to create a link between a single page app’s template and the app’s relevant angular code, I created a directory for the js code that is the same name as the template. Notice command_dashboard.html and command_dashboard/. Let’s check out an angular app:
 
