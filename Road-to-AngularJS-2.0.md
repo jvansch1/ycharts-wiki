@@ -10,14 +10,10 @@ Angular 2.0 is a major revamp of the Angular framework, and as such, introduces 
 
 
 ##Migrating to AngularJS 1.5
-In keeping with the above guidelines, we should move to max out our Angular 1.x upgrade path to 1.5 and adopt those 1.5 changes that ease the transition to 2.0. Angular 1.5 introduces new syntax, structural elements and patterns that will be both standard and required in Angular 2.0. Since 1.5 can interpret 1.4 code without modifications, it gives us the opportunity to incrementally up-spec our 1.4 code with only minimal breaking changes. This migration generally addresses 2 things: application architecture and application data flow.
+In keeping with the above guidelines, we should move to max out our Angular 1.x upgrade path to 1.5 and adopt those 1.5 changes that ease the transition to 2.0. Angular 1.5 introduces new syntax, structural elements and patterns that will be both standard and required in Angular 2.0. Since 1.5 can interpret 1.4 code without modifications, it gives us the opportunity to incrementally up-spec our 1.4 code with only minimal breaking changes. This migration generally addresses 3 things: File System Architecture, Application Architecture and Application Data Flow.
 
 
 ###Migration Case Study, the systems app:
-
-
-There are a lot of changes in 1.5, that affect  nearly every aspect of building an angular app. This includes File System Architecture, Application Architecture and Application Data Flow.
-
 
 ####File System Architecture:
 ``
