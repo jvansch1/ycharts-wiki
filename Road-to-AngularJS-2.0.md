@@ -34,11 +34,65 @@ Shared is not an app, but is represented as a top level directory like the singl
 
 So, components. What is a component and why have all the system app’s controllers and directives been deleted? A component is the basic building block of an angular app. Everything is a component. There should be 1 top level component, made up of smaller component if required. Component are quite like the directives we knew in many ways since they both create some enclosed, isolated scope over an associated template. However, along with api and lifecycle changes, components are used explicitly in the construction of a modular, component based architecture whereas directives have no such opinion and instead focus on the decoration of the DOM. The idea isn't that one can't do what the other does, but instead is a about what you SHOULD do with one versus the other. It turns out that most of our directives will become components and very few of them will remain directives. A key tactical difference is that components are emplaced in a template hierarchically as custom elements, whereas directives are added as attributed to existing elements. Again, directives decorate. I’ve selected a few components to analyze. I chose 2 components to look at not because they are the best pieces of angular 1.5 I can produce, but instead because they represent what our transitional 1.5 world will look like as we try to account for new component based architecture and our current deep dependence on $scope.
 
+```python
+shared.component('ycManagementCommandPopup', {
+    require: {
+        ycAutoCloseCtrl: 'ycAutoClose'
+    },
+    bindings: {
+        commandRunId:'<',
+        popupCloseStateHandler:'&'
+    },
+    templateUrl:'/media/systems/js/shared/management_command_popup/management_command_popup.html',
+    controller: function(Ajax, $sce, $scope){
+        
+        // you dont need to do this, this is cool most of the time
+        // unless you're in a scoping circumstance where this can conflict
+        var ctrl = this;
+        
+        ctrl.$onInit = function() {
+            ctrl.ycAutoCloseCtrl.setAutoCloseHandler(function(){
+                // note that calls into this here, call the autoclose directive
+                if(ctrl.isOpen){
+                    ctrl.closePopup();
+                    $scope.$apply();
+                }
+            });
 
+            ctrl.isOpen = false;
+        };
 
+        // no more scope watches... this is how you detect one way changes
+        ctrl.$onChanges = function(changes){
+            if (changes.commandRunId){
+                if (changes.commandRunId.isFirstChange()) return;
+                if (!changes.commandRunId.currentValue) return;
+                ctrl.commandRunId = changes.commandRunId.currentValue;
+                Ajax.Systems.CommandRun.get({},{'id': ctrl.commandRunId})
+                    .success(function(data){
+                        ctrl.isOpen = !ctrl.isOpen;
+                        ctrl.output = $sce.trustAsHtml(data.output);
+                        ctrl.scriptName = data.script_name;
+                        ctrl.runtime = data.runtime;
+                        ctrl.endtime = data.end_time;
+                    })
+                    .error(function(error, status){
+                        alert('Please make sure the commandRunId is correct.');
+                    });
+            }
+        };
 
+        // called when user hits the X on the popup
+        // and when someone clicks away from the popup
+        ctrl.closePopup = function() {
+            ctrl.isOpen = false;
+            ctrl.popupCloseStateHandler();
+        };
 
+    }
+});
 
+```
 
 
 
