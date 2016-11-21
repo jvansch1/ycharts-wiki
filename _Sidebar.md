@@ -57,12 +57,11 @@
 * Other
   * [[Calculation Principles]]
   * [[Fundamental Data Testing]]
-  * [[Index  Naming Instructions]]
+  * [[Index Naming Instructions]]
   * [[Add a New Data Frequency]]
   * [[Add a New Data Type]]
   * [[Jquery UI Components]]
   * [[News Headline Feeds]]
-  * [[Getting a new SSL certificate]]
   * [[Road to AngularJS 2.0]]
 
 **Devops**
@@ -72,4 +71,5 @@
 * [[Debugging Node Processes]]
 * [[Figuring Out Staging/Production/Dev IPs]]
 * [[Release Issues Debugging]]
+* [[Getting a new SSL certificate]]
 * [[Updating an SSL certificate]]
