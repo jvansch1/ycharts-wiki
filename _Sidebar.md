@@ -76,3 +76,4 @@
 
 **Machine Configuration**
 * [[ycharts Machine Configuration and Deployment Details]]
+* [[chart_image_generator Machine Configuration and Deployment Details]]
