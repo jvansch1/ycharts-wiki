@@ -75,4 +75,4 @@
 * [[Updating an SSL certificate]]
 
 **Machine Configuration**
-* [[YCharts.com Machine Configuration Details]]
+* [[Machine Configuration Details]]
