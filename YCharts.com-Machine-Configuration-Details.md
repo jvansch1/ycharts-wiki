@@ -1,5 +1,6 @@
-*Recipe Synopsis *
+# Synopsis of Recipes
 
-** Default **
+## Default ##
+
 
 
