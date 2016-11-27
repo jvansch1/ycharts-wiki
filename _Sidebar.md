@@ -73,3 +73,6 @@
 * [[Release Issues Debugging]]
 * [[Getting a new SSL certificate]]
 * [[Updating an SSL certificate]]
+
+**Machine Configuration**
+* [[YCharts.com Machine Configuration Details]]
