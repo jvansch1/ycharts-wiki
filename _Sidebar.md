@@ -75,4 +75,4 @@
 * [[Updating an SSL certificate]]
 
 **Machine Configuration**
-* [[Machine Configuration Details]]
+* [[ycharts Machine Configuration and Deployment Details]]
