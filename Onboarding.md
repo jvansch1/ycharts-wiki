@@ -4,7 +4,6 @@ Set up an e-mail address at http://google.com/a/ycharts.com
 1. If person is developer, add to developers@ycharts.com group
 2. If person is in New York, add to newyork@ycharts.com group
 3. If person is in Chicago, add to chicago@ycharts.com group
-4. If person is developer that will be involved in backend/systems at all, add to systems@ycharts.com and root@ycharts.com groups
 
 ## Pivotal Tracker
 Set up an account at http://www.pivotaltracker.com
