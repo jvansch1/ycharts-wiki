@@ -73,6 +73,7 @@
 * [[Release Issues Debugging]]
 * [[Getting a new SSL certificate]]
 * [[Updating an SSL certificate]]
+* [[Diagnosing Production System Issues]]
 
 **Machine Configuration**
 * [[ycharts Machine Configuration and Deployment Details]]
