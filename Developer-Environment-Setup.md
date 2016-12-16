@@ -77,6 +77,28 @@ If you were able to connect you will see it, if not ask for help.
 ```bash
 logout
 ```
+## Install Redis
+```bash
+# Download redis 3.2.4
+cd ~
+curl http://download.redis.io/releases/redis-3.2.4.tar.gz -o "redis-3.2.4.tar.gz"
+tar xzf redis-3.2.4.tar.gz
+cd redis-3.2.4
+make
+
+# Install redis executables and redis config
+mv ~/redis-3.2.4/src/redis-server /usr/local/bin
+mv ~/redis-3.2.4/src/redis-cli /usr/local/bin
+cp /sites/ycharts/confs/redis/redis.conf /usr/local/etc/redis.conf
+# Start redis on launch
+ln -sfv /sites/ycharts/confs/redis/ycharts.redis.plist ~/Library/LaunchAgents/ycharts.redis.plist
+
+# Start redis now
+launchctl load ~/Library/LaunchAgents/ycharts.redis.plist
+
+# Use the redis cli with:
+redis-cli
+```
 
 ## Install MySQL
 
