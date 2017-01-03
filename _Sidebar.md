@@ -23,6 +23,7 @@
   * [[Restoring Database]]
   * [[Upgrading MySQL]]
   * [[Useful MySQL Queries]]
+  * [[Copying Production DB to Staging]]
 * Tools
   * [[Sublime]]
   * [[PyCharm]]
