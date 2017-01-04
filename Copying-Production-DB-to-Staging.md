@@ -13,3 +13,4 @@
 1. Click **Restore DB Instance**
 1. Once the DB is running, update the host in ycharts/settings/staging.py
 1. Do a staging release to test that the new DB is up and running
+1. Once you have determined that the new DB is working fine, delete the old Staging DB
