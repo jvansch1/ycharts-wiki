@@ -66,6 +66,7 @@
   * [[Road to AngularJS 2.0]]
 
 **Devops**
+* [[Diagnosing Production System Issues]]
 * [[Diagnosing Memcache Issues]]
 * [[Random Useful Sysadmin Commands]]
 * [[Linux Process Debugging]]
@@ -74,7 +75,6 @@
 * [[Release Issues Debugging]]
 * [[Getting a new SSL certificate]]
 * [[Updating an SSL certificate]]
-* [[Diagnosing Production System Issues]]
 
 **Machine Configuration**
 * [[ycharts Machine Configuration and Deployment Details]]
