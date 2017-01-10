@@ -153,6 +153,12 @@ Install VirtualBox: https://www.virtualbox.org/wiki/Downloads
 ```
 
 ## Navigate to your main ycharts directory
+```
+cd /sites/ycharts
+vagrant up
+```
+This can take an hour or more. HOWEVER, there is a shortcut if you are in the NYC office.
+
 From the Mac Mini Shared Folder, copy vagrant_dev_setup_packaged.box to /sites/ycharts/confs/developers/vagrant_dev_setup_packaged.box
 ```
 cd /sites/ycharts
@@ -160,12 +166,13 @@ vagrant box add vagrant_dev_setup_packaged /sites/ycharts/confs/developers/vagra
 vagrant up
 ```
 This will take about 5 minutes for the first time setup. When it's completed ... test it
-```
-vagrant ssh
 
+```
 # Test Django
 # test django by running a webserver. this will load django
 # so that you can access it from your machine at 127.0.0.1:8000
+
+vagrant ssh
 yc_django
 ```
 
