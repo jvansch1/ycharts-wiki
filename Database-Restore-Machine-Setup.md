@@ -28,11 +28,15 @@ Make sure the computer won't sleep.
     - http://developer.apple.com/downloads
     - **Version**: 4.6.3
 
-1. Open Xcode and go to *Preferences* --> *Downloads* and install **Command Line Tools**
-
 1. If you have OSX 10.8 or higher, you may also need to install XQuartz manually
     - http://xquartz.macosforge.org/landing/
     - Be sure to log out and log back in after installing!
+
+### Install Homebrew
+On the machine run:
+```bash
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
 
 ### Install Chef
 
