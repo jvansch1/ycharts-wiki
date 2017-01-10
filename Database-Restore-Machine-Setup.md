@@ -28,6 +28,9 @@ Make sure the computer won't sleep.
     - http://developer.apple.com/downloads
     - **Version**: 4.6.3
 
+1. Install Xcode Command Line Tools
+    - `xcode-select --install`
+
 1. If you have OSX 10.8 or higher, you may also need to install XQuartz manually
     - http://xquartz.macosforge.org/landing/
     - Be sure to log out and log back in after installing!
