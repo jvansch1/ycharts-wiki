@@ -91,13 +91,17 @@ mv ~/redis-3.2.4/src/redis-server /usr/local/bin
 mv ~/redis-3.2.4/src/redis-cli /usr/local/bin
 cp /sites/ycharts/confs/redis/redis.conf /usr/local/etc/redis.conf
 # Start redis on launch
-ln -sfv /sites/ycharts/confs/redis/ycharts.redis.plist ~/Library/LaunchAgents/ycharts.redis.plist
-
+cp /sites/ycharts/confs/redis/com.ycharts.redis.plist ~/Library/LaunchAgents
 # Start redis now
 launchctl load ~/Library/LaunchAgents/ycharts.redis.plist
 
 # Use the redis cli with:
 redis-cli
+```
+
+NOTE: If after the above, redis-server is not running, check the permissions of
+```
+/usr/local/var/log/
 ```
 
 ## Install MySQL
