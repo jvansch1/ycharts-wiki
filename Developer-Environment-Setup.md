@@ -103,6 +103,7 @@ NOTE: If after the above, redis-server is not running, check the permissions of
 ```
 /usr/local/var/log/
 ```
+It should YOURUSERNAME:admin!
 
 ## Install MySQL
 
