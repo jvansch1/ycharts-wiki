@@ -8,7 +8,7 @@
 #### Steps
 
 1. In every app's `migrations` folder delete all the migrations except for the `__init__.py` 
-    1. ```bash find . -path "*migrations*" -name "*.py" -not -name "__init__.py" -type f -Xdelete```
+    1. ```find . -path "*migrations*" -name "*.py" -not -name "__init__.py" -type f -delete```
     1. Remove the X in the command above
 1. Locally run `mysql -u ycharts -p ycharts -A ycharts` and then `delete from django_migrations;`
 1. Run `python /sites/ycharts/manage.py makemigrations`
