@@ -2,7 +2,8 @@
 
 #### Requirements
 1. All Databases (local, staging and production) are in sync. Meaning they have the same exact migrations applied, tables and schemas. This means the best time to do it is after a full release where or develop and master branches are the same.
-1. Developers do not push to develop and any migrations that are not applied must be rewritten.
+1. Developers do not push to develop during the code freeze
+1. Migrations that are not applied must be rewritten.
 
 #### Steps
 
