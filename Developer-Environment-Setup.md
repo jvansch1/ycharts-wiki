@@ -109,7 +109,7 @@ It should YOURUSERNAME:admin!
 
 ```bash
 # Install MySQL -- DON'T RUN ANY COMMANDS HOMEBREW TELLS YOU TO RUN AFTER INSTALLATION!
-brew install mysql
+brew install mysql56
 
 # Copy YCharts MySQL plist file to correct location so MySQL runs on startup
 cp /sites/ycharts/confs/database/com.ycharts.mysql.plist ~/Library/LaunchAgents
