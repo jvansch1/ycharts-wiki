@@ -21,13 +21,6 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
     sudo chown -R `whoami` /sites/
     ```
 
-### Windows Development (Only for emergencies)
-```
-# ignore chmod differences, otherwise you will see a lot of modified files under PC when you shouldn't - do this 
-# in the git repo! You may have to do this twice depending on each repo's git configurations
-git config core.fileMode false
-git config --global core.fileMode false
-```
 ## Checkout Code
 1. Clone the `ycharts`, `chart_image_generator`, and `developer_setup` repos
 
