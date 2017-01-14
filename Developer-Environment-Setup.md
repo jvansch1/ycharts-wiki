@@ -53,7 +53,7 @@ git config --global core.fileMode false
 
 ## Get SSH keys, AWS keys, etc
 
-Get the ycharts_data key from someone and move it to `~/.ssh/` so you
+Get the ycharts key from someone and move it to `~/.ssh/` so you
 can connect to our server machines.  You will be getting the `.pem` key.
 
 Also ask someone to set up and AWS user for you for the project and send you
