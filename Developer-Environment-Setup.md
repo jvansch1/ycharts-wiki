@@ -90,8 +90,7 @@ cp /sites/ycharts/confs/developers/ssh.conf ~/.ssh/config
 
 Now exit and enter the directory and make sure it's working!
 ```bash
-cd /sites
-cd /sites/ycharts
+cd .
 ```
 
 ## Install Redis
