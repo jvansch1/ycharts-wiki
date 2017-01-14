@@ -51,32 +51,36 @@ git config --global core.fileMode false
     ln -s -f /sites/chart_image_generator/confs/git_pre_commit_hook.py /sites/chart_image_generator/.git/hooks/pre-commit
     ```
 
+## Get SSH keys, AWS keys, etc
 
-## Connecting to YCharts Production/Staging Servers
-Set up your SSH config so you can connect to our server machines.
-
-```bash
-cp /sites/ycharts/confs/developers/ssh.conf ~/.ssh/config
-```
-
-Get the ycharts key from someone and move it to `~/.ssh/` so you
+Get the ycharts_data key from someone and move it to `~/.ssh/` so you
 can connect to our server machines.  You will be getting the `.pem` key.
 
-```bash
+Also ask someone to set up and AWS user for you for the project and send you
+your access and secret keys.
+
+Initialize your ssh key
+```
 # Change the permissions on the key file
 chmod 700 ~/.ssh/ycharts-2014-01.pem
 # Add the key file to your ssh-agent
 ssh-add -K ~/.ssh/ycharts-2014-01.pem
-# Test that it works
-ssh staging_admin
 ```
 
-If you were able to connect you will see it, if not ask for help.
-(You may need to change `chmod` of the `.pem` key). Now quit.
-
-```bash
-logout
+## Install pip & Virtual Env
 ```
+cd ~
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+sudo python get-pip.py
+sudo pip install virtualenvwrapper --ignore-installed six
+
+echo "
+export WORKON_HOME=$HOME/.virtualenvs
+source /usr/local/bin/virtualenvwrapper.sh" >> ~/.bash_profile
+
+source ~/.bash_profile
+```
+
 ## Install Redis
 ```bash
 # Download redis 3.2.4
