@@ -11,6 +11,11 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
     * Follow the instructions here: https://help.github.com/articles/connecting-to-github-with-ssh/
 1. Configure so your SSH passphrase is remembered.
     * Follow the instructions here: https://help.github.com/articles/working-with-ssh-key-passphrases/.
+1. Add your ssh key to ssh-agent explicitly just in case though
+
+    ```bash
+    ssh-add -K ~/.ssh/id_rsa
+    ```
 1. Set up `/sites` directory
 
     ```bash
