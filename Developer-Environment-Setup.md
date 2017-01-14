@@ -54,7 +54,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 Get the ycharts key from someone and move it to `~/.ssh/` so you
 can connect to our server machines.  You will be getting the `.pem` key.
 
-Also ask someone to set up and AWS user for you for the project and send you
+Also ask someone to set up an AWS user for you for the project and send you
 your access and secret keys.
 
 Initialize your ssh key
