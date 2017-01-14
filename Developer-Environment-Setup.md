@@ -8,9 +8,9 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 ## Setting up Git
 1. Create a github account and tell an admin to add your username to YCharts.
 1. Create an private/public key and tie it to your github account.
-    * Follow the instructions here: http://help.github.com/mac-key-setup/
+    * Follow the instructions here: https://help.github.com/articles/connecting-to-github-with-ssh/
 1. Configure so your SSH passphrase is remembered.
-    * Follow the instructions here: http://help.github.com/working-with-key-passphrases/.
+    * Follow the instructions here: https://help.github.com/articles/working-with-ssh-key-passphrases/.
 1. Set up `/sites` directory
 
     ```bash
@@ -67,18 +67,26 @@ chmod 700 ~/.ssh/ycharts-2014-01.pem
 ssh-add -K ~/.ssh/ycharts-2014-01.pem
 ```
 
-## Install pip & Virtual Env
+## Install AutoEnv, set up env specific to this directory
+Install Autoenv to manage having different aws access keys.
+Be aware of the caveats that follow the install process
+Consult documentation for install https://github.com/kennethreitz/autoenv, however..
 ```
-cd ~
-curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-sudo python get-pip.py
-sudo pip install virtualenvwrapper --ignore-installed six
+brew install autoenv
+```
+After Install:
+```
+echo "source $(brew --prefix autoenv)/activate.sh" >> ~/.bash_profile
+```
 
-echo "
-export WORKON_HOME=$HOME/.virtualenvs
-source /usr/local/bin/virtualenvwrapper.sh" >> ~/.bash_profile
+Create an ".env" file in root of the project and add:
 
-source ~/.bash_profile
+```
+export AWS_ACCESS_KEY_ID=<YOUR YCHARTS ACCESS KEY>
+export AWS_SECRET_ACCESS_KEY=<YOUR YCHARTS SECRET KEY>
+export AWS_DEFAULT_REGION=us-east-1
+
+cp /sites/ycharts/confs/developers/ssh.conf ~/.ssh/config
 ```
 
 ## Install Redis
