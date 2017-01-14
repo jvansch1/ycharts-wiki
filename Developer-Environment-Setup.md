@@ -75,6 +75,7 @@ brew install autoenv
 After Install:
 ```
 echo "source $(brew --prefix autoenv)/activate.sh" >> ~/.bash_profile
+source ~/.bash_profile
 ```
 
 Create an ".env" file in root of the project and add:
