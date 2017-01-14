@@ -86,6 +86,7 @@ export AWS_SECRET_ACCESS_KEY=<YOUR YCHARTS SECRET KEY>
 export AWS_DEFAULT_REGION=us-east-1
 
 cp /sites/ycharts/confs/developers/ssh.conf ~/.ssh/config
+ssh-add -A
 ```
 
 Now exit and enter the directory and make sure it's working!
