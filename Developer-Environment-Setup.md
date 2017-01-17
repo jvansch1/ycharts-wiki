@@ -110,7 +110,7 @@ cp /sites/ycharts/confs/redis/redis.conf /usr/local/etc/redis.conf
 # Start redis on launch
 cp /sites/ycharts/confs/redis/com.ycharts.redis.plist ~/Library/LaunchAgents
 # Start redis now
-launchctl load ~/Library/LaunchAgents/ycharts.redis.plist
+launchctl load ~/Library/LaunchAgents/com.ycharts.redis.plist
 
 # Use the redis cli with:
 redis-cli
