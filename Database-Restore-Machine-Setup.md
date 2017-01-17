@@ -40,32 +40,65 @@ On the machine run:
 ```bash
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
+### Setup environment
+We need our Mac Mini to basically look like our dev setup which means we need the following
+ - We need it to have our private key files `ycharts_deploy1` (for github) and `ycharts-2014-01.pem`
+ - We need it to have our repo in `/sites/ycharts/`
+ - We need it to have a virtualenv `ycharts` (add the `workon ycharts` to the bash profile)
+ - We need to install python and pip packages
+ - We need to setup the right plists (`com.ycharts.download_and_restore_db.plist` and `com.ycharts.download_and_restore_redis.plist`)
 
-### Install Chef
 
+### Install MySQL
+We need to install the version we are using in staging/prod. 
+At the time of writing this was 5.6.
 ```bash
-curl -L https://www.opscode.com/chef/install.sh | sudo bash
+# Install MySQL -- DON'T RUN ANY COMMANDS HOMEBREW TELLS YOU TO RUN AFTER INSTALLATION!
+brew install mysql@5.6
+
+# Make a symlink so generic mysql commands link to 5.6 version
+ln -s /usr/local/opt/mysql\@5.6 /usr/local/opt/mysql
+
+# Copy YCharts MySQL plist file to correct location so MySQL runs on startup
+cp /sites/ycharts/confs/database/com.ycharts.mysql.plist ~/Library/LaunchAgents
+# Start MySQL now
+launchctl load ~/Library/LaunchAgents/com.ycharts.mysql.plist
+
+# Create ycharts database
+mysql -u root
+
+# Run the following commands in the mysql shell
+CREATE DATABASE ycharts CHARACTER SET utf8 COLLATE utf8_general_ci;
+GRANT ALL ON ycharts.* to 'ycharts'@'localhost' IDENTIFIED BY 'ycharts';
+FLUSH PRIVILEGES;
+
+# now get out of mysql
+exit
 ```
 
-### Run Chef
-
-If you are setting up the core machine which will execute the dump (New York) run
-
+### Install Redis
+Make sure you install the same redis version we use in staging/production.
+At the time of writing that was 3.2.4
 ```bash
-sudo chef-solo \
-    -j "https://s3.amazonaws.com/ycharts-utils/chef/new_york.json" \
-    -r "https://s3.amazonaws.com/ycharts-utils/chef/ycharts_db.tar.gz" \
-    -l debug
+# Download redis 3.2.4
+cd ~
+curl http://download.redis.io/releases/redis-3.2.4.tar.gz -o "redis-3.2.4.tar.gz"
+tar xzf redis-3.2.4.tar.gz
+cd redis-3.2.4
+make
+
+# Install redis executables and redis config
+mv ~/redis-3.2.4/src/redis-server /usr/local/bin
+mv ~/redis-3.2.4/src/redis-cli /usr/local/bin
 ```
 
-If you are setting up a machine that will just download an existing dump (anywhere else) run
-
+### Install Python and Pip
+Install redis tools package
 ```bash
-sudo chef-solo \
-    -j "https://s3.amazonaws.com/ycharts-utils/chef/chicago.json" \
-    -r "https://s3.amazonaws.com/ycharts-utils/chef/ycharts_db.tar.gz" \
-    -l debug
+pip install rdbtools==0.1.7
+pip install awscli==1.10.38
 ```
+
 
 ## Test it out
 
