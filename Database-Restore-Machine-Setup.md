@@ -92,7 +92,7 @@ mv ~/redis-3.2.4/src/redis-server /usr/local/bin
 mv ~/redis-3.2.4/src/redis-cli /usr/local/bin
 ```
 
-### Install Python and Pip
+### Install Special Pip packages
 Install redis tools package
 ```bash
 pip install rdbtools==0.1.7
