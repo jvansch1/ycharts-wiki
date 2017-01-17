@@ -1,4 +1,3 @@
-# Restoring Redis
 
 ## Copy Data Files Method (Preferred)
 #### Copy the Backup Files
