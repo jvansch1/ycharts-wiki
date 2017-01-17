@@ -18,6 +18,8 @@
   * [[Forking On Github]]
   * [[Random Git Notes]]
   * [[Git Revert and Reset]]
+* Redis
+  * [[Restoring Redis]]
 * MySQL
   * [[General Notes]]
   * [[Database Restore Machine Setup]]
