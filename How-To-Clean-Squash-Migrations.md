@@ -17,7 +17,7 @@
 1. Push this to `develop`
 1. On Staging:
   1. Run `fab staging build stop deploy`
-  1. Log into the staging mysql db by `ssh staging_admin` and then `mysql -u ycharts -A -p er45qw -h staging-2016-01-04.cy4wtovspprb.us-east-1.rds.amazonaws.com ycharts`
+  1. Log into the staging mysql db by `ssh staging_admin` and then `mysql -u ycharts -A -per45qw -h staging-2016-01-04.cy4wtovspprb.us-east-1.rds.amazonaws.com ycharts`
   1. Run `delete from django_migrations;`
   1. Run `python /sites/ycharts/manage.py migrate --fake`
   1. Run `fab staging start`
@@ -27,7 +27,7 @@
 1. On Production (after it runs on staging for at least 1 day):
   1. Prepare a [full release](https://github.com/ycharts/ycharts/wiki/Deployment-Procedures#prepare-release-to-production) to production
   1. Run `fab production build stop deploy`
-  1. Log into the production mysql db by `ssh production_admin` and then `mysql -u ycharts -A -p er45qw -h production-2015-05-16.cy4wtovspprb.us-east-1.rds.amazonaws.com ycharts`
+  1. Log into the production mysql db by `ssh production_admin` and then `mysql -u ycharts -A -per45qw -h production-2015-05-16.cy4wtovspprb.us-east-1.rds.amazonaws.com ycharts`
   1. Run `delete from django_migrations;`
   1. Run `python /sites/ycharts/manage.py migrate --fake`
   1. Run `fab production start`
