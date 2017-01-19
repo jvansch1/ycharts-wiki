@@ -22,6 +22,21 @@
   1. Run `python /sites/ycharts/manage.py migrate --fake`
   1. Run `fab staging start`
   
+1. Send an email/slack message out to all developers with the following instructions:
+    ```
+# Update your local develop branch
+cd /sites/ycharts
+git checkout develop
+git pull origin develop
+
+# Delete migrations table
+mysql -u ycharts -pycharts -A ycharts
+# In mysql shell
+delete from django_migrations;
+# Exit mysql shell
+
+python /sites/ycharts/manage.py migrate --fake
+```
 1. Let staging run for a day to make sure everything looks good and nothing breaks. In the mean time there is a code freeze. No one is allowed to push to `master` or `develop`.
 
 1. On Production (after it runs on staging for at least 1 day):
