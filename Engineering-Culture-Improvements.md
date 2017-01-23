@@ -1,6 +1,0 @@
-YCharts is embarking on a series of changes, additions and improvements to our engineering team processes to * FILL THIS IN JOHN *
-
-| ﻿Item                                             | Why                                                                                                                               | Who | How                                                                 | By When |
-|--------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|-----|---------------------------------------------------------------------|---------|
-| Monthly 1-on-1s with every team member.          | Make sure each individual on the team is heard, and has the tools and support they need to succeed                                | Ara | Ara will schedule repeating invites, for first week of every month. | 1/31/17 |
-| Regular meeting on technical company happenings. | Engineers need to know what's happening in the company beyond technical changes. Sales successes? Staff changes? Changes in plan? | Ara | Ara will schedule a weekly 30 minute meeting                        | 1/31/17 |
