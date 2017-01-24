@@ -21,7 +21,6 @@
   * [[Restoring Redis]]
 * MySQL
   * [[General Notes]]
-  * [[Database Restore Machine Setup]]
   * [[Restoring Database]]
   * [[Upgrading MySQL]]
   * [[Useful MySQL Queries]]
@@ -57,6 +56,7 @@
   * [[Concurrent Login Block Notes]]
   * [[IPython Tips]]
 * Other
+  * [[Database Restore Machine Setup]]
   * [[Calculation Principles]]
   * [[Fundamental Data Testing]]
   * [[Index Naming Instructions]]
