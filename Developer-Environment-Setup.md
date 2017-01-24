@@ -64,7 +64,7 @@ chmod 700 ~/.ssh/ycharts-2014-01.pem
 # Add the key file to your ssh-agent
 ssh-add -K ~/.ssh/ycharts-2014-01.pem
 # Make sure all ssh keys are added to the ssh-agent on login
-echo "ssh-add -A" >> ~/.bash_profile
+printf "\nssh-add -A\n" >> ~/.bash_profile
 source ~/.bash_profile
 ```
 
