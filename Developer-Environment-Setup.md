@@ -65,6 +65,10 @@ chmod 700 ~/.ssh/ycharts-2014-01.pem
 ssh-add -K ~/.ssh/ycharts-2014-01.pem
 ```
 
+# Make is your ssh keys are added to the ssh-agent on login
+echo "ssh-add -A" >> ~/.bash_profile
+
+
 ## Install AutoEnv, set up env specific to this directory
 Install Autoenv to manage having different aws access keys.
 Be aware of the caveats that follow the install process
