@@ -65,6 +65,7 @@ chmod 700 ~/.ssh/ycharts-2014-01.pem
 ssh-add -K ~/.ssh/ycharts-2014-01.pem
 # Make sure all ssh keys are added to the ssh-agent on login
 echo "ssh-add -A" >> ~/.bash_profile
+source ~/.bash_profile
 ```
 
 ## Install AutoEnv, set up env specific to this directory
