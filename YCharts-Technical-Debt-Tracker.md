@@ -1,5 +1,5 @@
-# Calculations representation and query refactor
+# Calculations
 # AngularJS 2.0
 # Django Upgrade Path
-# Redis as sole cache
+# Redis vs Memcache
 # Alerts
