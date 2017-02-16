@@ -20,6 +20,11 @@ Have the person create an account at http://github.com if they don't already hav
 Create an account for the person on Slack.
 If the person is a developer, invite them to the various engineering channels.
 
+## PagerDuty
+
+## Sentry
+
+
 ## YCharts.com
 Have the person create an account at http://ycharts.com if they don't already have one, give them staff access. If person is developer, add them to the following groups (web_admin, systems, testers). If not a developer, add them to web_admin.
 
