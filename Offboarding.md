@@ -15,6 +15,7 @@ If Exists, Remove
 * If it exists, remove "is_staff" access to the user's personal accounts on ycharts.com
 * http://ycharts.okta.com
 * https://app.getsentry.com/
+* https://ycharts.pagerduty.com
 
 Wipe Former Computer
 
