@@ -21,6 +21,7 @@ git pull origin master
 git merge --no-ff develop
 git vtag
 git tag X.X.X
+git describe --abbrev=0 --tags >> VERSION
 git push origin master
 git push origin --tags
 
