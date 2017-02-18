@@ -83,6 +83,7 @@ Now you make the changes you want
 git commit
 git vtag
 git tag X.X.X
+git describe --abbrev=0 --tags >> VERSION
 git push origin master
 git push origin --tags
 git checkout develop
