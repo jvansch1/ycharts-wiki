@@ -21,7 +21,7 @@ git pull origin master
 git merge --no-ff develop
 git vtag
 git tag X.X.X
-git describe --abbrev=0 --tags > VERSION && git commit -n -am "Update version"
+git describe --abbrev=0 --tags > VERSION && git commit -n -am "Update version" && git push origin
 git push origin master
 git push origin --tags
 
@@ -83,7 +83,7 @@ Now you make the changes you want
 git commit
 git vtag
 git tag X.X.X
-git describe --abbrev=0 --tags > VERSION && git commit -n -am "Update version"
+git describe --abbrev=0 --tags > VERSION && git commit -n -am "Update version" && git push origin
 git push origin master
 git push origin --tags
 git checkout develop
