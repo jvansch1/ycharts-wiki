@@ -51,13 +51,13 @@ We need our Mac Mini to basically look like our dev setup which means we need th
 
 ### Install MySQL
 We need to install the version we are using in staging/prod. 
-At the time of writing this was 5.6.
+At the time of writing this was 5.7.
 ```bash
 # Install MySQL -- DON'T RUN ANY COMMANDS HOMEBREW TELLS YOU TO RUN AFTER INSTALLATION!
-brew install mysql@5.6
+brew install mysql
 
-# Make a symlink so generic mysql commands link to 5.6 version
-ln -s /usr/local/opt/mysql\@5.6 /usr/local/opt/mysql
+# Make a symlink so generic mysql commands link to 5.7
+ln -s /usr/local/opt/mysql /usr/local/opt/mysql
 
 # Copy YCharts MySQL plist file to correct location so MySQL runs on startup
 cp /sites/ycharts/confs/database/com.ycharts.mysql.plist ~/Library/LaunchAgents
