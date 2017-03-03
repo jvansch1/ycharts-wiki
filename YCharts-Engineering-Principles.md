@@ -1,5 +1,3 @@
-# YCharts Engineering Principles
-
 ### Ownership is distributed
 There are no dark corners in our code and it’s always appropriate for an engineer to work on every part of our system. We always make a point to leave something better than when we found it.
 
