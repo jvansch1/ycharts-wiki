@@ -6,6 +6,7 @@
 * [[Offboarding]]
 * [[Code Guidelines]]
 * [[Code Principles]]
+* [[YCharts Engineering Principles]]
 * [[Pull Request Review Checklist]]
 
 **Developer Notes**
