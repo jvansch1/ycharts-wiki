@@ -1,9 +1,11 @@
-**Essentials**
-* [[Home]]
-* [[Developer Environment Setup]]
-* [[Deployment Procedures]]
+**Onboarding**
 * [[Onboarding]]
 * [[Onboarding for New Hires]]
+* [[Developer Environment Setup]]
+
+**Essentials**
+* [[Home]]
+* [[Deployment Procedures]]
 * [[Offboarding]]
 * [[Code Guidelines]]
 * [[Code Principles]]
