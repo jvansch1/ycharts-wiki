@@ -3,6 +3,7 @@
 * [[Developer Environment Setup]]
 * [[Deployment Procedures]]
 * [[Onboarding]]
+* [[Onboarding for New Hires]]
 * [[Offboarding]]
 * [[Code Guidelines]]
 * [[Code Principles]]
