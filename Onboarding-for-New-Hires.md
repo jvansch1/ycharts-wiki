@@ -10,12 +10,16 @@ During the first two weeks as a new hire, reading will be a large part of the jo
 | [YCharts Code Guidelines](https://github.com/ycharts/ycharts/wiki/Code-Guidelines)  | Helpful engineering guidelines |
 | [PEP 8](https://www.python.org/dev/peps/pep-0008/)  | This is the Style Guide we follow for Python |
 | [Django Documentation](https://docs.djangoproject.com/en/1.8/)  | Having a bookmark or link to the Django documentation is crucial for any Django developer. Notable sections to look at are: [Model Layer](https://docs.djangoproject.com/en/1.8/#the-model-layer), [View Layer](https://docs.djangoproject.com/en/1.8/#the-view-layer) and [Development Process](https://docs.djangoproject.com/en/1.8/#the-development-process)  |
-| [Two Scoops of Django](https://www.pdf-archive.com/2016/08/07/two-scoops-of-django-1-8/two-scoops-of-django-1-8.pdf) | This is a great book for learning Django and vital resource for many of us here. |
+| [Two Scoops of Django](https://www.pdf-archive.com/2016/08/07/two-scoops-of-django-1-8/two-scoops-of-django-1-8.pdf) | This is a great book for learning Django and very useful. While you don't need to read it all, especially in the first 2 weeks, keep it in mind as you become more and more familiar with the framework and codebase. |
 | [Git](http://learngitbranching.js.org/) | This tutorial is great for anyone that is new to Git. |
 
 
 # Django Tutorial
-Create a Django Polls app by following the [Django Tutorial](https://docs.djangoproject.com/en/1.8/intro/tutorial01/) and create a git repo for engineers to look at. As you go through creating it, ask Engineers any questions you have or if you need any help!
+Create a Django Polls app by following the [Django Tutorial](https://docs.djangoproject.com/en/1.8/intro/tutorial01/).
+Deliverable should be a working Django Polls app on your github repo called `django-polls`. 
+
+> As you go through creating it, ask Engineers any questions you have or if you need any help!
+
 
 
 # Walkthroughs
