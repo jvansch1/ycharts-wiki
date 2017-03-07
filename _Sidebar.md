@@ -1,6 +1,6 @@
 **Onboarding**
-* [[Onboarding]]
 * [[Onboarding for New Hires]]
+* [[Setting Up Accounts for New Hires]]
 * [[Developer Environment Setup]]
 
 **Essentials**
