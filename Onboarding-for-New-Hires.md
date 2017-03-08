@@ -40,6 +40,7 @@ You should start to feel a little more at home in your environment setup as well
 1. You will meet with your manager to go over your first PR and ticket that you submitted in week 3
 1. You will schedule a meeting to talk with a Chicago leader to discuss your thoughts so far
 1. You will take a look and start reading a couple books from our list of book to read
+
 ***
 
 # Reading List
@@ -55,7 +56,9 @@ During the first two weeks as a new hire, reading will be a large part of the jo
 | [PEP 8](https://www.python.org/dev/peps/pep-0008/)  | This is the Style Guide we follow for Python |
 | [Django Documentation](https://docs.djangoproject.com/en/1.8/)  | Having a bookmark or link to the Django documentation is crucial for any Django developer. Notable sections to look at are: [Model Layer](https://docs.djangoproject.com/en/1.8/#the-model-layer), [View Layer](https://docs.djangoproject.com/en/1.8/#the-view-layer) and [Development Process](https://docs.djangoproject.com/en/1.8/#the-development-process)  |
 | [Two Scoops of Django](https://www.pdf-archive.com/2016/08/07/two-scoops-of-django-1-8/two-scoops-of-django-1-8.pdf) | This is a great book for learning Django and very useful. While you don't need to read it all, especially in the first 2 weeks, keep it in mind as you become more and more familiar with the framework and codebase. |
-| [Git](http://learngitbranching.js.org/) | This tutorial is great for anyone that is new to Git. |
+
+# Git Tutorial
+Whether you know git or not this is a great [Git tutorial](http://learngitbranching.js.org/) to go through.
 
 
 # Django Tutorial
