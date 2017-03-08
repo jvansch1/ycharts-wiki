@@ -43,7 +43,7 @@ You should start to feel a little more at home in your environment setup as well
 
 ***
 
-# Reading List
+# Required Reading List
 During the first two weeks as a new hire, reading will be a large part of the job. Below is a list of resources that a new hire should read in order to get up to speed. 
 
 > Note: Feel free to to add anything you find useful in getting up to speed
@@ -55,7 +55,7 @@ During the first two weeks as a new hire, reading will be a large part of the jo
 | [YCharts Code Guidelines](https://github.com/ycharts/ycharts/wiki/Code-Guidelines)  | Helpful engineering guidelines |
 | [PEP 8](https://www.python.org/dev/peps/pep-0008/)  | This is the Style Guide we follow for Python |
 | [Django Documentation](https://docs.djangoproject.com/en/1.8/)  | Having a bookmark or link to the Django documentation is crucial for any Django developer. Notable sections to look at are: [Model Layer](https://docs.djangoproject.com/en/1.8/#the-model-layer), [View Layer](https://docs.djangoproject.com/en/1.8/#the-view-layer) and [Development Process](https://docs.djangoproject.com/en/1.8/#the-development-process)  |
-| [Two Scoops of Django](https://www.pdf-archive.com/2016/08/07/two-scoops-of-django-1-8/two-scoops-of-django-1-8.pdf) | This is a great book for learning Django and very useful. While you don't need to read it all, especially in the first 2 weeks, keep it in mind as you become more and more familiar with the framework and codebase. |
+| [Two Scoops of Django](https://www.pdf-archive.com/2016/08/07/two-scoops-of-django-1-8/two-scoops-of-django-1-8.pdf) | This is more optional but a great book for learning Django and very useful. While you don't need to read it all, especially in the first 2 weeks, keep it in mind as you become more and more familiar with the framework and codebase. |
 
 # Git Tutorial
 Whether you know git or not this is a great [Git tutorial](http://learngitbranching.js.org/) to go through.
