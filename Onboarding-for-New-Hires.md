@@ -11,7 +11,7 @@ Your first week will be a little bit slower than most at YCharts as you get setu
     * 401k through ADP
 1. You will get some sweet YCharts gear 👕 📓 ! 
 1. Participate in our daily scrum.
-1. You will have a catered lunch with us on Friday/
+1. You will have a catered lunch with us on Friday.
 1. We will also setup time for you to meet with some of our leaders in Chicago as well as New York.
 1. You will have a meeting with your manager to go over what your goals are and setup a weekly meeting with them.
 1. You will have a walkthrough of our site with the Product Manager and see what exactly we are selling.
