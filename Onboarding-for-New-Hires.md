@@ -19,25 +19,25 @@ Your first week will be a little bit slower than most at YCharts as you get setu
 ### Week 2
 After getting your feet wet in the first week, you will get to write some code and do a mini project.
 
-1. On your second week you will start to go over the [reading list](https://github.com/ycharts/ycharts/wiki/Onboarding-for-New-Hires#required-reading-list), Git and [Django Tutorial](https://github.com/ycharts/ycharts/wiki/Onboarding-for-New-Hires#django-tutorial).
-1. After finishing the Git and Django Tutorial you will have a review with an engineer of your Django Polls App
-1. You will have a walkthroughs / demos by different engineers to understand our codebase and architecture 
+- [ ] Start the [reading list](https://github.com/ycharts/ycharts/wiki/Onboarding-for-New-Hires#required-reading-list), Git and [Django Tutorial](https://github.com/ycharts/ycharts/wiki/Onboarding-for-New-Hires#django-tutorial).
+- [ ] Review with an engineer your Django Polls App
+- [ ] Walkthroughs / demos by different engineers to understand our front end and back end codebase 
 
 ### Week 3
 Week 3 will be introduction into our codebase and doing some small tickets.
 
-1. You will need to setup your [YCharts development environment](https://github.com/ycharts/ycharts/wiki/Developer-Environment-Setup). (This will usually take an entire day)
-1. You will meet with your manager and you will pick up your first pivotal ticket to work on.
-1. You will have many questions so don't hesitate to ask :)
-1. You should submit your first Pull Request by the end of week 3.
+- [ ] Setup your [YCharts development environment](https://github.com/ycharts/ycharts/wiki/Developer-Environment-Setup). (This will usually take an entire day)
+- [ ] Meet with your manager and you will pick up your first pivotal ticket to work on.
+- [ ] Ask questions
+- [ ] Try and submit your first Pull Request by the end of the week
 
 ### Week 4 
 You should start to feel a little more at home in your environment setup as well as our codebase.
 
-1. You will pick up a couple small tickets.
-1. You will meet with your manager to go over your first PR and ticket that you submitted in week 3
-1. You will schedule a meeting to talk with a Chicago leader to discuss your thoughts so far
-1. You will take a look and start reading a couple books from our list of book to read
+- [ ] Pick up a couple small tickets.
+- [ ] Meet with your manager to go over your first PR and ticket that you submitted in week 3
+- [ ] Schedule a meeting to talk with a Chicago leader to discuss your thoughts so far
+- [ ] Start reading a couple books from our list of educational resources
 
 ***
 
