@@ -32,3 +32,7 @@ After reading the above resources and having a look at the codebase any new hire
 | Backend | Engineer should go over our Django codebase. | 
 | Systems Architecture | Engineer should explain what YCharts looks like from a systems perspective. What are Admin vs. Web servers, how does the queue work? | 
 | Development Process | Engineer should go over how we release code from getting a requirement in Pivotal Tracker to releasing it to the development branch. Also should cover our use of git. | 
+
+# Meet Chicago
+
+# Setup your YCharts Environment
