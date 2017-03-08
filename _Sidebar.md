@@ -2,6 +2,7 @@
 * [[Onboarding for New Hires]]
 * [[Setting Up Accounts for New Hires]]
 * [[Developer Environment Setup]]
+* [[Educational Resources]]
 
 **Essentials**
 * [[Home]]
