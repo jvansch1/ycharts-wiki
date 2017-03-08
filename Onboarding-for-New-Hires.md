@@ -2,21 +2,19 @@
 ### Week 1
 Your first week will be a little bit slower than most at YCharts as you get setup and meet our team. We encourage your to write down as much as you can and there are never too many questions.
 
-1. On your couple of days you will need to setup a few things:
-    * Your desk
-    * Your computer
-    * Your monitor
+- [ ] On your couple of days you will need to setup a few things:
+    * Workstation (Desk, Keyboard, Monitor, etc)
     * Get access to all our accounts (gmail, slack, github, etc.)
     * Payroll/Insurance through Zenefits
     * 401k through ADP
-1. You will get some sweet YCharts gear 👕 📓 ! 
-1. Participate in our daily scrum.
-1. You will have a catered lunch with us on Friday.
-1. We will also setup time for you to meet with some of our leaders in Chicago as well as New York.
-1. You will have a meeting with your manager to go over what your goals are and setup a weekly meeting with them.
-1. You will have a walkthrough of our site with the Product Manager and see what exactly we are selling.
-1. You will learn how to make an espresso or pour over coffee! ☕️ 
-1. You can start on some of the [reading](https://github.com/ycharts/ycharts/wiki/Onboarding-for-New-Hires#required-reading-list) that you will do more of on week 2.
+- [ ] Get some sweet YCharts gear 👕 📓 ! 
+- [ ] Learn how to make an espresso or pour over coffee or both! ☕️ 
+- [ ] Participate in our daily scrum.
+- [ ] Eat a catered lunch on Friday with us.
+- [ ] Setup time for you to meet with some of our leaders in Chicago as well as New York.
+- [ ] Meet with your manager to go over what your goals are and setup a weekly meeting with them.
+- [ ] Get a walkthrough of our site with the Product Manager and see what exactly we are selling.
+- [ ] Start on some of the [required reading](https://github.com/ycharts/ycharts/wiki/Onboarding-for-New-Hires#required-reading-list) that you will do more of next week.
 
 ### Week 2
 After getting your feet wet in the first week, you will get to write some code and do a mini project.
