@@ -16,12 +16,12 @@ Your first week will be a little bit slower than most at YCharts as you get setu
 1. You will have a meeting with your manager to go over what your goals are and setup a weekly meeting with them.
 1. You will have a walkthrough of our site with the Product Manager and see what exactly we are selling.
 1. You will learn how to make an espresso or pour over coffee! ☕️ 
-1. You can start on some of the [reading](https://github.com/ycharts/ycharts/wiki/Onboarding-for-New-Hires#reading-list) that you will do more of on week 2.
+1. You can start on some of the [reading](https://github.com/ycharts/ycharts/wiki/Onboarding-for-New-Hires#required-reading-list) that you will do more of on week 2.
 
 ### Week 2
 After getting your feet wet in the first week, you will get to write some code and do a mini project.
 
-1. On your second week you will start to go over the [reading list](https://github.com/ycharts/ycharts/wiki/Onboarding-for-New-Hires#reading-list), Git and [Django Tutorial](https://github.com/ycharts/ycharts/wiki/Onboarding-for-New-Hires#django-tutorial).
+1. On your second week you will start to go over the [reading list](https://github.com/ycharts/ycharts/wiki/Onboarding-for-New-Hires#required-reading-list), Git and [Django Tutorial](https://github.com/ycharts/ycharts/wiki/Onboarding-for-New-Hires#django-tutorial).
 1. After finishing the Git and Django Tutorial you will have a review with an engineer of your Django Polls App
 1. You will have a walkthroughs / demos by different engineers to understand our codebase and architecture 
 
