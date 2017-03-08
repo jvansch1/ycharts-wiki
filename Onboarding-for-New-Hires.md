@@ -1,3 +1,47 @@
+# 1 Month Plan
+### Week 1
+Your first week will be a little bit slower than most at YCharts as you get setup and meet our team. We encourage your to write down as much as you can and there are never too many questions.
+
+1. On your couple of days you will need to setup a few things:
+    * Your desk
+    * Your computer
+    * Your monitor
+    * Get access to all our accounts (gmail, slack, github, etc.)
+    * Payroll/Insurance through Zenefits
+    * 401k through ADP
+1. You will get some sweet YCharts gear 👕 📓 ! 
+1. Participate in our daily scrum.
+1. You will have a catered lunch with us on Friday/
+1. We will also setup time for you to meet with some of our leaders in Chicago as well as New York.
+1. You will have a meeting with your manager to go over what your goals are and setup a weekly meeting with them.
+1. You will have a walkthrough of our site with the Product Manager and see what exactly we are selling.
+1. You will learn how to make an espresso or pour over coffee! ☕️ 
+1. You can start on some of the [reading](https://github.com/ycharts/ycharts/wiki/Onboarding-for-New-Hires#reading-list) that you will do more of on week 2.
+
+### Week 2
+After getting your feet wet in the first week, you will get to write some code and do a mini project.
+
+1. On your second week you will start to go over the [reading list](https://github.com/ycharts/ycharts/wiki/Onboarding-for-New-Hires#reading-list), Git and [Django Tutorial](https://github.com/ycharts/ycharts/wiki/Onboarding-for-New-Hires#django-tutorial).
+1. After finishing the Git and Django Tutorial you will have a review with an engineer of your Django Polls App
+1. You will have a walkthroughs / demos by different engineers to understand our codebase and architecture 
+
+### Week 3
+Week 3 will be introduction into our codebase and doing some small tickets.
+
+1. You will need to setup your [YCharts development environment](https://github.com/ycharts/ycharts/wiki/Developer-Environment-Setup). (This will usually take an entire day)
+1. You will meet with your manager and you will pick up your first pivotal ticket to work on.
+1. You will have many questions so don't hesitate to ask :)
+1. You should submit your first Pull Request by the end of week 3.
+
+### Week 4 
+You should start to feel a little more at home in your environment setup as well as our codebase.
+
+1. You will pick up a couple small tickets.
+1. You will meet with your manager to go over your first PR and ticket that you submitted in week 3
+1. You will schedule a meeting to talk with a Chicago leader to discuss your thoughts so far
+1. You will take a look and start reading a couple books from our list of book to read
+***
+
 # Reading List
 During the first two weeks as a new hire, reading will be a large part of the job. Below is a list of resources that a new hire should read in order to get up to speed. 
 
