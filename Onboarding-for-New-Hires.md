@@ -1,4 +1,4 @@
-# 1 Month Plan
+# 1st Month
 ### Week 1
 Your first week will be a little bit slower than most at YCharts as you get setup and meet our team. We encourage your to write down as much as you can and there are never too many questions.
 
@@ -29,7 +29,7 @@ Week 3 will be introduction into our codebase and doing some small tickets.
 - [ ] Setup your [YCharts development environment](https://github.com/ycharts/ycharts/wiki/Developer-Environment-Setup). (This will usually take an entire day)
 - [ ] Meet with your manager and you will pick up your first pivotal ticket to work on.
 - [ ] Ask questions
-- [ ] Try and submit your first Pull Request by the end of the week
+- [ ] Submit your first Pull Request by the end of the week
 
 ### Week 4 
 You should start to feel a little more at home in your environment setup as well as our codebase.
@@ -38,6 +38,20 @@ You should start to feel a little more at home in your environment setup as well
 - [ ] Meet with your manager to go over your first PR and ticket that you submitted in week 3
 - [ ] Schedule a meeting to talk with a Chicago leader to discuss your thoughts so far
 - [ ] Start reading a couple books from our list of educational resources
+- [ ] Finish and submit another pull request by end of the week
+
+# 2nd Month
+As you get more and more comfortable with our codebase and our development process you will take on more responsibility as the months progress.
+
+- [ ] Fly co-polit on a weekly release [Deployment Process](https://github.com/ycharts/ycharts/wiki/Deployment-Procedures)
+- [ ] Perform a weekly release
+- [ ] Be on-call for one day a week
+
+# 3rd Month
+
+- [ ] Meet with your manager
+- [ ] Perform a weekly release
+- [ ] Be on-call for a week
 
 ***
 
