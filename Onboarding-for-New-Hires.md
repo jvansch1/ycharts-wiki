@@ -64,6 +64,8 @@ During the first two weeks as a new hire, reading will be a large part of the jo
 | ------------- | ------------- |
 | [YCharts Engineering Principles](https://github.com/ycharts/ycharts/wiki/YCharts-Engineering-Principles)  | These are the principles we as engineers try (no one is perfect) to live by as engineers here at YCharts.  |
 | [YCharts Principles]()  | These are the principles all employees live by here at YCharts. |
+| [YCharts Product Roadmap](https://drive.google.com/drive/u/0/folders/0B7zntxMwD-7UcnBzaEYtVjUyVVU)  | This is what you will be building and where the product is headed! Take a look at the different materials in the folder. |
+| [YCharts Klipfolio](https://app.klipfolio.com/dashboard)  | This shows you how we are doing from a sales perspective. |
 | [YCharts Code Guidelines](https://github.com/ycharts/ycharts/wiki/Code-Guidelines)  | Helpful engineering guidelines |
 | [YCharts Technology Stack](https://github.com/ycharts/ycharts/wiki#technology-stack)  | Helpful list of the main technologies we use. |
 | [PEP 8](https://www.python.org/dev/peps/pep-0008/)  | This is the Style Guide we follow for Python |
