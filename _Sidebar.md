@@ -1,5 +1,6 @@
 **Onboarding**
 * [[Onboarding for New Hires]]
+  * [[Required Reading List]]
 * [[Setting Up Accounts for New Hires]]
 * [[Developer Environment Setup]]
 * [[Educational Resources]]
