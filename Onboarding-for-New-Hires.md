@@ -4,7 +4,8 @@ Your first week will be a little bit slower than most at YCharts as you get setu
 
 - [ ] On your couple of days you will need to setup a few things:
     * Workstation (Desk, Keyboard, Monitor, etc)
-    * Get access to all our accounts (gmail, slack, github, etc.)
+    * Environment, IDE (Fox prefers PyCharm and will make your life better if you use it)
+    * Accounts (gmail, slack, github, etc.)
     * Payroll/Insurance through Zenefits
     * 401k through ADP
 - [ ] Get some sweet YCharts gear 👕 📓 ! 
