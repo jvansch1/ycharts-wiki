@@ -1,4 +1,3 @@
-# Required Reading List
 During the first two weeks as a new hire, reading will be a large part of the job. Below is a list of resources that a new hire should read in order to get up to speed. 
 
 > Note: Feel free to to add anything you find useful in getting up to speed
