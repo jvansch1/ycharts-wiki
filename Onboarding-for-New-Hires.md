@@ -54,7 +54,6 @@ As you get more and more comfortable with our codebase and our development proce
 
 # 3rd Month
 
-- [ ] Meet with your manager
 - [ ] Perform a weekly release
 - [ ] Be on-call for a week
 
