@@ -6,6 +6,10 @@ Your first week will be a little bit slower than most at YCharts as you get setu
     * Workstation (Desk, Keyboard, Monitor, etc)
     * Environment, IDE (Fox prefers PyCharm and will make your life better if you use it)
     * Accounts (gmail, slack, github, etc.)
+    * Add gmail filter to account.
+      * [Filter XML File](https://gist.githubusercontent.com/KFoxder/8d2dd7a99bdcf1d9fac8917dd3460bc4/raw/9da9f1dca4188d9fbc6fb7595beba80316a49a93/ychartsMailFilters.xml) Right click and "Save As.."
+      * [Instructions on importing filter to gmail](https://support.neocloud.com/hc/en-us/articles/202770030-How-to-Export-Import-Gmail-Filters)
+
     * Payroll/Insurance through Zenefits
     * 401k through ADP
 - [ ] Get some sweet YCharts gear 👕 📓 ! 
