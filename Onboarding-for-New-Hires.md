@@ -4,6 +4,7 @@ Your first week will be a little bit slower than most at YCharts as you get setu
 
 - [ ] On your couple of days you will need to setup a few things:
     * Workstation (Desk, Keyboard, Monitor, etc)
+      * [Chair Adjustment Guide](http://www.hermanmiller.com/content/dam/hermanmiller/documents/user_information/aeron_chairs_user_adjustment_guide.pdf)
     * Environment, IDE (Fox prefers PyCharm and will make your life better if you use it)
     * Accounts (gmail, slack, github, etc.)
     * Add gmail filter to account.
