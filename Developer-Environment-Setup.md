@@ -109,6 +109,7 @@ make
 # Install redis executables and redis config
 mv ~/redis-3.2.4/src/redis-server /usr/local/bin
 mv ~/redis-3.2.4/src/redis-cli /usr/local/bin
+cp /sites/ycharts/confs/redis/redis.conf /usr/local/etc/redis.conf
 # Start redis on launch
 cp /sites/ycharts/confs/redis/com.ycharts.redis.plist ~/Library/LaunchAgents
 # Start redis now
