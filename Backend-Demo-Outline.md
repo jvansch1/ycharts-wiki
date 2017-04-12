@@ -4,5 +4,5 @@
 * API Server
 * Django/NodeJS
 * Admin Page (different groups)
-* Subscriptions/PartnerSubscriptions/ReportContract
+* Subscriptions/PartnerSubscriptions/ReportContract/Tiers
 * User saved data (watchlists/dashboards/charts/screens/metric sets)
