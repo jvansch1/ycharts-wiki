@@ -3,3 +3,6 @@
 * Companies/Mutual Funds/Indices/Indicators
 * API Server
 * Django/NodeJS
+* Admin Page (different groups)
+* Subscriptions/PartnerSubscriptions/ReportContract
+* User saved data (watchlists/dashboards/charts/screens/metric sets)
