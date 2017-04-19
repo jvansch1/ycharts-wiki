@@ -161,7 +161,7 @@ launchctl load ~/Library/LaunchAgents/com.ycharts.mysql.plist
 ```
 
 ### Load MySQL data
-Copy the `ycharts_db` folder containing the database files from the database restore machine
+Copy the `ycharts_db` folder containing the database files from the database restore machine (Mac Mini)
 or another developer's computer to your home folder (`~`). This can take some time so start
 it now and keep going while the files copy over.
 
