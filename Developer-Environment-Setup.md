@@ -167,7 +167,7 @@ it now and keep going while the files copy over.
 
 Once you have a copy of the database folder, you should be able to follow the
 [directions for restoring your database](https://github.com/ycharts/ycharts/wiki/Restoring-Database).
-and you will have a fresh MySQL 5.6 database!
+and you will have a fresh MySQL 5.7 database!
 
 > NOTE: You may wish to make sure you are connected to the network over ethernet before attempting
 to download a new DB. If you have one of the new CableMatters adapters, go to
