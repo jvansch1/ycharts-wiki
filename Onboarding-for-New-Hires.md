@@ -23,7 +23,7 @@ Your first week will be a little bit slower than most at YCharts as you get setu
 - [ ] Setup time for you to meet with some of our leaders in Chicago as well as New York.
 - [ ] Meet with your manager to go over what your goals are and setup a weekly meeting with them.
 - [ ] Get a walkthrough of our site with the Product Manager and see what exactly we are selling.
-- [ ] Start on some of the [required reading](https://github.com/ycharts/ycharts/wiki/Required-Reading-List) that you will do more of next week.
+- [ ] Start on some of the [required reading](https://github.com/ycharts/ycharts/wiki/Required-Reading-List)
 
 ### Week 2
 After getting your feet wet in the first week, you will get to write some code and do a mini project.
