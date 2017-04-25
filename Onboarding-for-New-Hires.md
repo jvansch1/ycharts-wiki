@@ -10,6 +10,9 @@ Your first week will be a little bit slower than most at YCharts as you get setu
     * Add gmail filter to account.
       * [Filter XML File](https://gist.githubusercontent.com/KFoxder/8d2dd7a99bdcf1d9fac8917dd3460bc4/raw/9da9f1dca4188d9fbc6fb7595beba80316a49a93/ychartsMailFilters.xml) Right click and "Save As.."
       * [Instructions on importing filter to gmail](https://support.neocloud.com/hc/en-us/articles/202770030-How-to-Export-Import-Gmail-Filters)
+    * Add Zenefits vacation calendar in GCal so you know when other people are away
+      * [Instructions on how to add the calendar](https://help.zenefits.com/Time_Off/FAQs_About_Calendars_in_Zenefits/How_do_I_add_a_Zenefits_calendar_to_Google_Calendar%3F/)
+      * Link to use in the above instructions: webcal://secure.zenefits.com/cal/company_pto/355381?token=fGshKaGkip&loc=87746
 
     * Payroll/Insurance through Zenefits
     * 401k through ADP
