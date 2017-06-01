@@ -42,10 +42,10 @@ git push origin --tags
 
 ```bash
 
+cd /sites/ycharts/
+
 # Update your ssh files
 cp confs/developers/ssh.conf ~/.ssh/config
-
-cd /sites/ycharts/
 
 # Start the release
 fab production build stop deploy
