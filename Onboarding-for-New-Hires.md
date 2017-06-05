@@ -25,29 +25,23 @@ Your first week will be a little bit slower than most at YCharts as you get setu
 - [ ] Get a walkthrough of our site with the Product Manager and see what exactly we are selling.
 - [ ] Start on some of the [required reading](https://github.com/ycharts/ycharts/wiki/Required-Reading-List)
 
-### Week 2
-After getting your feet wet in the first week, you will get to write some code and do a mini project.
-
-- [ ] Start the [reading list](https://github.com/ycharts/ycharts/wiki/Required-Reading-List), Git and [Django Tutorial](https://github.com/ycharts/ycharts/wiki/Onboarding-for-New-Hires#django-tutorial).
-- [ ] Review with an engineer your Django Polls App
-- [ ] Walkthroughs / demos by different engineers to understand our front end and back end codebase 
-
-### Week 3
-Week 3 will be introduction into our codebase and doing some small tickets.
+### Week 2-3
+After getting your feet wet in the first week, you will get into our codebase and do some small tickets.
 
 - [ ] Setup your [YCharts development environment](https://github.com/ycharts/ycharts/wiki/Developer-Environment-Setup). (This will usually take an entire day)
+- [ ] Start the [reading list](https://github.com/ycharts/ycharts/wiki/Required-Reading-List), Git and [Django Tutorial](https://github.com/ycharts/ycharts/wiki/Onboarding-for-New-Hires#django-tutorial).
+- [ ] Review with an engineer your Django Polls App
 - [ ] Meet with your manager and you will pick up your first pivotal ticket to work on.
 - [ ] Ask questions
-- [ ] Submit your first Pull Request by the end of the week
+- [ ] Submit your first Pull Request by the end of the week 2
 
-### Week 4 
+### Week 4
 You should start to feel a little more at home in your environment setup as well as our codebase.
 
 - [ ] Pick up a couple small tickets.
-- [ ] Meet with your manager to go over your first PR and ticket that you submitted in week 3
-- [ ] Schedule a meeting to talk with a Chicago leader to discuss your thoughts so far
+- [ ] Meet with your manager to go over your first PR and ticket that you submitted in week 2/3
 - [ ] Start reading a couple books from our list of educational resources
-- [ ] Finish and submit another pull request by end of the week
+- [ ] Finish and submit another pull request by end of the week 4
 
 # 2nd Month
 As you get more and more comfortable with our codebase and our development process you will take on more responsibility as the months progress.
