@@ -25,4 +25,4 @@
 | [What is Scrum?](https://www.scrumalliance.org/why-scrum/core-scrum-values-roles)  | Great resource for understanding the basics of Scrum and Agile methodology. |
 
 ### Whats next?
-Check out the [[Education Resources]] after you have finished this reading list.
+Check out the [[Educational Resources]] after you have finished this reading list.
