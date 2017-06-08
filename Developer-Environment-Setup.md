@@ -270,3 +270,19 @@ yc_node
     ```
     alias yc_node="node /sites/chart_image_generator/ycharts_server.js"
     ```
+
+
+## Local User account
+You will also need to create a new `User` account in your local database, with access to all of YChart's features. To get around the catch-22 of setting up a new user via the `/admin` panel, enter the django shell:
+
+```bash
+vagrant ssh
+python manage.py shell_plus
+```
+and create a new user:
+```python
+user = User(email=<your_email>, is_staff=True, is_superuser=True)
+user.set_password(<your_password>)
+user.save()
+```
+Now, start a django server and go to `http://0.0.0.0:8000/admin` to log in. From here, head to `Users` section and create a Subscription or PartnerSubscription for your account with the highest Tier. You should now have access to all features in your local environment. 
