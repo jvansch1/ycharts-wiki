@@ -15,7 +15,8 @@
     1. ```delete from django_migrations;```
 1. Run `python /sites/ycharts/manage.py makemigrations`
 1. Run `python /sites/ycharts/manage.py migrate --fake`
-1. Push this to `develop` via `git push origin develop`
+1. Commit and push this to `develop`
+    1. ```git add . && git commit -am "Squash migrations." && git push origin develop```
 
 #### 2. Update Staging
   1. Run `fab staging build stop deploy`
