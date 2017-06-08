@@ -19,7 +19,7 @@
 
 #### 2. Update Staging
   1. Run `fab staging build stop deploy`
-  1. Log into the staging mysql db by `ssh staging_admin` and then `mysql -u ycharts -A -per45qw -h staging-2016-01-04.cy4wtovspprb.us-east-1.rds.amazonaws.com ycharts`
+  1. Log into the staging mysql db by `ssh staging_admin` and then `mysql -u ycharts -A -per45qw -h staging-2017-03-18.cy4wtovspprb.us-east-1.rds.amazonaws.com ycharts`
   1. Run `delete from django_migrations;`
   1. Run `python /sites/ycharts/manage.py migrate --fake`
   1. Run `fab staging start`
