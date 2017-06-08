@@ -1,4 +1,4 @@
-### How to clean migrations
+### How to squash migrations
 
 #### Requirements
 1. All Databases (local, staging and production) are in sync. Meaning they have the same exact migrations applied, tables and schemas. This means the best time to do it is after a full release where or develop and master branches are the same.
