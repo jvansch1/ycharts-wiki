@@ -23,6 +23,7 @@
 **Developer Notes**
 * Django
   * [[Autocomplete]]
+  * [[How To Squash Migrations]]
 * Angular
   * [[Angular]]
 * Git
