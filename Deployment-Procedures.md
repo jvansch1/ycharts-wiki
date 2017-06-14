@@ -54,8 +54,6 @@ fab production build stop deploy
 ssh production_admin
 python /sites/ycharts/manage.py migrate
 
-# Run Pre Deploy Notes
-
 # End the release
 fab production start
 
