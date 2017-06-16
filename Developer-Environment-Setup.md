@@ -63,9 +63,7 @@ Initialize your ssh key
 chmod 700 ~/.ssh/ycharts-2014-01.pem
 # Add the key file to your ssh-agent
 ssh-add -K ~/.ssh/ycharts-2014-01.pem
-# Make sure all ssh keys are added to the ssh-agent on login
-printf "\nssh-add -A\n" >> ~/.bash_profile
-source ~/.bash_profile
+
 ```
 
 ## Install AutoEnv, set up env specific to this directory
@@ -89,7 +87,7 @@ export AWS_SECRET_ACCESS_KEY=<YOUR YCHARTS SECRET KEY>
 export AWS_DEFAULT_REGION=us-east-1
 
 cp /sites/ycharts/confs/developers/ssh.conf ~/.ssh/config
-ssh-add -A
+ssh-add -K ~/.ssh/ycharts-2014-01.pem
 ```
 
 Now exit and enter the directory and make sure it's working!
