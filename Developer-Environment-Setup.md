@@ -235,7 +235,7 @@ user.save()
 ### Setup User
 1. Now, start a django server by ssh into Vagrant (`cd /sites/ycharts && vagrant ssh`)
 1. Now once you are inside your vagrant instance run `yc_django` and go to `http://0.0.0.0:8000/admin` to log in. 
-1. From here, head to `Users` section and create a PartnerSubscription for your account. ![](https://imgur.com/UkMLmTl.png)
+1. From here, head to `Users` section and create a PartnerSubscription for your account. ![](https://imgur.com/a/pRIXq.png)  ![](https://imgur.com/UkMLmTl.png)
 1. Add your user to the [YCharts Staff Client Group](http://localhost:8000/admin/accounts/clientgroup/62/) [![Screenshot from Gyazo](https://gyazo.com/faf60276b187e0622509315ec3160696/raw)](https://gyazo.com/faf60276b187e0622509315ec3160696)
 
 
