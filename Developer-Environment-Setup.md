@@ -27,11 +27,11 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
     ```
 
 ## Checkout Code
-1. Clone the `ycharts`, `chart_image_generator`, and `developer_setup` repos
+1. Clone the `ycharts`, `ycharts_chart_generator`, and `developer_setup` repos
 
     ```bash
     git clone git@github.com:ycharts/ycharts.git
-    git clone git@github.com:ycharts/chart_image_generator.git
+    git clone git@github.com:ycharts/ycharts_chart_generator.git
     git clone git@github.com:ycharts/developer_setup.git
     ```
 
@@ -39,14 +39,13 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 
     ```bash
     cp /sites/ycharts/confs/developers/git_config /sites/ycharts/.git/config
-    cp /sites/chart_image_generator/confs/git_config /sites/chart_image_generator/.git/config
+    cp /sites/ycharts_chart_generator/confs/git_config /sites/ycharts_chart_generator/.git/config
     ```
 
 1. Set up your git pre-commit hooks
 
     ```bash
     ln -s -f /sites/ycharts/confs/developers/git_pre_commit_hook.py /sites/ycharts/.git/hooks/pre-commit
-    ln -s -f /sites/chart_image_generator/confs/git_pre_commit_hook.py /sites/chart_image_generator/.git/hooks/pre-commit
     ```
 
 ## Get SSH keys, AWS keys, etc
@@ -219,58 +218,9 @@ vagrant ssh
 python manage.py securities_process_lists_and_sets
 ```
 
-## Make Sure Node Works
-```
-vagrant ssh
-yc_node
-```
-If this doesn't work, delete any precompiled node packages that may be there from a previous setup. remove node_modules from sites/ycharts and sites/chart_image_generator and then make sure you do npm install on both directories INSIDE vagrant. (The way Mac installs node_modules doesn't always work)
-```
-npm cache clean
-# Remove all installed packages and other NPM stuffs
-rm -rf ~/.npm
-rm -rf /sites/chart_image_generator/node_modules
-rm -rf /sites/ycharts/node_modules
-cd /sites/ycharts
-npm install
-cd /sites/chart_image_generator
-npm install
-yc_node
-```
-
-## Amazon IAM Roles
-1. Setup your Vagrant Bash Profiles with your Amazon IAM
-   Ask someone to create an IAM user for you. Once created, they should give you
-   your credentials as well as a temporary password. They will also set up multi-factor
-   authentication for you.
-
-   After logging in to [the AWS console](https://ycharts.signin.aws.amazon.com/console), add
-   your credentials to your local vagrant bash_profile.
-   
-   ```
-   # if you have sublime
-   subl /sites/ycharts/confs/developers/vagrant_bash_profile_local
-   # otherwise open up with nano
-   nano /sites/ycharts/confs/developers/vagrant_bash_profile_local
-
-   # then in your vagrant_bash_profile_local add
-   export AWS_ACCESS_KEY_ID=<YOUR_ACCESS_KEY_HERE>
-   export AWS_SECRET_ACCESS_KEY=<YOUR_SECRET_ACCESS_KEY_HERE>
-   export AWS_DEFAULT_REGION=us-east-1
-   # add any other aliases you want and close it.
-
-   # you need to now 'source' your vagrant_bash_profile_local so run:
-   vagrant halt
-   vagrant up --provision
-   ```
-1. You can also add aliases you would like to use in vagrant. For example if you want an alias for running your `chart_image_generator` node server you might add a line like this to your `confs/developers/vagrant_bash_profile_local` file.
-
-    ```
-    alias yc_node="node /sites/chart_image_generator/ycharts_server.js"
-    ```
-
-
 ## Local User account
+
+### Create User
 You will also need to create a new `User` account in your local database, with access to all of YChart's features. To get around the catch-22 of setting up a new user via the `/admin` panel, enter the django shell:
 
 ```bash
@@ -283,4 +233,15 @@ user = User(email=<your_email>, is_staff=True, is_superuser=True)
 user.set_password(<your_password>)
 user.save()
 ```
-Now, start a django server and go to `http://0.0.0.0:8000/admin` to log in. From here, head to `Users` section and create a Subscription or PartnerSubscription for your account with the highest Tier. You should now have access to all features in your local environment. 
+
+### Setup User
+1. Now, start a django server by ssh into Vagrant (`cd /sites/ycharts && vagrant ssh`)
+1. Now once you are inside your vagrant instance run `yc_django` and go to `http://0.0.0.0:8000/admin` to log in. 
+1. From here, head to `Users` section and create a PartnerSubscription for your account. ![](https://imgur.com/UkMLmTl.png)
+1. Add your user to the [YCharts Staff Client Group](http://localhost:8000/admin/accounts/clientgroup/62/) [![Screenshot from Gyazo](https://gyazo.com/faf60276b187e0622509315ec3160696/raw)](https://gyazo.com/faf60276b187e0622509315ec3160696)
+
+
+
+> Note: You should now have access to all features in your local environment however you will need to do the same in staging and production. 
+
+
