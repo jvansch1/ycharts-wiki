@@ -31,7 +31,6 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 
     ```bash
     git clone git@github.com:ycharts/ycharts.git
-    git clone git@github.com:ycharts/ycharts_chart_generator.git
     git clone git@github.com:ycharts/developer_setup.git
     ```
 
@@ -39,7 +38,6 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 
     ```bash
     cp /sites/ycharts/confs/developers/git_config /sites/ycharts/.git/config
-    cp /sites/ycharts_chart_generator/confs/git_config /sites/ycharts_chart_generator/.git/config
     ```
 
 1. Set up your git pre-commit hooks
