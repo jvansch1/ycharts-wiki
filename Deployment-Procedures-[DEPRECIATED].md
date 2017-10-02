@@ -1,3 +1,5 @@
+# [DEPRECIATED]
+
 ### YCharts Deployment Procedures
 
 ## Testing deployment setup
