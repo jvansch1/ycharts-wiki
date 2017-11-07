@@ -83,7 +83,6 @@ export AWS_ACCESS_KEY_ID=<YOUR YCHARTS ACCESS KEY>
 export AWS_SECRET_ACCESS_KEY=<YOUR YCHARTS SECRET KEY>
 export AWS_DEFAULT_REGION=us-east-1
 
-cp /sites/ycharts/confs/developers/ssh.conf ~/.ssh/config
 ssh-add -K ~/.ssh/ycharts-2014-01.pem
 ```
 
