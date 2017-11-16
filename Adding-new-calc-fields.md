@@ -167,10 +167,14 @@ ALTER TABLE `calculations_companydailynavreturncalclatest`
 COMMIT;
 ```
 2. follow regular [production deployment procedures](https://github.com/ycharts/ycharts_systems/wiki/Deploy-and-Hotfix-%5BYCharts%5D)
-3. execute
+3. SSH into `main_admin` and execute
 ```
 screen -d -m python /sites/ycharts/calculations/onetime_scripts/calculations_reset_performance_calcs_all.py
 ```
-4. observe the [main queue](https://ycharts.com/systems/review/queue_info) and data for companies, mutual funds and indices.
+4. observe 
+- the [main queue](https://ycharts.com/systems/review/queue_info) 
+- [company calc data](https://ycharts.com/companies/MSFT/price)
+- [mutual fund calc data](https://ycharts.com/mutual_funds/M:DYN2569.TO/price)
+- [index calc data](https://ycharts.com/indices/%5ESPX/level).
 
 
