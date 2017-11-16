@@ -90,7 +90,3 @@
 * [[Release Issues Debugging]]
 * [[Getting a new SSL certificate]]
 * [[Updating an SSL certificate]]
-
-**Machine Configuration**
-* [[ycharts Machine Configuration and Deployment Details]]
-* [[chart_image_generator Machine Configuration and Deployment Details]]
