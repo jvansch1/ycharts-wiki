@@ -69,7 +69,7 @@ To mitigate this linear scaling, consider using `ycharts.utils.migration_utils.A
 
 # Execution of Strategy #2
 
-##1. Pick a good time (i.e. the least-worst time) to do this.
+## 1. Pick a good time (i.e. the least-worst time) to do this.
  - day where it's most acceptable for calc data to be unavailable. This is generally on Saturday.
  - time window when other tasks are not adding items to the `main_queue`. Check AWS CloudWatch for historical data. Currently, 8pm is the best candidate.
 
