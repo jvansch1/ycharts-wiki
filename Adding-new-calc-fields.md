@@ -108,31 +108,61 @@ screen -d -m python /sites/ycharts/apps/mutual_funds/onetime_scripts/reset_can_f
 BEGIN;
 TRUNCATE `calculations_companydailyperformancecalc`;
 ALTER TABLE `calculations_companydailyperformancecalc`
-             ADD COLUMN `mtd_return` numeric(13, 4) NULL, ADD COLUMN `mtd_total_return` numeric(13, 4) NULL, ADD COLUMN `qtd_return` numeric(13, 4) NULL, ADD COLUMN `qtd_total_return` numeric(13, 4) NULL, ADD COLUMN `fifteen_year_return` numeric(13, 4) NULL, ADD COLUMN `fifteen_year_total_return` numeric(13, 4) NULL, ADD COLUMN `twenty_year_return` numeric(13, 4) NULL, ADD COLUMN `twenty_year_total_return` numeric(13, 4) NULL, ADD COLUMN `all_time_return` numeric(13, 4) NULL, ADD COLUMN `all_time_total_return` numeric(13, 4) NULL;
+             ADD COLUMN `mtd_return` numeric(13, 4) NULL, 
+             ADD COLUMN `mtd_total_return` numeric(13, 4) NULL, 
+             ADD COLUMN `qtd_return` numeric(13, 4) NULL, 
+             ADD COLUMN `qtd_total_return` numeric(13, 4) NULL, 
+             ADD COLUMN `fifteen_year_return` numeric(13, 4) NULL, 
+             ADD COLUMN `fifteen_year_total_return` numeric(13, 4) NULL, 
+             ADD COLUMN `twenty_year_return` numeric(13, 4) NULL, 
+             ADD COLUMN `twenty_year_total_return` numeric(13, 4) NULL, 
+             ADD COLUMN `all_time_return` numeric(13, 4) NULL, 
+             ADD COLUMN `all_time_total_return` numeric(13, 4) NULL;
 
 ALTER TABLE `calculations_companydailyperformancecalclatest`
              ADD COLUMN `mtd_return` numeric(13, 4) NULL, ADD COLUMN `mtd_total_return` numeric(13, 4) NULL, ADD COLUMN `qtd_return` numeric(13, 4) NULL, ADD COLUMN `qtd_total_return` numeric(13, 4) NULL, ADD COLUMN `fifteen_year_return` numeric(13, 4) NULL, ADD COLUMN `fifteen_year_total_return` numeric(13, 4) NULL, ADD COLUMN `twenty_year_return` numeric(13, 4) NULL, ADD COLUMN `twenty_year_total_return` numeric(13, 4) NULL, ADD COLUMN `all_time_return` numeric(13, 4) NULL, ADD COLUMN `all_time_total_return` numeric(13, 4) NULL;
 
 TRUNCATE `calculations_mutualfunddailyperformancecalc`;
 ALTER TABLE `calculations_mutualfunddailyperformancecalc`
-             ADD COLUMN `mtd_return` numeric(13, 4) NULL, ADD COLUMN `mtd_total_return` numeric(13, 4) NULL, ADD COLUMN `qtd_return` numeric(13, 4) NULL, ADD COLUMN `qtd_total_return` numeric(13, 4) NULL, ADD COLUMN `fifteen_year_return` numeric(13, 4) NULL, ADD COLUMN `fifteen_year_total_return` numeric(13, 4) NULL, ADD COLUMN `twenty_year_return` numeric(13, 4) NULL, ADD COLUMN `twenty_year_total_return` numeric(13, 4) NULL, ADD COLUMN `all_time_return` numeric(13, 4) NULL, ADD COLUMN `all_time_total_return` numeric(13, 4) NULL;
+             ADD COLUMN `mtd_return` numeric(13, 4) NULL, 
+             ADD COLUMN `mtd_total_return` numeric(13, 4) NULL, 
+             ADD COLUMN `qtd_return` numeric(13, 4) NULL, 
+             ADD COLUMN `qtd_total_return` numeric(13, 4) NULL, 
+             ADD COLUMN `fifteen_year_return` numeric(13, 4) NULL, 
+             ADD COLUMN `fifteen_year_total_return` numeric(13, 4) NULL, 
+             ADD COLUMN `twenty_year_return` numeric(13, 4) NULL, 
+             ADD COLUMN `twenty_year_total_return` numeric(13, 4) NULL, 
+             ADD COLUMN `all_time_return` numeric(13, 4) NULL, 
+             ADD COLUMN `all_time_total_return` numeric(13, 4) NULL;
 
 ALTER TABLE `calculations_mutualfunddailyperformancecalclatest`
              ADD COLUMN `mtd_return` numeric(13, 4) NULL, ADD COLUMN `mtd_total_return` numeric(13, 4) NULL, ADD COLUMN `qtd_return` numeric(13, 4) NULL, ADD COLUMN `qtd_total_return` numeric(13, 4) NULL, ADD COLUMN `fifteen_year_return` numeric(13, 4) NULL, ADD COLUMN `fifteen_year_total_return` numeric(13, 4) NULL, ADD COLUMN `twenty_year_return` numeric(13, 4) NULL, ADD COLUMN `twenty_year_total_return` numeric(13, 4) NULL, ADD COLUMN `all_time_return` numeric(13, 4) NULL, ADD COLUMN `all_time_total_return` numeric(13, 4) NULL;
-TRUNCATE `calculations_indexdailyperformancecalc`;
 
+TRUNCATE `calculations_indexdailyperformancecalc`;
 ALTER TABLE `calculations_indexdailyperformancecalc`
-             ADD COLUMN `mtd_return` numeric(13, 4) NULL, ADD COLUMN `qtd_return` numeric(13, 4) NULL, ADD COLUMN `fifteen_year_return` numeric(13, 4) NULL, ADD COLUMN `twenty_year_return` numeric(13, 4) NULL, ADD COLUMN `all_time_return` numeric(13, 4) NULL;
+             ADD COLUMN `mtd_return` numeric(13, 4) NULL, 
+             ADD COLUMN `qtd_return` numeric(13, 4) NULL, 
+             ADD COLUMN `fifteen_year_return` numeric(13, 4) NULL, 
+             ADD COLUMN `twenty_year_return` numeric(13, 4) NULL, 
+             ADD COLUMN `all_time_return` numeric(13, 4) NULL;
 
 ALTER TABLE `calculations_indexdailyperformancecalclatest`
              ADD COLUMN `mtd_return` numeric(13, 4) NULL, ADD COLUMN `qtd_return` numeric(13, 4) NULL, ADD COLUMN `fifteen_year_return` numeric(13, 4) NULL, ADD COLUMN `twenty_year_return` numeric(13, 4) NULL, ADD COLUMN `all_time_return` numeric(13, 4) NULL;
 
 TRUNCATE `calculations_companydailynavreturncalc`;
 ALTER TABLE `calculations_companydailynavreturncalc`
-             ADD COLUMN `mtd_total_return` numeric(13, 4) NULL, ADD COLUMN `qtd_total_return` numeric(13, 4) NULL, ADD COLUMN `fifteen_year_total_return` numeric(13, 4) NULL, ADD COLUMN `twenty_year_total_return` numeric(13, 4) NULL, ADD COLUMN `all_time_total_return` numeric(13, 4) NULL;
+             ADD COLUMN `mtd_total_return` numeric(13, 4) NULL, 
+             ADD COLUMN `qtd_total_return` numeric(13, 4) NULL, 
+             ADD COLUMN `fifteen_year_total_return` numeric(13, 4) NULL, 
+             ADD COLUMN `twenty_year_total_return` numeric(13, 4) NULL, 
+             ADD COLUMN `all_time_total_return` numeric(13, 4) NULL;
 
 ALTER TABLE `calculations_companydailynavreturncalclatest`
-             ADD COLUMN `mtd_total_return` numeric(13, 4) NULL, ADD COLUMN `qtd_total_return` numeric(13, 4) NULL, ADD COLUMN `fifteen_year_total_return` numeric(13, 4) NULL, ADD COLUMN `twenty_year_total_return` numeric(13, 4) NULL, ADD COLUMN `all_time_total_return` numeric(13, 4) NULL;
+             ADD COLUMN `mtd_total_return` numeric(13, 4) NULL, 
+             ADD COLUMN `qtd_total_return` numeric(13, 4) NULL, 
+             ADD COLUMN `fifteen_year_total_return` numeric(13, 4) NULL, 
+             ADD COLUMN `twenty_year_total_return` numeric(13, 4) NULL, 
+             ADD COLUMN `all_time_total_return` numeric(13, 4) NULL;
 
 COMMIT;
 ```
