@@ -1,6 +1,0 @@
-# Synopsis of Recipes
-
-## Default ##
-
-
-
