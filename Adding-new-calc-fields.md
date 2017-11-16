@@ -20,6 +20,81 @@ ORDER  BY data_length + index_length
 DESC LIMIT  20;
 ```
 
+```
++------------------------------------------------------------+--------+--------+-------+------------+---------+
+| CONCAT(table_schema, '.', table_name)                      | rows   | DATA   | idx   | total_size | idxfrac |
++------------------------------------------------------------+--------+--------+-------+------------+---------+
+| ycharts.calculations_mutualfunddailyperformancecalc        | 93.91M | 29.95G | 6.26G | 36.21G     |    0.21 |
+| ycharts.calculations_indexdailyperformancecalc             | 86.55M | 19.32G | 3.40G | 22.72G     |    0.18 |
+| ycharts.calculations_mutualfunddailytechnicalcalc          | 99.10M | 14.42G | 6.29G | 20.71G     |    0.44 |
+| ycharts.calculations_mutualfundannualizeddailyreturncalc   | 95.76M | 15.49G | 4.89G | 20.38G     |    0.32 |
+| ycharts.calculations_companydailyperformancecalc           | 47.07M | 15.69G | 2.33G | 18.01G     |    0.15 |
+| ycharts.calculations_indexdailytechnicalcalc               | 88.98M | 11.96G | 3.33G | 15.29G     |    0.28 |
+| ycharts.calculations_dailybasiccalc                        | 43.05M | 8.10G  | 3.41G | 11.51G     |    0.42 |
+| ycharts.calculations_indexannualizeddailyreturncalc        | 83.37M | 7.94G  | 3.34G | 11.28G     |    0.42 |
+| ycharts.calculations_companydailytechnicalcalc             | 44.10M | 8.23G  | 2.94G | 11.17G     |    0.36 |
+| ycharts.calculations_companyannualizeddailyreturncalc      | 46.48M | 6.75G  | 1.89G | 8.64G      |    0.28 |
+| ycharts.calculations_mutualfundmonthlyreturncalc           | 4.10M  | 1.54G  | 0.43G | 1.97G      |    0.28 |
+| ycharts.calculations_mutualfundannualizedmonthlyreturncalc | 4.18M  | 1.50G  | 0.47G | 1.96G      |    0.31 |
+| ycharts.calculations_indexmonthlyriskcalc                  | 4.53M  | 1.77G  | 0.15G | 1.93G      |    0.09 |
+| ycharts.calculations_mutualfundmonthlyriskcalc             | 4.44M  | 1.68G  | 0.15G | 1.83G      |    0.09 |
+| ycharts.calculations_companydailynavreturncalc             | 6.09M  | 1.07G  | 0.60G | 1.67G      |    0.56 |
+| ycharts.calculations_indexannualizedmonthlyreturncalc      | 5.10M  | 0.91G  | 0.45G | 1.35G      |    0.49 |
+| ycharts.calculations_companyannualizedmonthlyreturncalc    | 3.00M  | 0.90G  | 0.27G | 1.17G      |    0.29 |
+| ycharts.calculations_companyannualizeddailynavreturncalc   | 5.83M  | 0.60G  | 0.48G | 1.08G      |    0.81 |
+| ycharts.calculations_companymonthlyriskcalc                | 2.70M  | 0.97G  | 0.09G | 1.05G      |    0.09 |
+| ycharts.calculations_mutualfundmonthlybetacalc             | 6.33M  | 0.61G  | 0.33G | 0.95G      |    0.54 |
++------------------------------------------------------------+--------+--------+-------+------------+---------+
+```
+^ ran on 11/16/2017.
+
 Any table with 10M+ rows should probably follow Approach #2. Also, keep in mind that this scales linearly -- each table being operated on adds to the total time. 
+
+Another consideration is that django's `migration.AddField` scales linearly -- it generates a DDL operation _per field_. That means if you are adding 2 columns, it takes twice as long as a single column. 
+
+In fact, `AddField` typically generates 2 DDL operations... For example:
+```
+migrations.AddField(
+    model_name='companydailyperformancecalc',
+    name='price_target_upside',
+    field=models.DecimalField(decimal_places=4, max_digits=13, null=True),
+)
+```
+becomes
+```
+ALTER TABLE `calculations_companydailyperformancecalc` ADD COLUMN `price_target_upside` numeric(13, 4) NULL;
+ALTER TABLE `calculations_companydailyperformancecalc` ALTER COLUMN `price_target_upside` DROP DEFAULT;
+```
+To mitigate this linear scaling, consider using `ycharts.utils.migration_utils.AddFields`. It batches `ADD COLUMN` operations together into a single `ALTER TABLE` statement.
+
+# Execution of Strategy #2
+
+1. Pick a good time (i.e. the least-worst time) to do this.
+ - day where it's most acceptable for calc data to be unavailable. This is generally on Saturday.
+ - time window when other tasks are not adding items to the `main_queue`. Check AWS CloudWatch for historical data. Currently, 8pm is the best candidate.
+
+2. Write the migration
+- `TRUNCATE` the table(s) in question (can use `ycharts.utils.migration_utils.TruncateTable` or `migrations.RunSQL`)
+- perform the DDL operation (via `migrations.AddField` or `migration_utils.AddFields`). If you truncate the table, you can use the former because the difference in execution time is negligible.
+
+3. Run a [release](https://github.com/ycharts/ycharts_systems/wiki/Deploy-and-Hotfix-%5BYCharts%5D)
+- obviously, the website will down during this period.
+
+4. Repopulate the truncated tables by re-calculating the data
+- ideally, this can be encapsulated in one or more `onetime_scripts`
+```
+screen -d -m python /sites/ycharts/<app_name>/onetime_scripts/<script_name.py>
+```
+
+- if the calculation is exposed as a management command at a sufficiently granular level, it can be invoked directly. For example:
+```
+screen -d -m python /sites/ycharts/manage.py companies_tasks_run --task_type monthlyriskcalc
+screen -d -m python /sites/ycharts/manage.py indices_tasks_run --task_type monthlyriskcalc
+screen -d -m python /sites/ycharts/manage.py mutual_funds_tasks_run --task_type monthlyriskcalc
+screen -d -m python /sites/ycharts/apps/mutual_funds/onetime_scripts/reset_can_funds.py
+```
+
+5. Go to the calc pages in question and make sure that their values are being repopulated. Do not skip this part. 
+
 
 
