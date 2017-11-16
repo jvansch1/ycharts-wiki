@@ -1,11 +1,11 @@
-# Nature of the problem
+## Nature of the problem
 Performing any DDL operation on large tables in MySQL is very time-intensive. Therefore, when faced with having to add a column to YCharts calc tables, one has 2 options:
 
 1. (Bad) Preserve table data, and perform a long (1+ hours) migration. This has the negative effect of forcing extended downtime. Moreover, if this process fails for any reason, all changes are rolled back, and downtime duration is multiplied.
 
 2. (Good) `TRUNCATE` the table, perform a reasonably fast migration, and repopulate the table(s) by recalculating the data. For YCharts, it currently makes more sense to follow this approach. It minimizes downtime and can benefit from horizontal scaling (to a degree). 
 
-# Do I need to worry about this?
+## Do I need to worry about this?
 To get a rundown of the calc tables, this command can be helpful. It will give you a list of the 20 largest calc tables. 
 ```
 SELECT CONCAT(table_schema, '.', table_name),        
