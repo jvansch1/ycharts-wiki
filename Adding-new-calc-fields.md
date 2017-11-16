@@ -51,7 +51,7 @@ DESC LIMIT  20;
 Any table with 10M+ rows should probably follow Approach #2. Also, keep in mind that this scales linearly -- each table being operated on adds to the total time. 
 
 ## Operating on medium-sized table but many columns
-Another consideration is that django's `migration.AddField` scales linearly -- it generates a DDL operation _per field_. That means if you are adding 2 columns, it takes twice as long as a single column. 
+Another consideration is that django's `migration.AddField` scales linearly with number of columns - it generates a DDL operation _per field_. That means if you are adding 2 columns, it takes twice as long as a single column. 
 
 In fact, `AddField` typically generates 2 DDL operations... For example:
 ```
