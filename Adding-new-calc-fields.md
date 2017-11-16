@@ -79,7 +79,7 @@ To mitigate this linear scaling, consider using `ycharts.utils.migration_utils.A
 - perform the DDL operation (via `migrations.AddField` or `migration_utils.AddFields`). If you truncate the table, you can use the former because the difference in execution time is negligible.
 
 ### 3. Run a [release](https://github.com/ycharts/ycharts_systems/wiki/Deploy-and-Hotfix-%5BYCharts%5D)
-- obviously, the website will down during this period.
+- obviously, all systems will be down during this period.
 
 ### 4. Repopulate the truncated tables by re-calculating the data
 - ideally, this can be encapsulated in one or more `onetime_scripts`
