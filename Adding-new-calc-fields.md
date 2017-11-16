@@ -69,11 +69,11 @@ To mitigate this linear scaling, consider using `ycharts.utils.migration_utils.A
 
 # Execution of Strategy #2
 
-1. Pick a good time (i.e. the least-worst time) to do this.
+##1. Pick a good time (i.e. the least-worst time) to do this.
  - day where it's most acceptable for calc data to be unavailable. This is generally on Saturday.
  - time window when other tasks are not adding items to the `main_queue`. Check AWS CloudWatch for historical data. Currently, 8pm is the best candidate.
 
-2. Write the migration
+##2. Write the migration
 - `TRUNCATE` the table(s) in question (can use `ycharts.utils.migration_utils.TruncateTable` or `migrations.RunSQL`)
 - perform the DDL operation (via `migrations.AddField` or `migration_utils.AddFields`). If you truncate the table, you can use the former because the difference in execution time is negligible.
 
