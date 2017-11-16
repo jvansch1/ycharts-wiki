@@ -45,11 +45,12 @@ DESC LIMIT  20;
 | ycharts.calculations_companymonthlyriskcalc                | 2.70M  | 0.97G  | 0.09G | 1.05G      |    0.09 |
 | ycharts.calculations_mutualfundmonthlybetacalc             | 6.33M  | 0.61G  | 0.33G | 0.95G      |    0.54 |
 +------------------------------------------------------------+--------+--------+-------+------------+---------+
+(ran on 11/16/2017 against staging DB)
 ```
-^ ran on 11/16/2017.
 
 Any table with 10M+ rows should probably follow Approach #2. Also, keep in mind that this scales linearly -- each table being operated on adds to the total time. 
 
+## Operating on medium-sized table but many columns
 Another consideration is that django's `migration.AddField` scales linearly -- it generates a DDL operation _per field_. That means if you are adding 2 columns, it takes twice as long as a single column. 
 
 In fact, `AddField` typically generates 2 DDL operations... For example:
