@@ -110,14 +110,14 @@ first_mutual_fund_batch = MutualFund.objects.order_by('-assets_under_management_
 ```
 #### 4. The rest of Companies
 ```
-processed_company_ids = first_company_batch.values_list('id', flat=True)
+processed_company_ids = list(first_company_batch.values_list('id', flat=True))
 rest = Company.objects\
         .exclude(company_id__in=processed_company_ids)\
         .order_by('-market_cap_usd')
 ```
 #### 5. The rest of Mutual Funds
 ```
-processed_mutual_fund_ids = first_mutual_fund_batch.values_list('id', flat=True)
+processed_mutual_fund_ids = list(first_mutual_fund_batch.values_list('id', flat=True))
 rest = MutualFund.objects\
         .exclude(mutual_fund_id__in=processed_mutual_fund_ids)\
         .order_by('-assets_under_management_usd'):
