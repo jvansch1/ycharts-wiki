@@ -125,8 +125,7 @@ rest = MutualFund.objects\
 #### 6. the rest of Indices
 ```
 rest = Index.objects\
-        .exclude(symbol__in=US_BROAD_ASSET_CLASS_TO_INDEX.values()):
-    indices_dailyperformancecalc_run.delay(index, None)
+        .exclude(symbol__in=US_BROAD_ASSET_CLASS_TO_INDEX.values())
 ```
 - ideally, this can be encapsulated in one or more `onetime_scripts`
 ```
