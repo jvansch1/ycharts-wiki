@@ -82,6 +82,52 @@ To mitigate this linear scaling, consider using `ycharts.utils.migration_utils.A
 - obviously, all systems will be down during this period.
 
 ### 4. Repopulate the truncated tables by re-calculating the data
+- queue up the cals in a particular order
+#### 1. `Indices` of the `US_BROAD_ASSET_CLASSES` & `S&P500`
+```
+US_BROAD_ASSET_CLASS_TO_INDEX = {
+    'US Equity': '^SPXTR',
+    'International Equity': '^MSACXUSNTR',
+    'Municipal Bond': '^BBMBTR',
+    'Allocation': '^SPXTR',
+    'Taxable Bond': '^BBUSATR',
+    'Commodities': '^STRB',
+    'Money Market': '^STRB',
+    'Sector Equity': '^MSWNTR',
+    'Alternative': '^MSACWINTR',
+    'S&P': '^SPX'
+}
+```
+#### 2. `Company`, ordered by `market_cap_usd` DESC, first 1000
+```
+FIRST_COMPANY_BATCH_SIZE = 1000
+first_company_batch = Company.objects.order_by('-market_cap_usd')[:FIRST_COMPANY_BATCH_SIZE]
+```
+#### 3. `Mutual Fund`, ordered by `assets_under_management_usd` DESC, first 2000
+```
+FIRST_MUTUAL_FUND_BATCH_SIZE = 2000
+first_mutual_fund_batch = MutualFund.objects.order_by('-assets_under_management_usd')[:FIRST_MUTUAL_FUND_BATCH_SIZE]
+```
+#### 4. The rest of Companies
+```
+processed_company_ids = first_company_batch.values_list('id', flat=True)
+rest = Company.objects\
+        .exclude(company_id__in=processed_company_ids)\
+        .order_by('-market_cap_usd')
+```
+#### 5. The rest of Mutual Funds
+```
+processed_mutual_fund_ids = first_mutual_fund_batch.values_list('id', flat=True)
+rest = MutualFund.objects\
+        .exclude(mutual_fund_id__in=processed_mutual_fund_ids)\
+        .order_by('-assets_under_management_usd'):
+```
+#### 6. the rest of Indices
+```
+for index in Index.objects\
+        .exclude(symbol__in=US_BROAD_ASSET_CLASS_TO_INDEX.values()):
+    indices_dailyperformancecalc_run.delay(index, None)
+```
 - ideally, this can be encapsulated in one or more `onetime_scripts`
 ```
 screen -d -m python /sites/ycharts/<app_name>/onetime_scripts/<script_name.py>
