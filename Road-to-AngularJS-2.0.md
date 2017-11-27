@@ -15,7 +15,7 @@ In keeping with the above guidelines, we should move to max out our Angular 1.x 
 
 ### Systems App Migration, a Conversation:
 
-####File System Architecture:
+#### File System Architecture:
 ![](https://s3.amazonaws.com/ycharts-static-dev/wiki/directory1.png)
 
 You’ll find that the patterns and structures on blogs or in the Angular docs are a little different from what I’ve done here. Firstly, this is a transitional stage on our way to 2.0, but also we are a Django project... we're not a pure single page javascript app. As such, our  main html template and our angular app are in 2 different directories vs. 1 like you’ll find elsewhere. In order to create a link between a single page app’s template and the app’s relevant angular code, I created a directory for the js code that is the same name as the template. Notice `command_dashboard.html` and `command_dashboard/`. Let’s check out an angular app:
@@ -28,7 +28,7 @@ This is an angular 1.5 app. Well, mostly, and I’ll tell you what I didn’t do
 `shared/` is not an app, but is represented as a top level directory like the single page apps around it. It is however, a body of code that is shared across multiple angular apps in the systems app. So, in keeping with angular 1.5 structure, I created a shared module that could be added to any single page apps's `app.module.js` file. Each app can now access the shared feature subfolder you see above to include that functionality as required. 
 
 
-####Application Architecture: components, components and all the rest
+#### Application Architecture: components, components and all the rest
 
 So, components. What is a component and why have all the system app’s controllers and directives been deleted? A component is the basic building block of an angular app. Everything is a component. There should be 1 top level component, made up of smaller component if required. Component are quite like the directives we knew in many ways since they both create some enclosed, isolated scope over an associated template. However, along with api and lifecycle changes, components are used explicitly in the construction of a modular, component based architecture whereas directives have no such opinion and instead focus on the decoration of the DOM. The idea isn't that one can't do what the other does, but instead is a about what you **should** do with one versus the other. It turns out that most of our directives will become components and very few of them will remain directives. A key tactical difference is that components are emplaced in a template hierarchically as custom elements, whereas directives are added as attributed to existing elements. Again, directives decorate. I’ve selected a few components to analyze. I chose 2 components to look at not because they are the best pieces of angular 1.5 I can produce, but instead because they represent what our transitional 1.5 world will look like as we try to balance the new component based architecture and our current, deep dependence on `$scope`.
 
@@ -170,7 +170,7 @@ app.component('ycImportantCommandDashboardTable', {
 });
 ```
 
-####Application Data Flow: one-way data binding
+#### Application Data Flow: one-way data binding
 
 Angular 1.5 introduces a new standard of data flow through an angular project. Gone is two-way data binding, and welcome one-way data binding + callbacks. Fortunately, as evident above, this really isn't so bad. Firstly, many of our two-way data bound scope vars are actually just used one-way… we were just using the `=` notation.If that’s the case, the above is a perfect model of how we will transition. Scenarios in our code where a child directive and parent entity actually rely on two-way data binding we could...keep it. OK, keeping it still works in 1.5, but it **has** to go. We’ll do very nearly the same as above except bind in a function from parent scope that is called every time the the variable of interest changes.
 ```javascript
@@ -193,14 +193,14 @@ shared.component('ycManagementCommandPopup', {
                 ctrl.commandRunId = changes.commandRunId.currentValue;
 ```
 
-###Resources:
+### Resources:
 
-####General Overview:
+#### General Overview:
 https://docs.angularjs.org/guide/migration
 https://github.com/toddmotto/angular-styleguide
 https://teropa.info/blog/2015/10/18/refactoring-angular-apps-to-components.html
 
-####Component and file system architecture:
+#### Component and file system architecture:
 https://www.sitepoint.com/building-angular-1-5-components/
 https://toddmotto.com/exploring-the-angular-1-5-component-method/
 https://scotch.io/tutorials/how-to-use-angular-1-5s-component-method
@@ -208,10 +208,10 @@ https://docs.angularjs.org/guide/component
 https://github.com/toddmotto/angular-1-5-components-app
 https://angular.io/docs/ts/latest/guide/style-guide.html#!#application-structure (angular 2)
 
-####One-way Data Binding:
+#### One-way Data Binding:
 https://toddmotto.com/one-way-data-binding-in-angular-1-5/
 
-###What we need to do:
+### What we need to do:
 1) Upgrade AngularJS to 1.5 with zero code changes and test for potential breaking changes.
 
 2) Establish across the team the new, Angular 1.5 methods of organizing the file system, building components, one way data binding, etc so that new development adheres to these patterns.
