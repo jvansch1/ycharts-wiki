@@ -37,7 +37,7 @@ LINES TERMINATED BY '\n';
 
 ```bash
 # Output to csv (RDS friendly)
-mysql --host=production-2015-05-16.cy4wtovspprb.us-east-1.rds.amazonaws.com -p -u ycharts -D ycharts --batch -e "QUERY_QUERY_QUERY" |     sed 's/\t/","/g;s/^/"/;s/$/"/;s/\n//g' > ~/XXX.csv
+mysql --host=production-recovery-2017-08-23-replica.cy4wtovspprb.us-east-1.rds.amazonaws.com -p -u ycharts -D ycharts --batch -e "QUERY_QUERY_QUERY" |     sed 's/\t/","/g;s/^/"/;s/$/"/;s/\n//g' > ~/XXX.csv
 
 # ON local machine, move CSV output over
 scp production:~/XXX.csv ~/.
