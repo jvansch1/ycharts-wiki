@@ -15,6 +15,7 @@
 #### 3. post-release
 - ssh to `main_admin`
 - run `onetime_script` to recalculate all `AnnualizedDaily` calcs
+     - `python /sites/ycharts/apps/calculations/onetime_scripts/calculations_reset_annualized_perf_calcs_all.py`
 - check queue to make sure jobs are being picked up
 - perform sanity checks for `Company`, `MutualFund` and `Index` calcs
 
