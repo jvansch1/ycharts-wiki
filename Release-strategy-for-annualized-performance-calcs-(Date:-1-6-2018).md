@@ -1,6 +1,5 @@
 ### Before release
-- January 6th?
-- once date is set, create status page for scheduled maintenance.
+- create status page for scheduled maintenance on 1/6/2018 at 8pm.
 
 ### Day of release
 #### 1. prepare code
