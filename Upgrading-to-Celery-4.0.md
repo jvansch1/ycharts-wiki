@@ -54,6 +54,15 @@ The following features have been removed. N/A marks those we do not incorporate,
 * Using Django ORM as a broker (N/A)
 * threads feature (N/A)
 * force_execv (N/A)
+* celery.contrib.methods (N/A)
+
+### [Scheduled Removals](http://docs.celeryproject.org/en/latest/whatsnew-4.0.html#scheduled-removals)
+
+* celery.worker.job >>> celery.worker.request
+* celery.task.trace >>> celery.app.trace (celery.task package being phased out)
+* [Magic keyword arguments](http://docs.celeryproject.org/en/latest/whatsnew-4.0.html#magic-keyword-arguments) check for these, not sure if used
+* [Removed Settings](http://docs.celeryproject.org/en/latest/whatsnew-4.0.html#removed-settings)
+* [Changed to internal API](http://docs.celeryproject.org/en/latest/whatsnew-4.0.html#changes-to-internal-api) grep for these and update 
 
 ## New Features!
 
