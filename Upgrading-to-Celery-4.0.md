@@ -66,7 +66,7 @@ The following features have been removed. N/A marks those we do not incorporate,
 * celery.task.trace >>> celery.app.trace (celery.task package being phased out)
 * [Magic keyword arguments](http://docs.celeryproject.org/en/latest/whatsnew-4.0.html#magic-keyword-arguments) check for these, not sure if used
 * [Removed Settings](http://docs.celeryproject.org/en/latest/whatsnew-4.0.html#removed-settings)
-* [Changed to internal API](http://docs.celeryproject.org/en/latest/whatsnew-4.0.html#changes-to-internal-api) grep for these and update 
+* [Changed to internal API](http://docs.celeryproject.org/en/latest/whatsnew-4.0.html#changes-to-internal-api) grep for these and update (doesn't look like we use any on first look)
 
 ## New Features!
 
