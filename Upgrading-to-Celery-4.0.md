@@ -2,6 +2,8 @@
 
 * [**REQUIREMENTS**](http://docs.celeryproject.org/en/latest/whatsnew-4.0.html#requirements) we will have update/install these 
 
+## 4.0 Changes - Implement with 4.0 update
+
 * Update Celery settings using the command-line utility provided: 
 `$ celery upgrade settings proj/settings.py --django`
 
@@ -10,8 +12,6 @@
 
 * The CLI should up date all settings with the CELERY_ namespace, but double check each settings variable
 [Lowercase settings names](http://docs.celeryproject.org/en/latest/whatsnew-4.0.html#v400-upgrade-settings), also if the CLI does not work, manually update based on the list provided
-
-## 4.0 Changes - Implement with 4.0 update
 
 * [Task base class no longer automatically registers tasks](http://docs.celeryproject.org/en/latest/whatsnew-4.0.html#the-task-base-class-no-longer-automatically-register-tasks), we have a few classes that inherit from base class, use @app.task as designated in link
 
