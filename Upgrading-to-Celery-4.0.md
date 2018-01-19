@@ -14,7 +14,7 @@ BROKER_TRANSPORT_OPTIONS = {
 
 * Upgrade servers next (admin / web machines)
 
-## 4.0 Prep - Implement with 3.1.25 update
+## 4.0 Prep - Implement with/on version 3.1.25
 
 * [**REQUIREMENTS**](http://docs.celeryproject.org/en/latest/whatsnew-4.0.html#requirements) we will have update/install these 
 
