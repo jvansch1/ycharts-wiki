@@ -14,7 +14,7 @@ BROKER_TRANSPORT_OPTIONS = {
 
 * Upgrade servers next (admin / web machines)
 
-## Begin preparing for 4.0 upgrade with
+## 4.0 Prep - Implement with 3.1.25 update
 
 * [**REQUIREMENTS**](http://docs.celeryproject.org/en/latest/whatsnew-4.0.html#requirements) we will have update/install these 
 
@@ -34,7 +34,7 @@ result_serializer = 'pickle'
 accept_content = {'pickle'}
 ```
 
-## 4.0 Changes
+## 4.0 Changes - Implement with 4.0 update
 
 * [Task base class no longer automatically registers tasks](http://docs.celeryproject.org/en/latest/whatsnew-4.0.html#the-task-base-class-no-longer-automatically-register-tasks), we have a few classes that inherit from base class, use @app.task as designated in link
 
