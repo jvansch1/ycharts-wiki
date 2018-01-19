@@ -94,7 +94,7 @@ The following features have been removed. N/A marks those we do not incorporate,
 
 * [New Periodic Task API](http://docs.celeryproject.org/en/latest/userguide/periodic-tasks.html#beat-entries) We could potentially swap this for crontab
 
-
+## [Future Deprecation Timeline](http://docs.celeryproject.org/en/latest/internals/deprecation.html#deprecation-timeline)
 
 
 
