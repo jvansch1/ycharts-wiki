@@ -25,7 +25,7 @@ BROKER_TRANSPORT_OPTIONS = {
 `app.config_from_object('django.conf:settings', namespace='CELERY')`
 
 * The CLI should up date all settings with the CELERY_ namespace, but double check each settings variable
-[Lowercase settings names](http://docs.celeryproject.org/en/latest/whatsnew-4.0.html#v400-upgrade-settings)
+[Lowercase settings names](http://docs.celeryproject.org/en/latest/whatsnew-4.0.html#v400-upgrade-settings), also if the CLI does not work, manually update based on the list provided
 
 * [Json is now the default serializer](http://docs.celeryproject.org/en/latest/whatsnew-4.0.html#json-is-now-the-default-serializer), if we want to continue using pickle, you must configure it in the app, although some of the added functionality may be beneficial? 
 ```
