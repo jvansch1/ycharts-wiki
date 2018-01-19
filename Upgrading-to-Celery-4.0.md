@@ -68,7 +68,7 @@ The following features have been removed. N/A marks those we do not incorporate,
 
 ### New Task Protocol
 
-* [Highlights](http://docs.celeryproject.org/en/latest/whatsnew-4.0.html#new-protocol-highlights) meta-data fields are now sent as message headers to avoid extra decode/encode step, support for other languages, lots of new helpful fields
+* [Highlights](http://docs.celeryproject.org/en/latest/whatsnew-4.0.html#new-protocol-highlights) meta-data fields are now sent as message headers to avoid extra decode/encode step, support for other languages, lots of new helpful fields. We may want to implement some going forward.
 
 * [Full Docs](http://docs.celeryproject.org/en/latest/internals/protocol.html#message-protocol-task-v2)
 
