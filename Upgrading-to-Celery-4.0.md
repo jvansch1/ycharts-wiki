@@ -1,19 +1,3 @@
-## Prepare current config
-
-* [Redis Events not backward compatible](http://docs.celeryproject.org/en/latest/whatsnew-4.0.html#redis-events-not-backward-compatible) 'fanout_patterns' and 'fanout_prefix' are enabled by default in 4.0, so configure 3.1 workers to prepare for the upgrade
-```
-BROKER_TRANSPORT_OPTIONS = {
-    'fanout_patterns': True,
-    'fanout_prefix': True,
-}
-```
-
-## Upgrade to Celery 3.1.25
-
-* Deploy workers first, this version can process messages sent by clients using both 3.1 and 4.0
-
-* Upgrade servers next (admin / web machines)
-
 ## 4.0 Prep - Implement with/on version 3.1.25
 
 * [**REQUIREMENTS**](http://docs.celeryproject.org/en/latest/whatsnew-4.0.html#requirements) we will have update/install these 
