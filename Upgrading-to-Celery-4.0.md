@@ -16,7 +16,7 @@ BROKER_TRANSPORT_OPTIONS = {
 
 ## Begin preparing for 4.0 upgrade with
 
-* [**REQUIREMENTS**](http://docs.celeryproject.org/en/latest/whatsnew-4.0.html#requirements)
+* [**REQUIREMENTS**](http://docs.celeryproject.org/en/latest/whatsnew-4.0.html#requirements) we will have update/install these 
 
 * Update Celery settings using the command-line utility provided: 
 `$ celery upgrade settings proj/settings.py --django`
