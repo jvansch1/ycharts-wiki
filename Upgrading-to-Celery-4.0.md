@@ -73,6 +73,14 @@ The following features have been removed. N/A marks those we do not incorporate,
 
 ## [Future Deprecation Timeline](http://docs.celeryproject.org/en/latest/internals/deprecation.html#deprecation-timeline)
 
+## STEPS to update
+
+1. Update requirements: 
+ - kombu : 4.0
+ - billiard : 3.5
+
+To be continued...
+
 
 
 
