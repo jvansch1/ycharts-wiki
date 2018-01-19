@@ -56,6 +56,10 @@ The following features have been removed. N/A marks those we do not incorporate,
 * force_execv (N/A)
 * celery.contrib.methods (N/A)
 
+### [Reorganization Deprications](http://docs.celeryproject.org/en/latest/whatsnew-4.0.html#reorganization-deprecations)
+
+* It doesn't look like we use and celery.utils, but grep again just to be sure
+
 ### [Scheduled Removals](http://docs.celeryproject.org/en/latest/whatsnew-4.0.html#scheduled-removals)
 
 * celery.worker.job >>> celery.worker.request
