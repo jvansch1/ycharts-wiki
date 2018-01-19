@@ -78,10 +78,26 @@ The following features have been removed. N/A marks those we do not incorporate,
 1. Update requirements: 
  - kombu : 4.0
  - billiard : 3.5
+2. Move routes to individual tasks.py files ala alerts app
 
-To be continued...
+On feature branch celery_4_0_upgrade:
 
+2. Update settings to new lowercase values
+3. Add namespace to app in celery.py
+4. Register custom tasks with register_task
+5. auto_discover no longer needs to be passed INSTALLED_APPS
+6. Update with new autoretry_for decorator instead of our custom retry tasks when possible, remove unused tasks if applicable
 
+In ycharts_systems:
 
+7. For worker AMIs, point repository to branch celery_4_0_upgrade
+8. Hotfix all worker machines from new branch
 
+In Ycharts:
 
+9. Merge in feature branch celery_4_0_upgrade
+10. Point the worker AMI build back to develop/master
+
+In ycharts_systems:
+
+11. Hotfix web / admin machines
