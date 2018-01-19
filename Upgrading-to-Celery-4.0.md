@@ -11,13 +11,6 @@
 * The CLI should up date all settings with the CELERY_ namespace, but double check each settings variable
 [Lowercase settings names](http://docs.celeryproject.org/en/latest/whatsnew-4.0.html#v400-upgrade-settings), also if the CLI does not work, manually update based on the list provided
 
-* [Json is now the default serializer](http://docs.celeryproject.org/en/latest/whatsnew-4.0.html#json-is-now-the-default-serializer), if we want to continue using pickle, you must configure it in the app, although some of the added functionality may be beneficial? 
-```
-task_serializer = 'pickle'
-result_serializer = 'pickle'
-accept_content = {'pickle'}
-```
-
 ## 4.0 Changes - Implement with 4.0 update
 
 * [Task base class no longer automatically registers tasks](http://docs.celeryproject.org/en/latest/whatsnew-4.0.html#the-task-base-class-no-longer-automatically-register-tasks), we have a few classes that inherit from base class, use @app.task as designated in link
