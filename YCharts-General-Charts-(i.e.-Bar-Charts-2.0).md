@@ -39,38 +39,38 @@ The inputs are as follows:
 
 **endDate**: Optional, Date in format of MM/DD/YYYY, default None
 
-**numTicks**: Optional, integer, default None
 
 **resampleFrequency**: Required if time is element in chart (x or y-axis), default yearly, otherwise set to None
 
 **resampleMethod** Required if x-axis = Required if time is element in chart (x or y-axis), default last, otherwise set to None
+
+**xAxisTicks**: Optional, integer, default None
 
 **xAxisLabelOverride**: Optional, list of labels for "categories', must match the actual number of categories.
 
 # Data Formation / Logic
 ```
 Data formation
-if xAxis = securites, then:
+if xAxis = securities, then:
     Must have > 1 security
     AND
-       If securities are all indicators
-           O metrics
-           optionally startDate, endDate, 
-
-       1 metric
-        startDate AND endDate
-        or
-        >= 1 metric
+    If securities are all indicators
+        O metrics
+        optionally, time params
+    If securities are all NOT indicators
+        >= 1 metrics, NO time stuff
+        OR
+        1 metric + time params
 
 if xAxis = metrics, then:
     Must have > 1 metric
     AND
-        startDate and EndDate
-        or
-        >= 1 security
+    > 1 security (NO INDICATORS)
+    OR
+    1 security + optionally, time params
 
-if xAxis = time, then
-    Must have startDate, endDate and startDate < endDate
+if xAxis = time, then:
+    Must have all time params
     AND
         >= 1 metric
         AND
