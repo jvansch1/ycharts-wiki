@@ -44,11 +44,11 @@ The inputs are as follows:
 
 **resampleMethod** Required if x-axis = Required if time is element in chart (x or y-axis), one of RESAMPLE_FUNCTION_OPTIONS, default last, otherwise set to None
 
-**xAxisNumLabels**: Optional, integer, default None
-
-**xAxisLabelStyle**: Options, one of [short, long], default short
+**xAxisLabelStyle**: Required, one of [short, long], default short
 
 **xAxisLabelOverride**: Optional, list of labels for "categories', must match the actual number of categories.
+
+**xAxisNumLabels**: Optional, integer, default None
 
 # Input Rules
 ```
@@ -80,5 +80,20 @@ if xAxis = time, then:
 # Category (x-axis) Labeling
 ```
 if xAxis = securities
- 
+    if xAxisLabelStyle = short
+        security_id
+    if xAxisLabelStyle = long
+        security_name
+if xAxis = metrics
+    if xAxisLabelStyle = short
+        short_label (from calc_info)
+    if xAxisLabelStyle = long
+        medium_label (from calc_info)
+if xAxis = time
+    (short/long label style is irrelevant)
+    if resampleFrequency = yearly, it's time formatted %Y
+    if resampleFrequency = monthly, it's time formated %b %Y
+    if resampleFrequency = daily, it's time formatted %b %d
+
+if xAxis in ['metrics', 'securities'] and xAxisLabelOverride is defined and is a list whose length = length of actual "categories" in x-axis, then we use these as categories instead!!!
 ```
