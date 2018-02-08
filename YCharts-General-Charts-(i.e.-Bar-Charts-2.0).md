@@ -113,3 +113,29 @@ before:
 after:
 ['Jan 2012', '', '', Apr 2012', '', '', 'Jul 2012', '', '', 'Oct 2012', '', '']
 ```
+
+# Examples
+Note on all examples:
+What is the correct in these examples is the inputs, the data that will be eventually passed to highcharts, and the basic set up of how the chart should look.
+
+What is not correct is the hover over interaction, the legend, and the look/feel. These should be made to match the current fundamental charts!
+
+## Single security, multiple metrics, category label override
+
+### Goal
+xxx
+
+### Inputs
+xxx
+### Data &  Output
+xxx
+
+## Single security, multiple metrics, category label override
+
+### Goal
+xxx
+
+### Inputs
+xxx
+### Data &  Output
+xxx
