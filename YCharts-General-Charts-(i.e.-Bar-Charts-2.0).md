@@ -27,7 +27,8 @@ general chart endpoint => yc-general-chart => ychart_general.js => highcharts
 # Inputs // GeneralChartParams
 Just like fundamental chart, the general chart endpoint will call into a GeneralChartParams object that will accept a series of params and clean them up such that we can pass them into another class that will query DB and produce the actual chart data.
 
-The inputs are as follows
+The inputs are as follows:
+
 **xAxis**: Required, one of 'securities', 'metrics', 'time'
 
 **metrics**: Optional, list of 0 or more metrics, default []
