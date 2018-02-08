@@ -24,5 +24,10 @@ fundamental chart app in browser => fund. chart endpoint => yc-fund-chart => ych
 In the general chart, it will be the same exept there will be no front-end app, so
 general chart endpoint => yc-general-chart => ychart_general.js => highcharts
 
-# Inputs // Chart Params
-The chart params to our new chart will be the following:
+# Inputs // GeneralChartParams
+Just like fundamental chart, the general chart endpoint will call into a GeneralChartParams object that will accept a series of params and clean them up such that we can pass them into another class that will query DB and produce the actual chart data.
+
+The inputs are as follows
+```
+asdfadsfads
+```
