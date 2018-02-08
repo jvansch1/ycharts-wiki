@@ -29,5 +29,12 @@ Just like fundamental chart, the general chart endpoint will call into a General
 
 The inputs are as follows
 ```
-asdfadsfads
+xAxis: Required, one of 'securities', 'metrics', 'time'
+metrics: Optional, list of 0 or more metrics, default []
+securities: Required, list of 1 or more securities
+startDate: Optional, Date in format of MM/DD/YYYY, default None
+endDate: Optional, Date in format of MM/DD/YYYY, default None
+numTicks: Optional, integer, default None
+xAxisLabelOverride: Optional, list of labels for "categories', must match the actual number of categories.
 ```
+# Data Formation
