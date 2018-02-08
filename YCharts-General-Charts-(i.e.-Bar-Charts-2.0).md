@@ -28,15 +28,13 @@ general chart endpoint => yc-general-chart => ychart_general.js => highcharts
 Just like fundamental chart, the general chart endpoint will call into a GeneralChartParams object that will accept a series of params and clean them up such that we can pass them into another class that will query DB and produce the actual chart data.
 
 The inputs are as follows
-```
-xAxis: Required, one of 'securities', 'metrics', 'time'
-metrics: Optional, list of 0 or more metrics, default []
-securities: Required, list of 1 or more securities. Unlike fundamental charts securities must all be indicators are be NOT indicators. If mixed list, take the first security, and filter out other securities of NOT that type.
-startDate: Optional, Date in format of MM/DD/YYYY, default None
-endDate: Optional, Date in format of MM/DD/YYYY, default None
-numTicks: Optional, integer, default None
-xAxisLabelOverride: Optional, list of labels for "categories', must match the actual number of categories.
-```
+**xAxis**: Required, one of 'securities', 'metrics', 'time'
+**metrics**: Optional, list of 0 or more metrics, default []
+**securities**: Required, list of 1 or more securities. Unlike fundamental charts securities must all be indicators are be NOT indicators. If mixed list, take the first security, and filter out other securities of NOT that type.
+**startDate**: Optional, Date in format of MM/DD/YYYY, default None
+**endDate**: Optional, Date in format of MM/DD/YYYY, default None
+**numTicks**: Optional, integer, default None
+**xAxisLabelOverride**: Optional, list of labels for "categories', must match the actual number of categories.
 
 # Data Formation / Logic
 ```
