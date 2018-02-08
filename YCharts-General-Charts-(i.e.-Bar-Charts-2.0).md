@@ -37,4 +37,32 @@ endDate: Optional, Date in format of MM/DD/YYYY, default None
 numTicks: Optional, integer, default None
 xAxisLabelOverride: Optional, list of labels for "categories', must match the actual number of categories.
 ```
-# Data Formation
+
+# Data Formation / Logic
+```
+Data formation
+if xAxis = securites, then:
+    Must have > 1 security
+    AND
+        startDate AND endDate
+        or
+        >= 1 metric
+
+if xAxis = metrics, then:
+    Must have > 1 metric
+    AND
+        startDate and EndDate
+        or
+        >= 1 security
+
+if xAxis = time, then
+    Must have startDate, endDate and startDate < endDate
+    AND
+        >= 1 metric
+        OR
+        >= 1 security
+    Must have
+        resampleFrequency = one of RESAMPLE_FREQUENCY_OPTION_MAP (default yearly)
+        resampleMethod =  one of RESAMPLE_FUNCTION_OPTIONS (default last)
+numTicks is optional and must be number
+```
