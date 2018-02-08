@@ -93,4 +93,5 @@
 * [[Updating an SSL certificate]]
 
 **Project Docs**
-* [[YCharts-General-Charts-(i.e.-Bar-Charts-2.0)]]
+* YCharts General Charts
+  * [[YCharts-General-Charts-(i.e.-Bar-Charts-2.0)]]
