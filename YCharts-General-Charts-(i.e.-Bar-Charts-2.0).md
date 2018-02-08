@@ -48,7 +48,7 @@ The inputs are as follows:
 
 **xAxisLabelOverride**: Optional, list of labels for "categories', must match the actual number of categories.
 
-**xAxisNumLabels**: Optional, integer, default None
+**xAxisLabelNum**: Optional, integer, default None
 
 # Input Rules
 ```
@@ -96,4 +96,20 @@ if xAxis = time
     if resampleFrequency = daily, it's time formatted %b %d
 
 if xAxis in ['metrics', 'securities'] and xAxisLabelOverride is defined and is a list whose length = length of actual "categories" in x-axis, then we use these as categories instead!!!
+
+if xAxis = time, we respect the xAxisLabelNum parameter
+in this case we get the number of categories we see in the data we modulus
+by number of ticks. That number - 1 is how many categories we null out
+
+So
+12 categories
+4 ticks
+12 % 4 = 3
+3-1 = 2
+Null out 2 categories in between
+
+before:
+['Jan 2012', 'Feb 2012', 'Mar 2012', 'Apr 2012', 'May 2012', 'Jun 2012', 'July 2012', 'Aug 2012', 'Sep 2012', 'Oct 2012', 'Nov 2012', 'Dec 2012']
+after:
+['Jan 2012', '', '', Apr 2012', '', '', 'Jul 2012', '', '', 'Oct 2012', '', '']
 ```
