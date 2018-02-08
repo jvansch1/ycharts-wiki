@@ -46,7 +46,7 @@ The inputs are as follows:
 
 **xAxisNumLabels**: Optional, integer, default None
 
-***xAxisLabelStyle**: Options, one of [short, long], default short
+**xAxisLabelStyle**: Options, one of [short, long], default short
 
 **xAxisLabelOverride**: Optional, list of labels for "categories', must match the actual number of categories.
 
