@@ -40,9 +40,9 @@ The inputs are as follows:
 **endDate**: Optional, Date in format of MM/DD/YYYY, default None
 
 
-**resampleFrequency**: Required if time is element in chart (x or y-axis), default yearly, otherwise set to None
+**resampleFrequency**: Required if time is element in chart (x or y-axis), one of RESAMPLE_FREQUENCY_OPTION_MAP, default yearly, otherwise set to None
 
-**resampleMethod** Required if x-axis = Required if time is element in chart (x or y-axis), default last, otherwise set to None
+**resampleMethod** Required if x-axis = Required if time is element in chart (x or y-axis), one of RESAMPLE_FUNCTION_OPTIONS, default last, otherwise set to None
 
 **xAxisTicks**: Optional, integer, default None
 
@@ -54,7 +54,7 @@ Data formation
 if xAxis = securities, then:
     Must have > 1 security
     AND
-    If securities are all indicators
+    if securities are all indicators
         O metrics
         optionally, time params
     If securities are all NOT indicators
@@ -65,19 +65,13 @@ if xAxis = securities, then:
 if xAxis = metrics, then:
     Must have > 1 metric
     AND
-    > 1 security (NO INDICATORS)
-    OR
-    1 security + optionally, time params
+        > 1 security (NO INDICATORS)
+        OR
+        1 security (NO INDICATORS) + optionally, time params
 
 if xAxis = time, then:
     Must have all time params
     AND
-        >= 1 metric
-        AND
-        >= 1 security
-        Special case: if securities are all indicators, no metric required!
-    Must have
-        resampleFrequency = one of RESAMPLE_FREQUENCY_OPTION_MAP (default yearly)
-        resampleMethod =  one of RESAMPLE_FUNCTION_OPTIONS (default last)
-numTicks is optional and must be number
+        >= 1 security and >= 1 metric
+        Special case: if securities are all indicators, no metrics!!!
 ```
