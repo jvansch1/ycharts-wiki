@@ -31,7 +31,7 @@ The inputs are as follows
 ```
 xAxis: Required, one of 'securities', 'metrics', 'time'
 metrics: Optional, list of 0 or more metrics, default []
-securities: Required, list of 1 or more securities
+securities: Required, list of 1 or more securities. Unlike fundamental charts securities must all be indicators are be NOT indicators. If mixed list, take the first security, and filter out other securities of NOT that type.
 startDate: Optional, Date in format of MM/DD/YYYY, default None
 endDate: Optional, Date in format of MM/DD/YYYY, default None
 numTicks: Optional, integer, default None
@@ -59,8 +59,9 @@ if xAxis = time, then
     Must have startDate, endDate and startDate < endDate
     AND
         >= 1 metric
-        OR
+        AND
         >= 1 security
+        Special case: if securities are all indicators, no metric required!
     Must have
         resampleFrequency = one of RESAMPLE_FREQUENCY_OPTION_MAP (default yearly)
         resampleMethod =  one of RESAMPLE_FUNCTION_OPTIONS (default last)
