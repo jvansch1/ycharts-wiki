@@ -41,6 +41,10 @@ The inputs are as follows:
 
 **numTicks**: Optional, integer, default None
 
+**resampleFrequency**: Required if time is element in chart (x or y-axis), default yearly, otherwise set to None
+
+**resampleMethod** Required if x-axis = Required if time is element in chart (x or y-axis), default last, otherwise set to None
+
 **xAxisLabelOverride**: Optional, list of labels for "categories', must match the actual number of categories.
 
 # Data Formation / Logic
@@ -49,6 +53,11 @@ Data formation
 if xAxis = securites, then:
     Must have > 1 security
     AND
+       If securities are all indicators
+           O metrics
+           optionally startDate, endDate, 
+
+       1 metric
         startDate AND endDate
         or
         >= 1 metric
