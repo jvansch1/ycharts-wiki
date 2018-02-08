@@ -44,7 +44,9 @@ The inputs are as follows:
 
 **resampleMethod** Required if x-axis = Required if time is element in chart (x or y-axis), one of RESAMPLE_FUNCTION_OPTIONS, default last, otherwise set to None
 
-**xAxisTicks**: Optional, integer, default None
+**xAxisNumLabels**: Optional, integer, default None
+
+***xAxisLabelStyle: Options, one of [short, long], default short
 
 **xAxisLabelOverride**: Optional, list of labels for "categories', must match the actual number of categories.
 
@@ -76,3 +78,7 @@ if xAxis = time, then:
 ```
 
 # Category (x-axis) Labeling
+```
+if xAxis = securities
+ 
+```
