@@ -1,5 +1,5 @@
 # Intro
-The purpose of this document is provide details about the project to replace the current flot based based on ycharts.com 
+The purpose of this document is provide details about the project to replace the current flot based bar charts on ycharts.com 
 
 # Goal
 Our goal is to replace the current bar charts, with a new, more flexible and functional charting stack that can:
