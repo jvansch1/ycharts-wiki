@@ -74,3 +74,5 @@ if xAxis = time, then:
         >= 1 security and >= 1 metric
         Special case: if securities are all indicators, no metrics!!!
 ```
+
+# Category (x-axis) Labeling
