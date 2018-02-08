@@ -29,11 +29,17 @@ Just like fundamental chart, the general chart endpoint will call into a General
 
 The inputs are as follows
 **xAxis**: Required, one of 'securities', 'metrics', 'time'
+
 **metrics**: Optional, list of 0 or more metrics, default []
+
 **securities**: Required, list of 1 or more securities. Unlike fundamental charts securities must all be indicators are be NOT indicators. If mixed list, take the first security, and filter out other securities of NOT that type.
+
 **startDate**: Optional, Date in format of MM/DD/YYYY, default None
+
 **endDate**: Optional, Date in format of MM/DD/YYYY, default None
+
 **numTicks**: Optional, integer, default None
+
 **xAxisLabelOverride**: Optional, list of labels for "categories', must match the actual number of categories.
 
 # Data Formation / Logic
