@@ -48,9 +48,8 @@ The inputs are as follows:
 
 **xAxisLabelOverride**: Optional, list of labels for "categories', must match the actual number of categories.
 
-# Data Formation / Logic
+# Input Rules
 ```
-Data formation
 if xAxis = securities, then:
     Must have > 1 security
     AND
