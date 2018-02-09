@@ -188,8 +188,7 @@ xAxisLabelOverride: []
 ```
 
 ### Data &  Output
-http://jsfiddle.net/j5ywtL1z/2/
-
+http://jsfiddle.net/8m4ne3ep/1/
 
 
 
