@@ -33,16 +33,17 @@ The inputs are as follows:
 
 **metrics**: Optional, list of 0 or more metrics, default []
 
-**securities**: Required, list of 1 or more securities. Unlike fundamental charts securities must all be indicators are be NOT indicators. If mixed list, take the first security, and filter out other securities of NOT that type.
+**securities**: Required, list of 1 or more securities. Unlike fundamental charts securities must all be indicators or all be NOT indicators. If mixed list, take the first security, and filter out other securities of NOT that type.
 
 **startDate**: Optional, Date in format of MM/DD/YYYY, default None
 
 **endDate**: Optional, Date in format of MM/DD/YYYY, default None
 
-
 **resampleFrequency**: Required if time is element in chart (x or y-axis), one of RESAMPLE_FREQUENCY_OPTION_MAP, default yearly, otherwise set to None
 
 **resampleMethod** Required if x-axis = Required if time is element in chart (x or y-axis), one of RESAMPLE_FUNCTION_OPTIONS, default last, otherwise set to None
+
+**yAxisLabelStyle**: Required, one of [short, long], default short
 
 **xAxisLabelStyle**: Required, one of [short, long], default short
 
@@ -77,23 +78,19 @@ if xAxis = time, then:
         Special case: if securities are all indicators, no metrics!!!
 ```
 
-# Category (x-axis) Labeling
+# Category Labeling
 ```
-if xAxis = securities
-    if xAxisLabelStyle = short
-        security_id
-    if xAxisLabelStyle = long
-        security_name
-if xAxis = metrics
-    if xAxisLabelStyle = short
-        short_label (from calc_info)
-    if xAxisLabelStyle = long
-        medium_label (from calc_info)
-if xAxis = time
-    (short/long label style is irrelevant)
-    if resampleFrequency = yearly, it's time formatted %Y
-    if resampleFrequency = monthly, it's time formated %b %Y
-    if resampleFrequency = daily, it's time formatted %b %d
+if x/yAxisLabelStyle = short
+   for securities, label = security_id
+   for metrics, label = short_label (from calc_info)
+if x/yAxisLabelStyle = long
+   for securities, label = security_name
+   for metrics, label = medium_label (from calc_info)
+
+For time, short/long is irrelevant!!!
+if resampleFrequency = yearly, it's time formatted %Y
+if resampleFrequency = monthly, it's time formated %b %Y
+if resampleFrequency = daily, it's time formatted %b %d
 
 if xAxis in ['metrics', 'securities'] and xAxisLabelOverride is defined and is a list whose length = length of actual "categories" in x-axis, then we use these as categories instead!!!
 
@@ -134,6 +131,7 @@ startDate: ''
 endDate: ''
 resampleFrequency: ''
 resampleMethod: ''
+yAxisLabelStyle: ''
 xAxisLabelStyle: ''
 xAxisLabelOverride: ['1 Year', '3 Year', '5 Year']
 ```
@@ -160,6 +158,7 @@ startDate: '12/1/2013'
 endDate: '' # (Note null = latest, just like in fundamental charts)
 resampleFrequency: 'yearly'
 resampleMethod: 'last'
+yAxisLabelStyle: ''
 xAxisLabelStyle: ''
 xAxisLabelOverride: ['2014, '2015', '2016', '2017', '2018 YTD']
 ```
