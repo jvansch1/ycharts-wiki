@@ -118,7 +118,7 @@ after:
 Note on all examples:
 What is the correct in these examples is the inputs, the data that will be eventually passed to highcharts, and the basic set up of how the chart should look.
 
-What is not correct is the hover over interaction, the legend, and the look/feel. These should be made to match the current fundamental charts!
+What is not correct is the hover over interaction, the legend, and the exact look/feel. These should be made to match the current fundamental charts!
 
 ## Single security, multiple metrics, category label override
 
@@ -130,19 +130,46 @@ What is not correct is the hover over interaction, the legend, and the look/feel
 xAxis: metrics
 metrics: ['revenues_growth_annual', 'revenues_growth_3y', 'revenues_growth_5y']
 securities: [{id: AAPL, include: true}]
-xAxisLabelStyle: 'short'
+startDate: ''
+endDate: ''
+resampleFrequency: ''
+resampleMethod: ''
+xAxisLabelStyle: ''
 xAxisLabelOverride: ['1 Year', '3 Year', '5 Year']
 ```
 
 ### Data &  Output
-http://jsfiddle.net/hz0savds/4/xxx
+http://jsfiddle.net/hz0savds/4/
 
-## Single security, multiple metrics, category label override
+## BLAH BLAH
 
 ### Goal
 xxx
 
 ### Inputs
 xxx
+
+### Data &  Output
+xxx
+
+## BLAH BLAH
+
+### Goal
+xxx
+
+### Inputs
+xxx
+
+### Data &  Output
+xxx
+
+## BLAH BLAH
+
+### Goal
+xxx
+
+### Inputs
+xxx
+
 ### Data &  Output
 xxx
