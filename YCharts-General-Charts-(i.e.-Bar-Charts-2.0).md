@@ -129,7 +129,7 @@ What is not correct is the hover over interaction, the legend, and the look/feel
 xxx
 
 ### Data &  Output
-(http://jsfiddle.net/hz0savds/4/xxx)
+http://jsfiddle.net/hz0savds/4/xxx
 
 ## Single security, multiple metrics, category label override
 
