@@ -126,7 +126,13 @@ What is not correct is the hover over interaction, the legend, and the look/feel
 ![](https://i.imgur.com/qIsqZux.png)
 
 ### Inputs
-xxx
+```
+xAxis: metrics
+metrics: ['revenues_growth_annual', 'revenues_growth_3y', 'revenues_growth_5y']
+securities: [{id: AAPL, include: true}]
+xAxisLabelStyle: 'short'
+xAxisLabelOverride: ['1 Year', '3 Year', '5 Year']
+```
 
 ### Data &  Output
 http://jsfiddle.net/hz0savds/4/xxx
