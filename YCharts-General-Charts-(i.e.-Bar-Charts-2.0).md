@@ -146,7 +146,7 @@ http://jsfiddle.net/hz0savds/5/
 
 
 
-## Single security, multiple metrics, across time
+## Single security, multiple metrics, across time, category label override
 
 ### Goal
 ![](https://i.imgur.com/2EDC2z1.png)
