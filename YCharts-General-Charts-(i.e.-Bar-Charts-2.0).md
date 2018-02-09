@@ -171,7 +171,7 @@ http://jsfiddle.net/2xm3mwk6/3/
 ## Treasury yield curve - multiple indicators, line chart
 
 ### Goal
-![](https://i.imgur.com/Jb5ad0l.png)
+![](https://i.imgur.com/sRLJWaz.png)
 
 ### Inputs
 ```
@@ -194,10 +194,10 @@ http://jsfiddle.net/8m4ne3ep/1/
 
 
 
-## BLAH BLAH
+## 1 security, 1 indicator, over time, grouped by month
 
 ### Goal
-xxx
+![](https://i.imgur.com/qALA6aH.png)
 
 ### Inputs
 xxx
@@ -205,17 +205,3 @@ xxx
 ### Data &  Output
 xxx
 
-
-
-
-
-## BLAH BLAH
-
-### Goal
-xxx
-
-### Inputs
-xxx
-
-### Data &  Output
-xxx
