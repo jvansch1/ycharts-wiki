@@ -141,10 +141,15 @@ xAxisLabelOverride: ['1 Year', '3 Year', '5 Year']
 ### Data &  Output
 http://jsfiddle.net/hz0savds/5/
 
-## BLAH BLAH
+
+
+
+
+
+## Single security, multiple metrics, across time
 
 ### Goal
-xxx
+![](https://i.imgur.com/2EDC2z1.png)
 
 ### Inputs
 xxx
@@ -162,6 +167,11 @@ xxx
 
 ### Data &  Output
 xxx
+
+
+
+
+
 
 ## BLAH BLAH
 
