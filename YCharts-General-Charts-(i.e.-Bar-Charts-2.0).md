@@ -163,7 +163,34 @@ xAxisLabelStyle: ''
 xAxisLabelOverride: ['2014, '2015', '2016', '2017', '2018 YTD']
 ```
 ### Data &  Output
-http://jsfiddle.net/2xm3mwk6/2/
+http://jsfiddle.net/2xm3mwk6/3/
+
+
+
+
+## Treasury yield curve - multiple indicators, line chart
+
+### Goal
+![](https://i.imgur.com/Jb5ad0l.png)
+
+### Inputs
+```
+xAxis:'securities'
+metrics: []
+securities: [{id: I:1MTR, include: true}, {id: I:3MTRNK, include: true}, {id: I:6MTRNK, include: true}, {id: I:1YTRNK, include: true}, {id: I:3YTR include: true}, {id: I:5YTRNK, include: true}, {id: I:10YTR, include: true}, {id: I:20YTRNK, include: true}, {id: I:30YTR, include: true}]
+startDate: ''
+endDate: '' # (Note null = latest, just like in fundamental charts)
+resampleFrequency: 'yearly'
+resampleMethod: 'last'
+yAxisLabelStyle: ''
+xAxisLabelStyle: ''
+xAxisLabelOverride: []
+```
+
+### Data &  Output
+http://jsfiddle.net/j5ywtL1z/2/
+
+
 
 
 
@@ -178,7 +205,6 @@ xxx
 
 ### Data &  Output
 xxx
-
 
 
 
