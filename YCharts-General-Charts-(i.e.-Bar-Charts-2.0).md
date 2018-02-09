@@ -134,6 +134,7 @@ resampleMethod: ''
 yAxisLabelStyle: ''
 xAxisLabelStyle: ''
 xAxisLabelOverride: ['1 Year', '3 Year', '5 Year']
+xAxisLabelNum: ''
 ```
 
 ### Data &  Output
@@ -161,6 +162,7 @@ resampleMethod: 'last'
 yAxisLabelStyle: ''
 xAxisLabelStyle: ''
 xAxisLabelOverride: ['2014, '2015', '2016', '2017', '2018 YTD']
+xAxisLabelNum: ''
 ```
 ### Data &  Output
 http://jsfiddle.net/2xm3mwk6/3/
@@ -184,7 +186,8 @@ resampleFrequency: 'yearly'
 resampleMethod: 'last'
 yAxisLabelStyle: ''
 xAxisLabelStyle: ''
-xAxisLabelOverride: []
+xAxisLabelOverride: [1M, 3M, 6M, 1Y, 3Y, 5Y, 10Y, 20Y, 30Y]
+xAxisLabelNum: '
 ```
 
 ### Data &  Output
@@ -200,8 +203,21 @@ http://jsfiddle.net/8m4ne3ep/1/
 ![](https://i.imgur.com/qALA6aH.png)
 
 ### Inputs
-xxx
+```
+xAxis:'securities'
+metrics: ['discount_or_premium_to_nav']
+securities: [{id:XIV , include: true}]
+startDate: '1/1/2013'
+endDate: '1/31/2018'
+resampleFrequency: 'monthly'
+resampleMethod: 'mean'
+yAxisLabelStyle: ''
+xAxisLabelStyle: ''
+xAxisLabelOverride: 
+xAxisLabelNum: 6
+```
+
 
 ### Data &  Output
-xxx
+http://jsfiddle.net/pxyLrndy/1/
 
