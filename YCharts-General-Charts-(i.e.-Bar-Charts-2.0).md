@@ -123,7 +123,7 @@ What is not correct is the hover over interaction, the legend, and the look/feel
 ## Single security, multiple metrics, category label override
 
 ### Goal
-xxx
+![](https://i.imgur.com/qIsqZux.png)
 
 ### Inputs
 xxx
