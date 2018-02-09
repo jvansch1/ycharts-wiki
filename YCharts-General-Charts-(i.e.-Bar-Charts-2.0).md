@@ -156,17 +156,18 @@ http://jsfiddle.net/hz0savds/5/
 xAxis:'time'
 metrics: ['ytd_total_return', 'ytd_total_return_nav']
 securities: [{id: PDI, include: true}]
-startDate: '12/1/2014'
+startDate: '12/1/2013'
 endDate: '' # (Note null = latest, just like in fundamental charts)
 resampleFrequency: 'yearly'
 resampleMethod: 'last'
 xAxisLabelStyle: ''
 xAxisLabelOverride: ['2014, '2015', '2016', '2017', '2018 YTD']
 ```
-
-
 ### Data &  Output
-xxx
+http://jsfiddle.net/2xm3mwk6/2/
+
+
+
 
 ## BLAH BLAH
 
