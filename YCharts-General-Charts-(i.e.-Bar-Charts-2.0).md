@@ -139,7 +139,7 @@ xAxisLabelOverride: ['1 Year', '3 Year', '5 Year']
 ```
 
 ### Data &  Output
-http://jsfiddle.net/hz0savds/4/
+http://jsfiddle.net/hz0savds/5/
 
 ## BLAH BLAH
 
