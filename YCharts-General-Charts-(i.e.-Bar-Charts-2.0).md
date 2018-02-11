@@ -92,7 +92,8 @@ if resampleFrequency = yearly, it's time formatted %Y
 if resampleFrequency = monthly, it's time formated %b %Y
 if resampleFrequency = daily, it's time formatted %b %d
 
-if xAxis in ['metrics', 'securities'] and xAxisLabelOverride is defined and is a list whose length = length of actual "categories" in x-axis, then we use these as categories instead!!!
+if xAxis in ['metrics', 'securities'] and xAxisLabelOverride is defined and the we replace each item in the
+original x-axis with xAxisLabelOverride item. The lengths don't need to match! if len(xAxisLabelOverride) < len(categories), just replace what you can!
 
 if xAxis = time, we respect the xAxisLabelNum parameter
 in this case we get the number of categories we see in the data we modulus
@@ -217,7 +218,6 @@ xAxisLabelOverride:
 xAxisLabelNum: 6
 ```
 
-
 ### Data &  Output
-http://jsfiddle.net/pxyLrndy/1/
+http://jsfiddle.net/pxyLrndy/3/
 
