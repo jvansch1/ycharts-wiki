@@ -29,7 +29,7 @@ Just like fundamental chart, the general chart endpoint will call into a General
 
 The inputs are as follows:
 
-**xAxis**: Required, one of 'securities', 'metrics', 'time'
+**xAxis**: Required, one of 'securities', 'metrics', 'time', default 'securities'
 
 **metrics**: Optional, list of 0 or more metrics, default []
 
