@@ -39,7 +39,7 @@ The inputs are as follows:
 
 **endDate**: Optional, Date in format of MM/DD/YYYY, default None
 
-**resampleFrequency**: Required if time is element in chart (x or y-axis), one of RESAMPLE_FREQUENCY_OPTION_MAP, default yearly, otherwise set to None
+**resampleFrequency**: Required if time is element in chart (x or y-axis), one of ['weekly', 'monthly', 'quarterly', 'yearly'], default yearly, otherwise set to None
 
 **resampleMethod** Required if x-axis = Required if time is element in chart (x or y-axis), one of RESAMPLE_FUNCTION_OPTIONS, default last, otherwise set to None
 
