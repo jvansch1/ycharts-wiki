@@ -198,7 +198,7 @@ http://jsfiddle.net/8m4ne3ep/1/
 
 
 
-## 1 security, 1 indicator, over time, grouped by month
+## 1 security, 1 metric, over time, grouped by month
 
 ### Goal
 ![](https://i.imgur.com/qALA6aH.png)
