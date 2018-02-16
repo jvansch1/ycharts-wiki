@@ -54,7 +54,7 @@ The inputs are as follows:
 # Input Rules
 ```
 if xAxis = securities, then:
-    Must have > 1 security
+    Must have >= 1 security
     AND
     if securities are all indicators
         O metrics
@@ -65,7 +65,7 @@ if xAxis = securities, then:
         1 metric + time params
 
 if xAxis = metrics, then:
-    Must have > 1 metric
+    Must have >= 1 metric
     AND
         > 1 security (NO INDICATORS)
         OR
@@ -74,11 +74,13 @@ if xAxis = metrics, then:
 if xAxis = time, then:
     Must have all time params
     AND
-        >= 1 security and >= 1 metric
+        >= 1 security +  1 metric
+        OR
+        1 security + >= 1 metric
         Special case: if securities are all indicators, no metrics!!!
 ```
 
-# Category Labeling
+# Labeling
 ```
 if x/yAxisLabelStyle = short
    for securities, label = security_id
