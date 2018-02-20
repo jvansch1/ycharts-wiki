@@ -60,7 +60,7 @@ if xAxis = securities, then:
         O metrics
         optionally, time params
     If securities are all NOT indicators
-        >= 1 metrics, NO time stuff
+        > 1 metrics, NO time stuff
         OR
         1 metric + time params
 
