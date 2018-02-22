@@ -207,7 +207,7 @@ http://jsfiddle.net/8m4ne3ep/1/
 
 ### Inputs
 ```
-xAxis:'securities'
+xAxis:'time'
 metrics: ['discount_or_premium_to_nav']
 securities: [{id:XIV , include: true}]
 startDate: '1/1/2013'
