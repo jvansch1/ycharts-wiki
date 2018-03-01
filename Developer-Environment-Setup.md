@@ -212,7 +212,7 @@ yc_celery
 Now, while Celery is running in a new ssh session
 ```bash
 vagrant ssh
-python manage.py securities_process_lists_and_sets
+python manage.py security_lists_store_lists_and_sets
 ```
 
 ## Local User account
