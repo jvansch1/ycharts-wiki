@@ -183,8 +183,8 @@ http://jsfiddle.net/2xm3mwk6/3/
 xAxis:'securities'
 metrics: []
 securities: [{id: I:1MTR, include: true}, {id: I:3MTRNK, include: true}, {id: I:6MTRNK, include: true}, {id: I:1YTRNK, include: true}, {id: I:3YTR include: true}, {id: I:5YTRNK, include: true}, {id: I:10YTR, include: true}, {id: I:20YTRNK, include: true}, {id: I:30YTR, include: true}]
-startDate: ''
-endDate: '' # (Note null = latest, just like in fundamental charts)
+startDate: '11/30/2011'
+endDate: '12/31/2015' # (Note null = latest, just like in fundamental charts)
 resampleFrequency: 'yearly'
 resampleMethod: 'last'
 yAxisLabelStyle: ''
