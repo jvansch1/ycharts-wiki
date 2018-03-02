@@ -199,6 +199,11 @@ yc_django
 ```
 
 ## Generate JSON Files and Initialize Site Autocompleters
+First, apply the migrations to have your models up to date
+```
+python manage.py migrate
+```
+Then, generate autocomplete jsons for your models
 ```
 python apps/systems/onetime_scripts/init_site_autocompleters_and_generate_json.py
 ```
