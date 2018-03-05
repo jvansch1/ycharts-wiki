@@ -28,6 +28,6 @@ Please respect the rules of the game. Unlawful or nefarious trading practices ar
 
 > We will be running a 'trial run' game from 3/5 - 3/12, to allow everyone to prepare. The official game will start 3/12. Game duration TBD.
 
-2. Familiarize yourself with the rules & settings specified in the game. These are subject to change.
+2. Familiarize yourself with the rules & settings specified in the game. These are subject to change, based on opinions and feedback! Feel free to make suggestions.
 
 3. Good luck & Have Fun!
