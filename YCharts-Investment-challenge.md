@@ -13,12 +13,11 @@ Any discrepancies in data, reports, news, etc. will defer to the information on 
 
 ### 3. You may share tips and methods freely with others.
 
-One of the goals is for us to become more familiar with investing in general, and understand YCharts from the perspectives of our clients. Therefore, sharing comp tables, charts, watchlists, and other tools with each other is encouraged for the sake of knowledge sharing. That being said, feel free to closely guard your secret sauce if that's how you choose to live your life...
+The primary goal is for us to become more familiar with investing in general, and understand YCharts from the perspectives of our clients. Therefore, sharing comp tables, charts, watchlists, and other tools with each other is encouraged for the sake of knowledge sharing. That being said, feel free to closely guard your secret sauce, if that's how you wish to live your life...
 
-### 3. Respect the honor system.
+### 4. Respect the honor system.
 
 Please respect the rules of the game. Unlawful or nefarious trading practices are not permitted. Let's be sportsmen of the highest rank. A victory won without honor is no victory at all. 
-
 
 
 ## Game
