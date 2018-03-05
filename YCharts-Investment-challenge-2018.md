@@ -1,5 +1,3 @@
-# YCharts Investment Challenge 2018
-
 Welcome to YCharts NYC's first investment challenge. The goal is simple: build a portfolio with the highest NAV.
 
 ## Rules
