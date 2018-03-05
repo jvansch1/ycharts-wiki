@@ -23,8 +23,8 @@ Please respect the rules of the game. Unlawful or nefarious trading practices ar
 
 ## Game
 
-1. If you have not done so already, create an account with [Investopedia](https://www.investopedia.com/simulator/home.aspx). Once you have done so, slack me (@lucas) your account email and I will invite you to YCharts' private game.
+1. If you have not done so already, create an account with [Investopedia](https://www.investopedia.com/simulator/home.aspx). Once you have done so, slack me (`@lucas`) your account email and I will invite you to YCharts' private game.
 
-2. Familiarize yourself with the rules & settings specified in the game.
+2. Familiarize yourself with the rules & settings specified in the game. These are subject to change.
 
 3. Good luck & Have Fun!
