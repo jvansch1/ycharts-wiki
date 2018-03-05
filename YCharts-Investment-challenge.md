@@ -26,7 +26,7 @@ Please respect the rules of the game. Unlawful or nefarious trading practices ar
 
 1. If you have not done so already, create an account with [Investopedia](https://www.investopedia.com/simulator/home.aspx). Once you have done so, slack me (`@lucas`) your account email and I will invite you to YCharts' private game.
 
-We will be running a 'trial run' game from 3/5 - 3/12, to allow everyone to prepare. The official game will start 3/12. Game duration is TBD.
+> We will be running a 'trial run' game from 3/5 - 3/12, to allow everyone to prepare. The official game will start 3/12. Game duration TBD.
 
 2. Familiarize yourself with the rules & settings specified in the game. These are subject to change.
 
