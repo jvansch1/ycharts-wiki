@@ -44,6 +44,17 @@ In order to ensure key functions of our application work before releasing code f
 1. Reset chart to default state.
 
 ## Timeseries Tables
+1. Create a basic timeseries table with at least one of each security type.
+1. Add security list to table.
+1. Add info columns to table.
+1. Reorder indo columns.
+1. Add metric set to table.
+1. Change Date Range.
+1. Change Data formatting
+1. Change Summary Stats.
+1. Test Pagination.
+1. Export Data.
+1. Reset Data.
 
 ## Comparables Tables
 1. Create basic comparables tables with at least one of each security type.
@@ -55,4 +66,4 @@ In order to ensure key functions of our application work before releasing code f
 1. Add scoring model to table.
 1. Export data to CSV.
 1. Export data to excel.
-1. Reset Data
+1. Reset Data.
