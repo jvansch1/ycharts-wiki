@@ -67,3 +67,11 @@ In order to ensure key functions of our application work before releasing code f
 1. Export data to CSV.
 1. Export data to excel.
 1. Reset Data.
+
+## Company Pages
+
+## Index Pages
+
+## Mutual Fund Pages
+
+## Indicator Pages
