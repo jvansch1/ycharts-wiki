@@ -14,9 +14,12 @@ In order to ensure key functions of our application work before releasing code f
 1. Go through the "Dashboard Setup".
 1. Create a watchlist.
 1. Add watchlist to dashboard.
+1. View all the tabs of a watchlist on the dashboard.
 1. Remove watchlist from dashboard.
 1. Reorder watchlist on dashboard.
 1. Reorder charts on dashboard.
+1. Create new dashboard.
+1. Rename dashboard.
 
 ## Alerts
 1. Create an alert for a stock via the dashboard.
