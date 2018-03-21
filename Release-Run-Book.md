@@ -46,5 +46,13 @@ In order to ensure key functions of our application work before releasing code f
 ## Timeseries Tables
 
 ## Comparables Tables
-
-
+1. Create basic comparables tables with at least one of each security type.
+1. Add security list to table.
+1. Add metric to table.
+1. Add info columns to table.
+1. Re-order columns of table.
+1. Add metric set to table.
+1. Add scoring model to table.
+1. Export data to CSV.
+1. Export data to excel.
+1. Reset Data
