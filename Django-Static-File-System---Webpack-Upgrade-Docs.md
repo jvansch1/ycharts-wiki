@@ -3,8 +3,10 @@ This documents review django's `staticfiles` system, how it works in our apps, a
 ## Django Static File System
 
 #### ABC of Django's Static File System
-[Docs](https://docs.djangoproject.com/en/2.0/ref/contrib/staticfiles/)
+Reference: [Official Docs](https://docs.djangoproject.com/en/2.0/ref/contrib/staticfiles/)
 1. Configure
+- `STATIC_ROOT` specify the **destination** to `collect` all static file to, which in our case is the `media` folder.
+- 
 
 2. Usage
 
