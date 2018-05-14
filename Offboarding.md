@@ -23,8 +23,8 @@ On YCharts.com
 * Delete their @ycharts.com account.
 * If it exists, remove "is_staff" access to the user's personal accounts on ycharts.com
 
-On Google:
-* Delete their account, moving files to the appropriate person
+On Google
+* Delete their @ycharts.com account, moving files to the appropriate person
 
 Wipe Former Computer
 
