@@ -15,6 +15,10 @@ If Exists, Remove the Following Accounts:
 * https://app.getsentry.com/
 * https://ycharts.pagerduty.com
 
+On AWS
+* Delete their IAM role from the main YCharts account
+* Delete their IAM role from the YCharts data account
+
 On YCharts.com
 * Delete their @ycharts.com account.
 * If it exists, remove "is_staff" access to the user's personal accounts on ycharts.com
