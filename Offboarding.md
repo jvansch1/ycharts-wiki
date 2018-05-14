@@ -17,7 +17,7 @@ If Exists, Remove the Following Accounts:
 
 On AWS
 * Delete their IAM role from the main YCharts account
-* Delete their IAM role from the YCharts data account
+* Delete their IAM role from the YCharts Data account
 
 On YCharts.com
 * Delete their @ycharts.com account.
