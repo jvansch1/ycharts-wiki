@@ -76,7 +76,7 @@ echo "source $(brew --prefix autoenv)/activate.sh" >> ~/.bash_profile
 source ~/.bash_profile
 ```
 
-Create an ".env" file in root of the project and add:
+Create an ".env" file in `/sites/ycharts` and add:
 
 ```
 export AWS_ACCESS_KEY_ID=<YOUR YCHARTS ACCESS KEY>
