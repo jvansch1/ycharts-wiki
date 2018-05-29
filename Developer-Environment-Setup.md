@@ -181,7 +181,7 @@ vagrant up
 ```
 This can take an hour or more. HOWEVER, there is a shortcut if you are in the NYC office.
 
-From the Mac Mini Shared Folder, copy vagrant_dev_setup_packaged.box to /sites/ycharts/confs/developers/vagrant_dev_setup_packaged.box
+From the Mac Mini Shared Folder, copy vagrant_dev_setup_packaged.box to `/sites/ycharts/confs/developers/vagrant_dev_setup_packaged.box`
 ```
 cd /sites/ycharts
 vagrant box add vagrant_dev_setup_packaged /sites/ycharts/confs/developers/vagrant_dev_setup_packaged.box
