@@ -16,5 +16,5 @@ What does AppState do?
 The Specifications are summarized as below:
   1. Calling AppState's various update methods should apply the change to the global state
   2. Such changes should also be reflected on the url
-  3. When url is set for the first time
+  3. When url is set for the first time, XXXXX
   4. When url is manually changed, the global state should change accordingly, if such change is valid
