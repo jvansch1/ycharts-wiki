@@ -24,4 +24,4 @@ App State is a Angular 1.x service designed to track the state of certain statef
   1. AppState can be configured to listen on changes on a slice of state, and update url params accordingly.
   2. AppState can set state when a url is set manually.
   3. If the manually set url is invalid, AppState should set state to default
-  4. [**In Progress**] The default state can be hydrated via server-side
+  4. [**In Progress**] The **initial** state can be hydrated via server-side, e.g. the user default. **Note this is different from the default fallback value that reducers will return on invalid input**
