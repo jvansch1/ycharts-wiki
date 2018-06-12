@@ -5,7 +5,7 @@ App State is a Angular 1.x service designed to track the state of certain statef
 
 [Redux](https://github.com/reduxjs/redux) does the first job perfectly, and the goal is to make Redux sync the url, so it does everything AppState should do.
 
-### What does AppState do?
+### What does (the old) AppState do?
   1. Activate a `$routeProvider`, so routing can be performed on non-HTML5 browsers without requesting new pages every time. [See here](https://stackoverflow.com/questions/14319967/angularjs-routing-without-the-hash)
   2. Kicks off a watch on routeChanges to apply the url.
      - For this to work, the locationProvider also needs to be invoked in the config block to declare what hashPrefix to use.
