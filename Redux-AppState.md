@@ -39,3 +39,5 @@ For example: the ordered columns of the tables should follow a format of:
   [{type: 'infoField', name: 'security_name'}, ...]
 ```
 What we want to validate on the front end is that the URL params for ordered column is an array of objects with keys of 'type' and 'name', etc; it cannot be a string, or an array of numbers, or array of objects with different keys. i.e. we want to check the JSON schema here. More rigorous validations would require more inputs, e.g. a list of valid info fields, and would take more time, and those should be (and are) performed on the backend.
+
+For example, if the user put in `orderedColumns: [{type: 'infoField', name: 'close_price'}]` when the `close_price` has been renamed to `day_close_price` in the backend, the frontend will not throw away all the ordered columns as it will not know about such changes. It will be up to the backend to valid the actual info field.
