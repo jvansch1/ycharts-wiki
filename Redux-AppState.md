@@ -29,7 +29,8 @@ App State is a Angular 1.x service designed to track the state of certain statef
   3. **Validation and Fallback**
      - If the manually set url is invalid, AppState should set state to default
   4. **Hydrate with User Default** 
-     - [**In Progress**] The **initial** state can be hydrated via server-side, e.g. the user default. **Note this is different from the default fallback value that reducers will return on invalid input**
+     - The **initial** state can be hydrated via server-side, e.g. the user default. **Note this is different from the default fallback value that reducers will return on invalid input**
+     - In order to do that, the store creation will be delay to the initiation block on the html template, where the user default state is loaded.
 
 ### On Validation
 The validation on step 3 checks for user input (on url), and the goal is to prevent arbitrary data to be put into the url. However, due to the limitation in terms of capacity and performance, not every single detail is verified here. 
