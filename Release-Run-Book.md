@@ -85,6 +85,7 @@ In order to ensure key functions of our application work before releasing code f
 1. Sort by `"Recently Modified First"`, `"Least Recently Edited First"`, `"A - Z"` and `"Z - A"`
 1. `Subscribe` & `Unsubscribe` to a report.
 1. `Duplicate` the report.
+1. `Delete` the duplicated report.
 1. navigate to [CER admin](https://staging.ycharts.com/admin/email_reports/customemailreport/)
 1. find most recently created report, navigate to /change page and in the `Tools` tab, hit "Send Report"
 1. go to your inbox, and confirm you received the CER. Make sure the modules show up correct.
