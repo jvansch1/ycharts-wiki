@@ -88,7 +88,7 @@ In order to ensure key functions of our application work before releasing code f
 1. `Delete` the duplicated report.
 1. navigate to [CER admin](https://staging.ycharts.com/admin/email_reports/customemailreport/)
 1. find most recently created report, navigate to /change page and in the `Tools` tab, hit "Send Report"
-1. go to your inbox, and confirm you received the CER. Make sure the modules show up correct.
+1. go to your inbox, and confirm you received the CER. Make sure the all the modules show up correctly, with the right Securitylists.
     - expect the `WeeklyMarketCommentaryModule` to be missing (only added on production) 
 
 ## Company Pages
