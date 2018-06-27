@@ -68,6 +68,28 @@ In order to ensure key functions of our application work before releasing code f
 1. Export data to excel.
 1. Reset Data.
 
+## Custom Email Reports
+1. go to [CER list view](https://staging.ycharts.com/email_reports/list/)
+1. navigate to /new page via "Create New"
+    - Fill out `Title`, `Description`, and `Periodicity`
+    - add `StockSecuritylistReviewModule`
+    - add `WeeklyMarketCommentaryModule`
+    - add `FundSecuritylistReviewModule`
+    - add `SecurityReturnSummaryModule`
+    - add `EconCalendarModule`
+1. hit `Save`. Confirm redirect to /edit page.
+1. reorder modules. Hit save. Refresh page to confirm ordering is preserved.
+1. Preview an individual module via the `Preview` icon. 
+1. Preview the entire `CustomEmailReport` via the `"Preview"` button.
+1. navigate back to /list.
+1. Sort by `"Recently Modified First"`, `"Least Recently Edited First"`, `"A - Z"` and `"Z - A"`
+1. `Subscribe` & `Unsubscribe` to a report.
+1. `Duplicate` the report.
+1. navigate to [CER admin](https://staging.ycharts.com/admin/email_reports/customemailreport/)
+1. find most recently created report, navigate to /change page and in the `Tools` tab, hit "Send Report"
+1. go to your inbox, and confirm you received the CER. Make sure the modules show up correct.
+    - expect the `WeeklyMarketCommentaryModule` to be missing (only added on production) 
+
 ## Company Pages
 
 ## Index Pages
