@@ -124,7 +124,7 @@ It should YOURUSERNAME:admin!
 
 ```bash
 # Install MySQL -- DON'T RUN ANY COMMANDS HOMEBREW TELLS YOU TO RUN AFTER INSTALLATION!
-brew install mysql
+brew install mysql@5.7
 
 # Make a symlink so generic mysql commands link to 5.7 version
 ln -s /usr/local/opt/mysql /usr/local/opt/mysql
