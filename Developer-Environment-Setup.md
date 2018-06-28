@@ -200,11 +200,12 @@ yc_django
 ```
 
 ## Update Node.js Environment
-    - `curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -`
-    - `sudo apt-get install -y nodejs`
-    - `sudo npm install npm@5 -g`
-    - Install all node dependencies with `npm i`
-    - Install additional JS related tools by checking [the webpack migration guide](https://github.com/ycharts/ycharts/blob/develop/docs/library_updates/frontend/migrate_guide_05-2018.md)
+1. `curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -`
+2. `sudo apt-get install -y nodejs`
+3. `sudo npm install npm@5 -g`
+
+Then, install all node dependencies with `npm i`
+Install additional JS related tools by checking [the webpack migration guide](https://github.com/ycharts/ycharts/blob/develop/docs/library_updates/frontend/migrate_guide_05-2018.md)
 
 
 ## Generate JSON Files and Initialize Site Autocompleters
