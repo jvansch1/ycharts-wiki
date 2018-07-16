@@ -1,6 +1,6 @@
 # 1st Month
 ### Week 1
-Your first week will be a little bit slower than most at YCharts as you get setup and meet our team. We encourage your to write down as much as you can and there are never too many questions.
+Your first week will be a little bit slower than most at YCharts as you get setup and meet our team. We encourage your to **write down as much as you can** and there are never too many questions.
 
 - [ ] On your couple of days you will need to setup a few things:
     * Workstation (Desk, Keyboard, Monitor, etc)
