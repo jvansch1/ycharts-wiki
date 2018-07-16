@@ -25,13 +25,13 @@ Your first week will be a little bit slower than most at YCharts as you get setu
 - [ ] Meet with your manager to go over what your goals are and setup a weekly meeting with them.
 - [ ] Get a walkthrough of our site with the Product Manager and see what exactly we are selling.
 - [ ] Start on some of the [required reading](https://github.com/ycharts/ycharts/wiki/Required-Reading-List)
-- [ ] Start the [reading list](https://github.com/ycharts/ycharts/wiki/Required-Reading-List), Git and [Django Tutorial](https://github.com/ycharts/ycharts/wiki/Onboarding-for-New-Hires#django-tutorial).
+- [ ] Do the [reading list](https://github.com/ycharts/ycharts/wiki/Required-Reading-List), Git and [Django Tutorial](https://github.com/ycharts/ycharts/wiki/Onboarding-for-New-Hires#django-tutorial).
 - [ ] Review with an engineer your Django Polls App
+- [ ] Setup your [YCharts development environment](https://github.com/ycharts/ycharts/wiki/Developer-Environment-Setup). (This will usually take an entire day)
 
 ### Week 2-3
 After getting your feet wet in the first week, you will get into our codebase and do some small tickets.
 
-- [ ] Setup your [YCharts development environment](https://github.com/ycharts/ycharts/wiki/Developer-Environment-Setup). (This will usually take an entire day)
 - [ ] Meet with your manager and you will pick up your first pivotal ticket to work on.
 - [ ] Ask questions
 - [ ] Submit your first Pull Request by the end of the week 2
