@@ -63,7 +63,7 @@ Whether you know git or not this is a great [Git tutorial](http://learngitbranch
 
 
 # Django Tutorial
-Create a Django Polls app by following the [Django Tutorial](https://docs.djangoproject.com/en/1.8/intro/tutorial01/).
+Create a Django Polls app by following the [Django Tutorial](https://docs.djangoproject.com/en/1.9/intro/tutorial01/).
 Deliverable should be a working Django Polls app on your github repo called `django-polls`. 
 
 > As you go through creating it, ask Engineers any questions you have or if you need any help!
