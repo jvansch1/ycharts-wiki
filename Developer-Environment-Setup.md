@@ -127,8 +127,10 @@ It should YOURUSERNAME:admin!
 # Install MySQL -- DON'T RUN ANY COMMANDS HOMEBREW TELLS YOU TO RUN AFTER INSTALLATION!
 brew install mysql@5.7
 
+echo 'export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"' >> ~/.bash_profile
+
 # Make a symlink so generic mysql commands link to 5.7 version
-ln -s /usr/local/opt/mysql /usr/local/opt/mysql
+ln -s /usr/local/opt/mysql@5.7 /usr/local/opt/mysql
 
 # Copy YCharts MySQL plist file to correct location so MySQL runs on startup
 cp /sites/ycharts/confs/database/com.ycharts.mysql.plist ~/Library/LaunchAgents
@@ -256,5 +258,4 @@ user.save()
 
 
 > Note: You should now have access to all features in your local environment however you will need to do the same in staging and production. 
-
 
