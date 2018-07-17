@@ -32,6 +32,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 
     ```bash
     git clone git@github.com:ycharts/ycharts.git
+    git clone git@github.com:ycharts/ycharts_chart_generator.git
     git clone git@github.com:ycharts/developer_setup.git
     ```
 
