@@ -259,3 +259,6 @@ user.save()
 
 > Note: You should now have access to all features in your local environment however you will need to do the same in staging and production. 
 
+## Configure PyCharm
+
+Lastly, follow the steps here to configure PyCharm: https://github.com/ycharts/ycharts/wiki/PyCharm-Configuration
