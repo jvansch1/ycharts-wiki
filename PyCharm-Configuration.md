@@ -17,14 +17,15 @@ For PyCharm to function correctly you really need to setup the project interpret
 3. Click on the ![Imgur](https://i.imgur.com/fRgFpZz.png) icon in the right hand corner and select `Add...`
 4. Then choose the below options.
 ![Imgur](https://i.imgur.com/yrzqPUJ.png)
+5. Click "Apply"
 
 ## Project Structure Setup
-When using all the different search functionality we don't want to include anything in `/media/*`.
+When using all the different search functionality we don't want to include anything in `media`, `node_modules` or `data` directories.
 
 1. On the main menu, choose `PyCharm | Preferences` Settings.
 2. Navigate to `Project:ycharts | Project Structure`.
 3. Select the `media` folder and on the top bar click "exclude".
-    * ![](http://s8.postimg.org/v5q5wap51/Screen_Shot_2015_12_22_at_5_39_36_PM.png)
+![Imgur](https://i.imgur.com/4BY0H7W.png)
 4. Click "Apply"
 
 ## ESLint Configuration
@@ -34,5 +35,3 @@ This is really helpful for spotting Javascript related issues before you get cau
 2. In PyCharm go to: `Preferences | Languages & Frameworks | JavaScript | Code Quality Tools | ESLint`
 3. Copy setting like below
 ![Imgur](https://i.imgur.com/YxskZEr.png)
-
-### Vagrant Configuration
