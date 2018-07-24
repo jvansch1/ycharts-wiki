@@ -44,7 +44,7 @@
   * [[Debugging Webpack]]
 * Tools
   * [[Sublime]]
-  * [[PyCharm]]
+  * [[PyCharm Configuration]]
   * [[Vim Notes]]
 * Amazon
   * [[IP Switch Guide]]
