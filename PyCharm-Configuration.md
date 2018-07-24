@@ -28,6 +28,13 @@ When using all the different search functionality we don't want to include anyth
 ![Imgur](https://i.imgur.com/4BY0H7W.png)
 4. Click "Apply"
 
+## Python Imports
+1. PyCharm by default collapses all your imports which some people like, but you can disable it here (`Preferences | Editor | General | Code Folding`): 
+![image](https://user-images.githubusercontent.com/2000316/43075866-1d64f5a6-8e50-11e8-95d1-5beb91c0a7cf.png)
+
+2. You should set your Code Style for Python (`Preferences | Editor | Code Style | Python`) here to sort Python Imports like below. Then click `control + option + o` and it will auto format your imports in the file.
+![image](https://user-images.githubusercontent.com/2000316/43075802-df90449c-8e4f-11e8-9d1f-529b286af5ea.png)
+
 ## ESLint Configuration
 This is really helpful for spotting Javascript related issues before you get caught by the pre commit hook. 
 
