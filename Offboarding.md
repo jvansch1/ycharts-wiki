@@ -1,31 +1,17 @@
-## YCharts Basic Offboarding
+## YCharts Offboarding
 
-## Essential Accounts
+Remove all the items on the [[Setting Up Accounts for New Hires]] page.
 
-Suspend or delete their account at http://google.com/a/ycharts.com
-
-If Exists, Remove the Following Accounts:
-* Google Analytics
-* GitHub YCharts project Access (To all 4+ Repos)
-* http://slack.com
-* http://jazzhr.com
-* http://pivotaltracker.com
-* http://mixpanel.com
-* http://ycharts.okta.com
-* https://app.getsentry.com/
-* https://ycharts.pagerduty.com
-
-On AWS
+#### Google Suite
+* Before deleting them, transfer their files following this [guide]()
+#### AWS
 * Delete their IAM role from the main YCharts account
 * Delete their IAM role from the YCharts Data account
 
-On YCharts.com
+#### YCharts.com
 * Delete their @ycharts.com account.
 * If it exists, remove "is_staff" access to the user's personal accounts on ycharts.com
 
-On Google
-* Delete their @ycharts.com account, moving files to the appropriate person
-
-Wipe Former Computer
+#### Wipe Computer
 
 
