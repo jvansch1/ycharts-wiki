@@ -28,18 +28,19 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 
 ## Checkout Code
 1. Fork the `ycharts` and `ycharts_chart_generator` repos by hitting the "Fork" button. ![Imgur](https://i.imgur.com/m4pVmux.png)
-1. Clone the `ycharts`, `ycharts_chart_generator`, and `developer_setup` repos
+1. Clone the `ycharts`, `ycharts_chart_generator`, and `ycharts_system` repos
 
     ```bash
     git clone git@github.com:ycharts/ycharts.git
     git clone git@github.com:ycharts/ycharts_chart_generator.git
-    git clone git@github.com:ycharts/developer_setup.git
+    git clone git@github.com:ycharts/ycharts_system.git
     ```
 
 1. Copy git configs to correct locations so you can push/pull
 
     ```bash
     cp /sites/ycharts/confs/developers/git_config /sites/ycharts/.git/config
+    cp /sites/ycharts_data/confs/developers/git_config /sites/ycharts_data/.git/config
     ```
 
 1. Set up your git pre-commit hooks
@@ -181,17 +182,9 @@ Install VirtualBox: https://www.virtualbox.org/wiki/Downloads
 ## Navigate to your main ycharts directory
 ```
 cd /sites/ycharts
-vagrant up
+vagrant --run_initial_setup up --provision
 ```
-This can take an hour or more. HOWEVER, there is a shortcut if you are in the NYC office.
-
-From the Mac Mini Shared Folder, copy vagrant_dev_setup_packaged.box to `/sites/ycharts/confs/developers/vagrant_dev_setup_packaged.box`
-```
-cd /sites/ycharts
-vagrant box add vagrant_dev_setup_packaged /sites/ycharts/confs/developers/vagrant_dev_setup_packaged.box
-vagrant up
-```
-This will take about 5 minutes for the first time setup. When it's completed ... test it
+This can take an hour or more.  When it's completed ... test it
 
 ```
 # Test Django
@@ -202,24 +195,8 @@ vagrant ssh
 yc_django
 ```
 
-## Update Node.js Environment
-1. `curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -`
-2. `sudo apt-get install -y nodejs`
-3. `sudo npm install npm@5 -g`
-
-Then, install all node dependencies with `npm i`
 Install additional JS related tools by checking [the webpack migration guide](https://github.com/ycharts/ycharts/blob/develop/docs/library_updates/frontend/migrate_guide_05-2018.md)
 
-
-## Generate JSON Files and Initialize Site Autocompleters
-First, apply the migrations to have your models up to date
-```
-python manage.py migrate
-```
-Then, generate autocomplete jsons for your models
-```
-python apps/systems/onetime_scripts/init_site_autocompleters_and_generate_json.py
-```
 
 ## Initialize Lists and Sets
 You need to run Celery to actually get the lists you need!
@@ -232,6 +209,7 @@ Now, while Celery is running in a new ssh session
 vagrant ssh
 python manage.py security_lists_store_lists_and_sets
 ```
+This will take a few hours.
 
 ## Local User account
 
