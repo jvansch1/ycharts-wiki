@@ -40,7 +40,6 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 
     ```bash
     cp /sites/ycharts/confs/developers/git_config /sites/ycharts/.git/config
-    cp /sites/ycharts_data/confs/developers/git_config /sites/ycharts_data/.git/config
     ```
 
 1. Set up your git pre-commit hooks
