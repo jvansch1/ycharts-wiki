@@ -28,12 +28,12 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 
 ## Checkout Code
 1. Fork the `ycharts` and `ycharts_chart_generator` repos by hitting the "Fork" button. ![Imgur](https://i.imgur.com/m4pVmux.png)
-1. Clone the `ycharts`, `ycharts_chart_generator`, and `ycharts_system` repos
+1. Clone the `ycharts`, `ycharts_chart_generator`, and `ycharts_systems` repos
 
     ```bash
     git clone git@github.com:ycharts/ycharts.git
     git clone git@github.com:ycharts/ycharts_chart_generator.git
-    git clone git@github.com:ycharts/ycharts_system.git
+    git clone git@github.com:ycharts/ycharts_systems.git
     ```
 
 1. Copy git configs to correct locations so you can push/pull
