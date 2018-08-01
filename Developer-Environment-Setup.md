@@ -107,6 +107,7 @@ mv ~/redis-3.2.4/src/redis-server /usr/local/bin
 mv ~/redis-3.2.4/src/redis-cli /usr/local/bin
 cp /sites/ycharts/confs/redis/redis.conf /usr/local/etc/redis.conf
 # Start redis on launch
+mkdir -p ~/Library/LaunchAgents
 cp /sites/ycharts/confs/redis/com.ycharts.redis.plist ~/Library/LaunchAgents
 # Start redis now
 launchctl load ~/Library/LaunchAgents/com.ycharts.redis.plist
