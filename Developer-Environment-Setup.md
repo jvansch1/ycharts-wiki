@@ -160,18 +160,17 @@ launchctl load ~/Library/LaunchAgents/com.ycharts.mysql.plist
 ```
 
 ### Load MySQL data
-Copy the `ycharts_db` folder containing the database files from the database restore machine (Mac Mini)
-or another developer's computer to your home folder (`~`). This can take some time so start
-it now and keep going while the files copy over.
-
-Once you have a copy of the database folder, you should be able to follow the
-[directions for restoring your database](https://github.com/ycharts/ycharts/wiki/Restoring-Database).
-and you will have a fresh MySQL 5.7 database!
-
-> NOTE: You may wish to make sure you are connected to the network over ethernet before attempting
-to download a new DB. If you have one of the new CableMatters adapters, go to
+1. Copy the `ycharts_db` folder containing the database files from the database restore machine (Mac Mini)
+or another developer's computer to your home folder (`~`). This will take around ~3 hours.
+> NOTE: USE THE ETHERNET CABLE. If you have one of the new CableMatters adapters, go to
 [their site](http://www.asix.com.tw/download.php?sub=driverdetail&PItemID=131 "Welcome to 1995")
 to download the drivers.  Choose: Apple Mac OS X 10.6 to 10.9 Drivers Installer.
+2. Once you have a copy of the database folder, you should be able to follow the
+[directions for restoring your database](https://github.com/ycharts/ycharts/wiki/Restoring-Database).
+and you will have a fresh MySQL 5.7 database! Once the below command finishes, you should have a fresh database.
+```
+/sites/ycharts/scripts/restore_database.sh -c
+```
 
 ## Create Your Vagrant Instance
 ```
