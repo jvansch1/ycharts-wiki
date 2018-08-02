@@ -172,6 +172,11 @@ and you will have a fresh MySQL 5.7 database! Once the below command finishes, y
 /sites/ycharts/scripts/restore_database.sh -c
 ```
 
+## Setup ycharts_systems
+[Setup `ycharts_systems`](https://github.com/ycharts/ycharts_systems/wiki/Development-Environment-Setup).
+Some of the steps in the `ycharts` setup are also present in the `ycharts_systems` setup. There is no need to repeat these steps. 
+
+
 ## Create Your Virtual Machine
 1. Install [Vagrant 2.1.1](https://releases.hashicorp.com/vagrant/2.1.1/vagrant_2.1.1_x86_64.dmg)
 2. Install [Virtualbox 5.2.16](https://download.virtualbox.org/virtualbox/5.2.16/VirtualBox-5.2.16-123759-OSX.dmg)
@@ -192,9 +197,6 @@ vagrant --run_initial_setup up --provision
 vagrant ssh
 yc_django
 ```
-
-Install additional JS related tools by checking [the webpack migration guide](https://github.com/ycharts/ycharts/blob/develop/docs/library_updates/frontend/migrate_guide_05-2018.md)
-
 
 #### Initialize Lists and Sets
 You need to run Celery to actually get the lists you need!
