@@ -185,6 +185,7 @@ Some of the steps in the `ycharts` setup are also present in the `ycharts_system
 1. Run the below commands
 ```
 cd /sites/ycharts
+workon ycharts_systems
 vagrant --run_initial_setup up --provision
 ```
 > This can take an hour or more.
