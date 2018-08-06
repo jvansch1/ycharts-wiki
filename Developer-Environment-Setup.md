@@ -68,7 +68,7 @@ ssh-add -K ~/.ssh/ycharts-2014-01.pem
 Install Autoenv to manage having different aws access keys as environment variables.
 > NOTE: We should probably be moving to use [direnv](https://direnv.net/) soon.
 
-1. brew install autoenv
+1. brew install autoenv: ```brew install autoenv```
 1. After install run: 
 ```
 echo "source $(brew --prefix autoenv)/activate.sh" >> ~/.bash_profile
