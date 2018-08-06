@@ -69,7 +69,8 @@ Install Autoenv to manage having different aws access keys as environment variab
 > NOTE: We should probably be moving to use [direnv](https://direnv.net/) soon.
 
 1. brew install autoenv
-1. After install run: ```
+1. After install run: 
+```
 echo "source $(brew --prefix autoenv)/activate.sh" >> ~/.bash_profile
 source ~/.bash_profile
 cd /sites/ycharts
@@ -78,10 +79,6 @@ echo "\nexport AWS_ACCESS_KEY_ID=<YOUR YCHARTS ACCESS KEY>" >> /sites/ycharts/.e
 echo "\nexport AWS_SECRET_ACCESS_KEY=<YOUR YCHARTS SECRET KEY>" >> /sites/ycharts/.env
 echo "\nexport AWS_DEFAULT_REGION=us-east-1" >> /sites/ycharts/.env
 echo "\nssh-add -K ~/.ssh/ycharts-2014-01.pem" >> /sites/ycharts/.env
-```
-1. Test it is working by executing the below line.
-```bash
-cd .
 ```
 
 ## Install Redis
