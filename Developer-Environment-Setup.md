@@ -173,8 +173,8 @@ and you will have a fresh MySQL 5.7 database! Once the below command finishes, y
 ```
 
 ## Setup ycharts_systems
-[Setup `ycharts_systems`](https://github.com/ycharts/ycharts_systems/wiki/Development-Environment-Setup).
-Some of the steps in the `ycharts` setup are also present in the `ycharts_systems` setup. There is no need to repeat these steps. 
+1. Follow the steps in this Wiki [`ycharts_systems` Developer Environment Setup](https://github.com/ycharts/ycharts_systems/wiki/Development-Environment-Setup#checkout-code).
+    - Start from the section [Checkout Code](https://github.com/ycharts/ycharts_systems/wiki/Development-Environment-Setup#checkout-code). Reason is some of the steps in the `ycharts` setup are also present in the `ycharts_systems` setup. There is no need to repeat these steps.
 
 
 ## Create Your Virtual Machine
@@ -211,7 +211,11 @@ Now, while Celery is running in a new ssh session
 vagrant ssh
 python manage.py security_lists_store_lists_and_sets
 ```
-This will take a few hours.
+> NOTE: This will take a few hours. While this is happening, configure your PyCharm editor.
+
+## Configure PyCharm
+
+Follow the steps here to configure PyCharm: https://github.com/ycharts/ycharts/wiki/PyCharm-Configuration
 
 ## Local User account
 
@@ -238,7 +242,3 @@ user.save()
 
 
 > Note: You should now have access to all features in your local environment however you will need to do the same in staging and production. 
-
-## Configure PyCharm
-
-Lastly, follow the steps here to configure PyCharm: https://github.com/ycharts/ycharts/wiki/PyCharm-Configuration
