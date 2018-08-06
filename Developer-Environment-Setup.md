@@ -50,11 +50,11 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 
 ## Get SSH keys, AWS keys, etc
 
-Get the ycharts key from someone and move it to `~/.ssh/` so you
+1. Get the ycharts keys from someone and move it to `~/.ssh/` so you
 can connect to our server machines.  You will be getting the `.pem` key.
 
-Also ask someone to set up an AWS user for you for the project and send you
-your access and secret keys.
+2. Also ask your manager to set up an AWS user for you for the project and send you
+your access and secret keys. You will need 2 factor authentication on your cell phone so go ahead and download it. ([iOS](https://itunes.apple.com/us/app/google-authenticator/id388497605?mt=8) or [Android](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en_US))
 
 Initialize your ssh key
 ```
@@ -62,33 +62,24 @@ Initialize your ssh key
 chmod 700 ~/.ssh/ycharts-2014-01.pem
 # Add the key file to your ssh-agent
 ssh-add -K ~/.ssh/ycharts-2014-01.pem
-
 ```
 
 ## Install AutoEnv, set up env specific to this directory
-Install Autoenv to manage having different aws access keys.
-Be aware of the caveats that follow the install process
-Consult documentation for install https://github.com/kennethreitz/autoenv, however..
-```
-brew install autoenv
-```
-After Install:
-```
+Install Autoenv to manage having different aws access keys as environment variables.
+> NOTE: We should probably be moving to use [direnv](https://direnv.net/) soon.
+
+1. brew install autoenv
+1. After install run: ```
 echo "source $(brew --prefix autoenv)/activate.sh" >> ~/.bash_profile
 source ~/.bash_profile
+cd /sites/ycharts
+touch .env
+echo "\nexport AWS_ACCESS_KEY_ID=<YOUR YCHARTS ACCESS KEY>" >> /sites/ycharts/.env
+echo "\nexport AWS_SECRET_ACCESS_KEY=<YOUR YCHARTS SECRET KEY>" >> /sites/ycharts/.env
+echo "\nexport AWS_DEFAULT_REGION=us-east-1" >> /sites/ycharts/.env
+echo "\nssh-add -K ~/.ssh/ycharts-2014-01.pem" >> /sites/ycharts/.env
 ```
-
-Create an ".env" file in `/sites/ycharts` and add:
-
-```
-export AWS_ACCESS_KEY_ID=<YOUR YCHARTS ACCESS KEY>
-export AWS_SECRET_ACCESS_KEY=<YOUR YCHARTS SECRET KEY>
-export AWS_DEFAULT_REGION=us-east-1
-
-ssh-add -K ~/.ssh/ycharts-2014-01.pem
-```
-
-Now exit and enter the directory and make sure it's working!
+1. Test it is working by executing the below line.
 ```bash
 cd .
 ```
@@ -116,12 +107,6 @@ launchctl load ~/Library/LaunchAgents/com.ycharts.redis.plist
 redis-cli
 ```
 
-NOTE: If after the above, redis-server is not running, check the permissions of
-```
-/usr/local/var/log/
-```
-It should YOURUSERNAME:admin!
-
 ## Install MySQL
 
 ```bash
@@ -134,6 +119,7 @@ echo 'export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"' >> ~/.bash_profile
 ln -s /usr/local/opt/mysql@5.7 /usr/local/opt/mysql
 
 # Copy YCharts MySQL plist file to correct location so MySQL runs on startup
+mkdir -p ~/Library/LaunchAgents
 cp /sites/ycharts/confs/database/com.ycharts.mysql.plist ~/Library/LaunchAgents
 # Start MySQL now
 launchctl load ~/Library/LaunchAgents/com.ycharts.mysql.plist
