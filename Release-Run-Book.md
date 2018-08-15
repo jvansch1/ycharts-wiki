@@ -1,6 +1,10 @@
 # Overview
 In order to ensure key functions of our application work before releasing code from staging to production, we go through the following user behaviors on our staging environment. All the following actions should happen on [staging.ycharts.com](https://staging.ycharts.com).
 
+## Systems Import Command Dashboard.
+1. Check https://staging.ycharts.com/systems/review/important_command_dashboard/
+1. Any failures should be checked to make sure there is not a bug that is being introduced.
+
 ## Trial Signup
 1. Go to https://staging.ycharts.com/
 1. Click "Start 7 Day Trial"
