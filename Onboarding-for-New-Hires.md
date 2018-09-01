@@ -6,7 +6,8 @@ Your first week will be a little bit slower than most at YCharts as you get setu
     * Workstation (Desk, Keyboard, Monitor, etc)
       * [Chair Adjustment Guide](http://www.hermanmiller.com/content/dam/hermanmiller/documents/user_information/aeron_chairs_user_adjustment_guide.pdf)
     * Environment, IDE (Fox prefers PyCharm and will make your life better if you use it)
-    * Accounts (gmail, slack, github, etc.) See the list [here](https://github.com/ycharts/ycharts/wiki/Setting-Up-Accounts-for-New-Hires) and make sure you have access to all of them. If you don't, please reach out to [Fox](https://ycharts.slack.com/messages/D1KMWKJQN)
+    * Accounts (gmail, slack, github, etc.) 
+      * [Full list here](https://github.com/ycharts/ycharts/wiki/Setting-Up-Accounts-for-New-Hires) and make sure you have access to all of them. If you don't, please reach out to [Fox](https://ycharts.slack.com/messages/D1KMWKJQN)
     * Add gmail filter to account.
       * [Filter XML File](https://gist.githubusercontent.com/KFoxder/8d2dd7a99bdcf1d9fac8917dd3460bc4/raw/9da9f1dca4188d9fbc6fb7595beba80316a49a93/ychartsMailFilters.xml) Right click and "Save As.."
       * [Instructions on importing filter to gmail](https://support.neocloud.com/hc/en-us/articles/202770030-How-to-Export-Import-Gmail-Filters)
