@@ -136,7 +136,7 @@ they are added only as needed.
 
 * `admin.py` - defines how models can be viewed and edited in the [Django Admin](http://ycharts.com/admin/])
 * `admin_views.py` - defines custom views used in the [Django Admin](http://ycharts.com/admin/]) that relate to the app.
-* `app.py` - defines a custom `AppConfig` that can override the app's `verbose_name` (used in the Django Admin) or set up signals.
+* `apps.py` - defines a custom `AppConfig` that can override the app's `verbose_name` (used in the Django Admin) or set up signals.
 * `autocompleters.py` - defines autocompleter providers for use with [django-autocompleter](https://github.com/ara818/django-autocompleter)
 * `feeds.py` - defines any feeds the app produces (as a part of Django's standard syndication system)
 * `forms.py` - defines HTML forms necessary for the app
