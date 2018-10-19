@@ -27,7 +27,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
     ```
 
 ## Checkout Code
-1. Fork the `ycharts`, `ycharts_systems`, and `ycharts_chart_generator` repos by hitting the "Fork" button. ![Imgur](https://i.imgur.com/m4pVmux.png)
+1. Fork the `ycharts`, `ycharts_chart_generator`, and `ycharts_systems` repos by hitting the "Fork" button. ![Imgur](https://i.imgur.com/m4pVmux.png)
 1. Clone the `ycharts`, `ycharts_chart_generator`, and `ycharts_systems` repos
 
     ```bash
