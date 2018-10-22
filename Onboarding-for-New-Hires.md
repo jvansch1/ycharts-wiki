@@ -18,8 +18,9 @@ Your first week will be a little bit slower than most at YCharts as you get setu
     * Payroll/Insurance through Zenefits
     * 401k through ADP
 - [ ] Get some sweet YCharts gear 👕 📓 ! 
-- [ ] Download slack and pagerduty for your phone
+- [ ] Download Slack and Pagerduty for your phone. You will need both in general, but definitely on support.
 - [ ] Learn how to make an espresso or pour over coffee or both! ☕️ 
+- [ ] Dinner is on us if you stay past 7PM. Seamless login is on the pillar.
 - [ ] Participate in our daily scrum.
 - [ ] Eat a catered lunch on Friday with us.
 - [ ] Setup time for you to meet with some of our leaders in Chicago as well as New York.
