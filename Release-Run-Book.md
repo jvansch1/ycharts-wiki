@@ -95,6 +95,17 @@ In order to ensure key functions of our application work before releasing code f
 1. go to your inbox, and confirm you received the CER. Make sure the all the modules show up correctly, with the right Securitylists.
     - expect the `WeeklyMarketCommentaryModule` to be missing (only added on production) 
 
+## Model Portfolios
+1. go to [Model Portfolios list view](https://staging.ycharts.com/model_portfolios/list/)
+1. navigate to /new page via "Create New" and create a new Model Portfolio.
+1. hit `Save`. Confirm redirect to /edit page.
+1. You should see the state for the newly created Model Portfolio in calculating. Click on the portfolio to visit it's quote page.
+1. Unless the calculation already completed, you should only be able to see the status bar while it's calculation takes place.
+1. Once calculation finishes, go through each tab and make sure each module has data and looks correct.
+1. Navigate back to /list.
+1. `Duplicate` a model portfolio and verify its data gets calculated successfully.
+1. `Delete` the duplicated report.
+
 ## Company Pages
 
 ## Index Pages
