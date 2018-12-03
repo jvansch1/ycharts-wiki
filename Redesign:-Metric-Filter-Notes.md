@@ -15,6 +15,7 @@ Notes for Lucas, Kdab and Fox.
 1. Metric Equation Component (MVP)
     1. Start with just the ability to build sequentially forward (not editing in place, etc)
     1. Implement the logic that validates the equation at every change. This also means getting the CSS / messaging on the component correct. 
+    1. In general, when looking building it sequentially look at what we are currently doing in the metric filter.
     
  
 
