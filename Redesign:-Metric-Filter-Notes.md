@@ -15,6 +15,7 @@ Notes for Lucas, Kdab and Fox.
 1. Metric Equation Service 
     1. Build a purely js (no need for angular) class that can validate an equation (represented as an array of strings and integers)
     1. Write some sweet unit tests for this service that test all of the invalid and valid states of an equation.
+    1. Do we need to validate the entire equation ever? We definitely need to validate each side independently but is there ever a use case for passing the left, middle and right to be validated?
 1. Metric Equation Component (MVP)
     1. Start with just the ability to build sequentially forward (not editing in place, etc)
     1. Implement the logic that validates the equation at every change. This also means getting the CSS / messaging on the component correct. 
