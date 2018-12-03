@@ -20,7 +20,7 @@ Notes for Lucas, Kdab and Fox.
  
 
 
-
+- Think about breaking some of the logci up (when it feels right) to services, components, etc
 - Mapping middle of metric filter object to tab (on edit when opened with state)
 
 
