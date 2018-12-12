@@ -61,16 +61,32 @@ In order to ensure key functions of our application work before releasing code f
 1. Reset Data.
 
 ## Comparables Tables
-1. Create basic comparables tables with at least one of each security type.
-1. Add security list to table.
-1. Add metric to table.
+### Legacy Design
+1. Create a basic comparables table with at least one of each security type.
+1. Add a security list to table.
+1. Add a metric set to table.
+1. Add a single metric to table.
 1. Add info columns to table.
 1. Re-order columns of table.
-1. Add metric set to table.
 1. Add scoring model to table.
 1. Export data to CSV.
-1. Export data to excel.
-1. Reset Data.
+1. Export data to Excel.
+1. Reset all data.
+
+### New Design
+1. Create a basic comparables table with at least one of each security type.
+1. Add a security list to table.
+1. Add a security to a watchlist.
+1. Add a metric set to table.
+1. Add a single metric to table.
+1. Save the group of metrics as a new metric set.
+1. Add info columns to table.
+1. Re-order columns of table.
+1. Add scoring model to table.
+1. Open a different metric set; confirm the new metrics replace the old ones
+1. Export data to CSV.
+1. Export data to Excel.
+1. Reset all data.
 
 ## Custom Email Reports
 1. go to [CER list view](https://staging.ycharts.com/email_reports/list/)
