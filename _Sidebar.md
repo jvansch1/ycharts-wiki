@@ -38,7 +38,6 @@
   * [[Restoring Database]]
   * [[Upgrading MySQL]]
   * [[Useful MySQL Queries]]
-  * [[Copying Production DB to Staging]]
 * Webpack
   * [[Django Static File System Webpack Upgrade Docs]]
   * [[Debugging Webpack]]
