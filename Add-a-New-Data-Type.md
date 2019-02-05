@@ -8,7 +8,7 @@
 1. In `apps/main/static/main/js/number_format_reverser.js`, add the type to `getReverser()` and
    add an appropriate handling function if necessary.
 
-1. In `apps/main/utils/data_formatting_utils.py`, add handling for the new types in
+1. In `/sites/ycharts/ycharts/utils/data_formatting_utils.py`, add handling for the new types in
    `number_format_by_type()`, adding new functions if necessary.
 
 1. In `apps/indicators/models.py`, add the type to `DATA_TYPE_CHOICES`
