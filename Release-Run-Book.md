@@ -74,6 +74,7 @@ In order to ensure key functions of our application work before releasing code f
 1. Change the Date Range using the "Date Range" dropdown option
 1. Change the Date Range using the "Full Year" dropdown option
 1. Change the Data Format properties (e.g. Frequency, Aggregation, Fill Method).
+1. Add summary stats.
 1. Test pagination
 1. Export data to CSV.
 1. Reset all data.
