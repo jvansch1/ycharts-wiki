@@ -161,7 +161,7 @@ and you will have a fresh MySQL 5.7 database! Once the below command finishes, y
 
 
 ## Create Your Virtual Machine
-1. Install [Vagrant 2.1.1](https://releases.hashicorp.com/vagrant/2.1.1/vagrant_2.1.1_x86_64.dmg)
+1. Install [Vagrant 2.1.2](https://releases.hashicorp.com/vagrant/2.1.2/vagrant_2.1.2_x86_64.dmg)
 2. Install [Virtualbox 5.2.16](https://download.virtualbox.org/virtualbox/5.2.16/VirtualBox-5.2.16-123759-OSX.dmg)
 
 ### Provision your Virtual Machine
