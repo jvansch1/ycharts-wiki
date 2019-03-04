@@ -32,3 +32,10 @@ Now you should be able to provision the new developer box:
 ```
 vagrant up bionic --provision --run_initial_setup
 ```
+
+Once that finishes running, test it out by sshing into the new Vagrant box and running the Django server.
+`ycharts`:
+```sh
+vagrant ssh bionic
+yc_django
+```
