@@ -45,3 +45,8 @@ Once that finishes running, test it out by sshing into the new Vagrant box and r
 vagrant ssh bionic
 yc_django
 ```
+
+Then the next time you want to start up the new vagrant dev box, the command will just be:
+```sh
+vagrant up bionic
+```
