@@ -17,6 +17,11 @@ workon ycharts_systems
 vagrant halt default
 ```
 
+Make sure you have the latest versions of both Ansible and Vagrant.
+- [Vagrant 2.1.2](https://releases.hashicorp.com/vagrant/2.1.2/vagrant_2.1.2_x86_64.dmg)
+- [Virtualbox 5.2.16](https://download.virtualbox.org/virtualbox/5.2.16/VirtualBox-5.2.16-123759-OSX.dmg)
+
+
 Now install requirements.txt to update our packages in ycharts_systems.
 `ycharts_systems`:
 ```sh
@@ -31,7 +36,7 @@ Then try pip installing again.
 
 Last step before we provision the new developer box is to delete the old network configuration created by VirtualBox. To do this:
 ```
-Open Virtual Box -> Preferences -> Network -> Host-only Networks -> Delete the vboxnet0 network
+Open Virtual Box -> Global Tools (top right hand side) -> Delete the vboxnet0 network
 ```
 
 Now you should be able to provision the new developer box:
