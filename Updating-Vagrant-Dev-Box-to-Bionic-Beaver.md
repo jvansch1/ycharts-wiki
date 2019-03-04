@@ -23,6 +23,12 @@ Now install requirements.txt to update our packages in ycharts_systems.
 pip install -r requirements.txt
 ```
 
+If running into an SSL CERT error when trying to install requirements, try the following in `ycharts_systems`:
+```sh
+curl https://bootstrap.pypa.io/get-pip.py | python
+```
+Then try pip installing again.
+
 Last step before we provision the new developer box is to delete the old network configuration created by VirtualBox. To do this:
 ```
 Open Virtual Box -> Preferences -> Network -> Host-only Networks -> Delete the vboxnet0 network
