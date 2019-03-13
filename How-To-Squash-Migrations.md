@@ -56,7 +56,7 @@ python /sites/ycharts/manage.py migrate --fake
 1. On Production (after it runs on staging for at least 1 day, preferably 2):
   1. Prepare a [full deploy](https://github.com/ycharts/ycharts_systems/wiki/Deploy-and-Hotfix-%5BYCharts%5D) to production
   1. Run `ycharts_deploy production --manual_migration`
-  1. Log into the production mysql db by `ycharts_ssh production migrations_admin` and then `mysql -u ycharts -A -per45qw -h [PRODUCTION_DB_HOST] ycharts`
+  1. Log into the production mysql db by `ycharts_ssh production migrations_admin` and then `mysql -u ycharts -A -p[PASSWORD] -h [PRODUCTION_DB_HOST] ycharts`
   1. In mysql shell run: `delete from django_migrations;`
   1. Run `python /sites/ycharts/manage.py migrate --fake`
   1. Let the deploy finish by hitting enter.
