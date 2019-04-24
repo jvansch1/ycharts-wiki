@@ -76,7 +76,7 @@ After a major deploy, always check deployment notes. Sometimes migrations and ne
 # Getting Started With Development
 
 ## Setting up a development environment
-The initial setup of a working development environment can be tricky. Talk to any developers with questions, but start with our [dev setup docs](https://github.com/ycharts/ycharts/wiki/Dev-Env-Setup).
+The initial setup of a working development environment can be tricky. Talk to any developers with questions, but start with our [dev setup docs](https://github.com/ycharts/ycharts/wiki/Developer-Environment-Setup).
 
 ## Style
 Maintaining a clean and consistent style is important to us. As part of the development environment we have
