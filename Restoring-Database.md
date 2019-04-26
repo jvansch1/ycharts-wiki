@@ -34,11 +34,3 @@ Copy the `ycharts_db` folder from the DB Restore machine to your home directory 
 #     -g Override the group of the destination directory (defaults to current group)
 
 ```
-
-## Logical Dump Method
-
-Make sure `ycharts_all.sql` is in your home folder (`~`), then:
-
-```bash
-fab restore_db
-```
