@@ -1,9 +1,11 @@
 ## YCharts Offboarding
 
-Remove all the items on the [[Setting Up Accounts for New Hires]] page.
+#### Accounts
+* Remove all the items on the [[Setting Up Accounts for New Hires]] page.
 
 #### Google Suite
 * Before deleting them, transfer their files following this [guide](https://support.google.com/a/answer/1247799)
+
 #### AWS
 * Delete their IAM role from the main YCharts account
 * Delete their IAM role from the YCharts Data account
@@ -11,6 +13,9 @@ Remove all the items on the [[Setting Up Accounts for New Hires]] page.
 #### YCharts.com
 * Delete their @ycharts.com account.
 * If it exists, remove "is_staff" access to the user's personal accounts on ycharts.com
+
+#### Update `git_config`
+* Update the [`git_config` here](https://github.com/ycharts/ycharts/blob/develop/confs/developers/git_config). 
 
 #### Wipe Computer
 
