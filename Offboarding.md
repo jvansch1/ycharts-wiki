@@ -3,7 +3,7 @@
 Remove all the items on the [[Setting Up Accounts for New Hires]] page.
 
 #### Google Suite
-* Before deleting them, transfer their files following this [guide]()
+* Before deleting them, transfer their files following this [guide](https://support.google.com/a/answer/1247799)
 #### AWS
 * Delete their IAM role from the main YCharts account
 * Delete their IAM role from the YCharts Data account
