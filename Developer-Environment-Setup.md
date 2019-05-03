@@ -165,11 +165,13 @@ and you will have a fresh MySQL 5.7 database! Once the below command finishes, y
 ```
 
 ## Setup ycharts_systems
-1. Follow the steps in this Wiki [`ycharts_systems` Developer Environment Setup](https://github.com/ycharts/ycharts_systems/wiki/Development-Environment-Setup#checkout-code).
-    - Start from the section [Checkout Code](https://github.com/ycharts/ycharts_systems/wiki/Development-Environment-Setup#checkout-code). Reason is some of the steps in the `ycharts` setup are also present in the `ycharts_systems` setup. There is no need to repeat these steps.
+Before you can fully complete the setup of your `ycharts` repo. You will need to setup the `ycharts_systems` repo. The reason for this is that the `ycharts_systems` repo contains the machine configuration code that is used to provision your vagrant box that serves as your local Linus VM for development.
 
+1. Follow the steps in this Wiki [`ycharts_systems` Developer Environment Setup](https://github.com/ycharts/ycharts_systems/wiki/Development-Environment-Setup#checkout-code).
+    - Start from the section [Checkout Code](https://github.com/ycharts/ycharts_systems/wiki/Development-Environment-Setup#checkout-code). The reason is some of the steps in the `ycharts` setup are also present in the `ycharts_systems` setup. There is no need to repeat these steps.
 
 ## Create Your Virtual Machine
+Now you will need to create your local Linux VM machine that will serve as your local development environment.
 1. Install [Vagrant 2.1.2](https://releases.hashicorp.com/vagrant/2.1.2/vagrant_2.1.2_x86_64.dmg)
 2. Install [Virtualbox 5.2.16](https://download.virtualbox.org/virtualbox/5.2.16/VirtualBox-5.2.16-123759-OSX.dmg)
 
@@ -192,13 +194,16 @@ yc_django
 ```
 
 #### Initialize Lists and Sets
-You need to run Celery to actually get the lists you need!
+What are list and sets? Good question! So when we talk about "lists" and "sets" we are usually referring to the list and sets we store in redis. They power parts of our application and to have a fully setup local environment you will need to populate the redis you installed in the previous steps.
+
+1. In order to populate redis we need Celery to be running.
 ```bash
+# Start Celery
 vagrant ssh
 yc_celery
+# do not close this window. Let it sit.
 ```
-
-Now, while Celery is running in a new ssh session
+2. Open a new window on your Terminal and SSH into your vagrant box.
 ```bash
 vagrant ssh
 python manage.py security_lists_store_lists_and_sets
@@ -230,7 +235,5 @@ user.save()
 1. Now once you are inside your vagrant instance run `yc_django` and go to `http://0.0.0.0:8000/admin/` to log in. 
 1. From here, head to `Users` section and create a PartnerSubscription for your account. ![](https://imgur.com/RuJsro3.png)  ![](https://imgur.com/UkMLmTl.png)
 1. Add your user to the [YCharts Staff Client Group](http://localhost:8000/admin/accounts/clientgroup/62/) [![Screenshot from Gyazo](https://gyazo.com/faf60276b187e0622509315ec3160696/raw)](https://gyazo.com/faf60276b187e0622509315ec3160696)
-
-
 
 > Note: You should now have access to all features in your local environment however you will need to do the same in staging and production. 
