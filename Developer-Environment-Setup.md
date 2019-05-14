@@ -206,7 +206,9 @@ yc_celery
 2. Open a new window on your Terminal and SSH into your vagrant box.
 ```bash
 vagrant ssh
-python manage.py security_lists_store_lists_and_sets
+python /sites/ycharts/manage.py calculations_store_sets
+python /sites/ycharts/manage.py securities_info_store_sets
+python /sites/ycharts/manage.py security_lists_store_lists_and_sets
 ```
 > NOTE: This will take a few hours. While this is happening, configure your PyCharm editor.
 
