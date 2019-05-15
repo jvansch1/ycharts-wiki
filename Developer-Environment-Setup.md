@@ -117,6 +117,7 @@ redis-cli
 brew install mysql@5.7
 
 echo 'export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"' >> ~/.bash_profile
+source ~/.bash_profile
 
 # Make a symlink so generic mysql commands link to 5.7 version
 ln -s /usr/local/opt/mysql@5.7 /usr/local/opt/mysql
