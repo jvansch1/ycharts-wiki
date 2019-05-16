@@ -63,6 +63,7 @@ In order to ensure key functions of our application work before releasing code f
 1. Add summary stats.
 1. Test pagination
 1. Export data to CSV.
+1. Export data to Excel.
 1. Reset all data.
 
 ## Comparables Tables
