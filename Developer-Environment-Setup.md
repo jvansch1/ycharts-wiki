@@ -6,7 +6,6 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 ```
 
 ## Setting up Git
-1. Create a github account and tell an admin to add your username to YCharts.
 1. Create an private/public key and tie it to your github account.
     * Follow the instructions here: https://help.github.com/articles/connecting-to-github-with-ssh/
 1. Configure so your SSH passphrase is remembered.
