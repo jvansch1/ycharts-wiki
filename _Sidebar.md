@@ -1,10 +1,6 @@
 **Onboarding**
 * [[Onboarding for New Hires]]
   * [[Required Reading List]]
-  * [[Product Demo Outline]]
-  * [[Frontend Demo Outline]]
-  * [[Backend Demo Outline]]
-  * [[Systems Demo Outline]]
   * [[Development Process Outline]]
 * [[Setting Up Accounts for New Hires]]
 * [[Developer Environment Setup]]
