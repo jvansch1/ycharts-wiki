@@ -14,7 +14,6 @@ The following is a description of the major components of our technology stack.
 * [Pandas](http://pandas.pydata.org/) is a library for ultra-fast financial timeseries transformations. We use it whenever we need to perform operations on timeseries (like calculating Total Return Price, resampling daily data into weekly, etc)
 * [django-autocompleter](https://github.com/ara818/django-autocompleter) is our Redis-backed autocompleter. It ties tightly into Django models and provides super-fast results. It supports a variety of fancy features specific to an autocompleter of financial data like aliasing abbreviations, autocompleting on multiple terms for one object (i.e. Apple or AAPL)
 * [django-pipeline](https://github.com/cyberdelia/django-pipeline) bundles, compresses and minifies our JS and CSS for efficient serving on the site.
-* [Fabric](http://docs.fabfile.org/en/1.4.1/index.html) is used for our automated deployment process.
 
 ## Some Notable JS Libraries We Use
 * [Angular.js](http://angularjs.org/) is how all our JS apps are built. We use it for building front-end widgets and controls, for building single-page stateful apps, etc.
