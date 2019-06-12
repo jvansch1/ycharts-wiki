@@ -46,4 +46,4 @@ This is really helpful for spotting Javascript related issues before you get cau
 ## reStructuredText Configuration
 This is useful for writing doc strings.
 1. In PyCharm go to: `Preferences | Tools | Python Integrated Tools`
-2. ![Imgur](https://imgur.com/k7DXSFf)
+2. ![Imgur](https://i.imgur.com/k7DXSFf)
