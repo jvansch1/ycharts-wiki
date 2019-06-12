@@ -190,6 +190,7 @@ vagrant --run_initial_setup up --provision
 # so that you can access it from your machine at 127.0.0.1:8000
 
 vagrant ssh
+yc_migrate
 yc_django
 ```
 
