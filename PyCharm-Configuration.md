@@ -42,3 +42,8 @@ This is really helpful for spotting Javascript related issues before you get cau
 2. In PyCharm go to: `Preferences | Languages & Frameworks | JavaScript | Code Quality Tools | ESLint`
 3. Copy setting like below
 ![Imgur](https://i.imgur.com/YxskZEr.png)
+
+## reStructuredText Configuration
+This is useful for writing doc strings.
+1. In PyCharm go to: `Preferences | Tools | Python Integrated Tools`
+2. ![Imgur](https://imgur.com/a/b2GoNaq)
