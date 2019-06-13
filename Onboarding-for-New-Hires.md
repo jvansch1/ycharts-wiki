@@ -8,6 +8,7 @@ Your first week will be a little bit slower than most at YCharts as you get setu
     * Environment, IDE (Fox prefers PyCharm and will make your life better if you use it)
     * Accounts (gmail, slack, github, etc.) 
       * [Full list here](https://github.com/ycharts/ycharts/wiki/Setting-Up-Accounts-for-New-Hires) and make sure you have access to all of them. If you don't, please reach out to [Fox](https://ycharts.slack.com/messages/D1KMWKJQN)
+      * Download the slack desktop application [link](https://slack.com/downloads/mac)
     * Add gmail filter to account.
       * [Filter XML File](https://gist.githubusercontent.com/KFoxder/8d2dd7a99bdcf1d9fac8917dd3460bc4/raw/9da9f1dca4188d9fbc6fb7595beba80316a49a93/ychartsMailFilters.xml) Right click and "Save As.."
       * [Instructions on importing filter to gmail](https://support.google.com/mail/answer/6579?hl=en)
