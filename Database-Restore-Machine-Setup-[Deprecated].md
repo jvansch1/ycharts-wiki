@@ -1,3 +1,6 @@
+# DEPRECATED
+Please see https://github.com/ycharts/ycharts/wiki/Mac-Mini-(Database-Restore-Machine)-Setup-Guide
+
 ### Setting Up OS X
 
 When installing OS X or setting up for the first time
