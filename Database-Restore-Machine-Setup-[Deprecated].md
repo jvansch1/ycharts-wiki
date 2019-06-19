@@ -1,5 +1,5 @@
 # DEPRECATED
-Please see https://github.com/ycharts/ycharts/wiki/Mac-Mini-(Database-Restore-Machine)-Setup-Guide
+Please see [[Mac Mini (Database Restore Machine) Setup Guide]]
 
 ### Setting Up OS X
 
