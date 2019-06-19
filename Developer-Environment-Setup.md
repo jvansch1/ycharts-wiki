@@ -2,7 +2,7 @@
 Install Homebrew for easier package management. This will also prompt you about XCode and install it for you.
 
 ```bash
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
 ## Setting up Git
