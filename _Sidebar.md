@@ -29,6 +29,7 @@
   * [[Git Revert and Reset]]
 * Redis
   * [[Restoring Redis]]
+  * [[YCharts Redis Tutorial]]
 * MySQL
   * [[General Notes]]
   * [[Restoring Database]]
