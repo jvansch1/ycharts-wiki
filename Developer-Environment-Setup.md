@@ -75,15 +75,15 @@ source ~/.bash_profile
 cd /sites/ycharts
 
 touch .env
-echo "\nexport AWS_ACCESS_KEY_ID=<YOUR YCHARTS ACCESS KEY>" >> /sites/ycharts/.env
-echo "\nexport AWS_SECRET_ACCESS_KEY=<YOUR YCHARTS SECRET KEY>" >> /sites/ycharts/.env
-echo "\nexport AWS_DEFAULT_REGION=us-east-1" >> /sites/ycharts/.env
-echo "\nssh-add -K ~/.ssh/ycharts-2014-01.pem" >> /sites/ycharts/.env
+echo "export AWS_ACCESS_KEY_ID=<YOUR YCHARTS ACCESS KEY>" >> /sites/ycharts/.env
+echo "export AWS_SECRET_ACCESS_KEY=<YOUR YCHARTS SECRET KEY>" >> /sites/ycharts/.env
+echo "export AWS_DEFAULT_REGION=us-east-1" >> /sites/ycharts/.env
+echo "ssh-add -K ~/.ssh/ycharts-2014-01.pem" >> /sites/ycharts/.env
 
 touch /sites/ycharts/confs/developers/vagrant_bash_profile_local
-echo "\nexport AWS_ACCESS_KEY_ID=<YOUR YCHARTS ACCESS KEY>" >> /sites/ycharts/confs/developers/vagrant_bash_profile_local
-echo "\nexport AWS_SECRET_ACCESS_KEY=<YOUR YCHARTS SECRET KEY>" >> /sites/ycharts/confs/developers/vagrant_bash_profile_local
-echo "\nexport AWS_DEFAULT_REGION=us-east-1" >> /sites/ycharts/confs/developers/vagrant_bash_profile_local
+echo "export AWS_ACCESS_KEY_ID=<YOUR YCHARTS ACCESS KEY>" >> /sites/ycharts/confs/developers/vagrant_bash_profile_local
+echo "export AWS_SECRET_ACCESS_KEY=<YOUR YCHARTS SECRET KEY>" >> /sites/ycharts/confs/developers/vagrant_bash_profile_local
+echo "export AWS_DEFAULT_REGION=us-east-1" >> /sites/ycharts/confs/developers/vagrant_bash_profile_local
 ```
 
 ## Install Redis
