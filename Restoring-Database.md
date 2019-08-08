@@ -13,7 +13,7 @@ Copy the `ycharts_db` folder from the DB Restore machine to your home directory 
 # To run with default values (should work if mysql was installed via Homebrew)
 /sites/ycharts/scripts/restore_database.sh
 
-# To copy instead of move files
+# To copy instead of move files (THIS IS MUCH BETTER!!!!!!!)
 /sites/ycharts/scripts/restore_database.sh -c
 
 # To specify a different source directory
