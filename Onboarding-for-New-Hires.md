@@ -2,17 +2,18 @@
 ### Week 1
 Your first week will be a little bit slower than most at YCharts as you get setup and meet our team. We encourage your to **write down as much as you can** and there are never too many questions.
 
-- [ ] On your couple of days you will need to setup a few things:
+- [ ] On your couple of days you will need to setup a few things. The following setup items are **required** not optional so do each of them:
     * Workstation (Desk, Keyboard, Monitor, etc)
       * [Chair Adjustment Guide](http://www.hermanmiller.com/content/dam/hermanmiller/documents/user_information/aeron_chairs_user_adjustment_guide.pdf)
-    * Environment, IDE (Fox prefers PyCharm and will make your life better if you use it)
-    * Accounts (gmail, slack, github, etc.) 
-      * [Full list here](https://github.com/ycharts/ycharts/wiki/Setting-Up-Accounts-for-New-Hires) and make sure you have access to all of them. If you don't, please reach out to [Fox](https://ycharts.slack.com/messages/D1KMWKJQN)
+    * Environment, IDE (We as a team use PyCharm and will make your life better if you use it)
+      * [Download the latest Professional version](https://www.jetbrains.com/pycharm/download/#section=mac). Sign up for the trial and once it expires let Fox know so he can add you to the account.
+    * External Accounts Setup
+      * Go through the [full list](https://github.com/ycharts/ycharts/wiki/Setting-Up-Accounts-for-New-Hires) accounts one by one and make sure you have access to all of them. You should have received emails from each of them asking you to confirm joining. If you don't have access and can not find the email for any of those accounts, please reach out to [Fox](https://ycharts.slack.com/messages/D1KMWKJQN). It is very important that you are able to login to each of them.
       * Download the slack desktop application [link](https://slack.com/downloads/mac)
-    * Add gmail filter to account.
+    * Add gmail filter to account so you are not spammed by unnecessary emails. This is not optional, this is a required step. If you have trouble applying the mail filter please let someone know.
       * [Filter XML File](https://gist.githubusercontent.com/KFoxder/8d2dd7a99bdcf1d9fac8917dd3460bc4/raw/9da9f1dca4188d9fbc6fb7595beba80316a49a93/ychartsMailFilters.xml) Right click and "Save As.."
       * [Instructions on importing filter to gmail](https://support.google.com/mail/answer/6579?hl=en)
-    * Add Zenefits vacation calendar in GCal so you know when other people are away
+    * Add Zenefits vacation calendar in Google Calendar so you know when other people are away.
       * [Instructions on how to add the calendar](https://help.zenefits.com/Time_Off/FAQs_About_Calendars_in_Zenefits/How_do_I_add_a_Zenefits_calendar_to_Google_Calendar%3F/)
       * Link to use in the above instructions: `webcal://secure.zenefits.com/custom_api/pto/cal/company_pto/591980?token=4wyCR_VQ_6&loc=ODc3NDY=&dept=`
 
