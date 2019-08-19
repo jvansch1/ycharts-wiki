@@ -32,7 +32,6 @@ Install Homebrew for easier package management. This will also prompt you about 
     ```bash
     git clone git@github.com:ycharts/ycharts.git
     git clone git@github.com:ycharts/ycharts_chart_generator.git
-    git clone git@github.com:ycharts/ycharts_systems.git
     ```
 
 1. Copy git configs to correct locations so you can push/pull
