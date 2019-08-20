@@ -16,7 +16,7 @@ For PyCharm to function correctly you really need to setup the project interpret
 2. Navigate to `Project:ycharts | Project Interpreter`.
 3. Click on the ![Imgur](https://i.imgur.com/fRgFpZz.png) icon in the right hand corner and select `Add...`
 4. Then choose the below options.
-![Imgur](https://i.imgur.com/yrzqPUJ.png)
+![Imgur](https://imgur.com/a/ak3SHvR)
 5. Click "Apply"
 
 ## Project Structure Setup
