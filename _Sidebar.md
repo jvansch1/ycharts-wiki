@@ -15,7 +15,6 @@
 * [[Code Principles]]
 * [[YCharts Core Values]]
 * [[YCharts Engineering Principles]]
-* [[Pull Request Review Checklist]]
 
 **Developer Notes**
 * Django
@@ -39,9 +38,7 @@
   * [[Django Static File System Webpack Upgrade Docs]]
   * [[Debugging Webpack]]
 * Tools
-  * [[Sublime]]
   * [[PyCharm Configuration]]
-  * [[Vim Notes]]
 * Amazon
   * [[IP Switch Guide]]
   * [[Connecting to AWS Servers]]
