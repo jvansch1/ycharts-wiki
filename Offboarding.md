@@ -12,7 +12,7 @@
 
 #### YCharts.com
 * Delete their @ycharts.com account.
-* If it exists, remove "is_staff" access to the user's personal accounts on ycharts.com
+* If it exists, remove "is_staff" or "is_superuser" access to the user's personal accounts on ycharts.com
 
 #### Update `git_config`
 * Update the [`git_config` here](https://github.com/ycharts/ycharts/blob/develop/confs/developers/git_config). 
