@@ -107,7 +107,7 @@ In order to ensure key functions of our application work before releasing code f
 ## Model Portfolios
 1. go to [Model Portfolios list view](https://staging.ycharts.com/model_portfolios/list/)
 1. navigate to /new page via "Create New" and create a new Model Portfolio.
-1. hit `Save`. Confirm redirect to /edit page.
+1. hit `Save`. Confirm redirect to /list page.
 1. You should see the state for the newly created Model Portfolio in calculating. Click on the portfolio to visit it's quote page.
 1. Unless the calculation already completed, you should only be able to see the status bar while it's calculation takes place.
 1. Once calculation finishes, go through each tab and make sure each module has data and looks correct.
