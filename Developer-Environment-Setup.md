@@ -174,6 +174,27 @@ Now you will need to create your local Linux VM machine that will serve as your 
 1. Install [Vagrant 2.1.2](https://releases.hashicorp.com/vagrant/2.1.2/vagrant_2.1.2_x86_64.dmg)
 2. Install [Virtualbox 5.2.16](https://download.virtualbox.org/virtualbox/5.2.16/VirtualBox-5.2.16-123759-OSX.dmg)
 
+### Configure NFS
+1. Open `/etc/sudoers` file with your preferred editor as root.
+```
+sudo nano /etc/sudoers
+```
+2. Add `Cmnd_Alias` entries. Under the line `# Cmnd alias specification`
+```
+# Cmnd alias specification
+Cmnd_Alias VAGRANT_EXPORTS_ADD = /usr/bin/tee -a /etc/exports
+Cmnd_Alias VAGRANT_NFSD = /sbin/nfsd restart
+Cmnd_Alias VAGRANT_EXPORTS_REMOVE = /usr/bin/sed -E -e /*/ d -ibak /etc/exports
+```
+3. Add User priveleges. The `# User privilege specification` should look like.
+```
+# User privilege specification
+root    ALL=(ALL) ALL
+%admin  ALL=(ALL) ALL
+%admin ALL=(root) NOPASSWD: VAGRANT_EXPORTS_ADD, VAGRANT_NFSD, VAGRANT_EXPORTS_REMOVE
+```
+4. Save and close the `/etc/sudoers` file. You are good to go.
+
 ### Provision your Virtual Machine
 1. Run the below commands
 ```
