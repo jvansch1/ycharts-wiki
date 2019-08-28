@@ -19,4 +19,4 @@
 
 #### Wipe Computer
 
-
+#### Notify Nick or Ara of offboarding to document security management tasks
