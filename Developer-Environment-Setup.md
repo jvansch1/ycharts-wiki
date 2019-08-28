@@ -175,6 +175,8 @@ Now you will need to create your local Linux VM machine that will serve as your 
 2. Install [Virtualbox 5.2.16](https://download.virtualbox.org/virtualbox/5.2.16/VirtualBox-5.2.16-123759-OSX.dmg)
 
 ### Configure NFS
+More detailed instructions of configuring your NFS can be found in Vagrant's [documentation](https://www.vagrantup.com/docs/synced-folders/nfs.html#root-privilege-requirement), however, the following steps is all you should need to do.
+
 1. Open `/etc/sudoers` file with your preferred editor as root.
 ```
 sudo nano /etc/sudoers
