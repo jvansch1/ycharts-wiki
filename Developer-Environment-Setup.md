@@ -1,4 +1,4 @@
-### FileVault
+### Enable FileVault
 For security purposes, all of our machines need to have encrypted hard disks. Before you do anything on your computer you will need to install FileVault. Please read the following steps:
 
 1. Note before following the guide remember to:
@@ -8,7 +8,7 @@ For security purposes, all of our machines need to have encrypted hard disks. Be
 1. Once it is completed (this can take a few hours) please notify Fox or Ara so they can verify and mark it internally.
 
 
-### Homebrew (Mac)
+### Install Homebrew
 Install Homebrew for easier package management. This will also prompt you about XCode and install it for you.
 
 ```bash
