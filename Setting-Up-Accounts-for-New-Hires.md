@@ -31,10 +31,13 @@ If the person is a developer, invite them to the various engineering channels.
 ## Lucidcharts
 
 ## YCharts.com
-Have the person create an account at http://ycharts.com if they don't already have one, give them staff access. If person is developer, add them to the following groups (web_admin, systems, testers). If not a developer, add them to web_admin.
+Repeat the following steps for production and staging.
 
-Have the person create an account at http://staging.ycharts.com if they don't already have one, give them staff access. If person is a developer, add them to the following groups (web_admin, systems, testers). If not a developer, add them to web_admin.
-They should use the same password as the account on http://ycharts.com
+1. Create User in YCharts Admin
+1. Give them a Partner Subscription with YCharts as the Partner
+1. Give them Staff Status
+1. Give them `web_admins`, `testers` and `systems` group access
+1. Add them to the YCharts Staff Client Group
 
 
 ## Optional Accounts
