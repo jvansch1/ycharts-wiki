@@ -42,10 +42,3 @@ They should use the same password as the account on http://ycharts.com
 If the person is interested in analytics:
 
 1. Give their @ycharts.com google account access to Google Analytics
-
-If the person will be directly involved in hiring:
-Log in as operator@ycharts.com at http://theresumator.com and add their @ycharts.com account to the YCharts account
-
-If the person will be directly involved in customer service:
-Log in as operator@ycharts.com at http://zendesk.com and add their @ycharts.com account to the YCharts account,
-as a customer service agent. Note: We pay per account for this, so don't do this if not needed!
