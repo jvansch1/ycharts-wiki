@@ -6,6 +6,8 @@ Set up an e-mail address at http://google.com/a/ycharts.com
 3. If person is in Chicago, add to chicago@ycharts.com group
 
 ## Meraki
+1. Setup their Wifi password account
+1. Set up their VPN account
 
 ## Pivotal Tracker
 Set up an account at http://www.pivotaltracker.com
