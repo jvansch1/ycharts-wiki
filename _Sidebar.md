@@ -27,7 +27,7 @@
   * [[Random Git Notes]]
   * [[Git Revert and Reset]]
 * Travis
-  * [[Debugging Travis builds]]
+  * [[Debugging Travis CI builds]]
 * Redis
   * [[Restoring Redis]]
   * [[YCharts Redis Tutorial]]
