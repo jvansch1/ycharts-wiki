@@ -17,6 +17,10 @@
 #### Update `git_config`
 * Update the [`git_config` here](https://github.com/ycharts/ycharts/blob/develop/confs/developers/git_config). 
 
+#### Git secret remove user
+
+#### AWS Authorized keys/users remove
+
 #### Wipe Computer
 
 #### Notify Nick or Ara of offboarding to document security management tasks
