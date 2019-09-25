@@ -293,3 +293,21 @@ user.save()
 1. Add your user to the [YCharts Staff Client Group](http://localhost:8000/admin/accounts/clientgroup/62/) [![Screenshot from Gyazo](https://gyazo.com/faf60276b187e0622509315ec3160696/raw)](https://gyazo.com/faf60276b187e0622509315ec3160696)
 
 > Note: You should now have access to all features in your local environment however you will need to do the same in staging and production. 
+
+## Day-to-Day Dev Environment Launch
+Any day you are doing development that requires browser access the development site you should:
+
+Start Terminal tab #1 and do:
+```
+cd /sites/ycharts
+vagrant up
+vagrant ssh
+yc_django
+```
+
+Start Terminal tab #2 and do:
+```
+cd /sites/ycharts
+nvm use 8
+npm run dev
+```
