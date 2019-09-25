@@ -295,7 +295,7 @@ user.save()
 > Note: You should now have access to all features in your local environment however you will need to do the same in staging and production. 
 
 ## Day-to-Day Dev Environment Launch
-Any day you are doing development that requires browser access the development site you should:
+Any day you are doing development that requires browser access to the local development site you should:
 
 Start Terminal tab #1 and do:
 ```
