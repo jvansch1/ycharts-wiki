@@ -95,13 +95,23 @@ echo "export AWS_SECRET_ACCESS_KEY=<YOUR YCHARTS SECRET KEY>" >> /sites/ycharts/
 echo "export AWS_DEFAULT_REGION=us-east-1" >> /sites/ycharts/confs/developers/vagrant_bash_profile_local
 ```
 
-## Install NVM
+## Install NVM and Node dependencies
+
+### Install NVM and set up so it runs for each new terminal session
 ```
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
 
 echo "export NVM_DIR=\"$HOME/.nvm\"" >> ~/.bash_profile
 echo "[ -s \"$NVM_DIR/nvm.sh\" ] && \. \"$NVM_DIR/nvm.sh\ # This loads nvm"  >> ~/.bash_profile
 echo "[ -s \"$NVM_DIR/bash_completion" ] && \. \"$NVM_DIR/bash_completion\" # This loads nvm bash_completion"  >> ~/.bash_profile
+```
+
+### Install dependencies
+```
+cd /sites/ycharts
+rm -rf /sites/ycharts/node_modules
+nvm use 8
+npm i
 ```
 
 ## Install Redis
