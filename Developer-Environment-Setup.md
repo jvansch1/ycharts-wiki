@@ -95,9 +95,7 @@ echo "export AWS_SECRET_ACCESS_KEY=<YOUR YCHARTS SECRET KEY>" >> /sites/ycharts/
 echo "export AWS_DEFAULT_REGION=us-east-1" >> /sites/ycharts/confs/developers/vagrant_bash_profile_local
 ```
 
-## Install NVM and Node dependencies
-
-### Install NVM and set up so it runs for each new terminal session
+## Install NVM
 ```
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
 
@@ -105,14 +103,6 @@ echo "export NVM_DIR=\"$HOME/.nvm\"" >> ~/.bash_profile
 echo "[ -s \"$NVM_DIR/nvm.sh\" ] && \. \"$NVM_DIR/nvm.sh\" # This loads nvm"  >> ~/.bash_profile
 echo "[ -s \"$NVM_DIR/bash_completion\" ] && \. \"$NVM_DIR/bash_completion\" # This loads nvm bash_completion"  >> ~/.bash_profile
 source ~/.bash_profile
-```
-
-### Install dependencies
-```
-cd /sites/ycharts
-rm -rf /sites/ycharts/node_modules
-nvm use 8
-npm i
 ```
 
 ## Install Redis
@@ -294,20 +284,28 @@ user.save()
 
 > Note: You should now have access to all features in your local environment however you will need to do the same in staging and production. 
 
-## Day-to-Day Dev Environment Launch
-Any day you are doing development that requires browser access to the local development site you should:
+## Running Webpack Locally
+Our newer redesigned frontend uses webpack to compile and bundle our frontend static assets. When running the site locally webpack has the ability to watch for any file changes and re-compile any JS or CSS if the files change. This process is known as "hot reloading". This feature makes it very easy to write JS and reload your local page and see the changes you made take effect immediately.
 
-Start Terminal tab #1 and do:
+#### Webpack Hot Reloading
+To get webpack to hot reload your assets you need to run:
 ```
 cd /sites/ycharts
-vagrant up
-vagrant ssh
-yc_django
-```
-
-Start Terminal tab #2 and do:
-```
-cd /sites/ycharts
-nvm use 8
 npm run dev
 ```
+
+If you run `npm run dev` in your Vagrant Virtual Machine you will notice that it takes a long time to pick up any file changes because the virtual machine is accessing your Mac's filesystem via NFS. So the way to get hot-reloading to work well is to run it on your Mac host machine. To do this you need to do the following:
+```
+cd /sites/ycharts
+# Remove the node modules directory since it was installed on your VM with Linux and thus some packages are not compatible with your mac.
+rm -rf node_modules/ 
+# Tells your mac to use Node version 8
+nvm use 8 
+# Re-install node modules on your mac so they are compatible with the host machine. 
+npm i
+# Run webpack hot reloading
+npm run dev
+```
+
+**IMPORTANT NOTE:**
+When running webpack hot reloading on your local host machine (Mac), do not check in the `package-lock.json` if it is modified. You should only checkin the `package-lock.json` if you have modified anything in `package.json` and have run `npm run dev` within your vagrant machine. 
