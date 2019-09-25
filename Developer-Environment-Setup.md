@@ -179,7 +179,7 @@ or another developer's computer to your home folder (`~`). This will take around
 2. Once you have a copy of the database folder, you should be able to follow the
 [directions for restoring your database](https://github.com/ycharts/ycharts/wiki/Restoring-Database).
 and you will have a fresh MySQL 5.7 database! Once the below command finishes, you should have a fresh database.
-```
+```bash
 /sites/ycharts/scripts/restore_database.sh -c
 ```
 
@@ -198,7 +198,7 @@ Now you will need to create your local Linux VM machine that will serve as your 
 More detailed instructions of configuring your NFS can be found in Vagrant's [documentation](https://www.vagrantup.com/docs/synced-folders/nfs.html#root-privilege-requirement), however, the following steps is all you should need to do.
 
 1. Open `/etc/sudoers` file with your preferred editor as root.
-```
+```bash
 sudo nano /etc/sudoers
 ```
 2. Add `Cmnd_Alias` entries. Under the line `# Cmnd alias specification`
@@ -219,14 +219,14 @@ root    ALL=(ALL) ALL
 
 ### Provision your Virtual Machine
 1. Run the below commands
-```
+```bash
 cd /sites/ycharts
 workon ycharts_systems
 vagrant --run_initial_setup up --provision
 ```
 > This can take an hour or more.
 2. Test that the setup worked correctly.
-```
+```bash
 # Test Django
 # test django by running a webserver. this will load django
 # so that you can access it from your machine at 127.0.0.1:8000
@@ -289,13 +289,13 @@ Our newer redesigned frontend uses webpack to compile and bundle our frontend st
 
 #### Webpack Hot Reloading
 To get webpack to hot reload your assets you need to run:
-```
+```bash
 cd /sites/ycharts
 npm run dev
 ```
 
 If you run `npm run dev` in your Vagrant Virtual Machine you will notice that it takes a long time to pick up any file changes because the virtual machine is accessing your Mac's filesystem via NFS. So the way to get hot-reloading to work well is to run it on your Mac host machine. To do this you need to do the following:
-```
+```bash
 cd /sites/ycharts
 # Remove the node modules directory since it was installed on your VM with Linux and thus some packages are not compatible with your mac.
 rm -rf node_modules/ 
