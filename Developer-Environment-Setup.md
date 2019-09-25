@@ -102,7 +102,7 @@ echo "export AWS_DEFAULT_REGION=us-east-1" >> /sites/ycharts/confs/developers/va
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
 
 echo "export NVM_DIR=\"$HOME/.nvm\"" >> ~/.bash_profile
-echo "[ -s \"$NVM_DIR/nvm.sh\" ] && \. \"$NVM_DIR/nvm.sh\ # This loads nvm"  >> ~/.bash_profile
+echo "[ -s \"$NVM_DIR/nvm.sh\" ] && \. \"$NVM_DIR/nvm.sh\" # This loads nvm"  >> ~/.bash_profile
 echo "[ -s \"$NVM_DIR/bash_completion\" ] && \. \"$NVM_DIR/bash_completion\" # This loads nvm bash_completion"  >> ~/.bash_profile
 source ~/.bash_profile
 ```
