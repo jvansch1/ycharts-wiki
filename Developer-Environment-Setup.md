@@ -34,10 +34,24 @@ Install Homebrew for easier package management. This will also prompt you about 
     # Use username to chown /sites
     sudo chown -R `whoami` /sites/
     ```
+## Setting up Git-Secret
+1. Install `git-secret` via Homebrew
+    ```bash
+    brew install git-secret
+    ```
+1. Install `gpg`. 
+    ```bash
+    brew install gnupg
+    ```
+1. Create a `gpg` key. Follow the instructions [here](https://help.github.com/en/articles/generating-a-new-gpg-key#generating-a-gpg-key). 
+1. Send Fox or Tom your public key and ask them to add you to the keyring. Do not proceed until they have pushed your keyring. Ask them to confirm before proceeding.
+    ```bash
+    gpg --armor --export [KEY ID]
+    ```
 
 ## Checkout Code
 1. Fork the [`ycharts`](https://github.com/ycharts/ycharts), [`ycharts_chart_generator`](https://github.com/ycharts/ycharts_chart_generator), and [`ycharts_systems`](https://github.com/ycharts/ycharts_systems) repos by hitting the "Fork" button. ![Imgur](https://i.imgur.com/N5Y9E6a.png)
-1. Clone the `ycharts`, `ycharts_chart_generator`, and `ycharts_systems` repos
+1. Clone the `ycharts` and `ycharts_chart_generator` repos
 
     ```bash
     git clone git@github.com:ycharts/ycharts.git
@@ -50,10 +64,18 @@ Install Homebrew for easier package management. This will also prompt you about 
     echo "[include]\n    path = /sites/ycharts/confs/developers/git_config" > /sites/ycharts/.git/config
     ```
 
-1. Set up your git pre-commit hooks
+1. Set up your git hooks for the `ycharts` repo
 
     ```bash
     ln -s -f /sites/ycharts/confs/developers/git_pre_commit_hook.py /sites/ycharts/.git/hooks/pre-commit
+    ln -s -f /sites/ycharts/confs/developers/git_post_merge_hook.py /sites/ycharts/.git/hooks/post-merge
+    ```
+
+1. Decrypt sensitive files in `ycharts` repo
+
+    ```bash
+    cd /sites/ycharts
+    git secret reveal -f
     ```
 
 ## Get SSH keys, AWS keys, etc
@@ -62,7 +84,7 @@ Install Homebrew for easier package management. This will also prompt you about 
 can connect to our server machines.  You will be getting the `.pem` key.
 
 2. Also ask your manager to set up an AWS user for you for the project and send you
-your access and secret keys. You will need 2 factor authentication on your cell phone so go ahead and download it. ([iOS](https://itunes.apple.com/us/app/google-authenticator/id388497605?mt=8) or [Android](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en_US))
+your access and secret keys. You will need 2-factor authentication on your cell phone so go ahead and download it. ([iOS](https://itunes.apple.com/us/app/google-authenticator/id388497605?mt=8) or [Android](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en_US))
 
 Initialize your ssh key
 ```
