@@ -44,8 +44,12 @@ Install Homebrew for easier package management. This will also prompt you about 
     brew install gnupg
     ```
 1. Create a `gpg` key. Follow the instructions [here](https://help.github.com/en/articles/generating-a-new-gpg-key#generating-a-gpg-key). 
-1. Send Fox or Tom your public key and ask them to add you to the keyring. Do not proceed until they have pushed your keyring. Ask them to confirm before proceeding.
+1. Send Fox or Tom your public key and associated email and ask them to add you to the keyring. Do not proceed until they have pushed your keyring. Ask them to confirm before proceeding.
     ```bash
+    # Export Public key via
+    # Find KEY ID
+    gpg --list-secret-keys --keyid-format LONG
+    # Print Public Key to terminal.
     gpg --armor --export [KEY ID]
     ```
 
