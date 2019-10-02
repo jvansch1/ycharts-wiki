@@ -106,7 +106,9 @@ In order to ensure key functions of our application work before releasing code f
 
 ## Model Portfolios
 1. go to [Model Portfolios list view](https://staging.ycharts.com/model_portfolios/list/)
-1. navigate to /new page via "Create New" and create a new Model Portfolio.
+1. click on the drop down next to any MP in the model portfolio list and click export holdings
+1. navigate to /new page via "Create New" and click import data.
+1. Drag and drop the csv that you exported in an earlier step and click submit in the modal.
 1. hit `Save`. Confirm redirect to /list page.
 1. You should see the state for the newly created Model Portfolio in calculating. Click on the portfolio to visit it's quote page.
 1. Unless the calculation already completed, you should only be able to see the status bar while it's calculation takes place.
