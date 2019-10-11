@@ -5,6 +5,9 @@ Set up an e-mail address at http://google.com/a/ycharts.com
 2. If person is in New York, add to newyork@ycharts.com group
 3. If person is in Chicago, add to chicago@ycharts.com group
 
+## Microsoft 365
+1. Ask Nick to set it up
+
 ## Meraki
 1. Setup their Wifi password account
 1. Set up their VPN account
