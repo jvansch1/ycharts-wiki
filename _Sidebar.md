@@ -50,8 +50,6 @@
   * Deprecated: [[AWS Redis Setup]]
 * Celery
   * [[Celery Getting Started]]
-* Apps
-  * [[Alerts]]
 * Indicator
   * [[Indicator Guide]]
   * [[Indicator Notes]]
