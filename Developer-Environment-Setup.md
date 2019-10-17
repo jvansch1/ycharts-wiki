@@ -62,10 +62,10 @@ Install Homebrew for easier package management. This will also prompt you about 
     git clone git@github.com:ycharts/ycharts_chart_generator.git
     ```
 
-1. Add an `include` section to the `ycharts` Git config
+1. Copy our base Git configuration file to the appropriate folder
 
     ```bash
-    echo "[include]\n    path = /sites/ycharts/confs/developers/git_config" > /sites/ycharts/.git/config
+    cp /sites/ycharts/confs/developers/git_config /sites/ycharts/.git/config
     ```
 
 1. Set up your git hooks for the `ycharts` repo
