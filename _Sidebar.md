@@ -30,7 +30,6 @@
   * [[Debugging Travis CI builds]]
 * Redis
   * [[Restoring Redis]]
-  * [[YCharts Redis Tutorial]]
 * MySQL
   * [[General Notes]]
   * [[Restoring Database]]
