@@ -35,6 +35,7 @@ In order to ensure key functions of our application work before releasing code f
 1. Save and open saved screens.
 1. Create an alert on a saved screen.
 1. Add a metric column to a screen.
+1. Export as CSV
 1. Reset screen to default state.
 
 ## Fundamental Chart
