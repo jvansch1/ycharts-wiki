@@ -64,6 +64,9 @@
   * [[Useful Regexps]]
   * [[Concurrent Login Block Notes]]
   * [[IPython Tips]]
+  * [[Setting-Up-Snakeviz]]
+
+ 
 * Other
   * [[Database Restore Machine Setup]]
   * [[Calculation Principles]]
