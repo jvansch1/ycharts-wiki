@@ -64,7 +64,7 @@
   * [[Useful Regexps]]
   * [[Concurrent Login Block Notes]]
   * [[IPython Tips]]
-  * [[Setting-Up-Snakeviz]]
+  * [[Setting Up Snakeviz]]
 
  
 * Other
