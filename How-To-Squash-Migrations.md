@@ -23,7 +23,7 @@
   1. Run `ycharts_deploy staging --manual_migration`
   1. When the deploy gets to the manual migration, it will pause.
   1. SSH into the migrations admin by opening a new terminal and within in the `ycharts_systems` directory run `ycharts_ssh staging migrations_admin`
-  1. Within the staging `migrations_admin` machine log into the staging database by running `mysql -u ycharts -A -per45qw -h [STAGING_DATABASE_HOST] ycharts`
+  1. Within the staging `migrations_admin` machine log into the staging database by running `mysql -u ycharts -A -p[STAGING_DATABASE_PASSWORD] -h [STAGING_DATABASE_HOST] ycharts`
   1. Within the mysql shell run: ```delete from django_migrations;```
   1. Then exit the mysql shell via: ```exit;```
   1. Then on the `migrations_admin` machine run: `python /sites/ycharts/manage.py migrate --fake`
