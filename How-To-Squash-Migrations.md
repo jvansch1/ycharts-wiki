@@ -51,8 +51,8 @@ cd /sites/ycharts && vagrant ssh
 python /sites/ycharts/manage.py migrate --fake
 ```
 2. All Developers that have open PRs with migrations need to re-do their migrations by:
-  - Deleting migrations that are in the PR.
-  - Running `python manage.py makemigrations`
+    - Deleting migrations that are in the PR.
+    - Running `python manage.py makemigrations`
 
 #### 4. Update Production
 1. Let staging run for a day to make sure everything looks good and nothing breaks. In the mean time there is a code freeze. No one is allowed to push to `master` or `develop`.
