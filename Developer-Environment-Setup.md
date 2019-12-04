@@ -44,7 +44,7 @@ Install Homebrew for easier package management. This will also prompt you about 
     brew install gnupg
     ```
 1. Create a `gpg` key. Follow the instructions [here](https://help.github.com/en/articles/generating-a-new-gpg-key#generating-a-gpg-key). You should add this `GPG` key to your github account as well.
-1. Export the `GPG` by following the instructions below. Send Fox or Tom your public key in a `.txt` file. Do not proceed until they have pushed your keyring. Ask them to confirm before moving forward with the setup.
+1. Export the `GPG` by following the instructions below. Send whoever is guiding your onboarding experience your public key in a `.txt` file. Do not proceed until they have pushed your keyring. Ask them to confirm before moving forward with the setup.
     ```bash
     # Export Public key via
     # Find KEY ID
@@ -52,7 +52,18 @@ Install Homebrew for easier package management. This will also prompt you about 
     # Print Public Key to terminal.
     gpg --armor --export [KEY ID]
     ```
-
+1. The onboarder needs to do the following before you can proceed:
+    ```bash
+    # Download the public key to a local directory (ie ~/Downloads/new_engineer.txt)
+    gpg --import ~/Downloads/new_engineer.txt
+    cd /sites/ycharts
+    git checkout develop
+    git pull origin develop
+    git secret tell newengineer@example.com
+    git secret reveal -f; git secret hide
+    git commit -am "Added Engineer's Name to git secret."
+    git push origin develop
+    ```
 ## Checkout Code
 1. Fork the [`ycharts`](https://github.com/ycharts/ycharts), [`ycharts_chart_generator`](https://github.com/ycharts/ycharts_chart_generator), and [`ycharts_systems`](https://github.com/ycharts/ycharts_systems) repos by hitting the "Fork" button. ![Imgur](https://i.imgur.com/N5Y9E6a.png)
 1. Clone the `ycharts` and `ycharts_chart_generator` repos
