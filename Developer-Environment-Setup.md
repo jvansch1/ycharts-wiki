@@ -62,10 +62,10 @@ Install Homebrew for easier package management. This will also prompt you about 
     git clone git@github.com:ycharts/ycharts_chart_generator.git
     ```
 
-1. Copy our base Git configuration file to the appropriate folder
+1. Confirm that you can pull down from one of our remote branches; if you can't ask for assistance!
 
     ```bash
-    cp /sites/ycharts/confs/developers/git_config /sites/ycharts/.git/config
+    git fetch --dry-run joe
     ```
 
 1. Set up your git hooks for the `ycharts` repo
@@ -270,7 +270,7 @@ vagrant ssh
 yc_celery
 # do not close this window. Let it sit.
 ```
-2. Open a new window on your Terminal and SSH into your vagrant box.
+2. Open a new window on your Terminal and SSH into your vagrant box. Run each of the `python` commands in a new `screen` session (e.g. `screen -d -m python /sites...`
 ```bash
 vagrant ssh
 python /sites/ycharts/manage.py calculations_store_sets
