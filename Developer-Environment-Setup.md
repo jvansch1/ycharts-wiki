@@ -76,6 +76,7 @@ Install Homebrew for easier package management. This will also prompt you about 
 1. Confirm that you can pull down from one of our remote branches; if you can't ask for assistance!
 
     ```bash
+    cp /sites/ycharts/confs/developers/git_config /sites/ycharts/.git/config
     git fetch --dry-run origin
     ```
 
