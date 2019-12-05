@@ -76,7 +76,7 @@ Install Homebrew for easier package management. This will also prompt you about 
 1. Confirm that you can pull down from one of our remote branches; if you can't ask for assistance!
 
     ```bash
-    git fetch --dry-run joe
+    git fetch --dry-run origin
     ```
 
 1. Set up your git hooks for the `ycharts` repo
