@@ -11,7 +11,7 @@ Setting Up SnakeViz
 	```
 - Create a directory to hold all the .prof files gathered from profiling code. `mkdir profiles`
 
-- Create a new vagrant box: `vagrant init ubutu/bionic64` which will create a Vagrantfile in the current directory
+- Create a new vagrant box: `vagrant init ubuntu/bionic64` which will create a Vagrantfile in the current directory
 
 - Update the created Vagrantfile to sync the directory created above. Example:
 	```
