@@ -108,15 +108,12 @@ chmod 700 ~/.ssh/ycharts-2014-01.pem
 ssh-add -K ~/.ssh/ycharts-2014-01.pem
 ```
 
-## Install AutoEnv, set up env specific to this directory
-Install Autoenv to manage having different aws access keys as environment variables.
+## Set up Autoenv specific to this directory
+Autoenv should have already been installed when going through the environment setup for ycharts-systems repo.
+
 > NOTE: We should probably be moving to use [direnv](https://direnv.net/) soon.
 
-1. brew install autoenv: ```brew install autoenv```
-1. After install run: 
-```
-echo "source $(brew --prefix autoenv)/activate.sh" >> ~/.bash_profile
-source ~/.bash_profile
+```sh
 cd /sites/ycharts
 
 touch .env
@@ -127,6 +124,12 @@ echo "export AWS_ACCESS_KEY_ID=<YOUR YCHARTS ACCESS KEY>" >> /sites/ycharts/conf
 echo "export AWS_SECRET_ACCESS_KEY=<YOUR YCHARTS SECRET KEY>" >> /sites/ycharts/confs/developers/vagrant_bash_profile_local
 echo "export AWS_DEFAULT_REGION=us-east-1" >> /sites/ycharts/confs/developers/vagrant_bash_profile_local
 ```
+
+Now re-enter the directory and make sure it's working. You should be prompted and then type y.
+
+```sh
+cd .
+``` 
 
 ## Install NVM
 ```
