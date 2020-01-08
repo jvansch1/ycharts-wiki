@@ -8,13 +8,14 @@
 
 **Essentials**
 * [[Home]]
+* [[Code Guidelines]]
+* [[Code Principles]]
+* [[Engineering Points of Emphasis]]
+* [[YCharts Core Values]]
+* [[YCharts Engineering Principles]]
 * [Deployment Procedure](https://github.com/ycharts/ycharts_systems/wiki/Deploy-and-Hotfix-%5BYCharts%5D)
 * [How to SSH into Machines](https://github.com/ycharts/ycharts_systems/wiki/SSH-%5BYCharts%5D)
 * [[Offboarding]]
-* [[Code Guidelines]]
-* [[Code Principles]]
-* [[YCharts Core Values]]
-* [[YCharts Engineering Principles]]
 
 **Developer Notes**
 * Django
