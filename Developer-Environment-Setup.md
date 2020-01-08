@@ -7,15 +7,8 @@ For security purposes, all of our machines need to have encrypted hard disks. Be
 1. Please follow the instructions on how to secure your hard drive with FileVault [here](https://support.apple.com/en-us/HT204837#turnon).
 1. Once it is completed (this can take a few hours) please notify Fox or Ara so they can verify and mark it internally.
 
-
-### Install Homebrew
-Install Homebrew for easier package management. This will also prompt you about XCode and install it for you.
-
-```bash
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
-
 ## Setting up Git
+1. Create a github account and tell an admin to add your username to YCharts.
 1. Create an private/public key and tie it to your github account.
     * Follow the instructions here: https://help.github.com/articles/connecting-to-github-with-ssh/
 1. Configure so your SSH passphrase is remembered.
@@ -28,12 +21,13 @@ Install Homebrew for easier package management. This will also prompt you about 
 1. Set up `/sites` directory
 
     ```bash
-    sudo mkdir /sites
+    sudo mkdir -p /sites
     cd /sites
 
     # Use username to chown /sites
     sudo chown -R `whoami` /sites/
     ```
+
 ## Setting up Git-Secret
 1. Install `git-secret` via Homebrew
     ```bash
@@ -94,6 +88,9 @@ Install Homebrew for easier package management. This will also prompt you about 
     cd /sites/ycharts
     git secret reveal -f
     ```
+
+## Setup ycharts_systems
+1. Follow the steps in this Wiki [`ycharts_systems` Developer Environment Setup](https://github.com/ycharts/ycharts_systems/wiki/Development-Environment-Setup).
 
 ## Get SSH keys, AWS keys, etc
 
@@ -219,12 +216,6 @@ and you will have a fresh MySQL 5.7 database! Once the below command finishes, y
 ```bash
 /sites/ycharts/scripts/restore_database.sh -c
 ```
-
-## Setup ycharts_systems
-Before you can fully complete the setup of your `ycharts` repo. You will need to setup the `ycharts_systems` repo. The reason for this is that the `ycharts_systems` repo contains the machine configuration code that is used to provision your vagrant box that serves as your local Linus VM for development.
-
-1. Follow the steps in this Wiki [`ycharts_systems` Developer Environment Setup](https://github.com/ycharts/ycharts_systems/wiki/Development-Environment-Setup#checkout-code).
-    - Start from the section [Checkout Code](https://github.com/ycharts/ycharts_systems/wiki/Development-Environment-Setup#checkout-code). The reason is some of the steps in the `ycharts` setup are also present in the `ycharts_systems` setup. There is no need to repeat these steps.
 
 ## Create Your Virtual Machine
 Now you will need to create your local Linux VM machine that will serve as your local development environment.
