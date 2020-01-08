@@ -110,6 +110,7 @@ In order to ensure key functions of our application work before releasing code f
 1. click on the drop down next to any MP in the model portfolio list and click export holdings
 1. navigate to /new page via "Create New" and click Upload Data.
 1. Drag and drop the csv that you exported in an earlier step and click submit in the modal.
+1. For the benchmark, choose another a model portfolio that you have
 1. hit `Save`. Confirm redirect to /list page.
 1. You should see the state for the newly created Model Portfolio in calculating. Click on the portfolio to visit it's quote page.
 1. Unless the calculation already completed, you should only be able to see the status bar while it's calculation takes place.
@@ -117,6 +118,8 @@ In order to ensure key functions of our application work before releasing code f
 1. Navigate back to /list.
 1. `Duplicate` a model portfolio and verify its data gets calculated successfully.
 1. `Delete` the duplicated report.
+1.  Create a scenario where A has B as a benchmark and B has C as a benchmark. Then Delete C, and verify that both A and B are in Needs Review (and that you got an email telling you that as well).
+1.  Edit B, so that it has a valid benchmark and watch that both B and A are recalculating now!
 
 ## PDF Reports
 1. Go to a Model Portfolio quote page, click on the "Generate Report" button; confirm your reports are shown in the modal
