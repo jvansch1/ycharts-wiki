@@ -7,6 +7,13 @@ For security purposes, all of our machines need to have encrypted hard disks. Be
 1. Please follow the instructions on how to secure your hard drive with FileVault [here](https://support.apple.com/en-us/HT204837#turnon).
 1. Once it is completed (this can take a few hours) please notify Fox or Ara so they can verify and mark it internally.
 
+## Install Homebrew
+Install Homebrew for easier package management. This will also prompt you about XCode and install it for you.
+
+```bash
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+
 ## Setting up Git
 1. Create a github account and tell an admin to add your username to YCharts.
 1. Create an private/public key and tie it to your github account.
