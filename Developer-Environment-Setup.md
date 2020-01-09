@@ -95,10 +95,6 @@ Install Homebrew for easier package management. This will also prompt you about 
     cd /sites/ycharts
     git secret reveal -f
     ```
-
-## Setup ycharts_systems
-1. Follow the steps in this Wiki [`ycharts_systems` Developer Environment Setup](https://github.com/ycharts/ycharts_systems/wiki/Development-Environment-Setup).
-
 ## Get SSH keys, AWS keys, etc
 
 1. Get the ycharts keys from someone and move it to `~/.ssh/` so you
@@ -114,6 +110,9 @@ chmod 700 ~/.ssh/ycharts-2014-01.pem
 # Add the key file to your ssh-agent
 ssh-add -K ~/.ssh/ycharts-2014-01.pem
 ```
+
+## Setup ycharts_systems
+1. Follow the steps in this Wiki [`ycharts_systems` Developer Environment Setup](https://github.com/ycharts/ycharts_systems/wiki/Development-Environment-Setup).
 
 ## Set up Autoenv specific to this directory
 Autoenv should have already been installed when going through the environment setup for ycharts-systems repo.
