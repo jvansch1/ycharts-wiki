@@ -6,7 +6,6 @@
 | ------------- | ------------- |
 | [YCharts Engineering Principles](https://github.com/ycharts/ycharts/wiki/YCharts-Engineering-Principles)  | These are the principles we as engineers try (no one is perfect) to live here at YCharts.  |
 | [YCharts Core Values](https://github.com/ycharts/ycharts/wiki/YCharts-Core-Values)  | These are the principles all employees live by here at YCharts. |
-| [YCharts Product Roadmap](https://drive.google.com/drive/u/0/folders/0B7zntxMwD-7UcnBzaEYtVjUyVVU)  | This is what you will be building and where the product is headed! Take a look at the different materials in the folder. |
 | [YCharts Klipfolio](https://app.klipfolio.com/dashboard)  | This shows you how we are doing from a sales perspective. |
 
 
