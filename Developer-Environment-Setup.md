@@ -284,6 +284,7 @@ yc_celery
 # do not close this window. Let it sit.
 ```
 2. Open a new window on your Terminal and SSH into your vagrant box. Run each of the `python` commands in a new `screen` session (e.g. `screen -d -m python /sites...`
+> NOTE: This will take a few hours. While this is happening, configure your PyCharm editor.
 ```bash
 vagrant ssh
 python /sites/ycharts/manage.py calculations_store_sets
@@ -291,7 +292,6 @@ python /sites/ycharts/manage.py securities_info_store_sets
 python /sites/ycharts/manage.py security_lists_store_lists
 python /sites/ycharts/manage.py companies_store_sets
 ```
-> NOTE: This will take a few hours. While this is happening, configure your PyCharm editor.
 
 ## Configure PyCharm
 
