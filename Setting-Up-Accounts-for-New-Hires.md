@@ -38,6 +38,8 @@ If the person is a developer, invite them to the various engineering channels.
 
 ## Microsoft 365
 
+## DockerHub
+
 ## YCharts.com
 Repeat the following steps for production and staging.
 
