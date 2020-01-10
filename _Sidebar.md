@@ -1,3 +1,5 @@
+[[Home]]
+
 **Onboarding**
 * [[Onboarding for New Hires]]
   * [[Required Reading List]]
@@ -7,7 +9,6 @@
 * [[Educational Resources]]
 
 **Essentials**
-* [[Home]]
 * [[Code Principles]]
 * [[Engineering Points of Emphasis]]
 * [[YCharts Core Values]]
