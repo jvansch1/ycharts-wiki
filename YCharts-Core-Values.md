@@ -6,3 +6,4 @@
 1. Respectful to all
 1. Displays a positive attitude 
 1. Accountable and dependable
+1. Trust, but verify
