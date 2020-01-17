@@ -7,3 +7,4 @@
 1. Displays a positive attitude 
 1. Accountable and dependable
 1. Trust, but verify
+1. Don't make the same mistake twice
