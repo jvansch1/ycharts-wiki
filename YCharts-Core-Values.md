@@ -6,5 +6,5 @@
 1. Respectful to all
 1. Displays a positive attitude 
 1. Accountable and dependable
-1. Trust, but verify
+1. Trusts, but verifies
 1. Don't make the same mistake twice
