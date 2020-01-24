@@ -34,6 +34,7 @@ Your first week will be a little bit slower than most at YCharts as you get setu
 - [ ] Do the [reading list](https://github.com/ycharts/ycharts/wiki/Required-Reading-List), Git and [Django Tutorial](https://github.com/ycharts/ycharts/wiki/Onboarding-for-New-Hires#django-tutorial).
 - [ ] Review with an engineer your Django Polls App
 - [ ] Setup your [YCharts development environment](https://github.com/ycharts/ycharts/wiki/Developer-Environment-Setup). (This will usually take an entire day)
+- [ ] Everyone is expected to show up before 9:45 AM and before 9:30 AM (Market Open) if you are on support.
 
 ### Week 2-3
 After getting your feet wet in the first week, you will get into our codebase and do some small tickets.
