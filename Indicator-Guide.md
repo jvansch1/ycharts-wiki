@@ -4,7 +4,7 @@
 The place to start when building an importer is with indicator_import_skeleton.py in the Indicators folder. It's just a template with a bunch of the elements you will need to customize already fleshed out.
 
 #### Checklist
-+ Indicator names are all in line with Ycharts conventions
++ Indicator names are all in line with YCharts conventions
 + Scheduler works. Check by going to /admin/indicators/indicator/?report__id__exact={{report_id}}
 + Data types are accurate and in line with `DATA_TYPE_CHOICES` in models.py
 + internal_name on report is unique and set correctly
