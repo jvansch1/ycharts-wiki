@@ -118,8 +118,8 @@ In order to ensure key functions of our application work before releasing code f
 1. Navigate back to /list.
 1. `Duplicate` a model portfolio and verify its data gets calculated successfully.
 1. `Delete` the duplicated report.
-1.  Create a scenario where A has B as a benchmark and B has C as a benchmark. Then Delete C, and verify that both A and B are in Needs Review (and that you got an email telling you that as well).
-1.  Edit B, so that it has a valid benchmark and watch that both B and A are recalculating now!
+1.  Create a scenario where A has B as a holding and B has C as a benchmark. Then Delete C, and verify that both A and B are in Needs Review (and that you got an email telling you that as well).
+1.  Edit B, so that it has a valid benchmark and watch that both B and A are recalculating now! B should finish calculating before A begins.
 
 ## PDF Reports
 1. Go to a Model Portfolio quote page, click on the "Generate Report" button; confirm your reports are shown in the modal
