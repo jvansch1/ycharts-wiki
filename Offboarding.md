@@ -18,8 +18,6 @@
 
 #### Git secret remove user
 
-#### AWS Authorized keys/users remove
-
 #### Wipe Computer
 
 #### Notify Nick or Ara of offboarding to document security management tasks
