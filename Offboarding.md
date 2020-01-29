@@ -8,7 +8,6 @@
 
 #### AWS
 * Delete their IAM role from the main YCharts account
-* Delete their IAM role from the YCharts Data account
 
 #### YCharts.com
 * Delete their @ycharts.com account.
