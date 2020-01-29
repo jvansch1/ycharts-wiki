@@ -110,7 +110,7 @@ In order to ensure key functions of our application work before releasing code f
 1. click on the drop down next to any MP in the model portfolio list and click export holdings
 1. navigate to /new page via "Create New" and click Upload Data.
 1. Drag and drop the csv that you exported in an earlier step and click submit in the modal.
-1. For the benchmark, choose another a model portfolio that you have
+1. Edit the model portfolio to use a different model portfolio as a benchmark. Also, add model portfolios as holdings.
 1. hit `Save`. Confirm redirect to /list page.
 1. You should see the state for the newly created Model Portfolio in calculating. Click on the portfolio to visit it's quote page.
 1. Unless the calculation already completed, you should only be able to see the status bar while it's calculation takes place.
