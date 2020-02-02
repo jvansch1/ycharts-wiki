@@ -18,7 +18,6 @@ Add the person to the various YCharts projects
 Have the person create an account at http://github.com if they don't already have one.
 
 1. If person is developer, add to the YCharts project, under the "Developers" group
-2. If person is seasoned developer, add to the "Deployers" group
 
 ## Slack
 Create an account for the person on Slack.
