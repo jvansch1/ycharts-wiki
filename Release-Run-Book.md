@@ -112,6 +112,7 @@ In order to ensure key functions of our application work before releasing code f
 1. Drag and drop the csv that you exported in an earlier step and click submit in the modal.
 1. Edit the model portfolio to use a different model portfolio as a benchmark. Also, add model portfolios as holdings.
 1. hit `Save`. Confirm redirect to /list page.
+1. Try to create another model portfolio with the same exact name you just created. You should see red error text and be prevented from creating the model portfolio.
 1. You should see the state for the newly created Model Portfolio in calculating. Click on the portfolio to visit it's quote page.
 1. Unless the calculation already completed, you should only be able to see the status bar while it's calculation takes place.
 1. Once calculation finishes, go through each tab and make sure each module has data and looks correct.
