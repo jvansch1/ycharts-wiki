@@ -54,7 +54,7 @@ You should start to feel a little more at home in your environment setup as well
 # 2nd Month
 As you get more and more comfortable with our codebase and our development process you will take on more responsibility as the months progress.
 
-- [ ] Fly co-polit on a weekly release [Deployment Process](https://github.com/ycharts/ycharts/wiki/Deployment-Procedures)
+- [ ] Fly co-polit on a weekly release [Deployment Process](https://github.com/ycharts/ycharts_systems/wiki/Deploy-and-Hotfix-%5BYCharts%5D)
 - [ ] Perform a weekly release
 - [ ] Be on-call for one day a week
 
