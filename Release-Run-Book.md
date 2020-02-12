@@ -124,12 +124,12 @@ In order to ensure key functions of our application work before releasing code f
 1. Go to the [Model Portfolios creation page](https://staging.ycharts.com/model_portfolios/new/), Set the management fees drop down to `Quarterly`. Verify that the ANNUALIZED FEE input box's border is red now, and the message "Please enter a management fee between 0.01% and 10%." appears below it.
 1. Enter the value `0` and verify that the message is still in view.
 1. Enter a value greater than 10. verify that the message is still in view.
-1. Try to enter a value with 5 or more characters. Verify that only are entered.
+1. Try to enter a value with 5 or more characters. Verify that only the first 4 characters are entered.
 1. Enter the value 0.01. Verify that the message is not visible.
 1. Enter the value 10.0. Verify that the message is not visible.
 1. With the value of 10.0 in the ANNUALIZED FEE box, switch the MANAGEMENT FEES drop down to have the value `Annually`. Verify that the value in the ANNUALIZED FEE box is still 10.0.
 1. With the value of 10.0 in the ANNUALIZED FEE box, switch the MANAGEMENT FEES drop down to have the value `Never`. Verify that the value in the ANNUALIZED FEE box is now empty and disabled.
-1. Switch the value of the MANAGEMENT FEES drop down to `Quarterly`. Verify that the ANNUALIZED FEE input box's border is red now, and the message `Please enter a management fee between 0.01% and 10%.` appears below it.
+1. Switch the value of the MANAGEMENT FEES drop down to `Quarterly`. Verify that the ANNUALIZED FEE input box's is empty, border is red now, and the message `Please enter a management fee between 0.01% and 10%.` appears below it.
 1. Add any items that target weight add up to 100% and click on update.
 1. Verify that SAVE button at the top of the page is disabled and that hovering over it shows "Enter a valid management fee in order to save"
 1. Enter 10.0 into ANNUALIZED FEE input box. Then click on SAVE.
