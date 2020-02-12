@@ -133,6 +133,8 @@ In order to ensure key functions of our application work before releasing code f
 1. Add any items that target weight add up to 100% and click on update.
 1. Verify that SAVE button at the top of the page is disabled and that hovering over it shows "Enter a valid management fee in order to save"
 1. Enter 10.0 into ANNUALIZED FEE input box. Then click on SAVE.
+1. Verify that you are redirected to [Model Portfolios list view](https://staging.ycharts.com/model_portfolios/list/)
+1. Once the model portfolio you've created is done calculating, click on the edit button (pencil) verify that MANAGEMENT FEES drop down is set to `Annually` and that ANNUALIZED FEE is `10.00`
 
 ## PDF Reports
 1. Go to a Model Portfolio quote page, click on the "Generate Report" button; confirm your reports are shown in the modal
