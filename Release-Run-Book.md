@@ -121,7 +121,7 @@ In order to ensure key functions of our application work before releasing code f
 1. `Delete` the duplicated report.
 1.  Create a scenario where A has B as a holding and B has C as a benchmark. Then Delete C, and verify that both A and B are in Needs Review (and that you got an email telling you that as well).
 1.  Edit B, so that it has a valid benchmark and watch that both B and A are recalculating now! B should finish calculating before A begins.
-1. Go to the [Model Portfolios creation page](https://staging.ycharts.com/model_portfolios/new/), Set the management fees drop down to `Quarterly`. Verify that the ANNUALIZED FEE input box's border is red now, and the message `Please enter a management fee between 0.01% and 10%.` appears below it.
+1. Go to the [Model Portfolios creation page](https://staging.ycharts.com/model_portfolios/new/), Set the management fees drop down to `Quarterly`. Verify that the ANNUALIZED FEE input box's border is red now, and the message "Please enter a management fee between 0.01% and 10%." appears below it.
 1. Enter the value `0` and verify that the message is still in view.
 1. Enter a value greater than 10. verify that the message is still in view.
 1. Try to enter a value with 5 or more characters. Verify that only are entered.
