@@ -7,7 +7,7 @@
 * [[Setting Up Accounts for New Hires]]
 * [[Developer Environment Setup]]
 * [[Educational Resources]]
-* [[Support & On Call Outline]]
+* [[Support and On Call Outline]]
 
 **Essentials**
 * [[Code Principles]]
