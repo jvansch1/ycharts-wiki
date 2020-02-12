@@ -56,7 +56,7 @@ As you get more and more comfortable with our codebase and our development proce
 
 - [ ] Fly co-polit on a weekly release [Deployment Process](https://github.com/ycharts/ycharts_systems/wiki/Deploy-and-Hotfix-%5BYCharts%5D)
 - [ ] Perform a weekly release
-- [ ] Be on-call for one day a week
+- [ ] Be on-call for one day a week (check out [the outline](https://github.com/ycharts/ycharts/wiki/Support-&-On-Call-Outline) for more details!)
 
 # 3rd Month
 
