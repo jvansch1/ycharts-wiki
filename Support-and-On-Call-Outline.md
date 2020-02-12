@@ -12,7 +12,7 @@ The `engineering-support` Slack channel is where the Chicago team posts any issu
 While you're on-call, you may be asked to work on small bugs that you and your teammates come across. This is one of the best ways to gain exposure to areas of the codebase that you don't normally work in.
 
 ### Performing the weekly release
-On Wednesday evenings, you will perform the weekly production release. More details can be found in the wiki (TODO: sub-in a link to the wiki page here)
+On Wednesday evenings, you will perform the weekly production release. More details can be found on the [YCharts systems wiki page](https://github.com/ycharts/ycharts_systems/wiki/Deploy-and-Hotfix-%5BYCharts%5D).
 
 Of course, not all bugs are easily solvable, and all support incidents have varying impacts on our operations. However, these items should take priority over your normal day-to-day responsiblities for your on-call period.
 
