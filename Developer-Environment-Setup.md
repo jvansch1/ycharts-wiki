@@ -234,9 +234,9 @@ Now you will need to create your local Linux VM machine that will serve as your 
 ### Configure NFS
 More detailed instructions of configuring your NFS can be found in Vagrant's [documentation](https://www.vagrantup.com/docs/synced-folders/nfs.html#root-privilege-requirement), however, the following steps is all you should need to do.
 
-1. Open `/etc/sudoers` file with your preferred editor as root.
+1. Edit the sudoers file (must be done as root using the visudo command)
 ```bash
-sudo nano /etc/sudoers
+sudo visudo
 ```
 2. Add `Cmnd_Alias` entries. Under the line `# Cmnd alias specification`
 ```
