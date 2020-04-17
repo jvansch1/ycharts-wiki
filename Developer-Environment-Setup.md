@@ -337,7 +337,7 @@ cd /sites/ycharts
 # Remove the node modules directory since it was installed on your VM with Linux and thus some packages are not compatible with your mac.
 rm -rf node_modules/ 
 # Tells your mac to use Node version 10
-nvm use 10.20.1
+nvm use 10
 # Re-install node modules on your mac so they are compatible with the host machine. 
 npm i
 # Run webpack hot reloading
