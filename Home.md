@@ -52,7 +52,8 @@ Our production and staging environments are hosted on Amazon's AWS cloud platfor
 
 [This chart](https://www.lucidchart.com/documents/edit/3ed05ef6-e356-462d-8eda-d255d65ce5bb/0_0) represents our current production network toplogy. [This chart](https://www.lucidchart.com/documents/edit/5c6fc033-6af6-4d6d-85c4-0348fe0529bc/0_0) goes into more detail as to the exact machine types and network setup.
 
-Breaking this down, there are a few major pieces of our architecture.
+Breaking this down, each exposed web service is backed by one or more distinct AMIs running in autoscale groups. 
+These are the distinct AMIs that exist:
 
 ### ycharts.com
 * **Web** one or more identical machines behind a load balancer serve as our frontend web and application server. They use Nginx which then routes to uwsgi which executes the Python/Django code and returns a response.
