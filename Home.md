@@ -26,8 +26,8 @@ The following is a description of the major components of our technology stack.
 * [Github](http://github.com/) is where we store our code.
 * [Google Analytics](https://google.com/analytics) is how we track traffic on the site.
 * [Mixpanel](https://mixpanel.com) does more fine grained user/event tracking so we know how our users use our appication.
-* [Pagerduty](https://www.pagerduty.com)
-* [Postmark](https://postmarkapp.com/) is how we send transactional e-mails, like post Pro sign-ups DRIP campaigns, cancel and billing notices, etc.
+* [Pagerduty](https://www.pagerduty.com) manages our on-call schedule. All site errors and issues are funneled here, which then notifies the person(s) on call and then escalates as necessary.
+* [Postmark](https://postmarkapp.com/) is how we send transactional e-mails, like cancel and billing notices, etc, password reset verifications and so on.
 * [Pivotal Tracker](https://pivotaltracker.com/) is where we manage our development (bugs, enhancements, etc)
 * [Hubspot](https://hubspot.com) is what we us for marketing automation. Every new trial on the site is sent there, and then Hubspot manages things like DRIP campaigns and the like. 
 * [Sentry](https://sentry.io/) is what tracks our Python/JS errors and exceptions as they occur.
