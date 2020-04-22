@@ -21,20 +21,24 @@ The following is a description of the major components of our technology stack.
 ## Some Notable NodeJS Libraries We Use
 * [Node Canvas](https://github.com/LearnBoost/node-canvas) helps us render our canvas-based charts in Node JS, add title, notes, etc and later save them as PNG
 
-## Some Notable NodeJS Libraries We Use
-* [Node Canvas](https://github.com/LearnBoost/node-canvas) helps us render our canvas-based charts in Node JS, add title, notes, etc and later save them as PNGs
-* [Flatiron](http://flatironjs.org/) provides the meat and potatoes functionality of our Node based chart creation service. Stuff like request handling, logging, error handling, etc.
-
 ## Some Notable SaaS Tools We Use
-* [Github](http://github.com/) is where we store our code.
-* [Pivotal Tracker](https://pivotaltracker.com/) is where we manage our development (bugs, enhancements, etc)
-* [Zendesk](http://zendesk.com) is how we manage customer service requests.
-* [Campaign Monitor](http://www.campaignmonitor.com/) is how we send mass e-mails, primarily the daily e-mail of articles written by YCharts editors
-* [Postmark](http://postmarkapp.com/) is how we send transactional e-mails, like post Pro sign-ups DRIP campaigns, cancel and billing notices, etc.
-* [Marketo](https://marketo.com) is how we manage inbound marketing leads, outbound marketing emails, etc.
-* [Google Analytics](http://google.com/analytics) is how we track traffic on the site.
 * [Base](https://getbase.com/) is what we use as a CRM/sales cycle management tool.
+* [Github](http://github.com/) is where we store our code.
+* [Google Analytics](http://google.com/analytics) is how we track traffic on the site.
+* [Pagerduty](https://www.pagerduty.com)
+* [Postmark](https://postmarkapp.com/) is how we send transactional e-mails, like post Pro sign-ups DRIP campaigns, cancel and billing notices, etc.
+* [Pivotal Tracker](https://pivotaltracker.com/) is where we manage our development (bugs, enhancements, etc)
+* [Zendesk](https://zendesk.com) is how we manage customer service requests.
+* [Hubspot](https://hubspot.com) is what we us for marketing automation. Every new trial on the site is sent there, and then Hubspot manages things like DRIP campaigns and the like. 
+* [Sentry] (https://sentry.io/) is what tracks our Python/JS errors and exceptions as they occur.
 * [TravisCI](https://travis-ci.com/) runs our tests automatically for every commit to develop/master and every pull request.
+
+
+
+
+
+
+# XXX Everything below here in process of being edited.
 
 
 
