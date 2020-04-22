@@ -91,15 +91,14 @@ For JS, we use [JSHint](http://www.jshint.com/) as a guide.
 Besides the precommit hook we highly recommend installing plugins for your preferred text editor to do PEP8/JSHint checking as you write code.
 
 ### Code Editors
-Although you are free to use any editor you prefer, our development has standardized around [PyCharm](https://github.com/ycharts/ycharts/wiki/PyCharm). We also have some note around using [Vim](https://github.com/ycharts/ycharts/wiki/Vim-Notes) 
+Although you are free to use any editor you prefer, our development has standardized around [PyCharm](https://github.com/ycharts/ycharts/wiki/PyCharm). We also have some note around using [Vim](https://github.com/ycharts/ycharts/wiki/Vim-Notes).
 
 
 
 # Testing Environment
 We currently use 3 different testing packages to cover different parts of the codebase.
 
-1. For Python/Django testing we use Django's standard testing setup, with the addition of django-nose/nose to make for more flexible tests for easy Python object mocking.
-
+1. For Python/Django testing we use Django's standard testing setup.
     ```python
     # To run the full suite of Django tests, do:
     python manage.py test
@@ -107,22 +106,12 @@ We currently use 3 different testing packages to cover different parts of the co
     python manage.py test apps.APP_NAME.tests
     ```
 
-1. For AngularJS, we use [karma](http://karma-runner.github.io/0.12/index.html)
+1. For JS, we use Jest.
 
     ```python
-    # To run karma tests, do:
-    cd /sites/ycharts
-    ./node_modules/.bin/karma start ./confs/karma/karma-unit.conf.js --browsers Firefox --single-run
+    # To run jest tests, do:
+    npm run test
     ```
-
-1. For testing the YCharts Node codebase we use mocha.
-
-    ```python
-    # To run embeds tests, do:
-    cd /sites/ycharts_node
-    ./node_modules/.bin/mocha test/embeds.js
-    ```
-
 
 
 # The YCharts Python Codebase
