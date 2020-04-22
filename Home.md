@@ -50,22 +50,35 @@ Our production and staging environments are hosted on Amazon's AWS cloud platfor
 
 ## Architecture / Topology
 
+[This chart](https://www.lucidchart.com/documents/edit/3ed05ef6-e356-462d-8eda-d255d65ce5bb/0_0) represents our current production network toplogy. [This chart](https://www.lucidchart.com/documents/edit/5c6fc033-6af6-4d6d-85c4-0348fe0529bc/0_0) goes into more detail as to the exact machine types and network setup.
 
+Breaking this down, there are a few major pieces of our architecture.
 
+### ycharts.com
+* **Web** one or more identical machines behind a load balancer serve as our frontend web and application server. They use Nginx which then routes to uwsgi which executes the Python/Django code and returns a response.
+* **Admin** various distinct machines that run periodic scripts using cron and/or airflow and also runs various continuously running scripts that update stock quotes and provide other functions that need to happen 24/7.
+* **Workers** Several groups of machines that each are assigned to handle tasks from distinct task queues. For example, our "Portfolio" worker group handles tasks for model portfolios, our "Latest" worker group the daily tasks that need to run every day to get our data and calculations ready for market open. Worker machines are autoscaled based on queue length. If the queue increases in size, more machines are spun up to help handle the load.
 
+### get.ycharts.com
+* **Marketing Web** one or more identical machines that run Wordpress and power our marketing site on get.ycharts.com
+
+### charts.ycharts.com
+* **Chart Generator*** one or more identical machines that run NodeJS and power our chart generation service that turns dynamic chart URLs into static images and puts them on S3.
+
+### airflow.ycharts.com
+* **Airflow Web** one or more identical machines that access a special Airflow database that visually displays the status of our dependency graphs that are run/managed by Airflow
+
+## Deployment
+We use what's called an "Immutable Deployment" strategy. The basic idea is we create "artifacts" that represents the code we want to release. Then we deploy these artifacts. The advantages of this setup are that once we have the artifacts created, we can deploy at will w/o depending on any external services like Github or pypi or what not. 
+
+In our case our artifacts are Amazon Machine Images or AMIs. We use [Packer](https://www.packer.io/) to create the AMIs and use [Ansible](https://www.ansible.com/) to deploy them into Amazon "Auto Scale Groups" or ASGs. 
+
+[This document](https://github.com/ycharts/ycharts_systems/wiki/Deployment-Overview) provides an overview of our deployment procedures while [this one](https://github.com/ycharts/ycharts_systems/wiki/Deploy-and-Hotfix) goes through the commands you need to run to do a deploy. 
 
 # XXX
 # XXX
 # XXX
 
-
-## Machine Types
-We have several types of machine that perform different functions within our server architecture.
-* **Web** one or more machines behind an ELB load balancer serve as our frontend web and application server. They use Nginx which then routes to uwsgi which executes the Python/Django code and returns a response.
-* **Admin** one machine per environment runs periodic scripts using cron and also runs various continuously running scripts that update stock quotes and provide other functions that need to happen 24/7.
-* **Indicators Admin** one machine per environment continuously runs scripts to import economic data.
-* **Node** one or more machines behind an ELB load balancer serve our NodeJS requests. The only use for this right now is to produce image-based charts using the same core JS chart code we use on our main site.
-* **Queue** one or machines per environment execute queued tasks, primarily financial calculations based on data that can be changed or updated throughout the day. Queue machines are autoscaled based on queue length. If the queue increases in size, more machines are spun up to help handle the load.
 
 ## Deployment
 For a full overview of our deployment setup, check out the [deployment prodedures doc](https://github.com/ycharts/ycharts/wiki/Deployment-Procedures) but here are a few quick tips:
