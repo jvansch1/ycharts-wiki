@@ -80,13 +80,6 @@ In our case our artifacts are Amazon Machine Images or AMIs. We use [Packer](htt
 # XXX
 
 
-## Deployment
-For a full overview of our deployment setup, check out the [deployment prodedures doc](https://github.com/ycharts/ycharts/wiki/Deployment-Procedures) but here are a few quick tips:
-
-1. Releasing to staging is no big deal. Learn there.
-1. Releasing to production is a big deal. Don't do it unless you've had somebody walk you through the process a couple times.
-
-After a major deploy, always check deployment notes. Sometimes migrations and new requirements have been added that must run or your dev environment won't work.
 
 # Getting Started With Development
 
