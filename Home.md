@@ -121,52 +121,56 @@ The following headers all represent folders in our YCharts python Django project
 Apps house our Django apps. In a typical Django project these app directories will be in the top level project directory, but we put them in the apps directory to help disambiguate them from non-app directories.
 
 ### Standard App Files
-Each Django app has a series of standard files with different functionality. Not all apps have all these files as
-they are added only as needed.
+Each Django app has a series of standard files with different functionality. Not all apps have all these files as they are added only as needed.
 
 * `admin.py` - defines how models can be viewed and edited in the [Django Admin](http://ycharts.com/admin/])
-* `admin_views.py` - defines custom views used in the [Django Admin](http://ycharts.com/admin/]) that relate to the app.
+* `admin_views.py` - defines custom views used in the [Django Admin](http://ycharts.com/admin/]) that relate to the app. Mostly these days they are included in admin.py, but we still have some in admin_views.py
 * `apps.py` - defines a custom `AppConfig` that can override the app's `verbose_name` (used in the Django Admin) or set up signals.
 * `autocompleters.py` - defines autocompleter providers for use with [django-autocompleter](https://github.com/ara818/django-autocompleter)
-* `feeds.py` - defines any feeds the app produces (as a part of Django's standard syndication system)
-* `forms.py` - defines HTML forms necessary for the app
+* `constants.py` - Contains app-level constants
+* `feeds.py` - DEPRECATED defines any feeds the app produces (as a part of Django's standard syndication system)
+* `forms.py` - defines HTML forms necessary for the app, as a part of the Django's forms system.
 * `lookups.py` - defines any autocompleter looks used by [django-selectable](https://bitbucket.org/mlavin/django-selectable)
 * `models.py` - contains the classes that define database tables and key objects, as well as all model methods, properties, etc.
 * `signals.py` - contains any signals associated with the app
-* `sitemaps.py` - defines any sitemap files the app produces (as a part of Django's standard sitemap system)
+* `sitemaps.py` - DEPRECATED defines any sitemap files the app produces (as a part of Django's standard sitemap system)
 * `tasks.py` - contains any tasks associated with a given app that can run asynchronously through a [celery task](http://celery.readthedocs.org/en/latest/index.html)
-* `tests.py` - defines test classes that test the functionality of the app
+* `tests.py` - defines test classes that test the functionality of the app.
 * `urls.py` - contains regular expressions mapping HTTP requests to specific views
-* `views.py` - Acts as the interface between an HTTP request and backend code and returns a response.
+* `views.py` - Acts as the interface between an HTTP request and backend code and returns a response. This can sometimes we a directory containing different test files.
 
 ### Standard App Directories
 * `/management/commands/` - holds all managment commands for the app
 * `/migrations` - holds Django migrations
-* `/onetime_scripts` - holds all onetime scripts assocated with the app
-* `/utils` - holds all utility functions associated with the app
+* `/onetime_scripts` - holds all onetime scripts associated with the app
+* `/services` - contains any service classes associated with the app
 * `/static` - holds and JS/CSS/image files associated with the app. These follow a very particular structure so they can later collected by Django's staticfile system for serving on the site.
+* `/tests` - For apps that may have lots of tests, we break tests up into different files and put it in this directory.
+* `/templates` - store any Django templates associated with the ap
 * `/templatetags` - holds all custom templatetags associated with the app
+* `/utils` - holds all utility functions associated with the app
+* `/views` - For apsp thats have lots of views,  we break views up into different files and put it in this directory.
 
 ### The Apps
 Here are our apps:
-
-* `about` - contains images and models relating to our about pages like job openings and staff photos
-* `accounts` - model for user profile (1-1 model providing extra fields we need for each user) and preferences (1-1 model providing options the user can set), log in, out, register views
+* `accounts` - model that represents users  and preferences (1-1 model providing options the user can set), log in, out, register views
 * `alerts` - code related to the various alerts we send, except for the changes in Pro Score components (stored in .../companies/models.py) and portfolio changes (stored in .../portfolios/models.py).
 * `api` - provides endpoints of an API used by premium users and our Excel plugin to get data out of the system. Centralized here because it draws diverse data from multiple other apps.
-* `articles` - code related to the the article we produce [in our analysis center](http://ycharts.com/analysis).
+* `articles` - DEPRECATED code related to the the article we produce [in our analysis center](http://ycharts.com/analysis).
 * `calculations` - models + executors for most calculations are here
 * `charts` - views and utilities for getting chart data + several single page apps like our [Fundamental Chart](http://ycharts.com/charts/fundamental_chart/) and [Technical Chart](http://ycharts.com/charts/technical_chart/). This is centralized as charts can draw data from objects in multiple other apps.
-* `classifications` - contains models relating to [sector and industry data](https://ycharts.com/classifications/sectors) (ex. Naics, MornSector, and MornIndustry).
-* `companies` - all information surrounding a company, including data import management commands, utils for getting company data form external sources, and tons of important model methods for accessing company information.
-* `countries` - contains models relating to countries and national holidays (which are used by indicators for scheduling purposes)
-* `currencies` - contains models relating to currencies and exchange rates
-* `dashboard` - code that powers our [Dashboard](http://ycharts.com/dashboard/). Center for Watchlist management, news and charts.
-* `embeds` - Management commands, asset files and utilities used to create our interactive JS embeds.
-* `estimates` - data model, import scripts and management commands for downloading and processing Zacks Sales/ Earnings Estimates
+* `classifications` - contains models relating to [sector and industry data](https://ycharts.com/classifications/sectors) (ex. NAICs, MornSector, and MornIndustry).
+* `companies` - all information surrounding a company, including data import management commands, utils for getting company data from external sources, and tons of important model methods for accessing company information.
+* `custom_pdf_reports` - All the backend generation code and front-end widgets needed to provide users Custom PDF reports based on one or more securities.
+* `countries` - contains models relating to countries and national holidays (which are used by stocks/funds for grouping purposes and indicators for scheduling purposes)
+* `currencies` - contains models and data importers relating to currencies and exchange rates
+* `dashboard` - code that powers our [Dashboard](http://ycharts.com/dashboard/). Center for watchlist management, news and charts.
+* `data_templates` - For all the different things that a user can save on the system, like a screen, or a comp table, or a chart, we have templates that we can either push to all users or a library of which they can browse so they can look at interesting views w/o having to figure out how to use our tools right away.
+* `embeds` - DEPRECATED Management commands, asset files and utilities used to create our interactive JS embeds. We have not created embeds for quite a while, but still have a few out there on the web
+* `estimates` - data model, import scripts and management commands for downloading and processing Revenue/ Earnings estimates from S&P Global
+* `events` - Small app that holds a service for gathering what we consider events for different securities. Events can be actual events, or stuff like splits and dividends.
 * `excel` - contains views for downloading and getting information regarding our [Excel Plugin](http://ycharts.com/excel)
 * `exchanges` - contains models with information on an exchange. This information is used by most securities.
-* `export_center` - everything we need to power our [Data Tables](http://ycharts.com/export_center/multicompany_comparison)
 * `financials` - models defining all quarterly and annual financial statements are contained here. Pinger and Ara Know this best.
 * `fund_attributes` - models with fund information for CEFs, ETFs, and mutual funds
 * `glossary` - powers [our glossary](http://ycharts.com/glossary)
