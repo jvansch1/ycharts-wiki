@@ -35,7 +35,7 @@ The following is a description of the major components of our technology stack, 
 * [TravisCI](https://travis-ci.com/) runs our tests automatically for every commit to develop/master and every pull request.
 * [Zendesk](https://zendesk.com) is how we manage customer service / support requests.
 
-# Deployment Environment
+# Hosting & Deployment
 
 ## Hosting
 Our production and staging environments are hosted on Amazon's AWS cloud platform. We are big users of many of their services.
