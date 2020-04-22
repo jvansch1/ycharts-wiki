@@ -112,7 +112,9 @@ We currently use a few different testing packages to cover different parts of th
     ```
 
 
-# The YCharts Python Codebase
+# The YCharts Codebase
+95% of our code resides in one monolithic Repo. This repo holds all the Python/Django code for our backend and all the JS/Angular code for our frontend. The only major piece of our service not in this repo is our "Chart Generator" service which is it's own distinct NodeJS based service in its own repo.
+
 The following headers all represent folders in our YCharts python Django project. Underneath the header are examples of what the folder contains.
 
 ## /apps
@@ -261,75 +263,3 @@ Other folders have names that describe what is in them. They are worth browsing 
 * `manage.py` - is the entrypoint to Django's management commands.
 * `package.json` - defines the node/npm packages that we use.
 
-
-
-# YCharts Python/Django Management Commands
-A full list of management commands is available by typing:
-```bash
-python manage.py
-```
-
-To get information about management command with name `<scriptname>` and its options.
-```bash
-python manage.py <scriptname> --help
-```
-
-## celery worker
-This runs the celery calculation engine for company, sector and industry calculations; indicator news; portfolio strategies; ratings; yscores; etc. We split them up into 3 categories.
-
-1. Main task queue. This task queue for all non time-sensitive tasks.
-1. "Latest" tasks. These are tasks that are run regularly to calculate the latest value of a calculation. Since they are typically run once a day, it is important that they are never buried by a backlog of base tasks so they live in their own queue.
-1. "Alert" tasks. These are tasks that trigger alerts in our alerts system. They have their own queue because we want to trigger alerts as soon as possible from the occurence of the triggering event.
-
-To run locally:
-
-```bash
-celery -A ycharts worker -E -Q main         # Run all base tasks
-celery -A ycharts worker -E -Q alerts       # Run all alerts tasks
-celery -A ycharts worker -E -Q latestcalcs  # Run all latest tasks
-# Run all tasks with INFO level logging
-celery -A ycharts worker -E -Q main,alerts,latestcalcs -l info
-```
-
-## Other Commands
-
-Like above, start locally with `python manage.py <scriptname>`, or after logging in to admin with ssh, run there with `sudo service <scriptname> start`
-
-Where `<scriptname>` is one of the following
-
-```bash
-# Always running on admin
-news_populate_company_news_single
-news_populate_company_news_full
-news_populate_index_news
-news_populate_company_tweets
-companies_bats_stock_quote_import
-companies_morn_realtime_quote_import
-indices_xignite_quote_import
-main_mturk_process_hits
-# Always running on indicators admin
-indicators_data_import --importer_priority one --importer_region other
-indicators_data_import --importer_priority two --importer_region other
-indicators_data_import --importer_priority three --importer_region other
-indicators_data_import --importer_priority four --importer_region other
-indicators_data_import --importer_priority one --importer_region north_of_50p
-indicators_data_import --importer_priority two --importer_region north_of_50p
-indicators_data_import --importer_priority three --importer_region north_of_50p
-indicators_data_import --importer_priority four --importer_region north_of_50p
-```
-
-Before starting all scripts one-by-one, if none are running, you can start all of them with:
-
-```bash
-# On production
-fab production:admin start # Starts all scripts
-fab production:admin stop  # Stops all scripts
-# On staging
-fab staging:admin start # Starts all scripts
-fab staging:admin stop  # Stops all scripts
-```
-
-# Getting Started With Development
-
-## Setting up a development environment
-The initial setup of a working development environment can be tricky. Talk to any developers with questions, but start with our [dev setup docs](https://github.com/ycharts/ycharts/wiki/Developer-Environment-Setup).
