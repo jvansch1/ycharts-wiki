@@ -24,14 +24,15 @@ The following is a description of the major components of our technology stack.
 ## Some Notable SaaS Tools We Use
 * [Base](https://getbase.com/) is what we use as a CRM/sales cycle management tool.
 * [Github](http://github.com/) is where we store our code.
-* [Google Analytics](http://google.com/analytics) is how we track traffic on the site.
+* [Google Analytics](https://google.com/analytics) is how we track traffic on the site.
+* [Mixpanel](https://mixpanel.com) does more fine grained user/event tracking so we know how our users use our appication.
 * [Pagerduty](https://www.pagerduty.com)
 * [Postmark](https://postmarkapp.com/) is how we send transactional e-mails, like post Pro sign-ups DRIP campaigns, cancel and billing notices, etc.
 * [Pivotal Tracker](https://pivotaltracker.com/) is where we manage our development (bugs, enhancements, etc)
-* [Zendesk](https://zendesk.com) is how we manage customer service requests.
 * [Hubspot](https://hubspot.com) is what we us for marketing automation. Every new trial on the site is sent there, and then Hubspot manages things like DRIP campaigns and the like. 
-* [Sentry] (https://sentry.io/) is what tracks our Python/JS errors and exceptions as they occur.
+* [Sentry](https://sentry.io/) is what tracks our Python/JS errors and exceptions as they occur.
 * [TravisCI](https://travis-ci.com/) runs our tests automatically for every commit to develop/master and every pull request.
+* [Zendesk](https://zendesk.com) is how we manage customer service / support requests.
 
 
 
