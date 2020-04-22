@@ -13,6 +13,7 @@ The following is a description of the major components of our technology stack.
 * [Celery](http://celeryproject.org/) powers our queued execution engine. 90% of our queued jobs are various time consuming financial calculations. Besides that, a few other things are queued like generating sparklines, finding related companies, and downloading news headlines for newly released economic indicators.
 * [Pandas](http://pandas.pydata.org/) is a library for ultra-fast financial timeseries transformations. We use it whenever we need to perform operations on timeseries (like calculating Total Return Price, resampling daily data into weekly, etc)
 * [django-autocompleter](https://github.com/ara818/django-autocompleter) is our Redis-backed autocompleter. It ties tightly into Django models and provides super-fast results. It supports a variety of fancy features specific to an autocompleter of financial data like aliasing abbreviations, autocompleting on multiple terms for one object (i.e. Apple or AAPL)
+* [Airflow](https://airflow.apache.org/) is used to handle dependency management. For YCharts, every day there are a number of data providers from which we get data, and when those imports are done we need to do various calculations on them. Airflow handles the dependency tree of that process such that one action can start as soon as another is done.
 
 ## Some Notable JS Libraries We Use
 * [Angular.js](http://angularjs.org/) is how all our JS apps are built. We use it for building front-end widgets and controls, for building single-page stateful apps, etc.
@@ -34,26 +35,29 @@ The following is a description of the major components of our technology stack.
 * [TravisCI](https://travis-ci.com/) runs our tests automatically for every commit to develop/master and every pull request.
 * [Zendesk](https://zendesk.com) is how we manage customer service / support requests.
 
+# Deployment Environment
 
-
-
-
-
-# XXX Everything below here in process of being edited.
-
-
-
-# Server / Deployment Environment
-
-## Host
+## Hosting
 Our production and staging environments are hosted on Amazon's AWS cloud platform. We are big users of many of their services.
 
 * EC2 is used to host our various servers.
 * RDS is used as for managed MySQL DB hosting.
-* ELB is used to load balance in front of our web servers and Node servers.
-* Cloudfront is used as our CDN for our JS embed widgets.
-* S3 is used to store any dynamic images on the sites (i.e. article images) as well as to host our embeddable chart images.
+* Elasticache Memcached is used to cache data.
+* Elasticache Redis is used as a datastore for various services, from our task queue, to our security lists, to intermediate data used to make our screening function faster.
+* Cloudfront is used as our CDN.
+* S3 is used to store to host our embeddable generated chart images.
 * Route 53 is used for our DNS.
+
+## Architecture / Topology
+
+
+
+
+
+# XXX
+# XXX
+# XXX
+
 
 ## Machine Types
 We have several types of machine that perform different functions within our server architecture.
@@ -70,9 +74,6 @@ For a full overview of our deployment setup, check out the [deployment prodedure
 1. Releasing to production is a big deal. Don't do it unless you've had somebody walk you through the process a couple times.
 
 After a major deploy, always check deployment notes. Sometimes migrations and new requirements have been added that must run or your dev environment won't work.
-
-
-* [Node Canvas](https://github.com/LearnBoost/node-canvas) helps us render our canvas-based charts in Node JS, add title, notes, etc and later save them as PNG
 
 # Getting Started With Development
 
