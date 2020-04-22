@@ -63,7 +63,7 @@ Breaking this down, there are a few major pieces of our architecture.
 * **Marketing Web** one or more identical machines that run Wordpress and power our marketing site on get.ycharts.com
 
 ### charts.ycharts.com
-* **Chart Generator*** one or more identical machines that run NodeJS and power our chart generation service that turns dynamic chart URLs into static images and puts them on S3.
+* **Chart Generator** one or more identical machines that run NodeJS and power our chart generation service that turns dynamic chart URLs into static images and puts them on S3.
 
 ### airflow.ycharts.com
 * **Airflow Web** one or more identical machines that access a special Airflow database that visually displays the status of our dependency graphs that are run/managed by Airflow
