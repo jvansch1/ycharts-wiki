@@ -1,5 +1,5 @@
-# Technology Stack
-The following is a description of the major components of our technology stack.
+# YCharts Technology Overview
+The following is a description of the major components of our technology stack, deployment and development process.
 
 ## High Level Stack
 * [Python](http://python.org) is our backend programming language. We are standardized around Python 3.x
@@ -75,20 +75,12 @@ These are the distinct AMIs that exist:
 ### airflow.ycharts.com
 * **Airflow Web** one or more identical machines that access a special Airflow database that visually displays the status of our dependency graphs that are run/managed by Airflow
 
+## Development
 
-
-# XXX
-# XXX
-# XXX
-
-
-
-# Getting Started With Development
-
-## Setting up a development environment
+### Setting up a development environment
 The initial setup of a working development environment can be tricky. Talk to any developers with questions, but start with our [dev setup docs](https://github.com/ycharts/ycharts/wiki/Developer-Environment-Setup).
 
-## Style
+### Style
 Maintaining a clean and consistent style is important to us. As part of the development environment we have
 precommit hooks that enforce style rules in Python and JS.
 
@@ -98,8 +90,8 @@ For JS, we use [JSHint](http://www.jshint.com/) as a guide.
 
 Besides the precommit hook we highly recommend installing plugins for your preferred text editor to do PEP8/JSHint checking as you write code.
 
-## Code Editors
-Although you are free to use any editor you prefer, our development has standardized around SublimeText and PyCharm and Vim. We have helpful pointers about plugins to install and shortcuts to know for each. The [SublimeText notes](https://github.com/ycharts/ycharts/wiki/Sublime), [PyCharm notes](https://github.com/ycharts/ycharts/wiki/PyCharm) and the [Vim notes](https://github.com/ycharts/ycharts/wiki/Vim-Notes) 
+### Code Editors
+Although you are free to use any editor you prefer, our development has standardized around [PyCharm](https://github.com/ycharts/ycharts/wiki/PyCharm). We also have some note around using [Vim](https://github.com/ycharts/ycharts/wiki/Vim-Notes) 
 
 
 
