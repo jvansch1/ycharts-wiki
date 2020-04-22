@@ -48,11 +48,17 @@ Our production and staging environments are hosted on Amazon's AWS cloud platfor
 * S3 is used to store to host our embeddable generated chart images.
 * Route 53 is used for our DNS.
 
+## Deployment
+We use what's called an "Immutable Deployment" strategy. The basic idea is we create "artifacts" that represents the code we want to release. Then we deploy these artifacts. The advantages of this setup are that once we have the artifacts created, we can deploy at will w/o depending on any external services like Github or pypi or what not. 
+
+In our case our artifacts are Amazon Machine Images or AMIs. We use [Packer](https://www.packer.io/) to create the AMIs and use [Ansible](https://www.ansible.com/) to deploy them into Amazon "Auto Scale Groups" or ASGs. 
+
+[This document](https://github.com/ycharts/ycharts_systems/wiki/Deployment-Overview) provides an overview of our deployment procedures while [this one](https://github.com/ycharts/ycharts_systems/wiki/Deploy-and-Hotfix) goes through the commands you need to run to do a deploy. 
+
 ## Architecture / Topology
 
-[This chart](https://www.lucidchart.com/documents/edit/3ed05ef6-e356-462d-8eda-d255d65ce5bb/0_0) represents our current production network toplogy. [This chart](https://www.lucidchart.com/documents/edit/5c6fc033-6af6-4d6d-85c4-0348fe0529bc/0_0) goes into more detail as to the exact machine types and network setup.
+[This chart](https://www.lucidchart.com/documents/edit/3ed05ef6-e356-462d-8eda-d255d65ce5bb/0_0) represents our current production network toplogy. [This chart](https://www.lucidchart.com/documents/edit/7546c880-820d-4d0b-9207-8a663fb17c3c/0_0) shows the different AMIs that power each auto scale group. [This chart](https://www.lucidchart.com/documents/edit/5c6fc033-6af6-4d6d-85c4-0348fe0529bc/0_0) goes into more detail as to the exact machine types and network setup.
 
-Breaking this down, each exposed web service is backed by one or more distinct AMIs running in autoscale groups. 
 These are the distinct AMIs that exist:
 
 ### ycharts.com
@@ -69,12 +75,7 @@ These are the distinct AMIs that exist:
 ### airflow.ycharts.com
 * **Airflow Web** one or more identical machines that access a special Airflow database that visually displays the status of our dependency graphs that are run/managed by Airflow
 
-## Deployment
-We use what's called an "Immutable Deployment" strategy. The basic idea is we create "artifacts" that represents the code we want to release. Then we deploy these artifacts. The advantages of this setup are that once we have the artifacts created, we can deploy at will w/o depending on any external services like Github or pypi or what not. 
 
-In our case our artifacts are Amazon Machine Images or AMIs. We use [Packer](https://www.packer.io/) to create the AMIs and use [Ansible](https://www.ansible.com/) to deploy them into Amazon "Auto Scale Groups" or ASGs. 
-
-[This document](https://github.com/ycharts/ycharts_systems/wiki/Deployment-Overview) provides an overview of our deployment procedures while [this one](https://github.com/ycharts/ycharts_systems/wiki/Deploy-and-Hotfix) goes through the commands you need to run to do a deploy. 
 
 # XXX
 # XXX
