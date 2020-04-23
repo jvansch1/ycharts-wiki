@@ -229,7 +229,6 @@ Documentation for the site
 ### /docs Subdirectories
 * `/data_providers` contains documentation for our data providers
 * `/deployment_notes` is where each new release's must-do tasks are kept
-* `/library_updates` contains some notes for upgrading various core libraries
 * `/partners` contains information about some of our embed partners
 * `/payments` has information regarding braintree setup
 
