@@ -28,8 +28,8 @@ Your first week will be a little bit slower than most at YCharts as you get setu
 - [ ] Meet with your manager to go over what your goals are and setup a weekly meeting with them.
 - [ ] Get a walkthrough of our site with the Product Manager and see what exactly we are selling.
 - [ ] Start on some of the [required reading list](https://github.com/ycharts/ycharts/wiki/Required-Reading-List).
-- [ ] Do the [git tutorial]()
-- [ ] Do the [Django tutorial()
+- [ ] Do the [git tutorial](https://github.com/ycharts/ycharts/wiki/Onboarding-for-New-Hires#git-tutorial).
+- [ ] Do the [Django tutorial](https://github.com/ycharts/ycharts/wiki/Onboarding-for-New-Hires#django-tutorial).
 - [ ] Review with an engineer your Django Polls App from the Django Tutorial
 - [ ] Setup your [YCharts development environment](https://github.com/ycharts/ycharts/wiki/Developer-Environment-Setup). (This will usually take an entire day).
 - [ ] Everyone is expected to show up before 9:45 AM and before 9:30 AM (Market Open) if you are on support.
@@ -37,23 +37,23 @@ Your first week will be a little bit slower than most at YCharts as you get setu
 
 ### Week 2-3
 After getting your feet wet in the first week, you will get into our codebase and do some small tickets.
-
+- [ ] Continue working through the [required reading list](https://github.com/ycharts/ycharts/wiki/Required-Reading-List).
 - [ ] Meet with your manager and you will pick up your first pivotal ticket to work on.
 - [ ] Ask questions
-- [ ] Submit your first Pull Request by the end of the week 2
+- [ ] Submit your first Pull Request by the end of the week 2.
 
 ### Week 4
 You should start to feel a little more at home in your environment setup as well as our codebase.
 
 - [ ] Pick up a couple small tickets.
-- [ ] Meet with your manager to go over your first PR and ticket that you submitted in week 2/3
-- [ ] Start reading a couple books from our list of educational resources
-- [ ] Finish and submit another pull request by end of the week 4
+- [ ] Meet with your manager to go over your first PR and ticket that you submitted in week 2/3.
+- [ ] Start reading a couple books from our list of educational resources.
+- [ ] Finish and submit another pull request by end of the week 4.
 
 # 2nd Month
 As you get more and more comfortable with our codebase and our development process you will take on more responsibility as the months progress.
 
-- [ ] Fly co-polit on a weekly release [Deployment Process](https://github.com/ycharts/ycharts_systems/wiki/Deploy-and-Hotfix-%5BYCharts%5D)
+- [ ] Fly co-pilot on a weekly release [Deployment Process](https://github.com/ycharts/ycharts_systems/wiki/Deploy-and-Hotfix)
 - [ ] Perform a weekly release
 - [ ] Be on-call for one day a week (check out [the outline](https://github.com/ycharts/ycharts/wiki/Support-and-On-Call-Outline) for more details!)
 
