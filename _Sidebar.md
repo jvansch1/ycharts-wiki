@@ -16,7 +16,6 @@
 * [[YCharts Engineering Principles]]
 * [Deployment Procedure](https://github.com/ycharts/ycharts_systems/wiki/Deploy-and-Hotfix-%5BYCharts%5D)
 * [How to SSH into Machines](https://github.com/ycharts/ycharts_systems/wiki/SSH-%5BYCharts%5D)
-* [[Code Guidelines]]
 
 **Developer Notes**
 * Django
