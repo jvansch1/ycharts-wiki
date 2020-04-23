@@ -4,18 +4,17 @@
 * [[Onboarding for New Hires]]
   * [[Required Reading List]]
   * [[Educational Resources]]
-  * [[Development Process Outline]]
 * [[Setting Up Accounts for New Hires]]
 * [[Developer Environment Setup]]
 * [[Support and On Call Outline]]
 
 **Essentials**
-* [[Code Principles]]
-* [[Engineering Points of Emphasis]]
 * [[YCharts Core Values]]
 * [[YCharts Engineering Principles]]
-* [Deployment Procedure](https://github.com/ycharts/ycharts_systems/wiki/Deploy-and-Hotfix-%5BYCharts%5D)
-* [How to SSH into Machines](https://github.com/ycharts/ycharts_systems/wiki/SSH-%5BYCharts%5D)
+* [[YCharts Coding Principles]]
+* [[Engineering Points of Emphasis]]
+* [Deployment Procedure](https://github.com/ycharts/ycharts_systems/wiki/Deploy-and-Hotfix)
+* [How to SSH into Machines](https://github.com/ycharts/ycharts_systems/wiki/SSH)
 
 **Developer Notes**
 * Django
