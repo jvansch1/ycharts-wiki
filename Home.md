@@ -198,7 +198,7 @@ Here are our apps:
 * `strategies` - Stores our [investment strategies](https://ycharts.com/strategies)
 * `support` - Power the [support center](http://ycharts.com/support)
 * `systems` - Views, models, and management commands for systems related things like the [Important Command Dashboard](http://ycharts.com/systems/review) or [Queue Info](http://ycharts.com/systems/review/queue_info)
-* `tables` - code that ours our [Data Tables](https://ycharts.com/tables/comparison/) and our [Timeseries Analysis](https://ycharts.com/tables/timeseries/)
+* `tables` - code that powers our [Data Tables](https://ycharts.com/tables/comparison/) and our [Timeseries Analysis](https://ycharts.com/tables/timeseries/)
 * `tracking` - utils for tracking customer activity via [MixPanel](https://mixpanel.com/)
 * `userstats` - utils for keeping track of statistics of users
 * `watchlists` - models and utils to deal with user watchlists.
