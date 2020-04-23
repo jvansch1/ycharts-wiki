@@ -6,13 +6,15 @@ Your first week will be a little bit slower than most at YCharts as you get setu
     * Workstation (Desk, Keyboard, Monitor, etc)
       * [Chair Adjustment Guide](http://www.hermanmiller.com/content/dam/hermanmiller/documents/user_information/aeron_chairs_user_adjustment_guide.pdf)
     * Environment, IDE (We as a team use PyCharm and will make your life better if you use it)
-      * [Download the latest Professional version](https://www.jetbrains.com/pycharm/download/#section=mac). Sign up for the trial and once it expires let Fox know so he can add you to the account.
+      * [Download the latest Professional version](https://www.jetbrains.com/pycharm/download/#section=mac). Sign up for the trial and once it expires let your manager know so he can add you to the account.
     * Setup Wifi (`ycharts-secure`). You should have been given credentials to connect from your manager.
     * Setup VPN. You should have been given your VPN credentials to connect from your manager. [Instructions](https://documentation.meraki.com/MX/Client_VPN/Client_VPN_OS_Configuration#macOS)
     * External Accounts Setup
-      * Go through the [full list](https://github.com/ycharts/ycharts/wiki/Setting-Up-Accounts-for-New-Hires) accounts one by one and make sure you have access to all of them. You should have received emails from each of them asking you to confirm joining. If you don't have access and can not find the email for any of those accounts, please reach out to [Fox](https://ycharts.slack.com/messages/D1KMWKJQN). It is very important that you are able to login to each of them.
+      * Go through the [full list](https://github.com/ycharts/ycharts/wiki/Setting-Up-Accounts-for-New-Hires) accounts one by one and make sure you have access to all of them. You should have received emails from each of them asking you to confirm joining. If you don't have access and can not find the email for any of those accounts, please reach out to your manager. It is very important that you are able to login to each of them.
       * Download the slack desktop application [link](https://slack.com/downloads/mac)
-    * Add gmail filter to account so you are not spammed by unnecessary emails. This is not optional, this is a required step. If you have trouble applying the mail filter please let someone know.
+    * You need to add a gmail filter that archives away developer emails that are sent when you or another developer does something locally that causes an email to get sent.
+
+ If you have trouble applying the mail filter please let someone know.
       * [Filter XML File](https://gist.githubusercontent.com/KFoxder/8d2dd7a99bdcf1d9fac8917dd3460bc4/raw/9da9f1dca4188d9fbc6fb7595beba80316a49a93/ychartsMailFilters.xml) Right click and "Save As.."
       * [Instructions on importing filter to gmail](https://support.google.com/mail/answer/6579?hl=en)
     * Add Zenefits vacation calendar in Google Calendar so you know when other people are away.
