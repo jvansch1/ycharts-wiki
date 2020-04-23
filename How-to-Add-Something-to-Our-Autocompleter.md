@@ -1,7 +1,6 @@
-## Django Autocompleter
 Useful notes for django-autocompleter as they pertain to YCharts Development
 
-### Setting up
+## Setting up
 In order to add a new item type to the autocompleter, you'll need to setup a new AutocompleterProvider. This is done by importing and extending one of two base AutoCompleterProvider classes. AutocompleterModelProvider is for autocompleting on models such as Companies or Indicators.  AutocompleterDictProvider is for anything else (in our case, metrics).
     
     # Registy and signal_registry will be discussd elsewhere.
@@ -19,7 +18,7 @@ In order to add a new item type to the autocompleter, you'll need to setup a new
     registry.register("main", IndicatorAutocompleteProvider, {'MIN_LETTERS': 2, 'MAX_RESULTS': 6})
     signal_registry.register(Indicator)
 
-### Aliasing:
+## Aliasing
 Django-autocompleter comes equipped with the ability to alias terms, both one-way and two-way.  This allows for users to get items that we store under one name by typing in another popular name for that item.  Generally, we want two-way aliases, but in certain circumstances, one-way is more correct.
 
 Scenario:
@@ -35,7 +34,7 @@ When creating a phrase alias dict, the key should be what we store in the db.  T
 
 This is more pertinent for one-way aliases.  We have not followed this to this point, but it doesn't *really* matter in two-way aliasing.  Everything will get mapped to everything else.
 
-#### Two-way Aliasing
+### Two-way Aliasing
 
 To get two-way phrase aliasing, override get_norm_phrase_aliases() in the autocompleter provider.
 
@@ -62,7 +61,7 @@ This will give you the following mapping:
 
 In short, everything get's aliased to everything.
 
-#### One-way Aliasing
+### One-way Aliasing
 
 To get one-way aliasing, ovverride get_one_way_phrase_aliases():
 
@@ -86,13 +85,13 @@ This will give you:
 The relationship is not flipped, so it is a lot more rigid.  Typing "Turnover" will show results for "Revenue", but typing
 "Revenue" will not show results for "Turnover."
 
-#### Keep in mind
+### Keep in mind
 Some things do not need to be aliased.  We do a bit of normalization to terms both before they are stored and when they are searched for.  One normalization that is particularly relevant is the handling of join characters and "&".  
 
 * "&" will be replaced by "and".
 * in ycharts.py, there is a setting called AUTOCOMPLETER_JOIN_CHARS.  These characters (at the time of this writing) will be replaced with both a space and an empty string.  'Hello-world' becomes ['Hello world', 'helloworld']
 
-### Calculation Examples
+## Calculation Examples
 ```
 # This structure dictates the set of calcs that will get autocompleted. 
 #
