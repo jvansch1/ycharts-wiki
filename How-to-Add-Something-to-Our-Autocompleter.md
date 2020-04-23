@@ -19,7 +19,7 @@ In order to add a new item type to the autocompleter, you'll need to setup a new
     registry.register("main", IndicatorAutocompleteProvider, {'MIN_LETTERS': 2, 'MAX_RESULTS': 6})
     signal_registry.register(Indicator)
 
-###Aliasing:
+### Aliasing:
 Django-autocompleter comes equipped with the ability to alias terms, both one-way and two-way.  This allows for users to get items that we store under one name by typing in another popular name for that item.  Generally, we want two-way aliases, but in certain circumstances, one-way is more correct.
 
 Scenario:
@@ -35,7 +35,7 @@ When creating a phrase alias dict, the key should be what we store in the db.  T
 
 This is more pertinent for one-way aliases.  We have not followed this to this point, but it doesn't *really* matter in two-way aliasing.  Everything will get mapped to everything else.
 
-####Two-way Aliasing
+#### Two-way Aliasing
 
 To get two-way phrase aliasing, override get_norm_phrase_aliases() in the autocompleter provider.
 
@@ -62,7 +62,7 @@ This will give you the following mapping:
 
 In short, everything get's aliased to everything.
 
-####One-way Aliasing
+#### One-way Aliasing
 
 To get one-way aliasing, ovverride get_one_way_phrase_aliases():
 
@@ -92,7 +92,7 @@ Some things do not need to be aliased.  We do a bit of normalization to terms bo
 * "&" will be replaced by "and".
 * in ycharts.py, there is a setting called AUTOCOMPLETER_JOIN_CHARS.  These characters (at the time of this writing) will be replaced with both a space and an empty string.  'Hello-world' becomes ['Hello world', 'helloworld']
 
-####Calculation Examples
+### Calculation Examples
 ```
 # This structure dictates the set of calcs that will get autocompleted. 
 #
@@ -109,7 +109,6 @@ Some things do not need to be aliased.  We do a bit of normalization to terms bo
 # Notice that for two level calcs ... the format is not really part of the search result and scoring itself
 # so much as it is part of the data returned as part of the result... The logic of a sub-calced being selected
 # will all happen on the client side.
-
 
 calc_info_for_search = [
 {
@@ -165,7 +164,6 @@ calc_info_for_search = [
 # This structure is just a alias mapping ... 
 # Notice that terms can map to multiple things... also, DONT WORRY ABOUT THE REQUISITE REVERSE MAPPINGS.
 # That will happen for you automatically.
-
 calc_aliases_for_search = {
     'Revenues' : ['Sales', 'Turnover'],
     'Dividend' : 'Divvies',
