@@ -17,10 +17,9 @@ The following is a description of the major components of our technology stack, 
 
 ## Some Notable JS Libraries We Use
 * [Angular.js](http://angularjs.org/) is how all our JS apps are built. We use it for building front-end widgets and controls, for building single-page stateful apps, etc.
+* [Node Canvas](https://github.com/LearnBoost/node-canvas) helps us render our canvas-based charts in Node JS, add title, notes, etc and later save them as PNG. It is used in our "ycharts_chart_generator" repo.
 * [Highcharts](https://www.highcharts.com/docs/) is the core library we use to create our charts.
-
-## Some Notable NodeJS Libraries We Use
-* [Node Canvas](https://github.com/LearnBoost/node-canvas) helps us render our canvas-based charts in Node JS, add title, notes, etc and later save them as PNG
+* [Webpack](https://webpack.js.org/) is used to bundle our static assets
 
 ## Some Notable SaaS Tools We Use
 * [Base](https://getbase.com/) is what we use as a CRM/sales cycle management tool.
