@@ -1,4 +1,3 @@
-# YCharts Engineering Overview
 The following is a description of the major components of our technology stack, deployment and development process.
 
 ## High Level Stack
