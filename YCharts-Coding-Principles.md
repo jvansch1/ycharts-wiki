@@ -36,7 +36,7 @@ Writing code that works is easier than writing interfaces that stand the test of
 
 If you find yourself copying code from one place to another, you are probably doing it wrong… Use a mix-in. Use a parent class. Use a util file with a bunch of common functions. Do whatever you need to do to not repeat code.
 
-### 4) Optimize the common path
+## Optimize the common path
 
 In most parts of the code, we favor clarity over performance. However, there are key sections of code that an outsize portion of our site run on top of / depend on. When we identify one of these sections, we optimize at the expense of clarity and document heavily.
 
