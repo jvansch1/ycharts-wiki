@@ -3,10 +3,10 @@
 **Onboarding**
 * [[Onboarding for New Hires]]
   * [[Required Reading List]]
+  * [[Educational Resources]]
   * [[Development Process Outline]]
 * [[Setting Up Accounts for New Hires]]
 * [[Developer Environment Setup]]
-* [[Educational Resources]]
 * [[Support and On Call Outline]]
 
 **Essentials**
