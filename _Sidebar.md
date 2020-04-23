@@ -16,31 +16,16 @@
 * [Deployment Procedure](https://github.com/ycharts/ycharts_systems/wiki/Deploy-and-Hotfix)
 * [How to SSH into Machines](https://github.com/ycharts/ycharts_systems/wiki/SSH)
 
-**Developer Notes**
-* Django
-  * [[Autocomplete]]
-  * [[How To Squash Migrations]]
+**Domain Specific Notes**
+* Indicator
+  * [[Indicator Guide]]
+  * [[Indicator Notes]]
+  * [[Indicator Outsourcer Notes]]
+
+**Technology Specific Notes**
 * Angular
   * [[Angular]]
-* Git
-  * [[Forking On Github]]
-  * [[Random Git Notes]]
-  * [[Git Revert and Reset]]
-* Travis
-  * [[Debugging Travis CI builds]]
-* Redis
-  * [[Restoring Redis]]
-* MySQL
-  * [[General Notes]]
-  * [[Restoring Database]]
-  * [[Upgrading MySQL]]
-  * [[Useful MySQL Queries]]
-* Webpack
-  * [[Django Static File System Webpack Upgrade Docs]]
-  * [[Debugging Webpack]]
-* Tools
-  * [[PyCharm Configuration]]
-* Amazon
+* AWS
   * [[IP Switch Guide]]
   * [[Connecting to AWS Servers]]
   * [[Mechanical-Turk]]
@@ -49,13 +34,30 @@
   * Deprecated: [[AWS Redis Setup]]
 * Celery
   * [[Celery Getting Started]]
-* Indicator
-  * [[Indicator Guide]]
-  * [[Indicator Notes]]
-  * [[Indicator Outsourcer Notes]]
+* Django
+  * [[How to Add Something to Our Autocompleter]]
+  * [[How To Squash Migrations]]
+* Git
+  * [[Forking On Github]]
+  * [[Random Git Notes]]
+  * [[Git Revert and Reset]]
+* MySQL
+  * [[General Notes]]
+  * [[Restoring Database]]
+  * [[Upgrading MySQL]]
+  * [[Useful MySQL Queries]]
+* Redis
+  * [[Restoring Redis]]
+* Tools
+  * [[PyCharm Configuration]]
+* Travis
+  * [[Debugging Travis CI builds]]
 * Vagrant
   * [[How To Use Vagrant 101]]
-* Notes
+* Webpack
+  * [[Django Static File System Webpack Upgrade Docs]]
+  * [[Debugging Webpack]]
+* Other
   * [[IE Testing Notes]]
   * [[Info Column Items Notes]]
   * [[Store Notes]]
@@ -65,8 +67,8 @@
   * [[Concurrent Login Block Notes]]
   * [[IPython Tips]]
   * [[Setting Up Snakeviz]]
-
  
+**XXX TBD**
 * Other
   * [[Database Restore Machine Setup]]
   * [[Calculation Principles]]
