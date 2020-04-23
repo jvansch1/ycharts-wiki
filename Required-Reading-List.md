@@ -12,9 +12,9 @@
 
 | Resource  | Notes | 
 | ------------- | ------------- |
-| [YCharts Engineering Principles](https://github.com/ycharts/ycharts/wiki/YCharts-Engineering-Principles)  | These are the principles we as engineers try (no one is perfect) to live here at YCharts.  |
-| [YCharts Code Guidelines](https://github.com/ycharts/ycharts/wiki/Code-Guidelines)  | Helpful engineering guidelines |
-| [YCharts Technology Stack](https://github.com/ycharts/ycharts/wiki#technology-stack)  | Helpful list of the main technologies we use. |
+| [YCharts Engineering Principles](https://github.com/ycharts/ycharts/wiki/YCharts-Engineering-Principles)  | These are the principles we as engineers try to live here at YCharts.  |
+| [YCharts Coding Principles](https://github.com/ycharts/ycharts/wiki/YCharts-Coding-Principles)  | These are some more practical guidelines we like to follow day to day. |
+| [YCharts Engineering Overview](https://github.com/ycharts/ycharts/wiki) | This is a overview of engineering @ YCharts, from tech stack to hosting/deployment and finally a directory by directory guide of our main repo. |
 | [Python Tutorial](https://www.learnpython.org/)  | Solid refresher on all things Python! |
 | [PEP 8](https://www.python.org/dev/peps/pep-0008/)  | This is the Style Guide we follow for Python |
 | [Django Documentation](https://docs.djangoproject.com/en/1.8/)  | Having a bookmark or link to the Django documentation is crucial for any Django developer. Notable sections to look at are: [Model Layer](https://docs.djangoproject.com/en/1.8/#the-model-layer), [View Layer](https://docs.djangoproject.com/en/1.8/#the-view-layer) and [Development Process](https://docs.djangoproject.com/en/1.8/#the-development-process)  |
