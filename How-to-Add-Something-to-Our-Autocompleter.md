@@ -36,7 +36,7 @@ This is more pertinent for one-way aliases.  We have not followed this to this p
 
 ### Two-way Aliasing
 
-To get two-way phrase aliasing, override get_norm_phrase_aliases() in the autocompleter provider.
+To get two-way phrase aliasing, override get_phrase_aliases() in the autocompleter provider.
 
     @classmethod
     def get_phrase_aliases(cls):
@@ -59,7 +59,7 @@ This will give you the following mapping:
         'price to earnings': ['pe', 'price earnings']
     }
 
-In short, everything get's aliased to everything.
+In short, everything gets aliased to everything else.
 
 ### One-way Aliasing
 
