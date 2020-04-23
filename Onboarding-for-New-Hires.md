@@ -12,8 +12,7 @@ Your first week will be a little bit slower than most at YCharts as you get setu
     * External Accounts Setup
       * Go through the [full list](https://github.com/ycharts/ycharts/wiki/Setting-Up-Accounts-for-New-Hires) accounts one by one and make sure you have access to all of them. You should have received emails from each of them asking you to confirm joining. If you don't have access and can not find the email for any of those accounts, please reach out to your manager. It is very important that you are able to login to each of them.
       * Download the slack desktop application [link](https://slack.com/downloads/mac)
-      * You need to add a gmail filter that archives away developer emails that are sent when you or another developer does something locally that causes an email to get sent. ![xx](https://i.imgur.com/mAhxXge.png)
-        
+      * You need to add a gmail filter that archives away developer emails that are sent when you or another developer does something locally that causes an email to get sent. The screenshot of the filter you need to add is below, if you have problems adding it ask a colleague ![filter](https://i.imgur.com/mAhxXge.png)
     * Add Zenefits vacation calendar in Google Calendar so you know when other people are away.
       * [Instructions on how to add the calendar](https://help.zenefits.com/Time_Off/FAQs_About_Calendars_in_Zenefits/How_do_I_add_a_Zenefits_calendar_to_Google_Calendar%3F/)
       * Link to use in the above instructions: `webcal://secure.zenefits.com/custom_api/pto/cal/company_pto/591980?token=4wyCR_VQ_6&loc=ODc3NDY=&dept=`
