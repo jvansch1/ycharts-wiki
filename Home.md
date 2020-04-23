@@ -210,17 +210,17 @@ DEPRECATED - This used to store various compiled binaries that we used. Right no
 Server and developer environment configuration files.
 
 ### /confs Subdirectories
-* `/aws` stores userdata files that autoscaled queue machines use
+* `/airflow` store airflow specific confs
+* `/celery` store celery-specific confs
 * `/cron` stores cronjob files
 * `/database` stores plist files used by the Database Restore Mac Mini
 * `/developers` stores configuration files needs for the development environment
 * `/fonts` stores fonts that are used on the site and by node
-* `/karma` stores karma configuration for javascript tests
+* `/incident` ssets needed when taking the site into incident mode.
 * `/maintenance` assets needed when taking the site into maintenance mode.
 * `/redis` Redis confs
-* `/server` Nginx, UWSGI and package installation confs.
-* `/ssl` Files needed to set up SSL for the site.
-* `/upstart` Configuration files that define long running commands using Ubuntu's upstart system for running/start/stopping tasks
+* `/server` Nginx confs for our webservers and related assets.
+* `/systems` Configuration files that define long running commands using Ubuntu's systemd service for running/start/stopping tasks
 
 ## /data
 This folder is reserved for downloading data files before they are processed. It also stores our server log files.
@@ -231,24 +231,37 @@ Documentation for the site
 ### /docs Subdirectories
 * `/data_providers` contains documentation for our data providers
 * `/deployment_notes` is where each new release's must-do tasks are kept
+* `/library_updates` contains some notes for upgrading various core libraries
 * `/partners` contains information about some of our embed partners
 * `/payments` has information regarding braintree setup
 
+## /media
+This empty directory is where our static assets end up when they are compiled and bundled.
+
 ## /scripts
-Contains bash scripts which we use for things like database restoration from a dump or updating basic auth on staging.
+Contains a random collection scripts which we use for things like database restoration from a dump or updating basic auth on staging or running chromeheadless
+
+## /wheelhouse
+This empty directory is where our python packages end up when they are collected as a part of the build process. 
 
 ## /ycharts
 This is our Django project-level files. This is where things that don't belong in an app go and includes:
 
+# XXX
+# XXX
+# XXX
+
+### /ycharts Subdirectories
+* `/settings` - This is where our Django settings are stored. We split our settings into development, staging, and production, because database and other settings differ depending on environments. `active.py` imports the currently active environment. It is by default set to development as is changed to production/staging as part of the deploy process.
+* `static/` - is where our static files are put after being versioned and bundled by pipeline before uploading to S3
+* `templates/` - is where we store templates that don't belong to any apps like our base templates or admin template overrides
+
+### /ycharts files
 * `admin.py` - defines custom admin site which is used to add custom URLs for custom admin views
 * `celery.py` - defines our celery application.
 * `urls.py` - defines the base site url configuration.
 * `wsgi.py` - is used to run the web server!
-* `static/` - is where our static files are put after being versioned and bundled by pipeline before uploading to S3
-* `templates/` - is where we store templates that don't belong to any apps like our base templates or admin template overrides
 
-### /ycharts/settings
-This is where our Django settings are stored. We split our settings into development, staging, and production, because database and other settings differ depending on environments. `active.py` imports the currently active environment. It is by default set to development as is changed to production/staging as part of the deploy process.
 
 Also good to know:
 * `django.py` contains the standard django settings
