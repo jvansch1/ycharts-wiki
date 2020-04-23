@@ -4,7 +4,6 @@
 ### YCharts Company Readings
 | Resource  | Notes | 
 | ------------- | ------------- |
-| [YCharts Engineering Principles](https://github.com/ycharts/ycharts/wiki/YCharts-Engineering-Principles)  | These are the principles we as engineers try (no one is perfect) to live here at YCharts.  |
 | [YCharts Core Values](https://github.com/ycharts/ycharts/wiki/YCharts-Core-Values)  | These are the principles all employees live by here at YCharts. |
 | [YCharts Klipfolio](https://app.klipfolio.com/dashboard)  | This shows you how we are doing from a sales perspective. |
 
@@ -13,6 +12,8 @@
 
 | Resource  | Notes | 
 | ------------- | ------------- |
+| [YCharts Engineering Principles](https://github.com/ycharts/ycharts/wiki/YCharts-Engineering-Principles)  | These are the principles we as engineers try (no one is perfect) to live here at YCharts.  |
+
 | [YCharts Code Guidelines](https://github.com/ycharts/ycharts/wiki/Code-Guidelines)  | Helpful engineering guidelines |
 | [YCharts Technology Stack](https://github.com/ycharts/ycharts/wiki#technology-stack)  | Helpful list of the main technologies we use. |
 | [Python Tutorial](https://www.learnpython.org/)  | Solid refresher on all things Python! |
