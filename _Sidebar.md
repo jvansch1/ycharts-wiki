@@ -57,6 +57,8 @@
 * Webpack
   * [[Django Static File System Webpack Upgrade Docs]]
   * [[Debugging Webpack]]
+
+**XXX TBD**
 * Other
   * [[IE Testing Notes]]
   * [[Info Column Items Notes]]
@@ -68,8 +70,7 @@
   * [[IPython Tips]]
   * [[Setting Up Snakeviz]]
  
-**XXX TBD**
-* Other
+* Other 2
   * [[Database Restore Machine Setup]]
   * [[Calculation Principles]]
   * [[Fundamental Data Testing]]
