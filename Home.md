@@ -273,7 +273,10 @@ We are not going to go through every file in /ycharts, as many of them mirror si
 ## Top level files
 We are not going to go through every top level file, just a few worth noting:
 * `.babelrc` - Defines Babel config that drives our transpilation from ES6 to code that works in the browser we are trying to target.
+* `.flake8` - We use flake8 to check that our Python code is clean, this is the config for that.
 * `.travis.yml` - defines the configuration for TravisCI to be able to run our tests.
+* `dev_requirements.txt` - defines the python packages needed to develop on YCharts, in addition to the packages needed in requirements.txt.
+* `jest.config.js` - We use Jest to run some JS tests. This is the config for that.
 * `manage.py` - is the entrypoint to Django's management commands.
 * `package.json` - defines the node/npm packages that we use. This is mostly for our front-end code and packaging there of.
 * `requirements.txt` - defines the python packages and versions our Python code depends on being installed.
