@@ -22,17 +22,18 @@ Your first week will be a little bit slower than most at YCharts as you get setu
 - [ ] Get some sweet YCharts gear 👕 📓 ! 
 - [ ] Download Slack and Pagerduty for your phone. You will need both in general, but definitely on support.
 - [ ] Learn how to make an espresso or pour over coffee or both! ☕️ 
-- [ ] Dinner is on us if you stay past 7PM. Seamless login is on the pillar.
 - [ ] Participate in our daily scrum.
 - [ ] Eat a catered lunch on Friday with us.
 - [ ] Setup time for you to meet with some of our leaders in Chicago as well as New York.
 - [ ] Meet with your manager to go over what your goals are and setup a weekly meeting with them.
 - [ ] Get a walkthrough of our site with the Product Manager and see what exactly we are selling.
-- [ ] Start on some of the [required reading](https://github.com/ycharts/ycharts/wiki/Required-Reading-List)
-- [ ] Do the [reading list](https://github.com/ycharts/ycharts/wiki/Required-Reading-List), Git and [Django Tutorial](https://github.com/ycharts/ycharts/wiki/Onboarding-for-New-Hires#django-tutorial).
-- [ ] Review with an engineer your Django Polls App
-- [ ] Setup your [YCharts development environment](https://github.com/ycharts/ycharts/wiki/Developer-Environment-Setup). (This will usually take an entire day)
+- [ ] Start on some of the [required reading list](https://github.com/ycharts/ycharts/wiki/Required-Reading-List).
+- [ ] Do the [git tutorial]()
+- [ ] Do the [Django tutorial()
+- [ ] Review with an engineer your Django Polls App from the Django Tutorial
+- [ ] Setup your [YCharts development environment](https://github.com/ycharts/ycharts/wiki/Developer-Environment-Setup). (This will usually take an entire day).
 - [ ] Everyone is expected to show up before 9:45 AM and before 9:30 AM (Market Open) if you are on support.
+- [ ] Dinner is on us if you stay past 7PM. Seamless login is on the pillar.
 
 ### Week 2-3
 After getting your feet wet in the first week, you will get into our codebase and do some small tickets.
