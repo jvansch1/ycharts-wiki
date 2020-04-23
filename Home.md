@@ -246,33 +246,37 @@ This empty directory is where our python packages end up when they are collected
 ## /ycharts
 This is our Django project-level files. This is where things that don't belong in an app go and includes:
 
-# XXX
-# XXX
-# XXX
-
 ### /ycharts Subdirectories
-* `/settings` - This is where our Django settings are stored. We split our settings into development, staging, and production, because database and other settings differ depending on environments. `active.py` imports the currently active environment. It is by default set to development as is changed to production/staging as part of the deploy process.
-* `static/` - is where our static files are put after being versioned and bundled by pipeline before uploading to S3
-* `templates/` - is where we store templates that don't belong to any apps like our base templates or admin template overrides
+* `/dags` - This is where we keep the directed a-cyclical graphs used by Airflow to do our data pipeline.
+* `/executor` - Celery task execution base classes.
+* `/fixtures` - Data fixtures used for testings
+* `/importers` - Base classes used by our various data importing classes.
+* `/settings` - This is where our Django settings are stored. We split our settings into development, staging, and production, because database and other settings differ depending on environments. `active.py` imports the currently active environment. It is by default set to development as is changed to production/staging as part of the deploy process. Additionally, the sensitive settings files are encrypted using git-secret! Anything like a password or key used to log in to another service like an upstream data provider is stored in secrets.py
+* `static/` - Project level static files like JS/CSS/Images that don't belong in any apps.
+* `templatetags/` - Project level templatetags that don't belong in any app
+* `templates/` - Project level templates that don't belong in any app
+* `tests/` - Project level tests that don't belong in any app
+* `utils/` - Project level util functions and classes that don't belong in any app
 
 ### /ycharts files
-* `admin.py` - defines custom admin site which is used to add custom URLs for custom admin views
-* `celery.py` - defines our celery application.
-* `urls.py` - defines the base site url configuration.
+We are not going to go through every file in /ycharts, as many of them mirror similar standard files in each app, but there are a few worth noting:
+* `admin.py` - Defines custom admin site which is used to add custom URLs for custom admin views
+* `celery.py` -Defines our celery application.
+* `constants.py` - Project level constants
+* `context_processors.py` - This is context that is inserted in each and every context that's rendered into Django templates.
+* `decorators.py` - This stores some decorators we used throughout the site like for example memoization decorators.
+* `export.py` - Some base classes we use to export data
+* `fields.py` - Defines some custom DB fields that are used in various models.
+* `middleware.py` - Defines code that we might want to attach to a request to intercept and do something against. For example, if we want to profile each request for a while.
+* `widgets.py` - Custom widgets used to render some of our custom fields.
 * `wsgi.py` - is used to run the web server!
 
-
-Also good to know:
-* `django.py` contains the standard django settings
-* `pipeline.py` contains settings needed specifically for django-pipeline
-* `vendors.py` contains api keys and passwords for our various vendors (Xignite, Zacks, google analytics, etc.)
-* `ycharts.py` contains YCharts specific settings, including celery queues, honeypot, etc.
-
-Other folders have names that describe what is in them. They are worth browsing briefly.
-
 ## Top level files
+We are not going to go through every top level file, just a few worth noting:
+* `.babelrc` - Defines Babel config that drives our transpilation from ES6 to code that works in the browser we are trying to target.
 * `.travis.yml` - defines the configuration for TravisCI to be able to run our tests.
-* `fabfile.py` - defines our deployment tasks for deploying via Fabric.
 * `manage.py` - is the entrypoint to Django's management commands.
-* `package.json` - defines the node/npm packages that we use.
+* `package.json` - defines the node/npm packages that we use. This is mostly for our front-end code and packaging there of.
+* `requirements.txt` - defines the python packages and versions our Python code depends on being installed.
+* `webpack.config.js` - defines the configuration of Webpack which handles our front-end code packaging, bundling, compressing.
 
