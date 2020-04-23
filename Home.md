@@ -171,43 +171,40 @@ Here are our apps:
 * `events` - Small app that holds a service for gathering what we consider events for different securities. Events can be actual events, or stuff like splits and dividends.
 * `excel` - contains views for downloading and getting information regarding our [Excel Plugin](http://ycharts.com/excel)
 * `exchanges` - contains models with information on an exchange. This information is used by most securities.
-* `financials` - models defining all quarterly and annual financial statements are contained here. Pinger and Ara Know this best.
-* `fund_attributes` - models with fund information for CEFs, ETFs, and mutual funds
+* `financials` - models defining all quarterly and annual financial statements and their corresponding importers  are contained here.
+* `fund_attributes` - Funds, be they ETFs that live in the companies app or mutual funds that live it in the mutual_funds app, come with a series of attributes that describe them. These are things like geographic make up of holdings, credit quality of holdings, expense and fees structures and so on. This app contains all the models that store this data as well as all he importers that import this data.
+* `funds` - aside from the shared data that's contained in fund_attributes, funds, be they ETFs that live in the companies app or mutual funds that live it in the mutual_funds app, can share other things like templatetags that display certain fund-specific information. This app contains that shared code that can be leveraged in the apps like companies or mutual_funds where the views actually live.
 * `glossary` - powers [our glossary](http://ycharts.com/glossary)
+* `home` - contains the HTML/CSS/images, etc needed to display our logged out [homepage](https://ycharts.com)
 * `indicators` - contains all code for importing, working with and displaying economic indicator data.
-* `indices` - code for dealing with indices (like S&P 500, Dow 30, NASDAQ, etc.) and when applicable their constituents
-* `investor_relations` - code for information regarding companies' investor relations info, as well as news and events pages
-* `marketing_emails` - handles transactional e-mails that are sent to users post regristration / Pro signup.
-* `messaging` - handles the yellow pop up box that can display messages on our site.
+* `indices` - code for importing, working with and displaying indices (like S&P 500, Dow 30, NASDAQ, etc.) and when applicable their constituents.
+* `investment_firms` - Investment firms have to report their holdings of stocks. This app contains code to import that data from an upstream provider (WhaleWisdom) and store it.
 * `mutual_funds` - contains all models relating to mutual funds as well as management commands for importing the data
-* `news` - handles importing of third party news feeds into our site.
+* `news` - handles importing of third party news and press releases feeds into our site.
 * `notes` - holds user-entered notes on a company, index, or fund.
-* `partners` - holds a generic model for partners that have some business relationship with YCharts. Currently only for partner subscriptions, which are subscriptions that were not paid for on our site.
-* `pdf_reports` - code for generating our company PDF reports.
-* `portfolios` - models for and utils to help with our pro portfolio strategies.
-* `quotes` - utils for dealing with the returning of stock quote data. Centralized in this app because we can get quotes for an number of different objects.
-* `resources` - models and views for the [Resources](http://ycharts.com/resources) section of our site.
+* `partners` - holds a generic model for partners that have some business relationship with YCharts. Currently only for partner subscriptions, which are subscriptions that were not directly billed via our billing partner, but are either free or are invoiced separately.
+* `pdf_reports` - DEPRECATED before we had the custom_pdf_reports app, we had this app that generated one-pagers or stocks and funds.
+* `portfolios` - DEPRECATED in 2016-2017 we tried to bring in client data via an aggregator named "By All Accounts" or BAA. This app contains the models and importers for that effort. It never really took off and is not being developed.
+* `quickflows` - an app that contains a service that makes it seamless to "flow" from one page/app to another and see useful, contextual views.
+* `quotes` - A tiny app used for dealing with the returning of stock quote data. Centralized in this app because we can get quotes for an number of different security types
 * `sales_support` - models for tracking the actions of users and syncing them with Base, our sales software.
-* `screener` - code that powers our [Stock Screener](http://ycharts.com/stock_screener).
-* `search` - views relating to search on our site.
-* `securities` - utils for working with multiple types of securities
+* `screener` - code that powers our [Stock Screener](https://ycharts.com/screener/stock/) and our [Fund Screener](https://ycharts.com/screener/mutual_fund_and_etf/)
+* `search` - A centralized place for search related views, components and utils. This powers our main site autocompleter as well as the search page itself.
+* `securities` - A centralized place to share templatetags, utils, services, mixins, etc that are shared across multiple security types.
+* `security_lists` - We have a concept of lists of securities that can mix and match various security types. This app contains all code related to generating, storing and accessing those lists.
+* `separate_accounts` - Stores models and importers needed to import data for "Separate Accounts" (SA) or "Separately Managed Acccount" (SMA) securities.
 * `sharing` - views, models and utils for internal sharing of items (SavedScreens, MetricSets, etc.) with users in the same ClientGroup.
 * `store` - Handles all paid product sign up, upgrade, downgrade, cancel, etc.
+* `strategies` - Stores our [investment strategies](https://ycharts.com/strategies)
 * `support` - Power the [support center](http://ycharts.com/support)
 * `systems` - Views, models, and management commands for systems related things like the [Important Command Dashboard](http://ycharts.com/systems/review) or [Queue Info](http://ycharts.com/systems/review/queue_info)
-* `tables` - provides security comparison and timeseries app
-* `topics` - DEPRECATED - recently removed from the site; kept because it contains information on holdings of investing pro like Warren Buffett, David Einhorn, etc. (13-f filing info). Due to be replaced by direct 13-F from a data provider
+* `tables` - code that ours our [Data Tables](https://ycharts.com/tables/comparison/) and our [Timeseries Analysis](https://ycharts.com/tables/timeseries/)
 * `tracking` - utils for tracking customer activity via [MixPanel](https://mixpanel.com/)
 * `userstats` - utils for keeping track of statistics of users
 * `watchlists` - models and utils to deal with user watchlists.
 
 ## /binaries
-Stores external binary programs that we use. This includes:
-
-* `phantomjs` used for running JS on pages we are trying to scrape
-* `wkhtmltox` used for converting HTML pages to PDFs
-* `ycharts_pdf_to_html` used for converting PDFs to HTML pages
-* `yuicompressor` used for minifying/compressing static files
+DEPRECATED - This used to store various compiled binaries that we used. Right now it only stores `yuicompressor` which is used to compress JS/CSS in our legacy frontend packaging system.
 
 ## /confs
 Server and developer environment configuration files.
