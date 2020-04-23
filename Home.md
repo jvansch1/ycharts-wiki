@@ -110,7 +110,6 @@ We currently use a few different testing packages to cover different parts of th
     npm run test
     ```
 
-
 # The YCharts Codebase
 95% of our code resides in one monolithic Repo. This repo holds all the Python/Django code for our backend and all the JS/Angular code for our frontend. The only major piece of our service not in this repo is our "Chart Generator" service which is it's own distinct NodeJS based service in its own repo.
 
