@@ -23,17 +23,8 @@
   * [[Indicator Outsourcer Notes]]
 
 **Technology Specific Notes**
-* Angular
-  * [[Angular]]
 * AWS
   * [[IP Switch Guide]]
-  * [[Connecting to AWS Servers]]
-  * [[Mechanical-Turk]]
-  * [[VPC-Setup]]
-  * Deprecated: [[S3-Static-Assets]]
-  * Deprecated: [[AWS Redis Setup]]
-* Celery
-  * [[Celery Getting Started]]
 * Django
   * [[How to Add Something to Our Autocompleter]]
   * [[How To Squash Migrations]]
