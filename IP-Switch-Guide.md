@@ -43,4 +43,5 @@ Can you direct me towards who can help me with this?
 
 
 ### 3. Associate new IPs with NAT servers
-1. In `ssh.conf` update each entry to the correct IP Address 
+
+### 4. In `ssh.conf` update each entry to the correct IP Address 
