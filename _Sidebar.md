@@ -16,12 +16,6 @@
 * [Deployment Procedure](https://github.com/ycharts/ycharts_systems/wiki/Deploy-and-Hotfix)
 * [How to SSH into Machines](https://github.com/ycharts/ycharts_systems/wiki/SSH)
 
-**Domain Specific Notes**
-* Indicator
-  * [[Indicator Guide]]
-  * [[Indicator Notes]]
-  * [[Indicator Outsourcer Notes]]
-
 **Technology Specific Notes**
 * AWS
   * [[IP Switch Guide]]
@@ -50,6 +44,12 @@
   * [[Debugging Webpack]]
 
 **XXX TBD**
+**Domain Specific Notes**
+* Indicator
+  * [[Indicator Guide]]
+  * [[Indicator Notes]]
+  * [[Indicator Outsourcer Notes]]
+
 * Other
   * [[IE Testing Notes]]
   * [[Info Column Items Notes]]
