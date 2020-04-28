@@ -38,9 +38,6 @@
 **Development Tooling Specific Notes**
 * [[PyCharm Configuration]]
 * [[Setting Up Snakeviz]]
-
-* Other
-  * [[Useful Code Snippets]]
  
 * Other 2
   * [[Database Restore Machine Setup]]
@@ -52,7 +49,6 @@
   * [[Jquery UI Components]]
   * [[News Headline Feeds]]
   * [[Road to AngularJS 2.0]]
-  * [[ YCharts Technical Debt Tracker ]]
 
 **Devops**
 * [[Diagnosing Production System Issues]]
