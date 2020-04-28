@@ -22,6 +22,8 @@
 * Django
   * [[How to Add Something to Our Autocompleter]]
   * [[How To Squash Migrations]]
+  * [[Transaction Atomic Notes]]
+  * [[Django-Specific Database Debugging]]
 * Git
   * [[Useful Git Commands]]
   * [[Git Revert and Reset]]
@@ -32,22 +34,13 @@
   * [[Debugging Travis CI builds]]
 * Vagrant
   * [[How To Use Vagrant]]
-* Webpack
-  * [[Django Static File System Webpack Upgrade Docs]]
-  * [[Debugging Webpack]]
 
 **Development Tooling Specific Notes**
 * [[PyCharm Configuration]]
 * [[Setting Up Snakeviz]]
 
 * Other
-  * [[IE Testing Notes]]
-  * [[Info Column Items Notes]]
-  * [[Transaction Atomic Notes]]
   * [[Useful Code Snippets]]
-  * [[Useful Regexps]]
-  * [[Concurrent Login Block Notes]]
-  * [[IPython Tips]]
  
 * Other 2
   * [[Database Restore Machine Setup]]
@@ -82,7 +75,7 @@
 * [[Indicator Guide]]
 * [[Indicator Notes]]
 * [[Store Notes]]
-
+* [[Concurrent Login Block Notes]]
 
 **PROBABLY DEAD, SOON TO BE DELETED**
 * [[Restoring Redis]]
