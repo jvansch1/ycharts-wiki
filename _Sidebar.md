@@ -39,16 +39,13 @@
 * [[PyCharm Configuration]]
 * [[Setting Up Snakeviz]]
 
-**Devops**
+** Systems / DevOps Specific Notes**
 * [[Diagnosing Production System Issues]]
 * [[Diagnosing Memcache Issues]]
 * [[Random Useful Sysadmin Commands]]
 * [[Linux Process Debugging]]
 * [[Debugging Node Processes]]
 * [[Figuring Out Staging/Production/Dev IPs]]
-* [[Release Issues Debugging]]
-* [[Getting a new SSL certificate]]
-* [[Updating an SSL certificate]]
 
 **DELETE / UPDATE / MOVE TO REPO???**
 * [[Indicator Guide]]
