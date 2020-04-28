@@ -1,4 +1,4 @@
-### Sysadmin
+## Sysadmin
 
 ```mysql
 # Get rough table / index size of all tables
@@ -23,12 +23,16 @@ ON (TABLES.table_collation = collation_character_set_applicability.collation_nam
 WHERE table_schema NOT IN ('mysql', 'information_schema');
 
 # Look at running queries
-SHOW processlist;
+SHOW full processlist;
 
 # Kill tasks that are metalocking a database
 SHOW processlist;
 kill <bad pid num>;
+```
 
+## Export 
+
+```mysql
 # Output to csv
 SELECT foo FROM bar INTO OUTFILE '<file>'
 FIELDS TERMINATED BY ',' ENCLOSED BY '"'
@@ -37,10 +41,11 @@ LINES TERMINATED BY '\n';
 
 ```bash
 # Output to csv (RDS friendly)
-mysql --host=production-recovery-2017-08-23-replica.cy4wtovspprb.us-east-1.rds.amazonaws.com -p -u ycharts -D ycharts --batch -e "QUERY_QUERY_QUERY" |     sed 's/\t/","/g;s/^/"/;s/$/"/;s/\n//g' > ~/XXX.csv
+mysql --host=DATABASE_HOST_NAME m -p -u ycharts -D ycharts --batch -e "QUERY_QUERY_QUERY" |     sed 's/\t/","/g;s/^/"/;s/$/"/;s/\n//g' > ~/XXX.csv
 
 # ON local machine, move CSV output over
-scp production:~/XXX.csv ~/.
+cd ~
+scp -o ProxyCommand="ssh ec2-user@NAT_MACHINE_ADDRESS -W %h:%p" ubuntu@MACHINE_PRIVATE_IP:~/XXX.csv .
 ```
 
 ## Companies
@@ -84,14 +89,7 @@ WHERE i.ir_url = '' AND c.market_cap_usd > 50
 ORDER BY c.market_cap_usd DESC;
 ```
 
-## Indices
-```mysql
-# Indices, grouped by family, with last price date
-select symbol, name, xignite_legacy_family, close_level, day from indices_index left outer join indices_indexlevellatest on indices_index.id = indices_indexlevellatest.index_id order by name, xignite_legacy_family;
-```
-
 ## Indicators
-
 ```mysql
 # Indicators grouped by frequency
 SELECT frequency, COUNT(*) FROM indicators_indicator
@@ -106,8 +104,19 @@ SELECT data_type, unit, unit_shorthand, COUNT(*) FROM indicators_indicator
 GROUP BY data_type, unit, unit_shorthand ORDER BY data_type, unit;
 ```
 
-## Users
+## Indices
+```mysql
+# Differen data provider combos
+select intraday_data_provider, ohlc_data_provider, close_data_provider, count(*) from indices_index group by intraday_data_provider, ohlc_data_provider, close_data_provider order by intraday_data_provider, ohlc_data_provider, close_data_provider;
 
+# Different family / subfamily combos
+select family, subfamily, count(*) from indices_index group by family, subfamily order by family, subfamily;
+
+# Different provider / family / subfamily combos
+select provider, family, subfamily, count(*) from indices_index group by provider, family, subfamily order by provider, family, subfamily;
+```
+
+## Users
 ```mysql
 # Possible robot accounts
 SELECT * FROM auth_user WHERE email RLIKE "^[a-z]{6}@[a-z]{6}\.com";
@@ -117,15 +126,3 @@ SELECT * FROM auth_user WHERE email RLIKE "^[a-z]{6}@[a-z]{6}\.com";
 SELECT COUNT(*) FROM auth_user
 WHERE last_login < (date_joined + INTERVAL 1 day);
 ```
-
-## South Manual Migrations Examples
-If you ever need to run a manual sql migration
-
-```bash
-  indicators/migrations/0167 - update records in a database based on another column
-calculations/migrations/0138 - add columns to an existing table
-calculations/migrations/0163 - add, drop, and modify column attributes on a table
-  financials/migrations/0038 - modify true/false boolean attributes on existing columns
-```
-
-You can also do a grep for db.execute to find other manual migrations
