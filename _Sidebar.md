@@ -28,8 +28,6 @@
 * MySQL
   * [[Useful MySQL Queries and Commands]]
   * [[Restoring Database]]
-* PyCharm
-  * [[PyCharm Configuration]]
 * Travis
   * [[Debugging Travis CI builds]]
 * Vagrant
@@ -38,23 +36,18 @@
   * [[Django Static File System Webpack Upgrade Docs]]
   * [[Debugging Webpack]]
 
-**XXX TBD**
-**Domain Specific Notes**
-* Indicator
-  * [[Indicator Guide]]
-  * [[Indicator Notes]]
-  * [[Indicator Outsourcer Notes]]
+**Development Tooling Specific Notes**
+* [[PyCharm Configuration]]
+* [[Setting Up Snakeviz]]
 
 * Other
   * [[IE Testing Notes]]
   * [[Info Column Items Notes]]
-  * [[Store Notes]]
   * [[Transaction Atomic Notes]]
   * [[Useful Code Snippets]]
   * [[Useful Regexps]]
   * [[Concurrent Login Block Notes]]
   * [[IPython Tips]]
-  * [[Setting Up Snakeviz]]
  
 * Other 2
   * [[Database Restore Machine Setup]]
@@ -85,7 +78,11 @@
 **Documentation**
 * [[Model Portfolios]]
 
-**UPDATE / MOVE TO REPO
+**UPDATE / MOVE TO REPO???
+* [[Indicator Guide]]
+* [[Indicator Notes]]
+* [[Store Notes]]
+
 
 **PROBABLY DEAD, SOON TO BE DELETED**
 * [[Restoring Redis]]
