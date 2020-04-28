@@ -39,17 +39,6 @@
 * [[PyCharm Configuration]]
 * [[Setting Up Snakeviz]]
 
-** Other 2 **
-  * [[Database Restore Machine Setup]]
-  * [[Calculation Principles]]
-  * [[Fundamental Data Testing]]
-  * [[Index Naming Instructions]]
-  * [[Add a New Data Frequency]]
-  * [[Add a New Data Type]]
-  * [[Jquery UI Components]]
-  * [[News Headline Feeds]]
-  * [[Road to AngularJS 2.0]]
-
 **Devops**
 * [[Diagnosing Production System Issues]]
 * [[Diagnosing Memcache Issues]]
@@ -67,11 +56,14 @@
 **Documentation**
 * [[Model Portfolios]]
 
-**UPDATE / MOVE TO REPO???
+**DELETE / UPDATE / MOVE TO REPO???
 * [[Indicator Guide]]
 * [[Indicator Notes]]
 * [[Store Notes]]
 * [[Concurrent Login Block Notes]]
+* [[Calculation Principles]]
+* [[Index Naming Instructions]]
 
 **PROBABLY DEAD, SOON TO BE DELETED**
 * [[Restoring Redis]]
+* [[Road to AngularJS 2.0]]
