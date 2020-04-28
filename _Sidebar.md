@@ -33,7 +33,7 @@
 * Travis
   * [[Debugging Travis CI builds]]
 * Vagrant
-  * [[How To Use Vagrant 101]]
+  * [[How To Use Vagrant]]
 * Webpack
   * [[Django Static File System Webpack Upgrade Docs]]
   * [[Debugging Webpack]]
@@ -84,6 +84,8 @@
 
 **Documentation**
 * [[Model Portfolios]]
+
+**UPDATE / MOVE TO REPO
 
 **PROBABLY DEAD, SOON TO BE DELETED**
 * [[Restoring Redis]]
