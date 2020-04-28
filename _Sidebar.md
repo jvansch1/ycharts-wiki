@@ -28,9 +28,7 @@
 * MySQL
   * [[Useful MySQL Queries and Commands]]
   * [[Restoring Database]]
-* Redis
-  * 
-* Tools
+* PyCharm
   * [[PyCharm Configuration]]
 * Travis
   * [[Debugging Travis CI builds]]
