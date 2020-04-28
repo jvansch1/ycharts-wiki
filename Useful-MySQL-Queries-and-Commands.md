@@ -32,20 +32,28 @@ kill <bad pid num>;
 
 ## Export 
 
+### Export query results to CSV
 ```mysql
-# Output to csv
 SELECT foo FROM bar INTO OUTFILE '<file>'
 FIELDS TERMINATED BY ',' ENCLOSED BY '"'
 LINES TERMINATED BY '\n';
 ```
 
+### Export query results to CSV (RDS friendly)
 ```bash
-# Output to csv (RDS friendly)
+# Export results of querty
 mysql --host=DATABASE_HOST_NAME m -p -u ycharts -D ycharts --batch -e "QUERY_QUERY_QUERY" |     sed 's/\t/","/g;s/^/"/;s/$/"/;s/\n//g' > ~/XXX.csv
 
-# ON local machine, move CSV output over
+# On local machine, move CSV output over
 cd ~
 scp -o ProxyCommand="ssh ec2-user@NAT_MACHINE_ADDRESS -W %h:%p" ubuntu@MACHINE_PRIVATE_IP:~/XXX.csv .
+```
+
+### Backup and Restore a Single Database Table
+
+```bash
+mysqldump -u ycharts -p -D ycharts TABLE_NAME > TABLE_NAME.sql
+mysql -u ycharts -p  -D ycharts < TABLE_NAME.sql
 ```
 
 ## Companies
