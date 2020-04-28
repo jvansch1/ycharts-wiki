@@ -56,7 +56,7 @@
 **Documentation**
 * [[Model Portfolios]]
 
-**DELETE / UPDATE / MOVE TO REPO???
+**DELETE / UPDATE / MOVE TO REPO???**
 * [[Indicator Guide]]
 * [[Indicator Notes]]
 * [[Store Notes]]
