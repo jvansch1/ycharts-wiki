@@ -1,4 +1,4 @@
-# Vagrant Commands (have to be in /sites/ycharts)
+## Vagrant Commands (have to be in /sites/ycharts)
 * vagrant up - build and set up the box
 * vagrant reload - shut down the VM and starts the box back up (this will NOT run requirements)
 * vagrant provision - runs the provision script (ie. setting up apt-get and requirements)
@@ -7,20 +7,20 @@
 * vagrant destroy - destroys the machine (CAREFUL: if you do this, vagrant up on the next command will take 30+ minutes!)
 
 ## Django Commands
-* Migrations
+### Migrations
 ```
 vagrant ssh
 python manage.py migrate
 ```
 
-* Run Server
+### Run Server
 ```
 # After
 vagrant ssh
 yc_django
 ```
 
-# Avoiding Entering Password on  Vagrant Up/Down
+## Avoiding Entering Password on Vagrant Up/Down
 ```
 # run the below, visudo is a file that makes edit to your /etc/sudoers but makes sure it's correct syntax!
 sudo visudo
