@@ -23,8 +23,7 @@
   * [[How to Add Something to Our Autocompleter]]
   * [[How To Squash Migrations]]
 * Git
-  * [[Forking On Github]]
-  * [[Random Git Notes]]
+  * [[Useful Git Commands]]
   * [[Git Revert and Reset]]
 * MySQL
   * [[General Notes]]
