@@ -7,7 +7,6 @@
 * vagrant destroy - destroys the machine (CAREFUL: if you do this, vagrant up on the next command will take 30+ minutes!)
 
 ## Django Commands
-```
 * Migrations
 ```
 vagrant ssh
