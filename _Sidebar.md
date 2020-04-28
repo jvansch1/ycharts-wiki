@@ -38,11 +38,8 @@
 **Development Tooling Specific Notes**
 * [[PyCharm Configuration]]
 * [[Setting Up Snakeviz]]
-**Essentials**
-* [[PyCharm Configuration]]
-* [[Setting Up Snakeviz]]
 
-* Other 2
+** Other 2 **
   * [[Database Restore Machine Setup]]
   * [[Calculation Principles]]
   * [[Fundamental Data Testing]]
