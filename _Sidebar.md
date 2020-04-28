@@ -26,10 +26,8 @@
   * [[Useful Git Commands]]
   * [[Git Revert and Reset]]
 * MySQL
-  * [[General Notes]]
+  * [[Useful MySQL Queries and Commands]]
   * [[Restoring Database]]
-  * [[Upgrading MySQL]]
-  * [[Useful MySQL Queries]]
 * Redis
   * [[Restoring Redis]]
 * Tools
