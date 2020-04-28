@@ -29,7 +29,7 @@
   * [[Useful MySQL Queries and Commands]]
   * [[Restoring Database]]
 * Redis
-  * [[Restoring Redis]]
+  * 
 * Tools
   * [[PyCharm Configuration]]
 * Travis
@@ -86,3 +86,6 @@
 
 **Documentation**
 * [[Model Portfolios]]
+
+**PROBABLY DEAD, SOON TO BE DELETED**
+* [[Restoring Redis]]
