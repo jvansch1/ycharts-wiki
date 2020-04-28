@@ -50,12 +50,6 @@
 * [[Getting a new SSL certificate]]
 * [[Updating an SSL certificate]]
 
-**Project Docs**
-* [[YCharts General Charts (i.e. Bar Charts 2.0)]]
-
-**Documentation**
-* [[Model Portfolios]]
-
 **DELETE / UPDATE / MOVE TO REPO???**
 * [[Indicator Guide]]
 * [[Indicator Notes]]
@@ -63,6 +57,8 @@
 * [[Concurrent Login Block Notes]]
 * [[Calculation Principles]]
 * [[Index Naming Instructions]]
+* [[Model Portfolios]]
+* [[YCharts General Charts (i.e. Bar Charts 2.0)]]
 
 **PROBABLY DEAD, SOON TO BE DELETED**
 * [[Restoring Redis]]
