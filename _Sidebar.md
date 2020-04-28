@@ -39,7 +39,7 @@
 * [[PyCharm Configuration]]
 * [[Setting Up Snakeviz]]
 
-** Systems / DevOps Specific Notes**
+**Systems / DevOps Specific Notes**
 * [[Diagnosing Production System Issues]]
 * [[Diagnosing Memcache Issues]]
 * [[Random Useful Sysadmin Commands]]
