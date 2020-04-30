@@ -1,5 +1,3 @@
-## Debugging Node Memory Issues
-
 We can use `node-inspector` to inspect the heap. See [this blog post](https://www.toptal.com/nodejs/debugging-memory-leaks-node-js-applications)
 for a more general overview of debugging memory leaks in a node app. This page will have more detail on how to use it specifically with YCharts'
 `chart_image_generator`
@@ -37,10 +35,9 @@ sudo node-inspector
 
 ```bash
 # Get the proxy command from the ssh config
-ssh -L 8080:localhost:8080 -o ProxyCommand='ssh ec2-user@52.5.69.58 -W %h:%p' ubuntu@[node_ip]
+ssh -L 8080:localhost:8080 -o ProxyCommand='ssh ec2-user@NAT_GATEWAY_IP -W %h:%p' ubuntu@NODE_IP
 ```
 
 ### Debug it!
 
-Go to http://localhost:8080 and you are in something like the Chrome dev tools and you can take heap snapshots and edit the source code and view the console
-of the live node process! Hopefully, there is something useful there!
+Go to http://localhost:8080 and you are in something like the Chrome dev tools and you can take heap snapshots and edit the source code and view the console of the live node process! Hopefully, there is something useful there!
