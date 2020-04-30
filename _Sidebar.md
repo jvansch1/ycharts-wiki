@@ -40,12 +40,9 @@
 * [[Setting Up Snakeviz]]
 
 **Systems / DevOps Specific Notes**
-* [[Diagnosing Production System Issues]]
-* [[Diagnosing Memcache Issues]]
-* [[Random Useful Sysadmin Commands]]
-* [[Linux Process Debugging]]
 * [[Debugging Node Processes]]
-* [[Figuring Out Staging/Production/Dev IPs]]
+* [[Linux Process Debugging]]
+* [[Useful Shell Commands]]
 
 **DELETE / UPDATE / MOVE TO REPO???**
 * [[Indicator Guide]]
