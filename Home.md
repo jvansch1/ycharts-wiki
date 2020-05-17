@@ -8,7 +8,7 @@ The following is a description of the major components of our technology stack, 
 * [Redis](http://redis.io/commands) is fast key-value data store that powers our screener, autocompleter, queue, among other things.
 * [Node.js](http://nodejs.org/api/) is the server technology we use alongside our main Python/Django stack to power specific tasks that are more suited to JavaScript. Currently, it only powers our [Chart Creator](https://github.com/ycharts/ycharts_chart_generator) tool and our one click chart embedding.
 * [Nginx](http://nginx.org/) serves our web requests. It handles any rewriting, global redirecting, static file serving then proxies requests off to [uswgi](http://projects.unbit.it/uwsgi/) to execute and return requests from actual Python/Django code.
-* [Wordpress](https://wordpress.com/) is our CRM for our subdomain [get.ycharts.com](https://get.ycharts.com/)that our Marketing team uses to customize content. We manage it as part of our stack although it is not something that is actively touched by our engineering team.
+* [Wordpress](https://wordpress.com/) is our CRM for our subdomain [get.ycharts.com](https://get.ycharts.com/)that our Marketing team uses to customize content. We manage it as part of our stack although it is not something that is actively touched by our engineering team. You can find all the code related Wordpress in our [`ycharts_marketing`](https://github.com/ycharts/ycharts_marketing) repository.
 
 ## Some Notable Python Libraries We Use
 * [Celery](http://celeryproject.org/) powers our queued execution engine. 90% of our queued jobs are various time consuming financial calculations. Besides that, a few other things are queued like generating sparklines, finding related companies, and downloading news headlines for newly released economic indicators.
@@ -49,6 +49,8 @@ Our production and staging environments are hosted on Amazon's AWS cloud platfor
 * Route 53 is used for our DNS.
 
 ## Deployment
+The first thing to note is that all of our code or infrastructure as code is a separate git repository called [`ycharts_systems`](https://github.com/ycharts/ycharts_systems). The separation here is to allow all code related to deploying different repositories to live in a single place rather than have deployment code for the chart generator, charts, and ycharts_marketing all live in separate places. 
+
 We use what's called an "Immutable Deployment" strategy. The basic idea is we create "artifacts" that represents the code we want to release. Then we deploy these artifacts. The advantages of this setup are that once we have the artifacts created, we can deploy at will w/o depending on any external services like Github or pypi or what not. 
 
 In our case our artifacts are Amazon Machine Images or AMIs. We use [Packer](https://www.packer.io/) to create the AMIs and use [Ansible](https://www.ansible.com/) to deploy them into Amazon "Auto Scale Groups" or ASGs. 
