@@ -27,6 +27,7 @@
 * Git
   * [[Useful Git Commands]]
   * [[Git Revert and Reset]]
+  * [[Git Secret]]
 * MySQL
   * [[Useful MySQL Queries and Commands]]
   * [[Restoring Database]]
