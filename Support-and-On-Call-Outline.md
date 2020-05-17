@@ -5,7 +5,7 @@ When you are on-call, you will be responsible for the following:
 Most incidents flow from Sentry into PagerDuty, though a few also come from our Systems Dashboard page. When an incident is raised, do your best to find the cause of the failure (e.g. Morningstar did not have data due to a holiday, etc.). As you gain experience you'll be expected to dig deeper into the root causes of these incidents.
 
 ### 2. Providing information & support to the Chicago team
-The `engineering-support` Slack channel is where the Chicago team posts any issues or incidents. Most inquiries deal with user-facing functionality but may touch on areas of the codebase such as the Celery queues.
+The `engineering-support` Slack channel is where the Chicago team posts any issues or incidents. Your responsibility is to be the point person in the channel. If someone reports an issue, you are the one who responds with updates, resolutions, etc. This is one of the main responsibilities which is you should be the funnel in which all information is going through so there is confusion and things do not get dropped. 
 
 ### 3. Leading any remediation efforts when bugs are discovered
 While you're on-call, you may be asked to work on small bugs that you and your teammates come across. This is one of the best ways to gain exposure to areas of the codebase that you don't normally work in.
@@ -26,6 +26,7 @@ Of course, not all bugs are easily solvable, and all support incidents have vary
 * Make sure you have either the PagerDuty app on your phone, or have SMS alerting enabled in your PagerDuty account.
 * Make sure you have access to our AWS CloudWatch console before you start your on-call period.
 * Reply promptly to inquiries from the Chicago team, even if you don't have a resolution prepared let them know you are addressing it. It is always difficult to manage communication across remote teams, but keeping a tight feedback loop between NY and Chicago benefits all of us.
+* Provides a support hand-off to the next engineer on support. The point of this is to let anyone who is coming on to support to be made aware of any ongoing issues or things to look out for. 
 
 ## Other Notes
 * If you are scheduled to be on-call while you're on PTO, make sure to schedule coverage with one of your teammates!
