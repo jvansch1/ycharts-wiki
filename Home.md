@@ -3,11 +3,12 @@ The following is a description of the major components of our technology stack, 
 
 ## High Level Stack
 * [Python](http://python.org) is our backend programming language. We are standardized around Python 3.x
-* [Django](https://docs.djangoproject.com/en/1.4/) is our backend framework.
-* [MySQL](http://dev.mysql.com/doc/) is our main storage database. It powers all of our Django models.
-* [Redis](http://redis.io/commands) is the data store that powers our screener, autocompleter, queue, among other things.
-* [Node.js](http://nodejs.org/api/) is the server technology we use alongside our main Python/Django stack to power specific tasks that are more suited to JavaScript. Currently, it only powers our [Chart Creator](http://ycharts.com/chart_creator) tool and our one click chart embedding.
+* [Django](https://docs.djangoproject.com) is our backend framework.
+* [MySQL](http://dev.mysql.com/doc/) is our main storage database.
+* [Redis](http://redis.io/commands) is fast key-value data store that powers our screener, autocompleter, queue, among other things.
+* [Node.js](http://nodejs.org/api/) is the server technology we use alongside our main Python/Django stack to power specific tasks that are more suited to JavaScript. Currently, it only powers our [Chart Creator](https://github.com/ycharts/ycharts_chart_generator) tool and our one click chart embedding.
 * [Nginx](http://nginx.org/) serves our web requests. It handles any rewriting, global redirecting, static file serving then proxies requests off to [uswgi](http://projects.unbit.it/uwsgi/) to execute and return requests from actual Python/Django code.
+* [Wordpress](https://wordpress.com/) is our CRM for our subdomain [get.ycharts.com](https://get.ycharts.com/)that our Marketing team uses to customize content. We manage it as part of our stack although it is not something that is actively touched by our engineering team.
 
 ## Some Notable Python Libraries We Use
 * [Celery](http://celeryproject.org/) powers our queued execution engine. 90% of our queued jobs are various time consuming financial calculations. Besides that, a few other things are queued like generating sparklines, finding related companies, and downloading news headlines for newly released economic indicators.
@@ -90,7 +91,7 @@ For JS, we use [JSHint](http://www.jshint.com/) as a guide.
 Besides the precommit hook we highly recommend installing plugins for your preferred text editor to do PEP8/JSHint checking as you write code.
 
 ## Code Editors
-Although you are free to use any editor you prefer, our development has standardized around [PyCharm](https://github.com/ycharts/ycharts/wiki/PyCharm). We also have some note around using [Vim](https://github.com/ycharts/ycharts/wiki/Vim-Notes).
+Our development has standardized around [PyCharm](https://github.com/ycharts/ycharts/wiki/PyCharm) as our goto code editor across the team. While you are not required to use PyCharm, you are highly encourages as it lowers the barrier for any pair programming and in general coworker together in person. We also have some note around using [Vim](https://github.com/ycharts/ycharts/wiki/Vim-Notes).
 
 ## Testing Environment
 We currently use a few different testing packages to cover different parts of the codebase.
@@ -111,7 +112,7 @@ We currently use a few different testing packages to cover different parts of th
     ```
 
 # The YCharts Codebase
-95% of our code resides in one monolithic Repo. This repo holds all the Python/Django code for our backend and all the JS/Angular code for our frontend. The only major piece of our service not in this repo is our "Chart Generator" service which is it's own distinct NodeJS based service in its own repo.
+95% of our code resides in one monolithic repository. This repository holds all the Python/Django code for our backend and all the JS/Angular code for our frontend. The only major piece of our service not in this repo is our "Chart Generator" service which is it's own distinct NodeJS based service in its own repo.
 
 The following headers all represent folders in our YCharts python Django project. Underneath the header are examples of what the folder contains.
 
@@ -187,10 +188,10 @@ Here are our apps:
 * `quotes` - A tiny app used for dealing with the returning of stock quote data. Centralized in this app because we can get quotes for an number of different security types
 * `sales_support` - models for tracking the actions of users and syncing them with Base, our sales software.
 * `screener` - code that powers our [Stock Screener](https://ycharts.com/screener/stock/) and our [Fund Screener](https://ycharts.com/screener/mutual_fund_and_etf/)
-* `search` - A centralized place for search related views, components and utils. This powers our main site autocompleter as well as the search page itself.
+* `search` - A centralized place for search-related views, components and utils. This powers our main site autocompleter as well as the search page itself.
 * `securities` - A centralized place to share templatetags, utils, services, mixins, etc that are shared across multiple security types.
 * `security_lists` - We have a concept of lists of securities that can mix and match various security types. This app contains all code related to generating, storing and accessing those lists.
-* `separate_accounts` - Stores models and importers needed to import data for "Separate Accounts" (SA) or "Separately Managed Acccount" (SMA) securities.
+* `separate_accounts` - Stores models and importers needed to import data for "Separate Accounts" (SA) or "Separately Managed Account" (SMA) securities.
 * `sharing` - views, models and utils for internal sharing of items (SavedScreens, MetricSets, etc.) with users in the same ClientGroup.
 * `store` - Handles all paid product sign up, upgrade, downgrade, cancel, etc.
 * `strategies` - Stores our [investment strategies](https://ycharts.com/strategies)
