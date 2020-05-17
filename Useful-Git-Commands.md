@@ -22,12 +22,12 @@ git fetch REMOTE
 git checkout REMOTE/BRANCH_NAME
 ```
 
-For example, to review a pull request from `ryan/random_changes`:
+For example, to review a pull request from `ara/random_changes`:
 
 ```bash
-git remote set-branches ryan random_changes
-git fetch ryan
-git checkout ryan/random_changes
+git remote set-branches ara random_changes
+git fetch ara
+git checkout ara/random_changes
 ```
 
 > NOTE: You will be in a "detached HEAD" state. This just means `HEAD` is at a remote ref and
