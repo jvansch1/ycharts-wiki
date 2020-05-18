@@ -52,7 +52,6 @@
 * [[Concurrent Login Block Notes]]
 * [[Calculation Principles]]
 * [[Index Naming Instructions]]
-* [[Model Portfolios]]
 * [[YCharts General Charts (i.e. Bar Charts 2.0)]]
 
 **PROBABLY DEAD, SOON TO BE DELETED**
