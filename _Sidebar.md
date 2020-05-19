@@ -45,7 +45,7 @@
 * [[Linux Process Debugging]]
 * [[Useful Shell Commands]]
 
-**Old Notes: Move to Repo or Delete**
+**OLD NOTES: Move to Repo or Delete**
 * [[Concurrent Login Block Notes]]
 * [[Calculation Principles]]
 * [[YCharts General Charts (i.e. Bar Charts 2.0)]]
