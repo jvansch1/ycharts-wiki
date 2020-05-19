@@ -45,7 +45,7 @@
 * [[Linux Process Debugging]]
 * [[Useful Shell Commands]]
 
-**Old Notes: Move to Repo or Delete **
+**Old Notes: Move to Repo or Delete**
 * [[Store Notes]]
 * [[Concurrent Login Block Notes]]
 * [[Calculation Principles]]
