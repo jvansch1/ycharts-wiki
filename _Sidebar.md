@@ -45,15 +45,10 @@
 * [[Linux Process Debugging]]
 * [[Useful Shell Commands]]
 
-**DELETE / UPDATE / MOVE TO REPO???**
-* [[Indicator Guide]]
-* [[Indicator Notes]]
+**Old Notes: Move to Repo or Delete **
 * [[Store Notes]]
 * [[Concurrent Login Block Notes]]
 * [[Calculation Principles]]
-* [[Index Naming Instructions]]
 * [[YCharts General Charts (i.e. Bar Charts 2.0)]]
 
-**PROBABLY DEAD, SOON TO BE DELETED**
-* [[Restoring Redis]]
-* [[Road to AngularJS 2.0]]
+
