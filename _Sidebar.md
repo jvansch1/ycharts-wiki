@@ -46,7 +46,6 @@
 * [[Useful Shell Commands]]
 
 **Old Notes: Move to Repo or Delete**
-* [[Store Notes]]
 * [[Concurrent Login Block Notes]]
 * [[Calculation Principles]]
 * [[YCharts General Charts (i.e. Bar Charts 2.0)]]
