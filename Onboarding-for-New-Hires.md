@@ -3,10 +3,8 @@
 Your first week will be a little bit slower than most at YCharts as you get setup and meet our team. We encourage your to **write down as much as you can** and there are never too many questions.
 
 - [ ] On your couple of days you will need to setup a few things. The following setup items are **required** not optional so do each of them:
-    * Workstation (Desk, Keyboard, Monitor, etc)
-      * [Chair Adjustment Guide](http://www.hermanmiller.com/content/dam/hermanmiller/documents/user_information/aeron_chairs_user_adjustment_guide.pdf)
     * Environment, IDE (We as a team use PyCharm and will make your life better if you use it)
-      * [Download the latest Professional version](https://www.jetbrains.com/pycharm/download/#section=mac). Sign up for the trial and once it expires let your manager know so he can add you to the account.
+      * [Download the latest Professional version](https://www.jetbrains.com/pycharm/download/#section=mac). Sign up for the trial and once it expires let your manager know so they can add you to the account.
     * Setup Wifi (`ycharts-secure`). You should have been given credentials to connect from your manager.
     * Setup VPN. You should have been given your VPN credentials to connect from your manager. [Instructions](https://documentation.meraki.com/MX/Client_VPN/Client_VPN_OS_Configuration#macOS)
     * External Accounts Setup
