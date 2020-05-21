@@ -1,3 +1,7 @@
+### Setup VPN
+Make sure you can access the YCharts VPN and have an account. 
+
+
 ### Enable FileVault
 For security purposes, all of our machines need to have encrypted hard disks. Before you do anything on your computer you will need to install FileVault. Please read the following steps:
 
