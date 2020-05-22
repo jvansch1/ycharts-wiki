@@ -9,6 +9,7 @@ Your first week will be a little bit slower than most at YCharts as you get setu
     * Setup VPN. You should have been given your VPN credentials to connect from your manager. [Instructions](https://documentation.meraki.com/MX/Client_VPN/Client_VPN_OS_Configuration#macOS)
     * Setup YCharts Production account. 
         * Login to [YCharts Admin Site](https://ycharts.com/admin/) and setup your 2FA with your google authenticator.
+    * Setup your calendar and make sure you accept the events you are invited to. We rely heavily on our google calendars for scheduling everything from daily meetings to 1 on 1s with your manager to reviews. Highly recommended to use the [slack plugin for google calendar](https://slack.com/app-pages/google-calendar). 
     * External Accounts Setup
       * Go through the [full list](https://github.com/ycharts/ycharts/wiki/Setting-Up-Accounts-for-New-Hires) accounts one by one and make sure you have access to all of them. You should have received emails from each of them asking you to confirm joining. If you don't have access and can not find the email for any of those accounts, please reach out to your manager. It is very important that you are able to login to each of them.
       * Download the slack desktop application [link](https://slack.com/downloads/mac)
