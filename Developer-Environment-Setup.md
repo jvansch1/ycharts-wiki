@@ -321,6 +321,9 @@ user.save()
 1. Now once you are inside your vagrant instance run `yc_django` and go to `http://0.0.0.0:8000/admin/` to log in. 
 1. From here, head to `Users` section and create a PartnerSubscription for your account. ![](https://imgur.com/RuJsro3.png)  ![](https://imgur.com/UkMLmTl.png)
 1. Add your user to the [YCharts Staff Client Group](http://localhost:8000/admin/accounts/clientgroup/62/) [![Screenshot from Gyazo](https://gyazo.com/faf60276b187e0622509315ec3160696/raw)](https://gyazo.com/faf60276b187e0622509315ec3160696)
+1. Add your user to the `web_admins`, `systems`, and `testers` groups in the Admin interface (under the `Administrative` tab for the user). Don't worry if the box on the right doesn't expand.
+![Screenshot of adding user to groups](https://i.imgur.com/WQFueNM.png)
+
 
 > Note: You should now have access to all features in your local environment however you will need to do the same in staging and production. 
 
