@@ -76,7 +76,7 @@ Install Homebrew for easier package management. This will also prompt you about 
 1. Clone the `ycharts` and `ycharts_chart_generator` repos
 
     ```bash
-    cd /sites/ycharts
+    cd /sites
     git clone git@github.com:ycharts/ycharts.git
     git clone git@github.com:ycharts/ycharts_chart_generator.git
     ```
