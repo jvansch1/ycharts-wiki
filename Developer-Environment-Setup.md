@@ -40,6 +40,8 @@ Install Homebrew for easier package management. This will also prompt you about 
     ```
 
 ## Setting up Git-Secret
+> Read more about git secret here: https://github.com/ycharts/ycharts/wiki/Git-Secret
+
 1. Install `git-secret` via Homebrew
     ```bash
     brew install git-secret
