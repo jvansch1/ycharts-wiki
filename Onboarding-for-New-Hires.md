@@ -14,6 +14,8 @@ Your first week will be a little bit slower than most at YCharts as you get setu
     * External Accounts Setup
       * Go through the [full list](https://github.com/ycharts/ycharts/wiki/Setting-Up-Accounts-for-New-Hires) accounts one by one and make sure you have access to all of them. You should have received emails from each of them asking you to confirm joining. If you don't have access and can not find the email for any of those accounts, please reach out to your manager. It is very important that you are able to login to each of them.
       * Download the slack desktop application [link](https://slack.com/downloads/mac)
+        * Be sure to install 2 necessary plugins: [Google Calendar](https://ycharts.slack.com/apps/ADZ494LHY-google-calendar) and [Github](https://ycharts.slack.com/apps/A8GBNUWU8-github)
+        * Once you have the Github Slack app installed follow these instructions to setup reminders so you know when PRs are approved, require changes, re-assigned, etc. : https://help.github.com/en/github/setting-up-and-managing-your-github-user-account/managing-your-scheduled-reminders
       * You need to add a gmail filter that archives away developer emails that are sent when you or another developer does something locally that causes an email to get sent. 
         * The screenshot of the filter you need to add is below, if you have problems adding it ask a colleague![filter](https://i.imgur.com/mAhxXge.png)
         * The XML Gmail filter is [here](https://gist.githubusercontent.com/KFoxder/8552361f1a59ba069db05fac2f801669/raw/d5996b599e5130f7dcae2bbd15c8b6e595e2e2b2/ycharts_engineering_gmail_filter.xml). Instructions on how to import a Gmail filter are [here](https://support.google.com/mail/answer/6579?hl=en)
