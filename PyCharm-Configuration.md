@@ -33,7 +33,11 @@ When using all the different search functionality we don't want to include anyth
 ![image](https://user-images.githubusercontent.com/2000316/43075866-1d64f5a6-8e50-11e8-95d1-5beb91c0a7cf.png)
 
 2. You should set your Code Style for Python (`Preferences | Editor | Code Style | Python`) here to sort Python Imports like below. Then click `control + option + o` and it will auto format your imports in the file.
-![image](https://user-images.githubusercontent.com/2000316/43075802-df90449c-8e4f-11e8-9d1f-529b286af5ea.png)
+![image](https://i.imgur.com/BzTO1If.png)
+
+3. You should also update your wrapping and indentation settings for imports like this:
+![image](https://i.imgur.com/AiWX4Uj.png)
+
 
 ## ESLint Configuration
 This is really helpful for spotting Javascript related issues before you get caught by the pre commit hook. 
