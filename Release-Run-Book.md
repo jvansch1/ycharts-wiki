@@ -32,7 +32,7 @@ In order to ensure key functions of our application work before releasing code f
 1. Create an alert for investment strategies.
 
 ### Redesign:
-1. Go to Mutual Fund Beta Quote page `http://staging.ycharts.com/mutual_funds/beta/M:VTSAX`
+1. Go to a Mutual Fund Beta Quote page (i.e. `http://staging.ycharts.com/mutual_funds/beta/M:VTSAX`)
 1. Select the Alerts icon and create a new alert from the Alerts modal. 
 1. Go back to the dashboard and ensure the newly created alert is present.
 
