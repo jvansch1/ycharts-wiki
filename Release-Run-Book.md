@@ -26,11 +26,12 @@ In order to ensure key functions of our application work before releasing code f
 1. Rename dashboard.
 
 ## Alerts
-Old Design:
+### Old Design:
 1. Create an alert for a stock via the dashboard.
 1. Create an alert for a watchlist via the dashboard.
 1. Create an alert for investment strategies.
-Redesign:
+
+### Redesign:
 1. Go to Mutual Fund Beta Quote page `http://staging.ycharts.com/mutual_funds/beta/M:VTSAX`
 1. Select the Alerts icon and create a new alert from the Alerts modal. 
 1. Go back to the dashboard and ensure the newly created alert is present.
