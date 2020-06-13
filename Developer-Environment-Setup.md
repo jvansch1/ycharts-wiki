@@ -120,7 +120,7 @@ ssh-add -K ~/.ssh/ycharts-2014-01.pem
 1. Follow the steps in this Wiki [`ycharts_systems` Developer Environment Setup](https://github.com/ycharts/ycharts_systems/wiki/Development-Environment-Setup).
 
 ## Set up Autoenv specific to this directory
-Autoenv should have already been installed when going through the environment setup for ycharts-systems repo.
+Autoenv should have already been installed when going through the environment setup for [ycharts_systems](https://github.com/ycharts/ycharts_systems/wiki/Development-Environment-Setup) repo.
 
 ```sh
 cd /sites/ycharts
