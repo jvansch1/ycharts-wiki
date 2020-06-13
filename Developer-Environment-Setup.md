@@ -77,7 +77,6 @@ Install Homebrew for easier package management. This will also prompt you about 
     ```bash
     cd /sites
     git clone git@github.com:ycharts/ycharts.git
-    git clone git@github.com:ycharts/ycharts_chart_generator.git
     ```
 
 1. Confirm that you can pull down from one of our remote branches; if you can't ask for assistance!
