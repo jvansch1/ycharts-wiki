@@ -55,8 +55,8 @@ Install Homebrew for easier package management. This will also prompt you about 
     # Export Public key via
     # Find KEY ID
     gpg --list-secret-keys --keyid-format LONG
-    # Print Public Key to terminal.
-    gpg --armor --export [KEY ID]
+    # Save your public key to a text file located at "~/Documents/new_engineer.txt"
+    gpg --armor --export [KEY ID] >> ~/Documents/new_engineer.txt
     ```
 1. The onboarder needs to do the following before you can proceed:
     ```bash
