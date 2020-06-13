@@ -19,8 +19,7 @@ Install Homebrew for easier package management. This will also prompt you about 
 ```
 
 ## Setting up Git
-1. Create a github account and tell an admin to add your username to YCharts.
-1. Create an private/public key and tie it to your github account.
+1. Create a private/public key and tie it to your github account.
     * Follow the instructions here: https://help.github.com/articles/connecting-to-github-with-ssh/
 1. Configure so your SSH passphrase is remembered.
     * Follow the instructions here: https://help.github.com/articles/working-with-ssh-key-passphrases/.
