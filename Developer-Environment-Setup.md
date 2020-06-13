@@ -122,8 +122,6 @@ ssh-add -K ~/.ssh/ycharts-2014-01.pem
 ## Set up Autoenv specific to this directory
 Autoenv should have already been installed when going through the environment setup for ycharts-systems repo.
 
-> NOTE: We should probably be moving to use [direnv](https://direnv.net/) soon.
-
 ```sh
 cd /sites/ycharts
 
