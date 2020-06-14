@@ -1,8 +1,8 @@
-### Setup VPN
-Make sure you can access the YCharts VPN and have an account. 
+## Setup VPN
+Make sure you can access the YCharts VPN and have an account. This should have already happened as part of setting up accounts. However, if it didn't, you must do it now before continuing.
 
 
-### Enable FileVault
+## Enable FileVault
 For security purposes, all of our machines need to have encrypted hard disks. Before you do anything on your computer you will need to install FileVault. Please read the following steps:
 
 1. Note before following the guide remember to:
@@ -18,27 +18,36 @@ Install Homebrew for easier package management. This will also prompt you about 
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-## Setting up Git
-1. Create a private/public key and tie it to your github account.
-    * Follow the instructions here: https://help.github.com/articles/connecting-to-github-with-ssh/
-1. Configure so your SSH passphrase is remembered.
-    * Follow the instructions here: https://help.github.com/articles/working-with-ssh-key-passphrases/.
-1. Add your ssh key to ssh-agent explicitly just in case though
-
+## Setup Github and Git
+1. Generate an SSH key: [Instructions](https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+1. Add this new SSH key to your Github Account: [Instructions](https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account)
+1. Add your ssh key to ssh-agent explicitly:
     ```bash
     ssh-add -K ~/.ssh/id_rsa
     ```
-1. Set up `/sites` directory
 
+## Setup local development directory
+
+> NOTE: Depending on your operating system there are two different steps. Please check your operating system version first before proceeding. To do so click the  > About This Mac
+
+**Mac OS => 10.15 (Catalina):**
+1. Copy and paste the following into your terminal:
+    ```bash
+    mkdir ~/sites
+    touch /etc/synthetic.conf
+    echo "sites\t/Users/`whoami`/sites" | sudo tee /etc/synthetic.conf
+    ```
+2. After copying and pasting, you must restart your computer.
+
+**Mac OS <= 10.14 (Mojave):**
     ```bash
     sudo mkdir -p /sites
     cd /sites
-
-    # Use username to chown /sites
     sudo chown -R `whoami` /sites/
+    ln -s /sites ~/sites
     ```
 
-## Setting up Git-Secret
+## Setup Git-Secret
 > Read more about git secret here: https://github.com/ycharts/ycharts/wiki/Git-Secret
 
 1. Install `git-secret` via Homebrew
