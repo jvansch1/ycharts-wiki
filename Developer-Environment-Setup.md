@@ -353,5 +353,5 @@ npm run dev
 When running webpack hot reloading on your local host machine (Mac), do not check in the `package-lock.json` if it is modified. You should only checkin the `package-lock.json` if you have modified anything in `package.json` and have run `npm run dev` within your vagrant machine. 
 
 
-### Setup Chart Generator Repo
+## Setup Chart Generator Repo
 Now that you have setup the `ycharts` repo and `ycharts_systems` the next step is to setup the `ycharts_chart_generator` repository. [Follow these instructions](https://github.com/ycharts/ycharts_chart_generator/wiki/Developer-Environment-Setup)
