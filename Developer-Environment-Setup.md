@@ -140,10 +140,10 @@ cd .
 ```
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
 
-echo "export NVM_DIR=\"$HOME/.nvm\"" >> ~/.bash_profile
-echo "[ -s \"$NVM_DIR/nvm.sh\" ] && \. \"$NVM_DIR/nvm.sh\" # This loads nvm"  >> ~/.bash_profile
-echo "[ -s \"$NVM_DIR/bash_completion\" ] && \. \"$NVM_DIR/bash_completion\""  >> ~/.bash_profile
-source ~/.bash_profile
+echo "export NVM_DIR=\"$HOME/.nvm\"" >> ~/.zprofile
+echo "[ -s \"$NVM_DIR/nvm.sh\" ] && \. \"$NVM_DIR/nvm.sh\" # This loads nvm"  >> ~/.zprofile
+echo "[ -s \"$NVM_DIR/bash_completion\" ] && \. \"$NVM_DIR/bash_completion\""  >> ~/.bashzprofile_profile
+source ~/.zprofile
 nvm install 10
 nvm alias default stable
 ```
@@ -175,8 +175,8 @@ nvm alias default stable
 # Install MySQL -- DON'T RUN ANY COMMANDS HOMEBREW TELLS YOU TO RUN AFTER INSTALLATION!
 brew install mysql@5.7
 
-echo 'export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"' >> ~/.bash_profile
-source ~/.bash_profile
+echo 'export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"' >> ~/.zprofile
+source ~/.zprofile
 
 # Make a symlink so generic mysql commands link to 5.7 version
 ln -s /usr/local/opt/mysql@5.7 /usr/local/opt/mysql
