@@ -24,13 +24,14 @@ echo 'source ~/.autoenv/activate.sh' >> ~/.bash_profile
 source ~/.bash_profile
 ```
 
-## 2. Upgrade OS
+## 2. Upgrade OS to Catalina
 1. Go to Systems Preferences -> Software Update
 2. Follow the upgrade instructions to upgrade to Catalina
 
 
 ## 3. Setup `sites` directory
 > NOTE: What we are doing here is moving your old `/sites` directory to `~/sites` and then creating a firmlink. When upgrading, Catalina moves all root directories to `/Users/Shared/Relocated Items/Security/`. Once the firmlink is created we need to restart the machine.
+Once the upgrade is complete, login and open the terminal and copy and paste the following:
 ```
 rm -rf ~/sites
 sudo mv /Users/Shared/Relocated\ Items/Security/sites ~
@@ -40,6 +41,7 @@ sudo shutdown -r now
 ```
 
 ## 4. Reprovision Vagrant & Install XCode
+Once the computer restarts, open the terminal and copy and paste the following:
 ```
 cd /sites/ycharts
 xcode-select --install
@@ -47,3 +49,6 @@ rm -rf node_modules
 vagrant destroy
 vagrant up --provision
 ```
+
+## 5. Test setup
+Once these steps are complete run the local django server through vagrant, along with the chart generator and ensure it is working. You should also test that you are able to SSH into staging machines through the `ycharts_systems` repo.
