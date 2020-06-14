@@ -31,6 +31,7 @@ source ~/.bash_profile
 
 ## 3. Setup `sites` directory
 > NOTE: What we are doing here is moving your old `/sites` directory to `~/sites` and then creating a firmlink. When upgrading, Catalina moves all root directories to `/Users/Shared/Relocated Items/Security/`. Once the firmlink is created we need to restart the machine.
+
 Once the upgrade is complete, login and open the terminal and copy and paste the following:
 ```
 rm -rf ~/sites
