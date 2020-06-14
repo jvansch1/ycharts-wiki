@@ -28,7 +28,7 @@ Install Homebrew for easier package management. This will also prompt you about 
 
 ## Setup local development directory
 
-> NOTE: Depending on your operating system there are two different steps. Please check your operating system version first before proceeding. To do so click the  > About This Mac
+> NOTE: Depending on your operating system there are two different steps. Please check your operating system version first before proceeding. To do so click  > About This Mac.
 
 **Mac OS => 10.15 (Catalina):**
 1. Copy and paste the following into your terminal:
@@ -40,6 +40,7 @@ Install Homebrew for easier package management. This will also prompt you about 
 2. After copying and pasting, you must restart your computer.
 
 **Mac OS <= 10.14 (Mojave):**
+1. Copy and paste the following into your terminal:
     ```bash
     sudo mkdir -p /sites
     cd /sites
@@ -67,7 +68,7 @@ Install Homebrew for easier package management. This will also prompt you about 
     # Save your public key to a text file located at "~/Documents/new_engineer.txt"
     gpg --armor --export [KEY ID] >> ~/Documents/new_engineer.txt
     ```
-1. The onboarder needs to do the following before you can proceed:
+1. These instructions are not for the engineering setting up their environment but for the onboarding engineer. The onboarding engineer needs to do the following before you can proceed:
     ```bash
     # Download the public key to a local directory (ie ~/Downloads/new_engineer.txt)
     gpg --import ~/Downloads/new_engineer.txt
@@ -80,16 +81,14 @@ Install Homebrew for easier package management. This will also prompt you about 
     git push origin develop
     ```
 ## Checkout Code
-1. Fork the [`ycharts`](https://github.com/ycharts/ycharts), [`ycharts_chart_generator`](https://github.com/ycharts/ycharts_chart_generator), and [`ycharts_systems`](https://github.com/ycharts/ycharts_systems) repos by hitting the "Fork" button. ![Imgur](https://i.imgur.com/N5Y9E6a.png)
-1. Clone the `ycharts` and `ycharts_chart_generator` repos
-
+1. Fork all 3 repositories. [`ycharts`](https://github.com/ycharts/ycharts), [`ycharts_chart_generator`](https://github.com/ycharts/ycharts_chart_generator), and [`ycharts_systems`](https://github.com/ycharts/ycharts_systems). You can fork them by hitting the "Fork" button. ![Imgur](https://i.imgur.com/N5Y9E6a.png)
+1. Clone the `ycharts` repo.
     ```bash
     cd /sites
     git clone git@github.com:ycharts/ycharts.git
     ```
 
 1. Confirm that you can pull down from one of our remote branches; if you can't ask for assistance!
-
     ```bash
     cp /sites/ycharts/confs/developers/git_config /sites/ycharts/.git/config
     cd /sites/ycharts
@@ -97,35 +96,23 @@ Install Homebrew for easier package management. This will also prompt you about 
     ```
 
 1. Set up your git hooks for the `ycharts` repo
-
     ```bash
     ln -s -f /sites/ycharts/confs/developers/git_pre_commit_hook.py /sites/ycharts/.git/hooks/pre-commit
     ln -s -f /sites/ycharts/confs/developers/git_post_merge_hook.py /sites/ycharts/.git/hooks/post-merge
     ```
 
 1. Decrypt sensitive files in `ycharts` repo
-
     ```bash
     cd /sites/ycharts
     git secret reveal -f
     ```
-## Get SSH keys, AWS keys, etc
+## Setup AWS Keys
+1. Download the Google Authenticator App on your personal phone. ([iOS](https://itunes.apple.com/us/app/google-authenticator/id388497605?mt=8) or [Android](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en_US))
 
-1. Get the ycharts keys from someone and move it to `~/.ssh/` so you
-can connect to our server machines.  You will be getting the `.pem` key.
+1. Ask your manager to set up an AWS user for you for the project and send you
+your access and secret keys. You will need to setup your Two-Factor as well using the Google Authenticator application.
 
-2. Also ask your manager to set up an AWS user for you for the project and send you
-your access and secret keys. You will need 2-factor authentication on your cell phone so go ahead and download it. ([iOS](https://itunes.apple.com/us/app/google-authenticator/id388497605?mt=8) or [Android](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en_US))
-
-Initialize your ssh key
-```
-# Change the permissions on the key file
-chmod 700 ~/.ssh/ycharts-2014-01.pem
-# Add the key file to your ssh-agent
-ssh-add -K ~/.ssh/ycharts-2014-01.pem
-```
-
-## Setup ycharts_systems
+## Setup ycharts_systems repo
 1. Follow the steps in this Wiki [`ycharts_systems` Developer Environment Setup](https://github.com/ycharts/ycharts_systems/wiki/Development-Environment-Setup).
 
 ## Set up Autoenv specific to this directory
@@ -138,9 +125,9 @@ touch .env
 echo "workon ycharts_systems" >> /sites/ycharts/.env
 
 touch /sites/ycharts/confs/developers/vagrant_bash_profile_local
+echo "export AWS_DEFAULT_REGION=us-east-1" >> /sites/ycharts/confs/developers/vagrant_bash_profile_local
 echo "export AWS_ACCESS_KEY_ID=<YOUR YCHARTS ACCESS KEY>" >> /sites/ycharts/confs/developers/vagrant_bash_profile_local
 echo "export AWS_SECRET_ACCESS_KEY=<YOUR YCHARTS SECRET KEY>" >> /sites/ycharts/confs/developers/vagrant_bash_profile_local
-echo "export AWS_DEFAULT_REGION=us-east-1" >> /sites/ycharts/confs/developers/vagrant_bash_profile_local
 ```
 
 Now re-enter the directory and make sure it's working. You should be prompted and then type y.
@@ -161,27 +148,25 @@ nvm install 8
 ```
 
 ## Install Redis
-```bash
-# Download redis 3.2.4
-cd ~
-curl http://download.redis.io/releases/redis-3.2.4.tar.gz -o "redis-3.2.4.tar.gz"
-tar xzf redis-3.2.4.tar.gz
-cd redis-3.2.4
-make
 
-# Install redis executables and redis config
-mv ~/redis-3.2.4/src/redis-server /usr/local/bin
-mv ~/redis-3.2.4/src/redis-cli /usr/local/bin
-cp /sites/ycharts/confs/redis/redis.conf /usr/local/etc/redis.conf
-# Start redis on launch
-mkdir -p ~/Library/LaunchAgents
-cp /sites/ycharts/confs/redis/com.ycharts.redis.plist ~/Library/LaunchAgents
-# Start redis now
-launchctl load ~/Library/LaunchAgents/com.ycharts.redis.plist
-
-# Use the redis cli with:
-redis-cli
-```
+1. Copy and Paste the following into your terminal:
+    ```bash
+    cd ~
+    curl http://download.redis.io/releases/redis-3.2.4.tar.gz -o "redis-3.2.4.tar.gz"
+    tar xzf redis-3.2.4.tar.gz
+    cd redis-3.2.4
+    make
+    mv ~/redis-3.2.4/src/redis-server /usr/local/bin
+    mv ~/redis-3.2.4/src/redis-cli /usr/local/bin
+    cp /sites/ycharts/confs/redis/redis.conf /usr/local/etc/redis.conf
+    mkdir -p ~/Library/LaunchAgents
+    cp /sites/ycharts/confs/redis/com.ycharts.redis.plist ~/Library/LaunchAgents
+    launchctl load ~/Library/LaunchAgents/com.ycharts.redis.plist
+    ```
+2. Run the following in the terminal to make sure redis is working:
+    ```
+    redis-cli
+    ```
 
 ## Install MySQL
 
@@ -238,77 +223,99 @@ and you will have a fresh MySQL 5.7 database! Once the below command finishes, y
 /sites/ycharts/scripts/restore_database.sh -c
 ```
 
-## Create Your Virtual Machine
+## Install Vagrant and VirtualBox
 Now you will need to create your local Linux VM machine that will serve as your local development environment.
-1. Install [Vagrant 2.1.2](https://releases.hashicorp.com/vagrant/2.1.2/vagrant_2.1.2_x86_64.dmg)
-2. Install [Virtualbox 5.2.16](https://download.virtualbox.org/virtualbox/5.2.16/VirtualBox-5.2.16-123759-OSX.dmg)
+1. Install [Vagrant 2.2.9](https://releases.hashicorp.com/vagrant/2.2.9/vagrant_2.2.9_x86_64.dmg)
+2. Install [Virtualbox 6.1.10](https://download.virtualbox.org/virtualbox/6.1.10/VirtualBox-6.1.10-138449-OSX.dmg)
 
-### Configure NFS
+### Configure Vagrant NFS
 More detailed instructions of configuring your NFS can be found in Vagrant's [documentation](https://www.vagrantup.com/docs/synced-folders/nfs.html#root-privilege-requirement), however, the following steps is all you should need to do.
 
 1. Edit the sudoers file (must be done as root using the visudo command)
-```bash
-sudo visudo
-```
+    ```bash
+    sudo visudo
+    ```
 2. Add `Cmnd_Alias` entries. Under the line `# Cmnd alias specification`
-```
-# Cmnd alias specification
-Cmnd_Alias VAGRANT_EXPORTS_ADD = /usr/bin/tee -a /etc/exports
-Cmnd_Alias VAGRANT_NFSD = /sbin/nfsd restart
-Cmnd_Alias VAGRANT_EXPORTS_REMOVE = /usr/bin/sed -E -e /*/ d -ibak /etc/exports
-```
+    ```
+    # Cmnd alias specification
+    Cmnd_Alias VAGRANT_EXPORTS_ADD = /usr/bin/tee -a /etc/exports
+    Cmnd_Alias VAGRANT_NFSD = /sbin/nfsd restart
+    Cmnd_Alias VAGRANT_EXPORTS_REMOVE = /usr/bin/sed -E -e /*/ d -ibak /etc/exports
+    ```
 3. Add User privileges. The `# User privilege specification` should look like.
-```
-# User privilege specification
-root    ALL=(ALL) ALL
-%admin  ALL=(ALL) ALL
-%admin ALL=(root) NOPASSWD: VAGRANT_EXPORTS_ADD, VAGRANT_NFSD, VAGRANT_EXPORTS_REMOVE
-```
-4. Save and close the `/etc/sudoers` file. You are good to go.
+    ```
+    # User privilege specification
+    root    ALL=(ALL) ALL
+    %admin  ALL=(ALL) ALL
+    %admin ALL=(root) NOPASSWD: VAGRANT_EXPORTS_ADD, VAGRANT_NFSD, VAGRANT_EXPORTS_REMOVE
+    ```
+4. Save and close the `/etc/sudoers` file.
 
-### Provision your Virtual Machine
-1. Run the below commands
-```bash
-cd /sites/ycharts
-workon ycharts_systems
-vagrant --run_initial_setup up --provision
-```
-> This can take an hour or more.
-2. Test that the setup worked correctly.
-```bash
-# Test Django
-# test django by running a webserver. this will load django
-# so that you can access it from your machine at 127.0.0.1:8000
+## Provision your Vagrant virtual machine
+1. Run the below commands. 
+    > NOTE: This can take about 30-45 minutes
+    ```bash
+    cd /sites/ycharts
+    workon ycharts_systems
+    vagrant --run_initial_setup up --provision
+    ```
+2. Test that the setup worked correctly by 
+    > NOTE: After running these commands it should respond with: "No migrations to apply."
+    ```bash
+    vagrant ssh
+    yc_migrate
+    ```
 
-vagrant ssh
-yc_migrate
-yc_django
-```
-
-#### Initialize Lists and Sets
+## Initialize Lists and Sets
 What are list and sets? Good question! So when we talk about "lists" and "sets" we are usually referring to the list and sets we store in redis. They power parts of our application and to have a fully setup local environment you will need to populate the redis you installed in the previous steps.
 
 1. In order to populate redis we need Celery to be running.
 ```bash
-# Start Celery
 vagrant ssh
 yc_celery
 # do not close this window. Let it sit.
 ```
-2. Open a new window on your Terminal and SSH into your vagrant box. Run each of the `python` commands in a new `screen` session (e.g. `screen -d -m python /sites...`
-> NOTE: This will take a few hours. While this is happening, configure your PyCharm editor.
+2. Open a new window on your Terminal and copy and paste the following into the terminal:
+> NOTE: This will take a few hours. While this is happening in the background you can continue with all other steps.
 ```bash
 vagrant ssh
-python /sites/ycharts/manage.py calculations_store_sets
-python /sites/ycharts/manage.py securities_info_store_sets
-python /sites/ycharts/manage.py security_lists_store_lists
+screen -d -m python /sites/ycharts/manage.py calculations_store_sets
+screen -d -m python /sites/ycharts/manage.py securities_info_store_sets
+screen -d -m python /sites/ycharts/manage.py security_lists_store_lists
+```
+
+## Setup Webpack / Frontend
+Our newer redesigned frontend uses webpack to compile and bundle our frontend static assets. When running the site locally webpack has the ability to watch for any file changes and re-compile any JS or CSS if the files change. This process is known as "hot reloading". This feature makes it very easy to write JS and reload your local page and see the changes you made take effect immediately.
+
+There are 2 ways to run webpack. You can run it locally on your Mac OS or you can run it in the Vagrant virtual machine on your linux OS. If you are actively writing javascript and want to take advantage of "hot-reloading" so you can make changes and see their effects you will want to run webpack locally, however if you are making any changes to `package.json` or `package-lock.json` you **must** be running webpack via the virtual machine.
+
+> **IMPORTANT NOTE:**
+When running webpack hot reloading on your local machine (Mac), do not check in the `package-lock.json` if it is modified. You should only checkin the `package-lock.json` if you have modified anything in `package.json` and have run `npm run dev` within your vagrant machine. 
+
+#### Running Webpack locally (Recommended for development)
+To run it locally copy and paste the following into a terminal:
+```sh
+cd /sites/ycharts
+rm -rf node_modules/ 
+nvm use 10
+npm i
+npm run dev
+```
+
+#### Running Webpack Virtually (Required for updating npm packages)
+```sh
+cd /sites/ycharts
+rm -rf node_modules/ 
+vagrant ssh
+npm i
+npm run dev
 ```
 
 ## Configure PyCharm
 
 Follow the steps here to configure PyCharm: https://github.com/ycharts/ycharts/wiki/PyCharm-Configuration
 
-## Local User account
+## Create Local User account
 
 ### Create User
 You will also need to create a new `User` account in your local database, with access to all of YChart's features. To get around the catch-22 of setting up a new user via the `/admin` panel, enter the django shell:
@@ -327,7 +334,7 @@ user.save()
 ### Setup User
 1. Now, start a django server by ssh into Vagrant (`cd /sites/ycharts && vagrant ssh`)
 1. Now once you are inside your vagrant instance run `yc_django` and go to `http://0.0.0.0:8000/admin/` to log in. 
-1. From here, head to `Users` section and create a PartnerSubscription for your account. ![](https://imgur.com/RuJsro3.png)  ![](https://imgur.com/UkMLmTl.png)
+1. From here, head to `Users` section and create a `PartnerSubscription` for your account. ![](https://imgur.com/RuJsro3.png)  ![](https://imgur.com/UkMLmTl.png)
 1. Add your user to the [YCharts Staff Client Group](http://localhost:8000/admin/accounts/clientgroup/62/) [![Screenshot from Gyazo](https://gyazo.com/faf60276b187e0622509315ec3160696/raw)](https://gyazo.com/faf60276b187e0622509315ec3160696)
 1. Add your user to the `web_admins`, `systems`, and `testers` groups in the Admin interface (under the `Administrative` tab for the user). Don't worry if the box on the right doesn't expand.
 ![Screenshot of adding user to groups](https://i.imgur.com/WQFueNM.png)
@@ -335,32 +342,6 @@ user.save()
 
 > Note: You should now have access to all features in your local environment however you will need to do the same in staging and production. 
 
-## Running Webpack Locally
-Our newer redesigned frontend uses webpack to compile and bundle our frontend static assets. When running the site locally webpack has the ability to watch for any file changes and re-compile any JS or CSS if the files change. This process is known as "hot reloading". This feature makes it very easy to write JS and reload your local page and see the changes you made take effect immediately.
-
-#### Webpack Hot Reloading
-To get webpack to hot reload your assets you need to run:
-```bash
-cd /sites/ycharts
-npm run dev
-```
-
-If you run `npm run dev` in your Vagrant Virtual Machine you will notice that it takes a long time to pick up any file changes because the virtual machine is accessing your Mac's filesystem via NFS. So the way to get hot-reloading to work well is to run it on your Mac host machine. To do this you need to do the following:
-```bash
-cd /sites/ycharts
-# Remove the node modules directory since it was installed on your VM with Linux and thus some packages are not compatible with your mac.
-rm -rf node_modules/ 
-# Tells your mac to use Node version 10
-nvm use 10
-# Re-install node modules on your mac so they are compatible with the host machine. 
-npm i
-# Run webpack hot reloading
-npm run dev
-```
-
-**IMPORTANT NOTE:**
-When running webpack hot reloading on your local host machine (Mac), do not check in the `package-lock.json` if it is modified. You should only checkin the `package-lock.json` if you have modified anything in `package.json` and have run `npm run dev` within your vagrant machine. 
-
 
 ## Setup Chart Generator Repo
-Now that you have setup the `ycharts` repo and `ycharts_systems` the next step is to setup the `ycharts_chart_generator` repository. [Follow these instructions](https://github.com/ycharts/ycharts_chart_generator/wiki/Developer-Environment-Setup)
+Now that you have setup the `ycharts` repo and `ycharts_systems` the next step is to set up the `ycharts_chart_generator` repository. [Follow these instructions](https://github.com/ycharts/ycharts_chart_generator/wiki/Developer-Environment-Setup)
