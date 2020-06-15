@@ -37,7 +37,7 @@ Once the upgrade is complete, login and open the terminal and copy and paste the
 rm -rf ~/sites
 sudo mv /Users/Shared/Relocated\ Items/Security/sites ~
 sudo touch /etc/synthetic.conf
-printf "sites\t/Users/`whoami`/sites" | sudo tee /etc/synthetic.conf
+printf "sites\t/Users/`whoami`/sites\n" | sudo tee /etc/synthetic.conf
 sudo shutdown -r now
 ```
 
