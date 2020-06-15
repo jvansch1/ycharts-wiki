@@ -46,6 +46,8 @@ Once the computer restarts, open the terminal and copy and paste the following:
 ```
 cd /sites/ycharts
 xcode-select --install
+sudo rm /etc/exports
+sudo touch /etc/exports
 rm -rf node_modules
 vagrant destroy
 vagrant up --provision
