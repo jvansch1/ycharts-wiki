@@ -33,7 +33,7 @@ Install Homebrew for easier package management. This will also prompt you about 
 **Mac OS => 10.15 (Catalina):**
 1. Copy and paste the following into your terminal:
     ```bash
-    mkdir ~/sites
+    mkdir -p ~/sites
     touch /etc/synthetic.conf
     echo "sites\t/Users/`whoami`/sites" | sudo tee /etc/synthetic.conf
     ```
