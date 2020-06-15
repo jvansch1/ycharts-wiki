@@ -4,7 +4,8 @@ This a guide walking through anyone who wishes to upgrade from Mojave to Catalin
 3. The biggest change of all is that the root directory is no longer writable so we cannot have a folder `/sites` like we currently do. The fix to this is to create what is called a "firmlink" (essentially the same thing as a symbolic link except it is bidirectional) on the root directory so things that depend on `/sites` directory still function properly. If you want to read more about this and why Apple did this here is a good [article](https://arstechnica.com/gadgets/2019/10/macos-10-15-catalina-the-ars-technica-review/11/) and here is Apple's [PDF](https://devstreaming-cdn.apple.com/videos/wwdc/2019/710aunvynji5emrl/710/710_whats_new_in_apple_file_systems.pdf)
 4. The last change (which should have already happened before updating) is that Docker cannot recognize this firmlink so we have to update the settings there.
 
-## 0. Update Software (Optional but recommended) 
+## 0. Update Software
+> NOTE: This is optional but highly recommended
 - Upgrade to the latest PyCharm
 - Upgrade to the latest Docker
 - Upgrade to the lastest Vagrant
