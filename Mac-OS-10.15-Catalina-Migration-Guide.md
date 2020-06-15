@@ -34,7 +34,7 @@ source ~/.bash_profile
 
 Once the upgrade is complete, login and open the terminal and copy and paste the following:
 ```
-rm -rf ~/sites
+unlink ~/sites
 sudo mv /Users/Shared/Relocated\ Items/Security/sites ~
 sudo touch /etc/synthetic.conf
 printf "sites\t/Users/`whoami`/sites\n" | sudo tee /etc/synthetic.conf
