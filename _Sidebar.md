@@ -38,6 +38,7 @@
 **Development Tooling Specific Notes**
 * [[PyCharm Configuration]]
 * [[Setting Up Snakeviz]]
+* [[Mac OS 10.15 Catalina Migration Guide]]
 
 **Systems / DevOps Specific Notes**
 * [[Debugging Node Processes]]
