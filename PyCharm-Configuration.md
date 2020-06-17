@@ -16,7 +16,7 @@ For PyCharm to function correctly you really need to setup the project interpret
 2. Navigate to `Project:ycharts | Project Interpreter`.
 3. Click on the ![Imgur](https://i.imgur.com/fRgFpZz.png) icon in the right hand corner and select `Add...`
 4. Then choose the below options: `/home/vagrant/.virtualenvs/ycharts/bin/python`
-![Imgur](https://i.imgur.com/3yquPgJ.png)
+![Imgur](https://i.imgur.com/YHf4ueb.png)
 5. Click "Apply"
 
 ## Project Structure Setup
@@ -25,20 +25,21 @@ When using all the different search functionality we don't want to include anyth
 1. On the main menu, choose `PyCharm | Preferences` Settings.
 2. Navigate to `Project:ycharts | Project Structure`.
 3. Select the `media` folder and on the top bar click "exclude".
-![Imgur](https://i.imgur.com/4BY0H7W.png)
+![Imgur](https://i.imgur.com/vBNW1hS.png)
 4. Click "Apply"
 
 ## Python Imports
 1. PyCharm by default collapses all your imports which some people like, but you can disable it here (`Preferences | Editor | General | Code Folding`): 
-![image](https://user-images.githubusercontent.com/2000316/43075866-1d64f5a6-8e50-11e8-95d1-5beb91c0a7cf.png)
+     
+    ![image](https://i.imgur.com/CALxyzl.png)
 
-2. You should set your Code Style for Python (`Preferences | Editor | Code Style | Python`) here to sort Python Imports like below. Then click `control + option + o` and it will auto format your imports in the file.
+2. You should set your Code Style for Python (`Preferences | Editor | Code Style | Python`) here to sort Python imports like below. Then click `control + option + o` and it will auto-format your imports in the file.
 
-![image](https://i.imgur.com/BzTO1If.png)
+    ![image](https://i.imgur.com/SO4A3c2.png)
 
 3. You should also update your wrapping and indentation settings (`Preferences | Editor | Code Style | Wrapping and Braces`) for imports like this:
 
-![image](https://i.imgur.com/AiWX4Uj.png)
+    ![image](https://i.imgur.com/AiWX4Uj.png)
 
 
 ## ESLint Configuration
