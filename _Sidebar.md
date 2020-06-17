@@ -5,6 +5,7 @@
   * [[YCharts Core Values]]
 * [[Setting Up Accounts for New Hires]]
 * [[Developer Environment Setup]]
+  * [[YCharts VPN Setup Instructions]]
 * [[Support and On Call Outline]]
 
 **Essentials**
