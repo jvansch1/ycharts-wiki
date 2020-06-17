@@ -26,3 +26,5 @@ Your manager should have provided you with the following pieces of information i
     ![]()
 6. Now click "Connect" and it should show "Status: Connected". To test that you are in fact on the VPN go to [staging.ycharts.com](https://staging.ycharts.com/) which is only accessible via the VPN.
     ![]()
+    > NOTE: If you are physically in the NYC office you will not be able to test the connection since the VPN is our literal VPN location. So you must test this from home or outside the office to ensure it is working. Please make a point to do this in your first week. If it doesn't work please let your manager know.
+
