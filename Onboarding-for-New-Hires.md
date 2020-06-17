@@ -6,7 +6,7 @@ Your first week will be a little bit slower than most at YCharts as you get setu
     * Environment, IDE (We as a team use PyCharm and will make your life better if you use it)
       * [Download the latest Professional version](https://www.jetbrains.com/pycharm/download/#section=mac). Sign up for the trial and once it expires let your manager know so they can add you to the account.
     * Setup Wifi (`ycharts-secure`). You should have been given credentials to connect from your manager.
-    * Setup VPN. You should have been given your VPN credentials to connect from your manager. [Instructions](https://documentation.meraki.com/MX/Client_VPN/Client_VPN_OS_Configuration#macOS)
+    * Setup VPN. You should have been given your VPN credentials to connect from your manager. [Instructions](https://github.com/ycharts/ycharts/wiki/YCharts-VPN-Setup-Instructions)
     * Setup YCharts Production account. 
         * Login to [YCharts Admin Site](https://ycharts.com/admin/) and setup your 2FA with your google authenticator.
     * Setup your Google calendar
