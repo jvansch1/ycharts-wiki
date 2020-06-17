@@ -38,7 +38,7 @@ xcode-select --install
     ```bash
     mkdir -p ~/sites
     touch /etc/synthetic.conf
-    echo "sites\t/Users/`whoami`/sites" | sudo tee /etc/synthetic.conf
+    printf "sites\t/Users/`whoami`/sites\n" | sudo tee /etc/synthetic.conf
     ```
 2. After copying and pasting, you must restart your computer.
 
