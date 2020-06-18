@@ -251,7 +251,7 @@ More detailed instructions of configuring your NFS can be found in Vagrant's [do
     # User privilege specification
     root    ALL=(ALL) ALL
     %admin  ALL=(ALL) ALL
-    %admin ALL=(root) NOPASSWD: VAGRANT_EXPORTS_ADD, VAGRANT_NFSD, VAGRANT_EXPORTS_REMOVE
+    %admin  ALL=(root) NOPASSWD: VAGRANT_EXPORTS_ADD, VAGRANT_NFSD, VAGRANT_EXPORTS_REMOVE
     ```
 4. Save and close the `/etc/sudoers` file.
 
