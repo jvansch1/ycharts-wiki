@@ -42,7 +42,8 @@ Your first week will be a little bit slower than most at YCharts as you get setu
 - [ ] Dinner is on us if you stay past 7PM. Seamless login is on the pillar.
 
 ### Week 2-3
-After getting your feet wet in the first week, you will get into our codebase and do some small tickets.
+After getting your feet wet in the first week, you will get into our codebase and do some small tickets and finish your Aptible Information Security training.
+- [ ] Finish Aptible Information Security training that should have been assigned to you.
 - [ ] Continue working through the [required reading list](https://github.com/ycharts/ycharts/wiki/Required-Reading-List).
 - [ ] Meet with your manager and you will pick up your first pivotal ticket to work on.
 - [ ] Ask questions
