@@ -102,6 +102,7 @@ xcode-select --install
     ```bash
     ln -s -f /sites/ycharts/confs/developers/git_pre_commit_hook.py /sites/ycharts/.git/hooks/pre-commit
     ln -s -f /sites/ycharts/confs/developers/git_post_merge_hook.py /sites/ycharts/.git/hooks/post-merge
+    cp /sites/ycharts/confs/developers/com.ycharts.vpn.plist ~/Library/LaunchAgents
     ```
 
 1. Decrypt sensitive files in `ycharts` repo
