@@ -302,7 +302,7 @@ To run it locally copy and paste the following into a terminal:
 ```sh
 cd /sites/ycharts
 rm -rf node_modules/ 
-nvm use 10
+nvm use 12
 npm i
 npm run dev
 ```
