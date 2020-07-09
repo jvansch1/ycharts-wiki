@@ -5,7 +5,6 @@
 | Resource  | Notes | 
 | ------------- | ------------- |
 | [YCharts Core Values](https://github.com/ycharts/ycharts/wiki/YCharts-Core-Values)  | These are the principles all employees live by here at YCharts. |
-| [YCharts Geckoboard Sales Dashboard](https://app.geckoboard.com/edit/dashboards/275569)  | This shows you how we are doing from a sales perspective. |
 
 
 ### YCharts Engineering Readings
