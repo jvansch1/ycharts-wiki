@@ -4,7 +4,6 @@ Welcome to the YCharts Wiki! Below are links to docs to help get you started set
 * [[Onboarding for New Hires]]
   * [[Required Reading List]]
   * [[Educational Resources]]
-  * [[YCharts Core Values]]
 * [[Setting Up Accounts for New Hires]]
 * [[Developer Environment Setup]]
 * [[Support and On Call Outline]]
