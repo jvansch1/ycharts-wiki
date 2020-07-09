@@ -10,7 +10,7 @@ Welcome to the YCharts Wiki! Below are links to docs to help get you started set
 
 **Essentials**
 * [[YCharts Engineering Overview]]
-* [[[YCharts In Repo Documentation Directory]]
+* [[YCharts In Repo Documentation Directory]]
 * [[YCharts Engineering Principles]]
 * [[YCharts Coding Principles]]
 * [[Engineering Points of Emphasis]]
