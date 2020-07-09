@@ -4,17 +4,17 @@
 ### YCharts Company Readings
 | Resource  | Notes | 
 | ------------- | ------------- |
-| [YCharts Core Values]  | These are the principles all employees live by here at YCharts. |
+| [[YCharts Core Values]]  | These are the principles all employees live by here at YCharts. |
 
 
 ### YCharts Engineering Readings
 
 | Resource  | Notes | 
 | ------------- | ------------- |
-| [YCharts Engineering Principles] | These are the principles we as engineers try to live here at YCharts.  |
-| [YCharts Coding Principles] | These are some more practical guidelines we like to follow day to day. |
-| [YCharts Engineering Overview] | This is a overview of engineering @ YCharts, from tech stack to hosting/deployment and finally a directory by directory guide of our main repo. |
-| [YCharts In Repo Documentation Directory] | A directory to all the various docs we maintain within our major repos. |
+| [[YCharts Engineering Principles]] | These are the principles we as engineers try to live here at YCharts.  |
+| [[YCharts Coding Principles]] | These are some more practical guidelines we like to follow day to day. |
+| [[YCharts Engineering Overview]] | This is a overview of engineering @ YCharts, from tech stack to hosting/deployment and finally a directory by directory guide of our main repo. |
+| [[YCharts In Repo Documentation Directory]] | A directory to all the various docs we maintain within our major repos. |
 
 ### Relevant Guides, Docs, Tutorials
 | Resource  | Notes | 
