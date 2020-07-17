@@ -8,7 +8,7 @@ Your first week will be a little bit slower than most at YCharts as you get setu
     * Setup Wifi (`ycharts-secure`). You should have been given credentials to connect from your manager.
     * Setup VPN. You should have been given your VPN credentials to connect from your manager. [Instructions](https://github.com/ycharts/ycharts/wiki/YCharts-VPN-Setup-Instructions)
     * Setup YCharts Staging & Production account. 
-        * Your account will not have a password so you will need to reset it in both environments. Your email is your ycharts email (i.e. xxx@ycharts.com)
+        * Your account will not have a password so you will need to reset it in both environments. Your email is your ycharts email (i.e. xyz@ycharts.com)
             * Staging Password Reset Link: https://staging.ycharts.com/accounts/password_reset
             * Production Password Reset Link: https://ycharts.com/accounts/password_reset
         * Login to [YCharts Admin Site](https://ycharts.com/admin/) and setup your 2FA with your google authenticator.
