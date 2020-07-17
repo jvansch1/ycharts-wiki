@@ -3,8 +3,8 @@
 Your manager should have provided you with the following pieces of information in a secure manner. If you do not have all of them please let your manager know before proceeding:
 1. **Server Address:** This is the IP of the VPN (i.e. `XXX.XXX.XXX.XXX`)
 2. **Account Name:** This is your YCharts email
-3. **Account Password:** This is an assigned password for your account to connect
-4. **Shared Secret:** This is a shared secret for access to the account. 
+3. **Account Password:** This password should have been emailed to your ycharts email.
+4. **Shared Secret:** This is a shared secret for access to the account. Your manager should provide this.
 
 ## Steps
 
