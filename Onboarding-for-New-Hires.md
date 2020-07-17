@@ -7,7 +7,10 @@ Your first week will be a little bit slower than most at YCharts as you get setu
       * [Download the latest Professional version](https://www.jetbrains.com/pycharm/download/#section=mac). Sign up for the trial and once it expires let your manager know so they can add you to the account.
     * Setup Wifi (`ycharts-secure`). You should have been given credentials to connect from your manager.
     * Setup VPN. You should have been given your VPN credentials to connect from your manager. [Instructions](https://github.com/ycharts/ycharts/wiki/YCharts-VPN-Setup-Instructions)
-    * Setup YCharts Production account. 
+    * Setup YCharts Staging & Production account. 
+        * Your account will not have a password so you will need to reset it in both environments.
+            * Staging Password Reset Link: https://staging.ycharts.com/accounts/password_reset
+            * Production Password Reset Link: https://ycharts.com/accounts/password_reset
         * Login to [YCharts Admin Site](https://ycharts.com/admin/) and setup your 2FA with your google authenticator.
     * Setup your Google calendar
     * make sure you accept the events you are invited to. We rely heavily on our google calendars for scheduling everything from daily meetings to 1 on 1s with your manager to reviews. Highly recommended to use the [slack plugin for google calendar](https://slack.com/app-pages/google-calendar). 
