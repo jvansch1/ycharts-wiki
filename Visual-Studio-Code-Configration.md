@@ -47,7 +47,14 @@ A new VSCode window will pop up. Let it work.
 2. Type "/sites/ycharts"
 3. Command-Shift-P "Save Workspace As"
 4. DO NOT save in Vagrant, instead click "Show Local"
-5. Now in your local machine, save in 
+5. Now in your local machine, save in your home directory as "ycharts.code-workspace"
+
+You should now be able to close VSCode and go to your home directory and click on "ycharts.code-workspace". Assuming vagrant is running, that should connect to vagrant and open the "/sites/ycharts" directory.
+
+### Install Python Extension
+To be able to work 
+
+1. 
 
 
 
