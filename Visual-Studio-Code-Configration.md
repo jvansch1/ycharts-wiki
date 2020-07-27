@@ -52,18 +52,23 @@ A new VSCode window will pop up. Let it work.
 You should now be able to close VSCode and go to your home directory and click on "ycharts.code-workspace". Assuming vagrant is running, that should connect to vagrant and open the "/sites/ycharts" directory.
 
 ### Install Python Extension
-To be able to work 
+The Python extension is a must have for code traversal, linting, etc.
 
-1. 
+1. Command-Shift-P "Install Extensions"
+2. In Search, type "Python" and install.
+
+#### Select Python Interpreter
+1. Command-Shift-P "Python: Select Interpreter" 
+2. Select for /sites/ycharts (NOT entire workspace)
+3. Choose the one in the virtualenv, it'll be like ```~/.virtualenvs/ycharts/bin/python```
+
+#### Select Python Linter
+1  Command-Shift-P "Python: Select Linter" 
+2. Choose "flake8"
 
 
 
 
-
-## Create Project for ycharts
-1. Launch VS Code
-2. File->Add Folder to Workspace /sites/ycharts
-3. File->Save Workspace as "ycharts" in your home directory.
 
 ## Install Extensions
 
