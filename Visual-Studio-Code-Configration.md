@@ -56,6 +56,10 @@ A new VSCode window will pop up. Let it work.
 
 You should now be able to close VSCode and go to your home directory and click on "ycharts.code-workspace". Assuming vagrant is running, that should connect to vagrant and open the "/sites/ycharts" directory.
 
+NOTE: If you get this error:
+```Visual Studio Code is unable to watch for file changes in this large workspace```
+Do this https://code.visualstudio.com/docs/setup/linux#_visual-studio-code-is-unable-to-watch-for-file-changes-in-this-large-workspace-error-enospc inside vagrant
+
 ### Install Python Extension
 The Python extension is a must have for code traversal, linting, etc.
 
