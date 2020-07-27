@@ -72,5 +72,5 @@ The Python extension is a must have for code traversal, linting, etc.
 3. Choose the one in the virtualenv, it'll be like ```~/.virtualenvs/ycharts/bin/python```
 
 #### Select Python Linter
-1  Command-Shift-P "Python: Select Linter" 
+1. Command-Shift-P "Python: Select Linter" 
 2. Choose "flake8"
