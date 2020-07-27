@@ -1,12 +1,14 @@
 You can download Visual Studio Code [here](https://code.visualstudio.com/Download).
 
-NOTE: Much of the below is us doing work to ensure we VS Code can work inside Vagrant, that way we get full visibility into our true development environment which mean, for example, we can peek into Django classes/methods from right within VS Code.
 
-## Install Remote SSH
+## Configure For "ycharts" Repo Development
+We need to set it up such that VS Code can work inside Vagrant, that way we get full visibility into our true development environment which means, for example, we can peek into Django classes/methods from right within VS Code.
+
+### Install Remote SSH
 1. Command-Shift-P, Type "Extensions: Install Extensions" and select it.
 2. From the search that comes up type "Remote SSH" and select it to install.
 
-## Get Vagrant ssh-info and copy to ssh config
+### Get Vagrant ssh-info and copy to ssh config
 ```
 cd /sites/ycharts
 vagrant ssh-config
@@ -32,6 +34,21 @@ Now
 open -e ~/.ssh/config
 ```
 and copy the config to the file and save it.
+
+### Connect to Vagrant
+1. Command-Shift-P "Remote SSH: Connect to Host" 
+2. You should see the name of the host we just added come up (in the example above it was "bionic"). 
+3. Select it.
+
+A new VSCode window will pop up. Let it work.
+
+### Add Vagrant Folder to Workspace and Save
+1. Command-Shift-P "Add Folder to Workspace"
+2. Type "/sites/ycharts"
+3. Command-Shift-P "Save Workspace As"
+4. DO NOT save in Vagrant, instead click "Show Local"
+5. Now in your local machine, save in 
+
 
 
 
