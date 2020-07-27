@@ -1,5 +1,10 @@
 You can download Visual Studio Code [here](https://code.visualstudio.com/Download).
 
+## General / Global Set Up
+While we will use VSCode for several different development environments (i.e. Python/Django inside Vagrant for "ycharts" repo and Node inside Docker for "ycharts-chart-generator" report), there are a few things we want to set up globally.
+
+1. Our standard is no lines longer than 120 chars, so help with that, go to ```Code->Preferences->Settings```. In the search type ```rulers```. Then you'll see it come up with a link to ```Edit in settings.json```. Click on that and put ```120``` in the list.
+
 
 ## Configure For "ycharts" Repo Development
 We need to set it up such that VS Code can work inside Vagrant, that way we get full visibility into our true development environment which means, for example, we can peek into Django classes/methods from right within VS Code.
