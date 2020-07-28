@@ -316,9 +316,10 @@ npm i
 npm run dev
 ```
 
-## Configure PyCharm
-
-Follow the steps here to configure PyCharm: https://github.com/ycharts/ycharts/wiki/PyCharm-Configuration
+## Configure Code Editor
+Most developers are YCharts tend to use PyCharm. Follow the steps here to configure PyCharm: https://github.com/ycharts/ycharts/wiki/PyCharm-Configuration
+Some developers use Visual Studio Code. Follow the steps here to configure Visual Studio Code:
+https://github.com/ycharts/ycharts/wiki/Visual-Studio-Code-Configration
 
 ## Create Local User account
 
