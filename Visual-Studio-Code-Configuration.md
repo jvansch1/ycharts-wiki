@@ -95,3 +95,15 @@ NOTE: Installing extensions while in the ycharts workspace makes it such that we
     1. Change it ```sphinx```
 1. _Angular Language Service_ provides some handy-handy shortcuts when writing Angular code / templates.
 1. _XML Tools_ formats giant XML files, which we often get from data providers.
+
+## Configure For "ycharts-chart-generator" Repo Development
+
+### Add Folder to Workspace and Save
+1. Command-Shift-P _Add Folder to Workspace_
+1. Type ```/sites/ycharts-chart-generator```
+1. Command-Shift-P _Save Workspace As_
+1. Save in your home directory as ```ycharts-chart-generator.code-workspace```
+
+### Install Extensions
+1. Docker
+2. eslint
