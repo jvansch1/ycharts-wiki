@@ -88,6 +88,4 @@ The Python extension is a must have for code traversal, linting, etc.
     1. In the search bar, type ```docstring```
     1. Find the setting named _Auto Docstring: Docstring Format_
     1. Change it ```sphinx```
-
-
-When you install this, go to the extensions settings and select the "sphinx" format, which is what we use!
+1. _Angular Language Service_ provides some handy-handy shortcuts when writing Angular code / templates.
