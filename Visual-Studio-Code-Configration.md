@@ -48,13 +48,13 @@ and copy the config to the file and save it.
 A new VSCode window will pop up. Let it work.
 
 ### Add Vagrant Folder to Workspace and Save
-1. Command-Shift-P "Add Folder to Workspace"
-2. Type "/sites/ycharts"
-3. Command-Shift-P "Save Workspace As"
-4. DO NOT save in Vagrant, instead click "Show Local"
-5. Now in your local machine, save in your home directory as "ycharts.code-workspace"
+1. Command-Shift-P _Add Folder to Workspace_
+2. Type ```/sites/ycharts```
+3. Command-Shift-P _Save Workspace As_
+4. DO NOT save in Vagrant, instead click _Show Local_
+5. Now in your local machine, save in your home directory as ```ycharts.code-workspace```
 
-You should now be able to close VSCode and go to your home directory and click on "ycharts.code-workspace". Assuming vagrant is running, that should connect to vagrant and open the "/sites/ycharts" directory.
+You should now be able to close VSCode and go to your home directory and click on _ycharts.code-workspace_. Assuming vagrant is running, that should connect to vagrant and open the _/sites/ycharts_ directory.
 
 NOTE: If you get this error:
 ```Visual Studio Code is unable to watch for file changes in this large workspace```
@@ -63,17 +63,17 @@ Do this https://code.visualstudio.com/docs/setup/linux#_visual-studio-code-is-un
 ### Install Python Extension
 The Python extension is a must have for code traversal, linting, etc.
 
-1. Command-Shift-P "Install Extensions"
-2. In Search, type "Python" and install.
+1. Command-Shift-P _Install Extensions_
+2. In Search, type _Python_ and install.
 
 #### Select Python Interpreter
-1. Command-Shift-P "Python: Select Interpreter" 
+1. Command-Shift-P _Python: Select Interpreter_
 2. Select for /sites/ycharts (NOT entire workspace)
 3. Choose the one in the virtualenv, it'll be like ```~/.virtualenvs/ycharts/bin/python```
 
 #### Select Python Linter
-1. Command-Shift-P "Python: Select Linter" 
-2. Choose "flake8"
+1. Command-Shift-P _Python: Select Linter_
+2. Choose _flake8_
 
 ### Install Other Extensions
 1. _Django_ (The first one that comes up, there are two) properly highlights and code completes Django template HTML files.
