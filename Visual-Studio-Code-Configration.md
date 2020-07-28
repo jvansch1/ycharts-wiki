@@ -91,4 +91,4 @@ NOTE: Installing extensions while in the ycharts workspace makes it such that we
     1. Find the setting named _Auto Docstring: Docstring Format_
     1. Change it ```sphinx```
 1. _Angular Language Service_ provides some handy-handy shortcuts when writing Angular code / templates.
-1. _XML Tools_ formats giant XML files, which we often get from data provideres.
+1. _XML Tools_ formats giant XML files, which we often get from data providers.
