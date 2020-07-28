@@ -7,6 +7,9 @@ Much of our documentation is better kept within our repos, because it is tightly
 - [Indicators](https://github.com/ycharts/ycharts/blob/develop/apps/indicators/docs/indicators.md)
 - [Model Portfolios](Coming Soon) 
 
+## Other apps
+- [Sharing](https://github.com/ycharts/ycharts/blob/develop/apps/sharing/docs/sharing.md)
+
 # ycharts_chart_generator
 
 # ycharts_systems
