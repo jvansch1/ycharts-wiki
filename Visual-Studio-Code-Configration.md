@@ -76,6 +76,8 @@ The Python extension is a must have for code traversal, linting, etc.
 1. Choose _flake8_. It automatically picks up the _.flake8_ file in ```/sites/ycharts/```!
 
 ### Install Other Extensions
+NOTE: Installing extensions while in the ycharts workspace makes it such that we are actually installing these extensions inside the vagrant box. If you'd like to use these extensions outside vagrant you'd have to close this workspace and install them again "Locally".
+
 1. _Django_ (The first one that comes up, there are two) properly highlights and code completes Django template HTML files.
 1. _Document This_ can auto generate docstrings for Javascript classes/methods in the "JSDoc" format.
 1. _ESLint_ will lint our JS files.  When you install, you need to then
@@ -89,3 +91,4 @@ The Python extension is a must have for code traversal, linting, etc.
     1. Find the setting named _Auto Docstring: Docstring Format_
     1. Change it ```sphinx```
 1. _Angular Language Service_ provides some handy-handy shortcuts when writing Angular code / templates.
+1. _XML Tools_ formats giant XML files, which we often get from data provideres.
