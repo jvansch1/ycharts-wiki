@@ -11,7 +11,7 @@ We need to set it up such that VS Code can work inside Vagrant, that way we get 
 
 ### Install Remote SSH
 1. Command-Shift-P, Type _Extensions: Install Extensions_ and select it.
-2. From the search that comes up type _Remote SSH_ and select it to install.
+1. From the search that comes up type _Remote SSH_ and select it to install.
 
 ### Get Vagrant ssh-info and copy to ssh config
 ```
@@ -42,17 +42,17 @@ and copy the config to the file and save it.
 
 ### Connect to Vagrant
 1. Command-Shift-P _Remote SSH: Connect to Host_
-2. You should see the name of the host we just added come up (in the example above it was _bionic_). 
-3. Select it.
+1. You should see the name of the host we just added come up (in the example above it was _bionic_). 
+1. Select it.
 
 A new VSCode window will pop up. Let it work.
 
 ### Add Vagrant Folder to Workspace and Save
 1. Command-Shift-P _Add Folder to Workspace_
-2. Type ```/sites/ycharts```
-3. Command-Shift-P _Save Workspace As_
-4. DO NOT save in Vagrant, instead click _Show Local_
-5. Now in your local machine, save in your home directory as ```ycharts.code-workspace```
+1. Type ```/sites/ycharts```
+1. Command-Shift-P _Save Workspace As_
+1. DO NOT save in Vagrant, instead click _Show Local_
+1. Now in your local machine, save in your home directory as ```ycharts.code-workspace```
 
 You should now be able to close VSCode and go to your home directory and click on _ycharts.code-workspace_. Assuming vagrant is running, that should connect to vagrant and open the _/sites/ycharts_ directory.
 
