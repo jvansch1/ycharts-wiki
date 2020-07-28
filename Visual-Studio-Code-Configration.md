@@ -64,21 +64,30 @@ Do this https://code.visualstudio.com/docs/setup/linux#_visual-studio-code-is-un
 The Python extension is a must have for code traversal, linting, etc.
 
 1. Command-Shift-P _Install Extensions_
-2. In Search, type _Python_ and install.
+1. In Search, type _Python_ and install.
 
 #### Select Python Interpreter
 1. Command-Shift-P _Python: Select Interpreter_
-2. Select for ```/sites/ycharts``` (NOT entire workspace)
-3. Choose the one in the virtualenv, it'll be like ```~/.virtualenvs/ycharts/bin/python```
+1. Select for ```/sites/ycharts``` (NOT entire workspace)
+1. Choose the one in the virtualenv, it'll be like ```~/.virtualenvs/ycharts/bin/python```
 
 #### Select Python Linter
 1. Command-Shift-P _Python: Select Linter_
-2. Choose _flake8_
+1. Choose _flake8_. It automatically picks up the _.flake8_ file in ```/sites/ycharts/```!
 
 ### Install Other Extensions
 1. _Django_ (The first one that comes up, there are two) properly highlights and code completes Django template HTML files.
-2. _Document This_ can auto generate docstrings for Javascript classes/methods in the "JSDoc" format.
-3. _ESLint_ will lint our JS files.  When you install, you need to then
-    1. _Code=>Preferences=>Settings_.
-    2. In the search bar, type ```eslint```
-4. _Python Docstring Generator_ can auto generate docstrings for Python classes/methods. IMPORTANT: When you install this, go to the extensions settings and select the "sphinx" format, which is what we use!
+1. _Document This_ can auto generate docstrings for Javascript classes/methods in the "JSDoc" format.
+1. _ESLint_ will lint our JS files.  When you install, you need to then
+    1. Go to _Code=>Preferences=>Settings_ menu.
+    1. In the search bar, type ```eslint```
+    1. Find the setting named _Eslint > Lint Task: Options_
+    1. Set it to ```--config /sites/ycharts/confs/developers/.eslintrc.js .```
+1. _Python Docstring Generator_ can auto generate docstrings for Python classes/methods. When you install, you need to then: 
+    1. Go to _Code=>Preferences=>Settings_ menu.
+    1. In the search bar, type ```docstring```
+    1. Find the setting named _Auto Docstring: Docstring Format_
+    1. Change it ```sphinx```
+
+
+When you install this, go to the extensions settings and select the "sphinx" format, which is what we use!
