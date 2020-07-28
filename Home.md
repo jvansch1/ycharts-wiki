@@ -39,6 +39,7 @@ Welcome to the YCharts Wiki! Below are links to docs to help get you started set
 
 **Development Tooling Specific Notes**
 * [[PyCharm Configuration]]
+* [[Visual Studio Code Configuration]]
 * [[Setting Up Snakeviz]]
 
 **Systems / DevOps Specific Notes**
