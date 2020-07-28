@@ -320,7 +320,7 @@ npm run dev
 Most developers at YCharts tend to use PyCharm. Follow the steps here to configure PyCharm: https://github.com/ycharts/ycharts/wiki/PyCharm-Configuration
 
 Some developers use Visual Studio Code. Follow the steps here to configure Visual Studio Code:
-https://github.com/ycharts/ycharts/wiki/Visual-Studio-Code-Configration
+https://github.com/ycharts/ycharts/wiki/Visual-Studio-Code-Configuration
 
 ## Create Local User account
 
