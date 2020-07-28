@@ -10,8 +10,8 @@ While we will use VSCode for several different development environments (i.e. Py
 We need to set it up such that VS Code can work inside Vagrant, that way we get full visibility into our true development environment which means, for example, we can peek into Django classes/methods from right within VS Code.
 
 ### Install Remote SSH
-1. Command-Shift-P, Type "Extensions: Install Extensions" and select it.
-2. From the search that comes up type "Remote SSH" and select it to install.
+1. Command-Shift-P, Type _Extensions: Install Extensions_ and select it.
+2. From the search that comes up type _Remote SSH_ and select it to install.
 
 ### Get Vagrant ssh-info and copy to ssh config
 ```
@@ -41,8 +41,8 @@ open -e ~/.ssh/config
 and copy the config to the file and save it.
 
 ### Connect to Vagrant
-1. Command-Shift-P "Remote SSH: Connect to Host" 
-2. You should see the name of the host we just added come up (in the example above it was "bionic"). 
+1. Command-Shift-P _Remote SSH: Connect to Host_
+2. You should see the name of the host we just added come up (in the example above it was _bionic_). 
 3. Select it.
 
 A new VSCode window will pop up. Let it work.
@@ -68,7 +68,7 @@ The Python extension is a must have for code traversal, linting, etc.
 
 #### Select Python Interpreter
 1. Command-Shift-P _Python: Select Interpreter_
-2. Select for /sites/ycharts (NOT entire workspace)
+2. Select for ```/sites/ycharts``` (NOT entire workspace)
 3. Choose the one in the virtualenv, it'll be like ```~/.virtualenvs/ycharts/bin/python```
 
 #### Select Python Linter
