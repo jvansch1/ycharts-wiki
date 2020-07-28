@@ -38,6 +38,7 @@
 
 **Development Tooling Specific Notes**
 * [[PyCharm Configuration]]
+* [[Visual Studio Code Configuration]]
 * [[Setting Up Snakeviz]]
 * [[Mac OS 10.15 Catalina Migration Guide]]
 
