@@ -79,4 +79,4 @@ The Python extension is a must have for code traversal, linting, etc.
 1. _Django_ (The first one that comes up, there are two) properly highlights and code completes Django template HTML files.
 2. _Document This_ can auto generate docstrings for Javascript classes/methods in the "JSDoc" format.
 3. _ESLint_ will lint our JS files.
-4. _Python Docstring Generator_ can auto generate docstrings for Python classes/methods. IMPORTANT: When you install this, go to the settings and select the "sphinx" format, which is what we use!
+4. _Python Docstring Generator_ can auto generate docstrings for Python classes/methods. IMPORTANT: When you install this, go to the extensions settings and select the "sphinx" format, which is what we use!
