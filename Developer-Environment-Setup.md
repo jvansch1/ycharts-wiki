@@ -225,7 +225,7 @@ or another developer's computer to your home folder (`~`). This will take around
 [directions for restoring your database](https://github.com/ycharts/ycharts/wiki/Restoring-Database).
 and you will have a fresh MySQL 5.7 database! Once the below command finishes, you should have a fresh database.
 ```bash
-/sites/ycharts/scripts/restore_database.sh -c
+/sites/ycharts/scripts/developers/restore_database.sh  -c
 ```
 
 ## Install Vagrant and VirtualBox
