@@ -103,7 +103,6 @@ In order to ensure key functions of our application work before releasing code f
 1. Preview an individual module via the `Preview` icon. 
 1. Preview the entire `CustomEmailReport` via the `"Preview"` button.
 1. navigate back to /list.
-1. Sort by `"Recently Modified First"`, `"Least Recently Edited First"`, `"A - Z"` and `"Z - A"`
 1. `Subscribe` & `Unsubscribe` to a report.
 1. `Duplicate` the report.
 1. `Delete` the duplicated report.
@@ -124,6 +123,7 @@ In order to ensure key functions of our application work before releasing code f
 1. Unless the calculation already completed, you should only be able to see the status bar while it's calculation takes place.
 1. Once calculation finishes, go through each tab and make sure each module has data and looks correct.
 1. Navigate back to /list.
+1. Sort by `"Recently Modified First"`, `"Least Recently Edited First"`, `"A - Z"` and `"Z - A"`
 1. `Duplicate` a model portfolio and verify its data gets calculated successfully.
 1. `Delete` the duplicated report.
 1.  Create a scenario where A has B as a holding and B has C as a benchmark. Then Delete C, and verify that both A and B are in Needs Review (and that you got an email telling you that as well).
