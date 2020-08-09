@@ -1,36 +1,32 @@
-# Restoring Your Database
+Every week we dump our most recent staging data to a S3 bucket so that developers can always have access to up to date data. 
 
-## Copy Data Files Method (Preferred)
-#### Copy the Backup Files
-Copy the `ycharts_db` folder from the DB Restore machine to your home directory (`~`)
+**Guide Prerequisites:**
+- `zstd` is installed on your local development machine
+- `ycharts_systems` repository is checked out locally and setup
 
-#### Restore Your Database
-> NOTE: By default, the script will move a database backup from `~/ycharts_db` to
-> `/usr/local/var/mysql` and keep the current owner and group of `/usr/local/var/mysql`.
-> These defaults should work if you have installed mysql via Homebrew.
+#### 1. Download the database dump file from S3
+Execute the following commands to download the compressed S3 file to your local environment. 
+> It is important to note that it will take around 2:30 - 3 hours to download depending on your internet speed.
 
+```
+cd /sites/ycharts_systems
+git checkout develop
+git pull origin develop
+./ycharts_download_dump
+```
+
+#### 2. Decompress the dump file
+Execute the following commands to decompress the S3 file into a directory.
+> This should take around 45 minutes to complete.
 ```bash
-# To run with default values (should work if mysql was installed via Homebrew)
-/sites/ycharts/scripts/developers/restore_database.sh
+cd ~
+unzstd ycharts_db.tar.zst && tar -xf ycharts_db.tar 
+mv ~/mysql ~/ycharts_db
+```
 
-# To copy instead of move files (THIS IS MUCH BETTER!!!!!!!)
+#### 3. Restore local DB with dumped database
+To restore your local DB we need to copy the files from your root directory to the working directory of MySQL.
+```bash
+# To copy files from ~/ycharts_db to /usr/local/var/mysql
 /sites/ycharts/scripts/developers/restore_database.sh -c
-
-# To specify a different source directory
-/sites/ycharts/scripts/developers/restore_database.sh -s ~/ycharts_sql_backup_files
-
-# To output usage information
-/sites/ycharts/scripts/developers/restore_database.sh
-# usage: /sites/ycharts/scripts/developers/restore_database.sh [OPTIONS]
-#
-# This script moves or copies backed up MySQL database files to the MySQL database folder
-#
-# OPTIONS:
-#     -h Show this message and exit
-#     -s Source directory of the database files (default: ~/ycharts_db)
-#     -d Destination directory of the database files (default: /usr/local/var/mysql)
-#     -c Copy the files from the source directory instead of moving them
-#     -o Override the owner of the destination directory (defaults to current owner)
-#     -g Override the group of the destination directory (defaults to current group)
-
 ```
