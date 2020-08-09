@@ -213,20 +213,8 @@ launchctl load ~/Library/LaunchAgents/com.ycharts.mysql.plist
 ```
 
 ### Load MySQL data
-Now that MySQL is installed you need data in there. Every week we dump our most recent staging data to a server that is on the premise so that if developers need a new database they can get it whenever they want. You will need to do this right now while you set your environment up but this will also be something you do once a week or once every couple of weeks so that you always have data locally that reflects what is in staging. 
-
-1. Before you start copying 400GB of data. Make sure you are connected to the internet via an Ethernet. You should have a Ethernet to USB-C adapter with you. If you don't please ask Fox for one since someone forget to put it on your desk. If you have one of the new CableMatters adapters, go to
-[their site](http://www.asix.com.tw/download.php?sub=driverdetail&PItemID=131 "Welcome to 1995")
-to download the drivers.  Choose: Apple Mac OS X 10.6 to 10.9 Drivers Installer.
-1. Open the finder and you should see the YCharts's Mac Mini in your "Shared" network. It will prompt you to login. Ask the nearest developer or Fox what the password and username is.
-1. Copy the `ycharts_db` folder containing the database files from the database restore machine (Mac Mini)
-or another developer's computer to your home folder (`~`). This will take around ~3 hours.
-2. Once you have a copy of the database folder, you should be able to follow the
-[directions for restoring your database](https://github.com/ycharts/ycharts/wiki/Restoring-Database).
-and you will have a fresh MySQL 5.7 database! Once the below command finishes, you should have a fresh database.
-```bash
-/sites/ycharts/scripts/developers/restore_database.sh  -c
-```
+Now that MySQL you need to populate it with data. Every week we dump our most recent staging data to a S3 bucket. You will need to do this right now while you set your environment up but this will also be something you do once a week or once every couple of weeks so that you always have data locally that reflects what is in staging. 
+1. Follow the instructions here to restore your database: [Restore Development Environment Database](https://github.com/ycharts/ycharts/wiki/Restoring-Database)
 
 ## Install Vagrant and VirtualBox
 Now you will need to create your local Linux VM machine that will serve as your local development environment.
