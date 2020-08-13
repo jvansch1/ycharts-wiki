@@ -3,7 +3,7 @@ This document is provided to give some loose guidelines around implementing a ne
 
 ### General App Guidelines:
 1. **Frontend Integration:** Make sure the user can add the new security type to the app state on the frontend. This may require adding the new security type to an autocompleter or updating the frontend redux state.
-1. **Backend - Single Security Integration:** If the application supports adding individual securities to the sate then ensure the new security type can be handled properly by the backend. 
+1. **Backend - Single Security Integration:** If the application supports adding individual securities to the state then ensure the new security type can be handled properly by the backend. 
 1. **Backend - Securitylist Member Integration:** If the application supports the user of securitylists then make sure the backend of the application can handle the new security type as a member of a securitylist.
 1. **Export Integration:** If the application supports exporting data make sure the backend can export data with the new security type.
 1. **Feature Permission Checking:** If the new security type requires special permissions make sure the frontend and the backend check the permission correctly. 
