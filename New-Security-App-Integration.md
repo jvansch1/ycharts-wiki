@@ -1,4 +1,4 @@
-This document is provided to give some lose guidelines around implementing a new type of security that is either user-created like a Model Portfolio or Custom Security or data provider-driven like a Separate Account or Mutual Fund.
+This document is provided to give some loose guidelines around implementing a new type of security that is either user-created like a Model Portfolio or Custom Security or data provider-driven like a Separate Account or Mutual Fund.
 
 
 ### General App Guidelines:
