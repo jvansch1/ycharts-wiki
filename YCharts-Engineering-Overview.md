@@ -123,6 +123,7 @@ Apps house our Django apps. In a typical Django project these app directories wi
 ### Standard App Files
 Each Django app has a series of standard files with different functionality. Not all apps have all these files as they are added only as needed.
 
+* `__init__.py` - specifies the [default_app_config](https://docs.djangoproject.com/en/2.2/ref/applications/#configuring-applications)
 * `admin.py` - defines how models can be viewed and edited in the [Django Admin](http://ycharts.com/admin/])
 * `admin_views.py` - defines custom views used in the [Django Admin](http://ycharts.com/admin/]) that relate to the app. Mostly these days they are included in admin.py, but we still have some in admin_views.py
 * `apps.py` - defines a custom `AppConfig` that can override the app's `verbose_name` (used in the Django Admin) or set up signals.
