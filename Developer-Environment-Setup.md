@@ -214,9 +214,10 @@ launchctl load ~/Library/LaunchAgents/com.ycharts.mysql.plist
 
 ### Load MySQL data
 Now that MySQL you need to populate it with data. Every week we dump our most recent staging data to a S3 bucket. You will need to do this right now while you set your environment up but this will also be something you do once a week or once every couple of weeks so that you always have data locally that reflects what is in staging. 
-1. Install `zstd` which will allow you to decompress the database dump:
+1. Install `zstd` and `gtar` which will allow you to decompress the database dump:
     ```
     brew install zstd
+    brew install gnu-tar
     ```
 1. Follow the instructions here to restore your database: [Restore Development Environment Database](https://github.com/ycharts/ycharts/wiki/Restoring-Database)
 
