@@ -1,6 +1,7 @@
 Every week we dump our most recent staging data to a S3 bucket so that developers can always have access to up to date data. 
 
 **Guide Prerequisites:**
+- `gtar` is installed on your local development machine
 - `zstd` is installed on your local development machine
 - `ycharts_systems` repository is checked out locally and setup
 
