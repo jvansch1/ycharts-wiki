@@ -21,7 +21,7 @@ Execute the following commands to decompress the S3 file into a directory.
 > This should take around 45 minutes to complete.
 ```bash
 cd ~
-unzstd --rm ycharts_db.tar.zst && tar -xf ycharts_db.tar && rm ycharts_db.tar
+gtar -xaf ycharts_db.tar.zst
 mv ~/mysql ~/ycharts_db
 ```
 
