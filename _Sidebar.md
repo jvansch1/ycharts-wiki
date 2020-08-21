@@ -13,6 +13,7 @@
 * [[YCharts Engineering Principles]]
 * [[YCharts Coding Principles]]
 * [[Engineering Points of Emphasis]]
+* [Engineering Career Framework](https://docs.google.com/spreadsheets/d/1A7pXEIr5mzCmh7s5TZ9bStaLDAsz03IoNeQannOa3Q0/edit#gid=1723134103)
 * [Deployment Procedure](https://github.com/ycharts/ycharts_systems/wiki/Deploy-and-Hotfix)
 * [How to SSH into Machines](https://github.com/ycharts/ycharts_systems/wiki/SSH)
 
