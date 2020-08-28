@@ -17,6 +17,7 @@ Welcome to the YCharts Wiki! Below are links to docs to help get you started set
 * [Engineering Career Framework](https://docs.google.com/spreadsheets/d/1A7pXEIr5mzCmh7s5TZ9bStaLDAsz03IoNeQannOa3Q0/edit#gid=1723134103)
 * [Deployment Procedure](https://github.com/ycharts/ycharts_systems/wiki/Deploy-and-Hotfix)
 * [How to SSH into Machines](https://github.com/ycharts/ycharts_systems/wiki/SSH)
+* [[Restoring Database]]
 
 **Technology Specific Notes**
 * AWS
@@ -32,7 +33,6 @@ Welcome to the YCharts Wiki! Below are links to docs to help get you started set
   * [[Git Secret]]
 * MySQL
   * [[Useful MySQL Queries and Commands]]
-  * [[Restoring Database]]
 * Travis
   * [[Debugging Travis CI builds]]
 * Vagrant
