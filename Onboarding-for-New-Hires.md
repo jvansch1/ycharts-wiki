@@ -41,21 +41,22 @@ Your first week will be a little bit slower than most at YCharts as you get setu
 - [ ] Do the [Django tutorial](https://github.com/ycharts/ycharts/wiki/Onboarding-for-New-Hires#django-tutorial).
 - [ ] Review with an engineer your Django Polls App from the Django Tutorial
 - [ ] Setup your [YCharts development environment](https://github.com/ycharts/ycharts/wiki/Developer-Environment-Setup). (This will usually take an entire day).
+- [ ] Meet with your manager and you will pick up your first pivotal ticket to work on.
+- [ ] Submit your first Pull Request by the end of the week 1.
 - [ ] Everyone is expected to show up before 9:45 AM and before 9:30 AM (Market Open) if you are on support.
-- [ ] Dinner is on us if you stay past 7PM. Seamless login is on the pillar.
+- [ ] Dinner is on us if you stay past 7PM. Seamless login is on Okta.
 
 ### Week 2-3
 After getting your feet wet in the first week, you will get into our codebase and do some small tickets and finish your Aptible Information Security training.
 - [ ] Finish Aptible Information Security training that should have been assigned to you.
 - [ ] Continue working through the [required reading list](https://github.com/ycharts/ycharts/wiki/Required-Reading-List).
-- [ ] Meet with your manager and you will pick up your first pivotal ticket to work on.
+- [ ] Pick up a couple of small tickets.
 - [ ] Ask questions
-- [ ] Submit your first Pull Request by the end of the week 2.
+
 
 ### Week 4
 You should start to feel a little more at home in your environment setup as well as our codebase.
 
-- [ ] Pick up a couple small tickets.
 - [ ] Meet with your manager to go over your first PR and ticket that you submitted in week 2/3.
 - [ ] Start reading a couple books from our list of educational resources.
 - [ ] Finish and submit another pull request by end of the week 4.
