@@ -110,7 +110,7 @@ NOTE: Installing extensions while in the ycharts workspace makes it such that we
 ### Install Remote Container
 1. Command-Shift-P, Type _Extensions: Install Extensions_ and select it.
 1. From the search that comes up type _Remote Container_ and select it to install.
-1. When you install, it's going to ask you for a starting point for the dev container, choose the docker-compose.yml file. It will now take a minute or two but VSCode will build a special container that you can interact with
+1. When you install, it's going to ask you for a starting point for the dev container, choose the `docker-compose.yml` file. It will now take a minute or two but VSCode will build a special container that you can interact with
 
 ### Space Workspace
 1. Command-Shift-P _Add Folder to Workspace_
