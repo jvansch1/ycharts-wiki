@@ -148,7 +148,7 @@ In order to ensure key functions of our application work before releasing code f
 1. Go to a Model Portfolio quote page, click on the "Generate Report" button; confirm your reports are shown in the modal
 1. Select a report that has the Cover Page module; confirm your default contact info (if any!) is shown in the fields in the modal
 1. Change the various fields to custom strings then generate the report; confirm the appropriate values are shown on the cover page
-1. Select a report that has the Cumulative Return/Key Stats module; change the title to a custom string then generate the report; confirm your custom title is shown in the Cumulative Return/Key Stats module
+1. Select a report that has the Cumulative Return/Basic Info module; change the title to a custom string then generate the report; confirm your custom title is shown in the Cumulative Return/Basic Info module
 
 ## Company Pages
 
