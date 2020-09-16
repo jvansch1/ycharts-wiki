@@ -103,7 +103,7 @@ In order to ensure key functions of our application work before releasing code f
 1. Preview an individual module via the `Preview` icon. 
 1. Preview the entire `CustomEmailReport` via the `"Preview"` button.
 1. navigate back to /list.
-1. Sort by `"Recently Modified First"`, `"Least Recently Edited First"`, `"A - Z"` and `"Z - A"`
+1. Sort by `"Most Recently Edited First"`, `"Least Recently Edited First"`, `"A - Z"` and `"Z - A"`
 1. `Subscribe` & `Unsubscribe` to a report.
 1. `Duplicate` the report.
 1. `Delete` the duplicated report.
