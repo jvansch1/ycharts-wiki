@@ -1,6 +1,6 @@
 This document is intended to be a guide on how to approach planning small to large project here at YCharts.
 
-### 1. Gather project documents
+## 1. Gather project documents
 
 An essential step before planning any project is to ensure you have all the information you need. Below is a list of artifacts to ensure you have:
 
@@ -13,7 +13,7 @@ An essential step before planning any project is to ensure you have all the info
 
 <hr>
 
-### 2. Formulate questions and decisions
+## 2. Formulate questions and decisions
 
 Once all the documents and artifacts of the projects have been gathered the next step is to start formulating questions, concerns, and discussion points that need to be clarified before any further work can take place. The goal of this step is to uncover as many big decisions before the project starts so that the estimate is as correct as it can be, the spec is accurate. Once you have formulated all the clarifying questions, discussion points, or roadblocks, you need to create a document and setup time with the product team and technical leaders to discuss them.
 
@@ -42,13 +42,13 @@ Below is a list of general questions to ask. It is not exhaustive but should giv
 
 <hr>
 
-### 3. Refine the project
+## 3. Refine the project
 
 After meeting with the product team and technical leaders, there should have been decisions made and questions answered. That doesn't mean we are done though. It is crucial that before you go any farther that you iterate on Part 2. With the answers and decisions revisit those same considerations and make sure there are not more things that should be clarified. If there are, repeat part 2.
 
 <hr>
 
-### 4. Breakdown Sections and Estimate
+## 4. Breakdown Sections and Estimate
 
 Once the project has been refined and clarified as best as it can. The next step is breakdown the project into logical parts so you can attempt a rough estimate with unit being "weeks". The term logical parts is vague on purpose since there is no one size fits all way to separate general steps in all projects. At the end of this step, we should have a rough idea of the "parts" of the projects, their estimate in weeks and whether the work is sequential or parallel.
 
@@ -67,7 +67,7 @@ Below is a list of ways to create these logical separations. These are not mutua
 
 <hr>
 
-### 5. Create Technical Spec Document
+## 5. Create Technical Spec Document
 
 Before an engineer can start implementing or working on a project there needs to be a formalized spec document. The goal of the document is to synthesize all the work that has been done up until this point in a concise manner so whoever is implementing the project has context.
 
@@ -108,7 +108,7 @@ The work plan is the meat of the document. It should contain all the information
 
 <hr>
 
-### 6. Kickoff Project
+## 6. Kickoff Project
 
 Before the implementing engineer starts on the Spec Document, the planning engineer should set up a meeting to review the spec document. Before the meeting occurs, the planning engineer should share the document with the implementing engineer so both parties have a chance to review it.
 
