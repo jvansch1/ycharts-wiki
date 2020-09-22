@@ -1,4 +1,4 @@
-This document is intended to be a guide on how to approach planning small to large project here at YCharts.
+This document is intended to be a living guide on how to plan small and large projects from a technical perspective.
 
 ## 1. Gather project documents
 
