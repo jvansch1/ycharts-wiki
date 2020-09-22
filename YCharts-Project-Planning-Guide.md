@@ -17,7 +17,7 @@ An essential step before planning any project is to ensure you have all the info
 
 Once all the documents and artifacts of the projects have been gathered the next step is to start formulating questions, concerns, and discussion points that need to be clarified before any further work can take place. The goal of this step is to uncover as many big decisions before the project starts so that the estimate is as correct as it can be, the spec is accurate. Once you have formulated all the clarifying questions, discussion points, or roadblocks, you need to create a document and setup time with the product team and technical leaders to discuss them.
 
-Below is a list of general questions to ask. It is not exhaustive but should give you a general sense of what you should considere in this phase of project planning.
+Below is a list of general questions to ask. It is not exhaustive but should give you a general sense of what you should consider in this phase of project planning.
 
 **Considerations:**
 
@@ -27,7 +27,7 @@ Below is a list of general questions to ask. It is not exhaustive but should giv
     - If we are adding or changing functionality, we should consider whether the place we are technically is one that will work in the long term. If it is not, we should consider what work needs to be done to achieve that.
 1. When looking at the PRD are there interactions that may take place that have not been considered?
     - Our product team knows our product but they don't know every technical interaction. It is our job to consider if there are interactions that "may" be possible and make sure we present them to our product team.
-1. Does this work require permissions?
+1. Does this work require permissions for a user?
 1. When looking at the Design Document and CSS mock up, is it possible, do we have all the data needed? Can we create visualizations that look like that?
     - Make sure that the designs are feasible. It is possible there are data points that may not apply for all securities. Make sure all the charts that are designed are possible as they are shown.
 1. Are there storage implications we should consider if we are importing more data in the project?
@@ -38,7 +38,7 @@ Below is a list of general questions to ask. It is not exhaustive but should giv
 1. Once you have identified all the questions you have or discussion points, you need to formulate them in a written google document. You should present the questions with any examples that would be helpful so that discussions can be better guided.
 2. Schedule a meeting with the product team and any technical leaders that should be involved. Share the document before the meeting so everyone has a chance to view it and digest it.
 3. Go through your written document and take notes on the decisions that are made in the meeting.
-4. Ensure the PRD has been updated with any changes or additions in behaviour.
+4. Ensure the PRD has been updated with any changes or additions in behavior.
 
 <hr>
 
@@ -50,7 +50,7 @@ After meeting with the product team and technical leaders, there should have bee
 
 ### 4. Breakdown Sections and Estimate
 
-Once the project has been refined and clarified as best as it can. The next step is breakdown the project into logical parts so you can attempt a rough estimate with unit being "weeks". The term logical parts is vague on purpose since there is no one size fits all way to separate general steps in all projects. At the end of this step we should have a rough idea of the "parts" of the projects, their estimate in weeks and whether the work is sequential or parralel.
+Once the project has been refined and clarified as best as it can. The next step is breakdown the project into logical parts so you can attempt a rough estimate with unit being "weeks". The term logical parts is vague on purpose since there is no one size fits all way to separate general steps in all projects. At the end of this step, we should have a rough idea of the "parts" of the projects, their estimate in weeks and whether the work is sequential or parallel.
 
 Below is a list of ways to create these logical separations. These are not mutually exclusive and can be combine.
 
@@ -63,13 +63,13 @@ Below is a list of ways to create these logical separations. These are not mutua
 
 **Output:**
 1. An estimate in weeks or months (depending on how large the project is)
-1. A written document of logical parts of the project and rough idea if parts of it are parallelize or sequential.
+1. A written document of logical parts of the project and a rough idea if parts of it are parallelized or sequential.
 
 <hr>
 
 ### 5. Create Technical Spec Document
 
-Before an engineer can start implementing or working on a project there needs to be an formalized spec document. The goal of the document is to syntehsize all the work that has been done up until thise point in a concise manner so whoever is implementing the project has context.
+Before an engineer can start implementing or working on a project there needs to be a formalized spec document. The goal of the document is to synthesize all the work that has been done up until this point in a concise manner so whoever is implementing the project has context.
 
 [Example](https://gist.github.com/KFoxder/eeefb1f02a0fe86545142e8cebfa9759)
 
@@ -85,15 +85,16 @@ The spec document should contain at least 2 parts. It should contain an "Overvie
 The overview should be written in paragraph form and it may include any reference materials, examples, or images the help explain the goal and reason of the project.
 
 **Work Plan:**
-The work plan is the meat of the document. It should contain all the information needed for the implementing engineer to create tickets, execute the tickets and complete the project. The process of creating the work plan is one of the most time consuming parts of planning a project, but with experience and time becomes quicker. The goal of creating the work plan is to develop the plan and more percise estimate for the project. As the planning engineer it is your responsibility to focus more on the arch of the project rather than the code and tests that needs to be written. That may sound too abstract, but a better example is the difference between thinking "in this section we need to get these 5 data points for each security" vs. "gather the securities and group them by their security type to make a more performant call to get the 5 data points we need". Leave the implementation details to the implementing engineer. As the planning engineer it is your job to concern yourself with the project's order and direction.
+The work plan is the meat of the document. It should contain all the information needed for the implementing engineer to create tickets, execute the tickets and complete the project. The process of creating the work plan is one of the most time-consuming parts of planning a project, but with experience and time becomes quicker. The goal of creating the work plan is to develop the plan and more precise estimate for the project. As the planning engineer, it is your responsibility to focus more on the arch of the project rather than the code and tests that needs to be written. That may sound too abstract, but a better example is the difference between thinking "in this section we need to get these 5 data points for each security" vs. "gather the securities and group them by their security type to make a more performant call to get the 5 data points we need". Leave the implementation details to the implementing engineer. As the planning engineer, it is your job to concern yourself with the project's order and direction.
 
 1. It should be broken up into sections where each section represents a ticket and accompanying pull request.
-1. Each section should contain 5 piece of information: Title, Points, Description, Implementation Notes and Acceptance Criteria.
+1. A ticket should be no more than a days worth of work. When in doubt, split the ticket up into more than 1.
+1. Each section should contain 5 pieces of information: Title, Points, Description, Implementation Notes and Acceptance Criteria.
     - **Title:** The title of the ticket / pull request
     - **Points:** How many points is this body of work. 1 being 1/3rd of a day, 2 being 1/2-2/3 a day and 3 being a full day.
     - **Description:** One or more sentences describing what the ticket is about.
-    - **Implementation Notes:** These are notes that guide the implementing engineer on how to achieve what you are asking for. It shouldn't be a step by step instructions but should point out hard to find or easy to miss parts of the work. It may include similar Examples or places in our codebase that could be helpful to reference. It may also include things to look out for or be catious of ("Make sure the migration isn't too long." or "Make sure there is no impact on the time it takes to import price data both locally and on staging after it is merged")
-    - **Acceptance Criteria:** This is arguably the most important part of the section. It should describe exactly what you would expect after the work is successfully completed. It allows the implementing engineer to understand if their work has been successful or not. It also forces the planning engineer to verbalize what they will be looking to review when reviewing the code for behaviour. Acceptance criteria may be behaviour related ("We should see a button appear here that when clicked does Y") but can also be code related as well ("If we call `some_object.get_first_point()` it should return the first point" or "There should be full coverage of these 3 methods").
+    - **Implementation Notes:** These are notes that guide the implementing engineer on how to achieve what you are asking for. It shouldn't be a step by step instructions but should point out hard to find or easy to miss parts of the work. It may include similar Examples or places in our codebase that could be helpful to reference. It may also include things to look out for or be cautious of ("Make sure the migration isn't too long." or "Make sure there is no impact on the time it takes to import price data both locally and on staging after it is merged")
+    - **Acceptance Criteria:** This is arguably the most important part of the section. It should describe exactly what you would expect after the work is successfully completed. It allows the implementing engineer to understand if their work has been successful or not. It also forces the planning engineer to verbalize what they will be looking to review when reviewing the code for behavior. Acceptance criteria may be behavior related ("We should see a button appear here that when clicked does Y") but can also be code related as well ("If we call `some_object.get_first_point()` it should return the first point" or "There should be full coverage of these 3 methods").
 1. When breaking up each section consider the order of work.
     - Does A need to happen before B?
     - If A gets merged into develop with B is that ok?
@@ -109,10 +110,10 @@ The work plan is the meat of the document. It should contain all the information
 
 ### 6. Kickoff Project
 
-Before the implementing engineer starts on the Spec Document, the planning engineer should setup a meeting to review the spec document. Before the meeting occurs, the planning engineer should share the document with the implementing engineer so both parties have a chance to review it.
+Before the implementing engineer starts on the Spec Document, the planning engineer should set up a meeting to review the spec document. Before the meeting occurs, the planning engineer should share the document with the implementing engineer so both parties have a chance to review it.
 
 **Meeting Goals:**
-1. Implementing engineer should come prepared with any questions they have about the Goal, Reason or Plan for the project and take a look at the overall estimate and deadline make sure it aligns with their expectations.
+1. Implementing engineers should come prepared with any questions they have about the Goal, Reason or Plan for the project and take a look at the overall estimate and deadline make sure it aligns with their expectations.
 1. Planning engineer should walk through verbally the different sections and do their best to answer any questions the implementing engineer has for the project.
 1. The estimate and deadline should be communicated and agreed upon.
 
