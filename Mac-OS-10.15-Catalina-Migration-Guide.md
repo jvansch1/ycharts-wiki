@@ -56,6 +56,7 @@ sudo rm /etc/exports
 sudo touch /etc/exports
 rm -rf node_modules
 vagrant destroy
+workon ycharts_systems
 vagrant up --provision
 ```
 
