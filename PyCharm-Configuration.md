@@ -1,4 +1,5 @@
 # PyCharm Setup
+![image](https://user-images.githubusercontent.com/15602942/94614033-81f8e880-0273-11eb-8ac9-7f3115646899.png)
 
 You can download PyCharm [here](https://www.jetbrains.com/pycharm/).
 
@@ -51,6 +52,8 @@ This is really helpful for spotting Javascript related issues before you get cau
 ![Imgur](https://i.imgur.com/YxskZEr.png)
 4. Now go to `Preferences | Keymap` and search for `ESLint` in the search bar
 5. Map `Fix ESLint Problems` to a key map of your choice. (e.g. `CMD + SHIFT + S`). Activating this shortcut will automatically run prettier and `eslint --fix` to format TypeScript files
+![image](https://user-images.githubusercontent.com/15602942/94614033-81f8e880-0273-11eb-8ac9-7f3115646899.png)
+
 
 ## reStructuredText Configuration
 This is useful for writing doc strings.
