@@ -6,18 +6,20 @@ Below are links to docs to help get you started setting up your environment as w
 * [[Onboarding for New Hires]]
   * [[Required Reading List]]
   * [[Educational Resources]]
+  * [[YCharts Core Values]]
 * [[Setting Up Accounts for New Hires]]
 * [[Developer Environment Setup]]
+  * [[YCharts VPN Setup Instructions]]
 * [[Support and On Call Outline]]
 
 **Essentials**
 * [[YCharts Engineering Overview]]
-* [[YCharts In Repo Documentation Directory]]
 * [[YCharts Engineering Principles]]
 * [[YCharts Coding Principles]]
 * [[Engineering Points of Emphasis]]
 * [Engineering Career Framework](https://docs.google.com/spreadsheets/d/1A7pXEIr5mzCmh7s5TZ9bStaLDAsz03IoNeQannOa3Q0)
 * [Deployment Procedure](https://github.com/ycharts/ycharts_systems/wiki/Deploy-and-Hotfix)
+* [[YCharts Project Planning Guide]]
 * [How to SSH into Machines](https://github.com/ycharts/ycharts_systems/wiki/SSH)
 * [[Restoring Database]]
 
@@ -44,6 +46,7 @@ Below are links to docs to help get you started setting up your environment as w
 * [[PyCharm Configuration]]
 * [[Visual Studio Code Configuration]]
 * [[Setting Up Snakeviz]]
+* [[Mac OS 10.15 Catalina Migration Guide]]
 
 **Systems / DevOps Specific Notes**
 * [[Debugging Node Processes]]
