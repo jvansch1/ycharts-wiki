@@ -1,5 +1,4 @@
 # PyCharm Setup
-![image](https://user-images.githubusercontent.com/15602942/94614033-81f8e880-0273-11eb-8ac9-7f3115646899.png)
 
 You can download PyCharm [here](https://www.jetbrains.com/pycharm/).
 
