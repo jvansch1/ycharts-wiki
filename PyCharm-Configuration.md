@@ -48,7 +48,7 @@ This is really helpful for spotting Javascript related issues before you get cau
 1. On your host OS X machine (not vagrant) install node via: `brew install node`
 2. In PyCharm go to: `Preferences | Languages & Frameworks | JavaScript | Code Quality Tools | ESLint`
 3. Copy setting like below
-![Imgur](https://i.imgur.com/YxskZEr.png)
+![Imgur](https://i.imgur.com/lYisDp6.png)
 4. Now go to `Preferences | Keymap` and search for `ESLint` in the search bar
 5. Map `Fix ESLint Problems` to a key map of your choice. (e.g. `CMD + SHIFT + S`). Activating this shortcut will automatically run prettier and `eslint --fix` to format TypeScript files
 ![image](https://user-images.githubusercontent.com/15602942/94614033-81f8e880-0273-11eb-8ac9-7f3115646899.png)
