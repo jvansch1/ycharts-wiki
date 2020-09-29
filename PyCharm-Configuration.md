@@ -1,5 +1,5 @@
 # PyCharm Setup
-
+jetbrains://Python/settings?name=Editor--Code+Style--Python
 You can download PyCharm [here](https://www.jetbrains.com/pycharm/).
 
 ## Launch PyCharm Project
@@ -37,7 +37,7 @@ When using all the different search functionality we don't want to include anyth
 
     ![image](https://i.imgur.com/SO4A3c2.png)
 
-3. You should also update your wrapping and indentation settings ([`Preferences | Editor | Code Style | Python | Wrapping and Braces`](jetbrains://Python/settings?name=Editor--Code+Style--Python)) for imports like this:
+3. You should also update your wrapping and indentation settings `Preferences | Editor | Code Style | Python | Wrapping and Braces` for imports like this:
 
     ![image](https://i.imgur.com/eKNpLVx.png)
 
