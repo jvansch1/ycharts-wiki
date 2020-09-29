@@ -51,25 +51,25 @@ This is really helpful for spotting Javascript related issues before you get cau
 ![](https://i.imgur.com/0yBvKlC.png)
 4. Now go to `Preferences | Keymap` and search for `ESLint` in the search bar
 5. Map `Fix ESLint Problems` to a key map of your choice. (e.g. `CMD + SHIFT + S`). Activating this shortcut will automatically run prettier and `eslint --fix` to format TypeScript files
-![image](https://user-images.githubusercontent.com/15602942/94614033-81f8e880-0273-11eb-8ac9-7f3115646899.png)
+![image](https://i.imgur.com/sfGcnq8.png)
 
 
 ## reStructuredText Configuration
 This is useful for writing doc strings.
 1. In PyCharm go to: `Preferences | Tools | Python Integrated Tools`
 2. Copy setting like below
-![Imgur](https://imgur.com/k7DXSFf.png)
+![Imgur](https://i.imgur.com/5giT8j9.png)
 
 ## Django Setup
 Django is very well integrated with PyCharm, including support for Django's test runner and debug server functionality.
 
 ### Initial Setup
 In the Preferences window (`Cmd + ,` or `PyCharm | Preferences` in the menu bar), navigate to `Languages & Frameworks | Django`. Modify the settings to match the image below:
-![Imgur](https://imgur.com/rxhtN4K.png)
+![Imgur](https://i.imgur.com/QPceQtF.png)
 
 ### Debug Server Setup
 In the Edit Configurations window (`Run | Edit Configurations` in the menu bar), click the Plus symbol in the upper left. Select "Django server", then modify the settings to match the image below:
-![Imgur](https://imgur.com/gGQAG6T.png)
+![Imgur](https://i.imgur.com/qOaKull.png)
 
 The "Environtment variables" text box should contain the following (where `xxxxxx` is the AWS secrets from your local `.env` file): `PYTHONUNBUFFERED=1;DJANGO_SETTINGS_MODULE=ycharts.settings.active;AWS_ACCESS_KEY_ID=xxxxxx;AWS_SECRET_ACCESS_KEY=xxxxxx;AWS_DEFAULT_REGION=us-east-1`
 
@@ -77,7 +77,7 @@ Set any breakpoints you would like in PyCharm by clicking to the left of the lin
 
 ### Test Runner Setup
 In the Edit Configurations window (`Run | Edit Configurations` in the menu bar), click the Plus symbol in the upper left. Select "Django tests", then modify the settings to match the image below:
-![Imgur](https://imgur.com/18d0f3E.png)
+![Imgur](https://i.imgur.com/HulHrBy.png)
 
 This will serve as a template for all future Django test cases. To confirm the settings are correct navigate to a test file, then click the green "play" button next to a test class or test method. If the test runner appears and does not raise any unexpected errors, you should be good to go.
 
