@@ -1,4 +1,6 @@
-Welcome to the YCharts Wiki! Below are links to docs to help get you started setting up your environment as well as to help you work effectively as a YCharts engineer.
+Welcome to the YCharts Wiki! 
+
+Below are links to docs to help get you started setting up your environment as well as to help you work effectively as a YCharts engineer. You will see the right hand sidebar contains all of the same information. 
 
 **Onboarding**
 * [[Onboarding for New Hires]]
