@@ -1,5 +1,6 @@
 # PyCharm Setup
-jetbrains://Python/settings?name=Editor--Code+Style--Python
+[tet](jetbrains://Python/settings?name=Editor--Code+Style--Python)
+
 You can download PyCharm [here](https://www.jetbrains.com/pycharm/).
 
 ## Launch PyCharm Project
