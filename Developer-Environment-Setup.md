@@ -148,8 +148,10 @@ echo "export NVM_DIR=\"$HOME/.nvm\"" >> ~/.zprofile
 echo "[ -s \"$NVM_DIR/nvm.sh\" ] && \. \"$NVM_DIR/nvm.sh\""  >> ~/.zprofile
 echo "[ -s \"$NVM_DIR/bash_completion\" ] && \. \"$NVM_DIR/bash_completion\""  >> ~/.zprofile
 source ~/.zprofile
-nvm install 10
-nvm alias default stable
+nvm install 12.16.3
+nvm use 12.16.3
+nvm alias default 12.16.3
+npm install npm@6.14.4 -g
 ```
 
 ## Install Redis
