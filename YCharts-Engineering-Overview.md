@@ -58,7 +58,7 @@ In our case our artifacts are Amazon Machine Images or AMIs. We use [Packer](htt
 
 ## Architecture / Topology
 
-[This chart](https://www.lucidchart.com/documents/edit/3ed05ef6-e356-462d-8eda-d255d65ce5bb/0_0) represents our current production network toplogy. [This chart](https://www.lucidchart.com/documents/edit/7546c880-820d-4d0b-9207-8a663fb17c3c/0_0) shows the different AMIs that power each auto scale group. [This chart](https://www.lucidchart.com/documents/edit/5c6fc033-6af6-4d6d-85c4-0348fe0529bc/0_0) goes into more detail as to the exact machine types and network setup.
+[This chart](https://app.lucidchart.com/documents/edit/3ed05ef6-e356-462d-8eda-d255d65ce5bb/) represents our current production network toplogy. [This chart](https://www.lucidchart.com/documents/edit/7546c880-820d-4d0b-9207-8a663fb17c3c/0_0) shows the different AMIs that power each auto scale group. [This chart](https://www.lucidchart.com/documents/edit/5c6fc033-6af6-4d6d-85c4-0348fe0529bc/0_0) goes into more detail as to the exact machine types and network setup.
 
 These are the distinct AMIs that exist:
 
