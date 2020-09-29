@@ -49,6 +49,8 @@ This is really helpful for spotting Javascript related issues before you get cau
 2. In PyCharm go to: `Preferences | Languages & Frameworks | JavaScript | Code Quality Tools | ESLint`
 3. Copy setting like below
 ![Imgur](https://i.imgur.com/YxskZEr.png)
+4. Now go to `Preferences | Keymap` and search for `ESLint` in the search bar
+5. Map `Fix ESLint Problems` to a key map of your choice. (e.g. `CMD + SHIFT + S`). Activating this shortcut will automatically run prettier and `eslint --fix` to format TypeScript files
 
 ## reStructuredText Configuration
 This is useful for writing doc strings.
