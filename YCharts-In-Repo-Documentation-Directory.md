@@ -8,6 +8,7 @@ Much of our documentation is better kept within our repos, because it is tightly
 - [Model Portfolios](Coming Soon) 
 
 ## Key Apps / Concepts
+- [Security Lists](https://github.com/ycharts/ycharts/blob/develop/apps/security_lists/docs/security_lists.md)
 - [Sharing](https://github.com/ycharts/ycharts/blob/develop/apps/sharing/docs/sharing.md)
 
 # ycharts_chart_generator
