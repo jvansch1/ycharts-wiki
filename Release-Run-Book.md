@@ -37,7 +37,7 @@ In order to ensure key functions of our application work before releasing code f
 1. Go back to the dashboard and ensure the newly created alert is present.
 
 
-## Equity Screener / Fund Screener
+## Stock Screener / Fund Screener
 1. Create a basic screen. 
 1. Save and open saved screens.
 1. Create an alert on a saved screen.
