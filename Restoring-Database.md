@@ -22,6 +22,7 @@ Execute the following commands to decompress the S3 file into a directory.
 ```bash
 cd ~
 gtar -xaf ycharts_db.tar.zst
+rm ~/ycharts_db.tar.zst
 rm -rf ~/ycharts_db
 mv ~/mysql ~/ycharts_db
 ```
