@@ -52,6 +52,20 @@ Once the computer restarts, open the terminal and copy and paste the following:
 ```
 cd /sites/ycharts
 xcode-select --install
+```
+If running `xcode-select --install` fails, try the following:
+
+1. Go to the [Apple Dev download page](https://developer.apple.com/download/more/?&name=for%20Xcode). 
+2. Sign in with your Apple ID, and look for the latest "Command Line Tools for Xcode {{number}}".
+3. Click on it, and a dropdown menu will appear where you can download and install a .dmg file.
+4. Follow the on-screen instructions, then quit/re-open your terminal.
+6. The following error message will appear once you have successfully installed xcode-select, should you try to run `xcode-select --install` again:
+```
+xcode-select: error: command line tools are already installed, use "Software Update" to install updates
+```
+6. If you quit your terminal, cd back into /sites/ycharts and proceed with the following commands `cd /sites/ycharts`
+
+```
 sudo rm /etc/exports
 sudo touch /etc/exports
 rm -rf node_modules
