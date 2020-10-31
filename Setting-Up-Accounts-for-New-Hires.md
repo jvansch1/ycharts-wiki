@@ -37,7 +37,8 @@ If the person is a developer, invite them to the various engineering channels.
 
 ## Microsoft 365
 
-## DockerHub
+## Google Marketing Platform Group
+[Link to org](https://marketingplatform.google.com/home/orgs/Mzprey-xTWS-WPKdEyNNew/settings?authuser=0)
 
 ## YCharts.com
 Repeat the following steps for production and staging.
