@@ -158,16 +158,17 @@ npm install npm@6.14.4 -g
 
 1. Copy and Paste the following into your terminal:
     ```bash
+
     cd ~
-    curl http://download.redis.io/releases/redis-3.2.4.tar.gz -o "redis-3.2.4.tar.gz"
-    tar xzf redis-3.2.4.tar.gz
-    cd redis-3.2.4
+    curl https://download.redis.io/releases/redis-5.0.10.tar.gz -o "redis-5.0.10.tar.gz"
+    tar xzf redis-5.0.10.tar.gz
+    cd redis-5.0.10
     make
-    mv ~/redis-3.2.4/src/redis-server /usr/local/bin
-    mv ~/redis-3.2.4/src/redis-cli /usr/local/bin
-    cp /sites/ycharts/confs/redis/redis.conf /usr/local/etc/redis.conf
+    mv ~/redis-5.0.10/src/redis-server /usr/local/bin
+    mv ~/redis-5.0.10/src/redis-cli /usr/local/bin
+    cp /sites/ycharts/confs/developers/redis.conf /usr/local/etc/redis.conf
     mkdir -p ~/Library/LaunchAgents
-    cp /sites/ycharts/confs/redis/com.ycharts.redis.plist ~/Library/LaunchAgents
+    cp /sites/ycharts/confs/developers/com.ycharts.redis.plist ~/Library/LaunchAgents
     launchctl load ~/Library/LaunchAgents/com.ycharts.redis.plist
     ```
 2. Run the following in the terminal to make sure redis is working:
