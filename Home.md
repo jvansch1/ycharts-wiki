@@ -22,6 +22,7 @@ Below are links to docs to help get you started setting up your environment as w
 * [[YCharts Project Planning Guide]]
 * [How to SSH into Machines](https://github.com/ycharts/ycharts_systems/wiki/SSH)
 * [[Restoring Database]]
+* [[Release Run Book]]
 
 **Technology Specific Notes**
 * AWS
