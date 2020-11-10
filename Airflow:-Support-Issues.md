@@ -29,5 +29,5 @@ To address this follow the below steps:
 - We need to resolve this by succeeding the entire DAG.
     - Go to https://airflow.staging.ycharts.com and click on the Dag Run that is in a light green circle for the DAG with the issue like the image below shows. ![image](https://user-images.githubusercontent.com/16657367/98730535-6b61a900-236a-11eb-9902-375e80b4c803.png)
     - Click the checkbox on the left side and then under `With Selected` click `Set state to 'success'`.
-- Now that this Dag Run has been succeeded, the DAG for today should be triggered (this might take a couple minutes). Confirm this by clicking on the DAG and going to the graph view and check that a fresh DAG has been triggered and is running.
+- Now that this older Dag Run has been succeeded, the DAG for today should be triggered (this might take a couple minutes). Confirm this by clicking on the DAG and going to the graph view and check that a fresh DAG has been triggered and is running.
 - Repeat the above steps for our production airflow UI: https://airflow.ycharts.com/
