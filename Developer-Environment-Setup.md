@@ -1,6 +1,15 @@
 ## Setup VPN
 Make sure you can access the YCharts VPN and have an account. This should have already happened as part of setting up accounts. However, if it didn't, you must do it now before continuing.
 
+## Turn off Automatic Updates
+Before doing anything, make sure your automatic updates for the mac are disabled as it may upgrade your operating system to an unsupported version and break your environment.
+
+1. Go to: Settings > Software Update
+1. Click "Advanced..."
+1. Select everything except "Install macOS updates"
+
+![](https://i.imgur.com/7VUC2Xq.png)
+
 
 ## Enable FileVault
 For security purposes, all of our machines need to have encrypted hard disks. Before you do anything on your computer you will need to install FileVault. Please read the following steps:
