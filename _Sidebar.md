@@ -1,6 +1,7 @@
 **Onboarding**
 * [[Onboarding for New Hires]]
   * [[Required Reading List]]
+    * [[YCharts In Repo Documentation Directory]]
   * [[Educational Resources]]
   * [[YCharts Core Values]]
 * [[Setting Up Accounts for New Hires]]
