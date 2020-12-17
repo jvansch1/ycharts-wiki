@@ -16,6 +16,7 @@ Below are links to docs to help get you started setting up your environment as w
 * [[YCharts Engineering Overview]]
 * [[YCharts Engineering Principles]]
 * [[YCharts Coding Principles]]
+* [[YCharts In Repo Documentation Directory]]
 * [[Engineering Points of Emphasis]]
 * [Engineering Career Framework](https://docs.google.com/spreadsheets/d/1A7pXEIr5mzCmh7s5TZ9bStaLDAsz03IoNeQannOa3Q0)
 * [[YCharts Project Planning Guide]]
