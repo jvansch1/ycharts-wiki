@@ -5,7 +5,6 @@ Below are links to docs to help get you started setting up your environment as w
 **Onboarding**
 * [[Onboarding for New Hires]]
   * [[Required Reading List]]
-    * [[YCharts In Repo Documentation Directory]]
   * [[Educational Resources]]
   * [[YCharts Core Values]]
 * [[Setting Up Accounts for New Hires]]
