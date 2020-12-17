@@ -1,7 +1,6 @@
 **Onboarding**
 * [[Onboarding for New Hires]]
   * [[Required Reading List]]
-    * [[YCharts In Repo Documentation Directory]]
   * [[Educational Resources]]
   * [[YCharts Core Values]]
 * [[Setting Up Accounts for New Hires]]
@@ -13,6 +12,7 @@
 * [[YCharts Engineering Overview]]
 * [[YCharts Engineering Principles]]
 * [[YCharts Coding Principles]]
+* [[YCharts In Repo Documentation Directory]]
 * [[Engineering Points of Emphasis]]
 * [Engineering Career Framework](https://docs.google.com/spreadsheets/d/1A7pXEIr5mzCmh7s5TZ9bStaLDAsz03IoNeQannOa3Q0)
 * [Deployment Procedure](https://github.com/ycharts/ycharts_systems/wiki/Deploy-and-Hotfix)
