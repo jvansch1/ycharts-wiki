@@ -25,6 +25,10 @@ Below are the changes made on December 2nd, 2020. A more in-depth analysis of th
 ---------
 - `log_output` changed from the default of `TABLE` to `FILE`. 
   - This was changed to allow us to enable cloudwatch logging from the Slow Query, General, and Audit logs. [AWS Instructions](https://aws.amazon.com/premiumsupport/knowledge-center/rds-aurora-mysql-logs-cloudwatch/) 
+- `general_log` changed from the default of `0` to `1`. 
+  - This was changed to allow us to enable cloudwatch logging from the Slow Query, General, and Audit logs. [AWS Instructions](https://aws.amazon.com/premiumsupport/knowledge-center/rds-aurora-mysql-logs-cloudwatch/) 
+- `slow_query_log` changed from the default of `0` to `1`.
+  - This was changed to allow us to enable cloudwatch logging from the Slow Query, General, and Audit logs. [AWS Instructions](https://aws.amazon.com/premiumsupport/knowledge-center/rds-aurora-mysql-logs-cloudwatch/) 
 
 2019
 ---------
