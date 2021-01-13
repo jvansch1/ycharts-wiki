@@ -23,7 +23,7 @@ This guide goes over the necessary process to switch our IP addresses across sta
 
 
 ### 2. Notify organizations of new IPs
-Send an email to the below organizations to whitelist our 3 new IPs that were allocated.
+Send an email to the below organizations to whitelist our 3 new IPs that were allocated. Something like this
 
 ```
 We are making system configuration changes, and I need to add 3 IPs to the whitelist to allow access to the Stocktwits/Morningstar/Dallas Fed... We will be sunsetting 3 IPs of our existing IPs in about 1 month, so we are really just swapping them.
@@ -36,10 +36,10 @@ The IPs I need to add are:
 Can you direct me towards who can help me with this?
 ```
 
-1. Morningstar (realtimehelpdesk@morningstar.com)
-1. Bank of Dallas (dal.webmaster@dal.frb.org)
+1. Morningstar (realtimehelpdesk@morningstar.com) (For realtime quote access)
+1. Bank of Dallas (dal.webmaster@dal.frb.org) (For econ data access)
 1. Bloomberg (indexops@bloomberg.net) (For Index data FTP)
-1. MyPrivateProxy - whitelisted IPs for no user/password auth
+1. ICE (ClientDelivery@theice.com) (For Index data FTP)
 
 
 ### 3. Associate new IPs with NAT servers
