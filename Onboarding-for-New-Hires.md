@@ -30,21 +30,18 @@ Your first week will be a little bit slower than most at YCharts as you get setu
     * 401k through ADP
 - [ ] Get some sweet YCharts gear 👕 📓 ! 
 - [ ] Download Slack and Pagerduty for your phone. You will need both in general, but definitely on support.
-- [ ] Learn how to make an espresso or pour over coffee or both! ☕️ 
 - [ ] Participate in our daily scrum.
-- [ ] Eat a catered lunch on Friday with us.
 - [ ] Setup time for you to meet with some of our leaders in Chicago as well as New York.
 - [ ] Meet with your manager to go over what your goals are and setup a weekly meeting with them.
 - [ ] Get a walkthrough of our site with the Product Manager and see what exactly we are selling.
 - [ ] Start on some of the [required reading list](https://github.com/ycharts/ycharts/wiki/Required-Reading-List).
 - [ ] Do the [git tutorial](https://github.com/ycharts/ycharts/wiki/Onboarding-for-New-Hires#git-tutorial).
-- [ ] Do the [Django tutorial](https://github.com/ycharts/ycharts/wiki/Onboarding-for-New-Hires#django-tutorial).
+- [ ] Do the [Django tutorial](https://github.com/ycharts/ycharts/wiki/Onboarding-for-New-Hires#django-tutorial) if it applies to your role.
 - [ ] Review with an engineer your Django Polls App from the Django Tutorial
 - [ ] Setup your [YCharts development environment](https://github.com/ycharts/ycharts/wiki/Developer-Environment-Setup). (This will usually take an entire day).
 - [ ] Meet with your manager and you will pick up your first pivotal ticket to work on.
 - [ ] Submit your first Pull Request by the end of the week 1.
 - [ ] Everyone is expected to show up before 9:45 AM and before 9:30 AM (Market Open) if you are on support.
-- [ ] Dinner is on us if you stay past 7PM. Seamless login is on Okta.
 
 ### Week 2-3
 After getting your feet wet in the first week, you will get into our codebase and do some small tickets and finish your Aptible Information Security training.
