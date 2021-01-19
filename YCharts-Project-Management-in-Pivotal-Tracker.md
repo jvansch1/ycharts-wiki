@@ -7,6 +7,7 @@ YCharts uses [Pivotal Tracker](https://www.pivotaltracker.com/) to manage engine
 For YCharts, Project Boards represent the the collective work and output of a team. 
 
 Currently, YCharts has 5 Project boards
+
 *Data* - All data importing, calculating related projects
 *Applications* - All front-end application projects
 *Core* - PDF reports, quote pages and other projects that have a mix of front-end and back end components. Note, YCharts may have multiple Core teams but will share one Core project board
