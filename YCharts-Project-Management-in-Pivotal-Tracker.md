@@ -16,11 +16,16 @@ Currently, YCharts has 5 Project boards
 ## Current/Backlog/Icebox
 The Current, Backlog and Icebox columns of a project board should contain tickets that are in specific states. Care should be taken by each engineer to ensure their tickets are in the right column.
 
-*Current* - Represents works that the engineer is currently working on, or has finished working on and is awaiting review. **Nothing** else should be in current. 
+*Current* - Represents works that the engineer is currently working on, or has finished working on and is awaiting review. **Nothing** else should be in current. Looking at the Current column anyone should be able to see what any member of a team is working on.
 
-*Backlog* - Represents the next 
+*Backlog* - Represents work that is scheduled to happen next. They should be roughly ordered by the order in which they will be done. Tickets should only be in backlog if they are 100% going to get done at some point. Looking at the Backlog column anyone should be able to tell roughly how many weeks of work a team currently has scheduled. In other words, if a teams' backlog is 5 weeks long, we should know that they will not be able to take on any additional projects for 5 weeks. The backlog should be groomed at least bi-weekly by engineering leaders to ensure it accurately reflects what the team is scheduled to work on.
+
+*Icebox* - Represents vague work or ideas that may turn into real/scheduled work at some point. An engineer may create a ticket in the icebox based on an idea they had while doing other work. Engineering leaders may create a ticket or tickets in icebox for work they'd like to see done that is not critical to any project being successfully delivered. Icebox is generally a place to stick work / ideas that we don't want to forget, but that may never actually get done.
 
 ## Epics
+
+## Bugs
+Bugs typically come in two forms 
 
 # Ticket Management
 
