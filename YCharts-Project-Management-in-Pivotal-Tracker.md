@@ -23,6 +23,7 @@ The Current, Backlog and Icebox columns of a project board should contain ticket
 *Icebox* - Represents vague work or ideas that may turn into real/scheduled work at some point. An engineer may create a ticket in the icebox based on an idea they had while doing other work. Engineering leaders may create a ticket or tickets in icebox for work they'd like to see done that is not critical to any project being successfully delivered. Icebox is generally a place to stick work / ideas that we don't want to forget, but that may never actually get done.
 
 ## Epics
+All medium to large sized projects should be tracked on Pivotal Tracker using an Epic. 
 
 ## Bugs
 Bugs typically come in two forms 
