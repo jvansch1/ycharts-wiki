@@ -8,11 +8,11 @@ For YCharts, Project Boards represent the the collective work and output of a te
 
 Currently, YCharts has 5 Project boards
 
-*Data* - All data importing, calculating related projects
-*Applications* - All front-end application projects
-*Core* - PDF reports, quote pages and other projects that have a mix of front-end and back end components. Note, YCharts may have multiple Core teams but will share one Core project board
-*Systems* - AWS and developer infrastructure related projects
-*Excel* - Excel Add-in related projects
+- **Data** - All data importing, calculating related projects
+- **Applications** - All front-end application projects
+- **Core** - PDF reports, quote pages and other projects that have a mix of front-end and back end components. Note, YCharts may have multiple Core teams but will share one Core project board
+- **Systems** - AWS and developer infrastructure related projects
+- **Excel** - Excel Add-in related projects
 
 ## Current/Backlog/Icebox
 The Current, Backlog and Icebox columns of a project board should contain tickets that are in specific states. Care should be taken by each engineer to ensure their tickets are in the right column.
