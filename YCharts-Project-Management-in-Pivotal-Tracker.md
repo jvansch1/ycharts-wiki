@@ -53,5 +53,5 @@ Tickets should be kept in the correct state as work progress.
 - **Started** - Work has started
 - **Finished** - Work has finished and is ready for review.
 - **Delivered** - Work has finished the review process and has merged to development branch, *or the relevant feature branch* (this is to say tickets should be delivered even if they have not merged into our main development branch and made their way to staging).
-- **Accepted** - Work has been reviewed by QA team and was confirmed to function as necessary (NOTE: This state is currently irrelevant as no QA team exists, instead tickets that have been delivered will be automatically accepted during a release by the release engineer)
+- **Accepted** - Work has been reviewed by QA team and was confirmed to function as necessary (NOTE: This state is currently irrelevant as no QA team exists, instead tickets that have been delivered will be accepted during a release by the release engineer)
 - **Rejected** Work has been review by QA team and issues were found (NOTE: This state is currently irrelevant as no QA team exists)
