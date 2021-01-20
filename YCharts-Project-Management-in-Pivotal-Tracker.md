@@ -17,11 +17,11 @@ Currently, YCharts has 5 Project Boards
 ## Current/Backlog/Icebox
 The Current, Backlog and Icebox columns of a project board should contain tickets that are in specific states. Care should be taken by each engineer to ensure their tickets are in the right column.
 
-*Current* - Represents works that the engineer is currently working on, or has finished working on and is awaiting review. **Nothing** else should be in current. Looking at the Current column anyone should be able to see what any member of a team is working on.
+**Current** - Represents works that the engineer is currently working on, or has finished working on and is awaiting review. *Nothing* else should be in current. Looking at the Current column anyone should be able to see what any member of a team is working on.
 
-*Backlog* - Represents work that is scheduled to happen next. They should be roughly ordered by the order in which they will be done. Tickets should only be in backlog if they are 100% going to get done at some point. Looking at the Backlog column anyone should be able to tell roughly how many weeks of work a team currently has scheduled. In other words, if a teams' backlog is 5 weeks long, we should know that they will not be able to take on any additional projects for 5 weeks. The backlog should be groomed at least bi-weekly by engineering leaders to ensure it accurately reflects what the team is scheduled to work on.
+**Backlog** - Represents work that is scheduled to happen next. They should be roughly ordered by the order in which they will be done. Tickets should only be in backlog if they are 100% going to get done at some point. Looking at the Backlog column anyone should be able to tell roughly how many weeks of work a team currently has scheduled. In other words, if a teams' backlog is 5 weeks long, we should know that they will not be able to take on any additional projects for 5 weeks. The backlog should be groomed at least bi-weekly by engineering leaders to ensure it accurately reflects what the team is scheduled to work on.
 
-*Icebox* - Represents vague work or ideas that may turn into real/scheduled work at some point. An engineer may create a ticket in the icebox based on an idea they had while doing other work. Engineering leaders may create a ticket or tickets in icebox for work they'd like to see done that is not critical to any project being successfully delivered. Icebox is generally a place to stick work / ideas that we don't want to forget, but that may never actually get done.
+**Icebox** - Represents vague work or ideas that may turn into real/scheduled work at some point. An engineer may create a ticket in the icebox based on an idea they had while doing other work. Engineering leaders may create a ticket or tickets in icebox for work they'd like to see done that is not critical to any project being successfully delivered. Icebox is generally a place to stick work / ideas that we don't want to forget, but that may never actually get done.
 
 ## Epics
 All medium to large sized projects (> 3 tickets) should be tracked on Pivotal Tracker using an Epic. Engineering leaders speccing the project should
@@ -49,9 +49,9 @@ If a ticket will take longer than a day to complete it should be split in multip
 
 ## States
 Tickets should be kept in the correct state as work progress.
-- *Unstarted* - No work has started
-- *Started* - Work has started
-- *Finished* - Work has finished and is ready for review.
-- *Delivered* - Work has finished the review process and has merged to development branch, **or the relevant feature branch** (this is to say tickets should be delivered even if they have not merged into our main development branch and made their way to staging).
+- **Unstarted** - No work has started
+- **Started** - Work has started
+- **Finished** - Work has finished and is ready for review.
+- **Delivered** - Work has finished the review process and has merged to development branch, *or the relevant feature branch* (this is to say tickets should be delivered even if they have not merged into our main development branch and made their way to staging).
 - *Accepted* - Work has been reviewed by QA team and was confirmed to function as necessary (NOTE: This state is currently irrelevant as no QA team exists, instead tickets that have been delivered will be automatically accepted during a release by the release engineer)
 - *Rejected* Work has been review by QA team and issues were found (NOTE: This state is currently irrelevant as no QA team exists)
