@@ -11,8 +11,8 @@
 
 **Documentation & Guides**
 * [[YCharts In Repo Documentation Directory]]
-* Guides & Frameworks
-  * [[YCharts Project Planning Guide]]
+* [[YCharts Project Planning Guide]]
+* [[YCharts Project Management in Pivotal Tracker]]
 
 **Career**
 * [Engineering Career Framework](https://docs.google.com/spreadsheets/d/1A7pXEIr5mzCmh7s5TZ9bStaLDAsz03IoNeQannOa3Q0)
