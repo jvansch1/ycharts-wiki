@@ -6,7 +6,7 @@ YCharts uses [Pivotal Tracker](https://www.pivotaltracker.com/) to manage engine
 ## Boards Basics
 For YCharts, Project Boards represent the the collective work and output of a team. 
 
-Currently, YCharts has 5 Project boards
+Currently, YCharts has 5 Project Boards
 
 - **Data** - All data importing, calculating related projects
 - **Applications** - All front-end application projects
@@ -24,13 +24,34 @@ The Current, Backlog and Icebox columns of a project board should contain ticket
 *Icebox* - Represents vague work or ideas that may turn into real/scheduled work at some point. An engineer may create a ticket in the icebox based on an idea they had while doing other work. Engineering leaders may create a ticket or tickets in icebox for work they'd like to see done that is not critical to any project being successfully delivered. Icebox is generally a place to stick work / ideas that we don't want to forget, but that may never actually get done.
 
 ## Epics
-All medium to large sized projects should be tracked on Pivotal Tracker using an Epic. 
+All medium to large sized projects (> 3 tickets) should be tracked on Pivotal Tracker using an Epic. Engineering leaders speccing the project should
+1. Create an appropriately named epic and add a short description
+2. Link to the project spec doc either in Github or Google Docs
 
-## Bugs
-Bugs typically come in two forms 
+The engineer leading the project should create tickets *with points* before starting the project, such that rough progress of the project can be estimated by looking at the percentage of delivered points.
 
 # Ticket Management
-
-## States
+The state and size of tickets should be appropriately managed such that for any epic we can:
+- See the amount of work done/todo 
+- See the exact status of any of the pieces
 
 ## Estimation
+We use a 0-1-2-3 point estimation system for tickets.
+
+- 0 point tickets are super-quick changes that might take 5 minutes or less An example might be adding a redirect to our nginx redirect file. 
+- 1 point should be 2 hours or less of work
+- 2 points should be roughly 4 hours of work
+- 3 points should be 6 hours (for a whole day) of work
+
+Further, bug tickets are always 0 points, as they are considered "the cost of doing business" and are thus not considered to be a part of team output.
+
+If a ticket will take longer than a day to complete it should be split in multiple pieces if at all possible
+
+## States
+Tickets should be kept in the correct state as work progress.
+- *Unstarted* - No work has started
+- *Started* - Work has started
+- *Finished* - Work has finished and is ready for review.
+- *Delivered* - Work has finished the review process and has merged to development branch, **or the relevant feature branch** (this is to say tickets should be delivered even if they have not merged into our main development branch and made their way to staging).
+- *Accepted* - Work has been reviewed by QA team and was confirmed to function as necessary (NOTE: This state is currently irrelevant as no QA team exists, instead tickets that have been delivered will be automatically accepted during a release by the release engineer)
+- *Rejected* Work has been review by QA team and issues were found (NOTE: This state is currently irrelevant as no QA team exists)
