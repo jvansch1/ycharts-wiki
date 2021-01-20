@@ -16,6 +16,7 @@ Below are links to docs to help get you started setting up your environment as w
 **Documentation & Guides**
 * [[YCharts In Repo Documentation Directory]]
 * [[YCharts Project Planning Guide]]
+* [[YCharts Project Management in Pivotal Tracker]]
 
 **Career**
 * [Engineering Career Framework](https://docs.google.com/spreadsheets/d/1A7pXEIr5mzCmh7s5TZ9bStaLDAsz03IoNeQannOa3Q0)
