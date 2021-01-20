@@ -1,4 +1,4 @@
-**Onboarding**
+**Onboarding & Setup**
 * [[Onboarding for New Hires]]
   * [[Required Reading List]]
   * [[Educational Resources]]
@@ -6,20 +6,26 @@
 * [[Setting Up Accounts for New Hires]]
 * [[Developer Environment Setup]]
   * [[YCharts VPN Setup Instructions]]
+  * [[Restoring Database]]
 * [[Support and On Call Outline]]
 
-**Essentials**
+**Documentation & Guides**
+* [[YCharts In Repo Documentation Directory]]
+* [[YCharts Project Planning Guide]]
+
+**Career**
+* [Engineering Career Framework](https://docs.google.com/spreadsheets/d/1A7pXEIr5mzCmh7s5TZ9bStaLDAsz03IoNeQannOa3Q0)
+
+**Organization Essentials**
 * [[YCharts Engineering Overview]]
 * [[YCharts Engineering Principles]]
 * [[YCharts Coding Principles]]
-* [[YCharts In Repo Documentation Directory]]
 * [[Engineering Points of Emphasis]]
-* [Engineering Career Framework](https://docs.google.com/spreadsheets/d/1A7pXEIr5mzCmh7s5TZ9bStaLDAsz03IoNeQannOa3Q0)
-* [[YCharts Project Planning Guide]]
+
+**Infrastructure & Deployments**
 * [Deployment Procedure](https://github.com/ycharts/ycharts_systems/wiki/Deploy-and-Hotfix)
-* [How to SSH into Machines](https://github.com/ycharts/ycharts_systems/wiki/SSH)
-* [[Restoring Database]]
 * [[Release Run Book]]
+* [How to SSH into Machines](https://github.com/ycharts/ycharts_systems/wiki/SSH)
 
 **Technology Specific Notes**
 * AWS
