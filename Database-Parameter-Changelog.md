@@ -1,5 +1,10 @@
 Below are changes that have been made to the production database's [AWS Parameter Group](https://console.aws.amazon.com/rds/home?region=us-east-1#parameter-groups-detail:ids=ycharts5-7;type=DbParameterGroup;editing=false). 
 
+2021 - 01 - 27
+--------------
+- `innodb_io_capacity_max` changed from `2000` to `4000`.
+  - Write-intensive workloads can cause buffer pool flushing activity to fall behind, in which case InnoDB will flush more aggresively. This parameter defines the iops dedicated to these background tasks such as flushing in these scenarios. We are increasing this parameter so that the database can quickly catch up on flushing activity if it does happen to fall behind.
+
 2020 - 12 - 28
 --------------
 - `general_log` changed from the default of `0` to `1`. 
