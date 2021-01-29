@@ -1,5 +1,10 @@
 Below are changes that have been made to the production database's [AWS Parameter Group](https://console.aws.amazon.com/rds/home?region=us-east-1#parameter-groups-detail:ids=ycharts5-7;type=DbParameterGroup;editing=false). 
 
+2021 - 01 - 29
+--------------
+- `general_log` changed from `1` to `0`.
+  - We found the general log of queries to not be very helpful and not worth the cost of having it enabled.
+
 2021 - 01 - 27
 --------------
 - `innodb_io_capacity_max` changed from `2000` to `4000`.
