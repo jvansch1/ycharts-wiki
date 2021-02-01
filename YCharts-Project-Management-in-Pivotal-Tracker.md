@@ -21,14 +21,14 @@ The Current, Backlog and Icebox columns of a project board should contain ticket
 
 **Backlog** - Represents work that is scheduled to happen next. They should be roughly ordered by the order in which they will be done. Tickets should only be in backlog if they are 100% going to get done at some point. Looking at the Backlog column anyone should be able to tell roughly how many weeks of work a team currently has scheduled. In other words, if a teams' backlog is 5 weeks long, we should know that they will not be able to take on any additional projects for 5 weeks. The backlog should be groomed at least bi-weekly by engineering leaders to ensure it accurately reflects what the team is scheduled to work on.
 
-**Icebox** - Represents work we intend to do, but has not been prioritized yet. For example, and engineer speccing a project should feel free to put all the tickets into the icebox. The team leader will then work with the product team to get the project prioritized and move to the the correct place in the backlog.
+**Icebox** - Represents work we intend to do, but has not been prioritized yet. For example, an engineer speccing a project should feel free to put all the tickets into the icebox. The team leader will then work with the product team to get the project prioritized and move to the correct place in the backlog.
 
 ## Epics
-All medium to large sized projects (>= 2 tickets) should be tracked on Pivotal Tracker using an Epic. Engineering leaders speccing the project should
+All medium to large-sized projects (>= 2 tickets) should be tracked on Pivotal Tracker using an Epic. Engineers speccing the project should
 1. Create an appropriately named epic and add a short description
 2. Link to the project spec doc either in Github or Google Docs
 
-The engineer leading the project should create tickets *with points* before starting the project, such that rough progress of the project can be estimated by looking at the percentage of delivered points.
+The engineer leading the project should create tickets *with points* before starting the project, such that the rough progress of the project can be estimated by looking at the percentage of delivered points.
 
 # Ticket Management
 The state and size of tickets should be appropriately managed such that for any epic we can:
