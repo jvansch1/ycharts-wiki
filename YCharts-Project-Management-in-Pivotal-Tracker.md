@@ -53,5 +53,5 @@ Tickets should be kept in the correct state as work progress.
 - **Started** - Work has started. At this point you have a local branch on your machine and are working on it.
 - **Finished** - Work has finished and is ready for review. At this point you have made a PR and have submitted for review.
 - **Delivered** - Work has gone through the review process been approve. At this point you must have merged into the parent branch, (e.g. `ycharts/develop`, a feature branch on `origin`, etc.). *NOTE:* This means that tickets may be set to "Delivered" even if they are not merged into our main development branch/deployed to the staging environment/etc.
-- **Accepted** - Work has been reviewed by QA team and was confirmed to function as necessary. *NOTE:* This state is currently irrelevant as no QA team exists, instead tickets that have been delivered will be accepted during a release by the release engineer.
+- **Accepted** - Work has been reviewed by QA team and was confirmed to function as necessary. *NOTE:* This state is currently irrelevant as no QA team exists, instead tickets that have been delivered should also be accepted by the engineer who delivered them.
 - **Rejected** Work has been review by QA team and issues were found. *NOTE:* This state is currently irrelevant as no QA team exists.
