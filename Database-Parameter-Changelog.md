@@ -1,5 +1,16 @@
 Below are changes that have been made to the production database's [AWS Parameter Group](https://console.aws.amazon.com/rds/home?region=us-east-1#parameter-groups-detail:ids=ycharts5-7;type=DbParameterGroup;editing=false). 
 
+2021 - 02 - 06
+--------------
+- Upgrade Database to have 10,000 provisioned IOPS from 8,000 IOPS
+  - This was done because our write-intensive workloads were pushing our IOPS near 8,000 consistently. 
+- `innodb_io_capacity_max` changed from `4000` to `6000`.
+  - Write-intensive workloads can cause buffer pool flushing activity to fall behind, in which case InnoDB will flush more aggressively. This parameter defines the IOPS dedicated to these background tasks such as flushing in these scenarios. We are increasing this parameter so that the database can quickly catch up on flushing activity if it does happen to fall behind but keeping it significantly below the provisioned IOPS of 10,000 so we don't take up too much I/O work from non-innodb workloads.
+- `innodb_io_capacity` changes from `1000` to `2000`.
+  - We wanted a sensible value that allows for innodb to have enough IOPS to handle a normal workload when flushing the buffer pool but keeping it below the max of `6000`
+- `innodb_flush_sync` changes from the default of `1` (ON) to `0` (OFF)
+  - While the `innodb_io_capacity_max` value represents the max IOPS that innodb can use, in practice innodb can and will take more IOPS than `innodb_io_capacity_max` if it feels it needs to. When innodb goes above the max this is usually called a "flush storm" and it caused an [outage for us in January](https://docs.google.com/document/d/1Uzm5NQP0Y9hfZG_ctyX3txykwdupNrjkCASy4Iv3vL8/edit#). You can also [read more here](https://www.percona.com/blog/2020/01/22/innodb-flushing-in-action-for-percona-server-for-mysql/) about flush storms and why they happen. What is important is that when this is set to `0` (OFF) that innodb __will not__ go above the `innodb_io_capacity_max` of `6000`.
+
 2021 - 01 - 29
 --------------
 - `general_log` changed from `1` to `0`.
@@ -8,7 +19,7 @@ Below are changes that have been made to the production database's [AWS Paramete
 2021 - 01 - 27
 --------------
 - `innodb_io_capacity_max` changed from `2000` to `4000`.
-  - Write-intensive workloads can cause buffer pool flushing activity to fall behind, in which case InnoDB will flush more aggresively. This parameter defines the iops dedicated to these background tasks such as flushing in these scenarios. We are increasing this parameter so that the database can quickly catch up on flushing activity if it does happen to fall behind.
+  - Write-intensive workloads can cause buffer pool flushing activity to fall behind, in which case InnoDB will flush more aggressively. This parameter defines the IOPS dedicated to these background tasks such as flushing in these scenarios. We are increasing this parameter so that the database can quickly catch up on flushing activity if it does happen to fall behind.
 
 2020 - 12 - 28
 --------------
