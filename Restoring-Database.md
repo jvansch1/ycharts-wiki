@@ -7,7 +7,7 @@ Every week we dump our most recent staging data to a S3 bucket so that developer
 
 #### 1. Download the database dump file from S3
 Execute the following commands to download the compressed S3 file to your local environment. 
-> It is important to note that it will take around 2:30 - 3 hours to download depending on your internet speed.
+> It is important to note that it will take around 1 - 3 hours to download depending on your internet speed.
 
 ```
 cd /sites/ycharts_systems
