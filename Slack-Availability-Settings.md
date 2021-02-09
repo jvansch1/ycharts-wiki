@@ -1,5 +1,3 @@
-## Slack Availability Settings
-
 Slack allows us to set an "availability" (e.g. "Active" and "Away") and a "notification policy" (a.k.a. "Do Not Disturb" or pause). We utilize both to allow other team members to see the current status of their teammates. To help everyone communicate effeciently, please use the following presence states to indicate your availability. For more information, see the [official Slack docs](https://slack.com/help/categories/360000047906-Your-profile-preferences).
 
 * __Active & Unpaused__ - This is the "default" presence state when you're online and at your desk. This state is automatically set when Slack is open on your computer or phone.
