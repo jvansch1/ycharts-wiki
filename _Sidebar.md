@@ -8,6 +8,7 @@
   * [[YCharts VPN Setup Instructions]]
   * [[Restoring Database]]
 * [[Support and On Call Outline]]
+* [[Slack Availability Settings]]
 
 **Documentation & Guides**
 * [[YCharts In Repo Documentation Directory]]
