@@ -1,0 +1,10 @@
+## Slack Availability Settings
+
+Slack allows us to set an "availability" (e.g. "Active" and "Away") and a "notification policy" (a.k.a. "Do Not Disturb" or pause). We utilize both to allow other team members to see the current status of their teammates. To help everyone communicate effeciently, please use the following presence states to indicate your availability. For more information, see the [official Slack docs](https://slack.com/help/categories/360000047906-Your-profile-preferences).
+
+* __Active & Unpaused__ - This is the "default" presence state when you're online and at your desk. This state is automatically set when Slack is open on your computer or phone.
+* __Active & Paused__ - Set this presence state when you're online but shouldn't be disturbed (e.g. you're in a meeting or working on a task that shouldn't be interrupted). If you see one of your teammates in this presence state feel free to send messages, but keep in mind that a response may take some time.
+* __Away & Unpaused__ - Set this presence state when you're away from your desk, but can be reached if necessary (e.g. during a lunch break, etc.). If you see one of your teammates in this presence state feel free to send messages, but keep in mind that a response may take some time. This state is automatically set if Slack is closed on your computer or phone.
+* __Away & Paused__ - Set this presence state when you've signed off for the day, or you know you'll be away from your desk for an extended period. This presence state will also automatically be set based on your [Notification schedule](https://slack.com/help/articles/201355156-Configure-your-Slack-notifications#notification-schedule) so messages outside of work hours will be muted. When your teammates are in this state, try to avoid sending messages except in the case of an emergency.
+
+Slack also allows us to set short status messages, including an emoji. Use these to add more detail to your presence state, such as a "Do Not Disturb" message/icon. Slack also includes a Google Calendar integration, which sets your status message to "In a meeting" when your calendar has an event at the current time.
