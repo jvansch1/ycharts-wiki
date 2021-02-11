@@ -4,7 +4,8 @@ Much of our documentation is better kept within our repos, because it is tightly
 
 ## Security Types
 - [Indicators](https://github.com/ycharts/ycharts/blob/develop/apps/indicators/docs/indicators.md)
-- [Model Portfolios](https://github.com/ycharts/ycharts/blob/develop/apps/model_portfolios/docs/model_portfolios.md) 
+- [Model Portfolios](https://github.com/ycharts/ycharts/blob/develop/apps/model_portfolios/docs/model_portfolios.md)
+- [Custom Securities](https://github.com/ycharts/ycharts/blob/develop/apps/custom_securities/docs/custom_securities.md) 
 
 ## Security Related Data
 - [Security Lists](https://github.com/ycharts/ycharts/blob/develop/apps/security_lists/docs/security_lists.md)
