@@ -149,3 +149,19 @@ In order to ensure key functions of our application work before releasing code f
 1. Select a report that has the Cover Page module; confirm your default contact info (if any!) is shown in the fields in the modal
 1. Change the various fields to custom strings then generate the report; confirm the appropriate values are shown on the cover page
 1. Select a report that has the Cumulative Return/Basic Info module; change the title to a custom string then generate the report; confirm your custom title is shown in the Cumulative Return/Basic Info module
+
+## Custom Securities
+1. Go to the [Custom Security Creator](https://staging.ycharts.com/custom_securities/new/).
+1. Create a Daily Level Custom Security with [this](files/daily_levels.csv) file.
+1. Create a Daily Return Custom Security with [this](files/daily_returns.csv) file.
+1. Create a Monthly Level Custom Security with [this](files/monthly_levels.csv) file.
+1. Create a Monthly Return Custom Security with [this](files/monthly_returns.csv) file.
+1. Make sure all these custom securities finish calculating and that levels are shown on their quote pages.
+1. Go to the Timeseries Table and add some/all of these custom securities as well as the level calc. Make sure that data
+is showing up for the custom securities.
+1. Go to the Fund Chart and add some/all of these custom securities to the chart as well as the level calc. Make sure
+that data is showing up for the custom securities.
+1. Add some/all of the custom securities to a watchlist. Go to the dashboard and make sure it shows up in the watchlist
+properly.
+1. Add some/all of these custom securities to a Model Portfolio. Once it is added delete the Model Portfolio. Make
+sure that the Model Portfolio is then put into the needs review state.
